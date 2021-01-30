@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerPlatformerController : PhysicsObject
-{
+public class PlayerPlatformerController : MonoBehaviour
+{/*
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
     private Controls control;
@@ -35,11 +35,11 @@ public class PlayerPlatformerController : PhysicsObject
 
 
 
-        /*else if (Input.GetButtonUp("Jump"))
+        else if (Input.GetButtonUp("Jump"))
         {
             if (velocity.y > 0)
                 velocity.y = velocity.y * .5f; 
-        }*/
-        targetVelocity = move * maxSpeed; 
-    }
+        }
+        targetVelocity = move * maxSpeed;
+    }*/
 }
