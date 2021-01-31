@@ -173,6 +173,74 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""DEBUG"",
+            ""id"": ""634ab154-cd4c-4002-abe5-f8ab7563633f"",
+            ""actions"": [
+                {
+                    ""name"": ""JumpJ2"",
+                    ""type"": ""Button"",
+                    ""id"": ""b680ddc0-9cea-4409-8c4c-ecb33eed19e7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""DeplacementJ2"",
+                    ""type"": ""Button"",
+                    ""id"": ""d641c3aa-e723-4f78-88f9-d16b54e9a25a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""3ee7e78a-6a59-4182-afc0-e566c02dd46b"",
+                    ""path"": ""<Keyboard>/numpad0"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""JumpJ2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Horizontal"",
+                    ""id"": ""3b25210e-15d9-49a9-9d65-2c98df305d44"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DeplacementJ2"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""c91cd003-f6e8-4462-8f81-f48aacc500f3"",
+                    ""path"": ""<Keyboard>/numpad1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DeplacementJ2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""2e2e5840-1671-490a-96d6-6b317b2cdde0"",
+                    ""path"": ""<Keyboard>/numpad3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DeplacementJ2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -189,6 +257,10 @@ public class @Controls : IInputActionCollection, IDisposable
         m_Cri = asset.FindActionMap("Cri", throwIfNotFound: true);
         m_Cri_CriUp = m_Cri.FindAction("CriUp", throwIfNotFound: true);
         m_Cri_CriDown = m_Cri.FindAction("CriDown", throwIfNotFound: true);
+        // DEBUG
+        m_DEBUG = asset.FindActionMap("DEBUG", throwIfNotFound: true);
+        m_DEBUG_JumpJ2 = m_DEBUG.FindAction("JumpJ2", throwIfNotFound: true);
+        m_DEBUG_DeplacementJ2 = m_DEBUG.FindAction("DeplacementJ2", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -357,6 +429,47 @@ public class @Controls : IInputActionCollection, IDisposable
         }
     }
     public CriActions @Cri => new CriActions(this);
+
+    // DEBUG
+    private readonly InputActionMap m_DEBUG;
+    private IDEBUGActions m_DEBUGActionsCallbackInterface;
+    private readonly InputAction m_DEBUG_JumpJ2;
+    private readonly InputAction m_DEBUG_DeplacementJ2;
+    public struct DEBUGActions
+    {
+        private @Controls m_Wrapper;
+        public DEBUGActions(@Controls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @JumpJ2 => m_Wrapper.m_DEBUG_JumpJ2;
+        public InputAction @DeplacementJ2 => m_Wrapper.m_DEBUG_DeplacementJ2;
+        public InputActionMap Get() { return m_Wrapper.m_DEBUG; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(DEBUGActions set) { return set.Get(); }
+        public void SetCallbacks(IDEBUGActions instance)
+        {
+            if (m_Wrapper.m_DEBUGActionsCallbackInterface != null)
+            {
+                @JumpJ2.started -= m_Wrapper.m_DEBUGActionsCallbackInterface.OnJumpJ2;
+                @JumpJ2.performed -= m_Wrapper.m_DEBUGActionsCallbackInterface.OnJumpJ2;
+                @JumpJ2.canceled -= m_Wrapper.m_DEBUGActionsCallbackInterface.OnJumpJ2;
+                @DeplacementJ2.started -= m_Wrapper.m_DEBUGActionsCallbackInterface.OnDeplacementJ2;
+                @DeplacementJ2.performed -= m_Wrapper.m_DEBUGActionsCallbackInterface.OnDeplacementJ2;
+                @DeplacementJ2.canceled -= m_Wrapper.m_DEBUGActionsCallbackInterface.OnDeplacementJ2;
+            }
+            m_Wrapper.m_DEBUGActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @JumpJ2.started += instance.OnJumpJ2;
+                @JumpJ2.performed += instance.OnJumpJ2;
+                @JumpJ2.canceled += instance.OnJumpJ2;
+                @DeplacementJ2.started += instance.OnDeplacementJ2;
+                @DeplacementJ2.performed += instance.OnDeplacementJ2;
+                @DeplacementJ2.canceled += instance.OnDeplacementJ2;
+            }
+        }
+    }
+    public DEBUGActions @DEBUG => new DEBUGActions(this);
     public interface IDeplacementActions
     {
         void OnJump(InputAction.CallbackContext context);
@@ -371,5 +484,10 @@ public class @Controls : IInputActionCollection, IDisposable
     {
         void OnCriUp(InputAction.CallbackContext context);
         void OnCriDown(InputAction.CallbackContext context);
+    }
+    public interface IDEBUGActions
+    {
+        void OnJumpJ2(InputAction.CallbackContext context);
+        void OnDeplacementJ2(InputAction.CallbackContext context);
     }
 }
