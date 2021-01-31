@@ -7,16 +7,10 @@ using DG.Tweening;
 public class DoorController : MonoBehaviour
 {
     private bool DoorOpen = false;
-
-    // Start is called before the first frame update
-    void Start() {
-
-    
-
+    void Start()
+    {
         GameEvents.Instance.switchOn += OnDoorwayOpen;
     }
-
-    // Update is called once per frame
     private void OnDoorwayOpen(List<GameObject> gameObjects)
     {
         DoorController DC;
@@ -33,11 +27,6 @@ public class DoorController : MonoBehaviour
                 }
             }
         }
-
-        Debug.Log("yolo");
-
     }
-
- 
 }
 

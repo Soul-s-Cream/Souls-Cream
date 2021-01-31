@@ -1,10 +1,14 @@
-
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MovePlayer : MonoBehaviour
 {
     #region
     private Controls control;
+    public List<GameObject> Box;
+    public bool CriN1 = false;
 
     private void Awake()
     {
@@ -146,7 +150,20 @@ public class MovePlayer : MonoBehaviour
         if (control.Cri.Cri.triggered)
         {
             anim.SetInteger("Cri", CriSelected);
-        }else anim.SetInteger("Cri", 0);
+            if (CriSelected == 1)
+            {
+                CriN1 = true;
+                GameEvents.Instance.SwitchBoxOn(Box);
+            }
+
+        }
+        else
+        {
+            anim.SetInteger("Cri", 0);
+            CriN1 = false;
+        }
+
+
 
     }
 }

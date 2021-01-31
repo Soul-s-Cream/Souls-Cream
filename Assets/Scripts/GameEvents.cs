@@ -24,6 +24,7 @@ public class GameEvents : MonoBehaviour
     public delegate void SwitchEvent(List<GameObject> gameObjects);
     public event SwitchEvent switchOn;
     public event SwitchEvent switchOff;
+    public event SwitchEvent switchBox;
 
     #endregion
 
@@ -42,19 +43,26 @@ public class GameEvents : MonoBehaviour
         PlayerReachEnd(gameObject);
     }
 
-    public void DoorwayTriggerEnter()
+    /*public void DoorwayTriggerEnter()
     {
         Debug.Log("DoorWay");
         if (BasicEventExemple != null)
         {
             BasicEventExemple();
         }
-    }
+    }*/
     public void SwitchTriggerOn(List<GameObject> gameObjects )
     {
         if (switchOn != null)
         {
             switchOn(gameObjects);
+        }
+    }
+    public void SwitchBoxOn(List<GameObject> gameObjects)
+    {
+        if (switchBox != null)
+        {
+            switchBox(gameObjects);
         }
     }
 }
