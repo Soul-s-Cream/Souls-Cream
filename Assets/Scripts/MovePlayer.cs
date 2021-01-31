@@ -18,7 +18,8 @@ public class MovePlayer : MonoBehaviour
     {
         control.Deplacement.Disable();
     }
-    #endregion
+    #endregion  //Controls
+    #region
     public int NumSaut = 0;
 
     public float fallMultiplier = 2.5f;
@@ -38,7 +39,13 @@ public class MovePlayer : MonoBehaviour
     public Rigidbody2D rb;
     private Vector3 velocity = Vector3.zero;
     private float horizontalMovement = 0f;
+    #endregion  // déplacement
+    Animator anim;
 
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
     void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckLeft.position);
