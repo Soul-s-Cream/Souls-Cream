@@ -114,6 +114,52 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Cri",
+            "id": "15a7e9cd-70a7-432e-9396-4fe88100bc35",
+            "actions": [
+                {
+                    "name": "CriUp",
+                    "type": "Button",
+                    "id": "25e5b478-f057-45e2-a7c5-c9f586b6b4b2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "CriDown",
+                    "type": "Button",
+                    "id": "bc6107db-c0c5-4fa5-a5e5-909ca7f81f5f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "2d9c271e-06ee-4772-b4d6-bb426347d34b",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CriUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a67b8866-a457-4599-bfb9-464fedb4fa3a",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CriDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

@@ -13,10 +13,12 @@ public class MovePlayer : MonoBehaviour
     private void OnEnable()
     {
         control.Deplacement.Enable();
+        control.Cri.Enable();
     }
     private void OnDisable()
     {
         control.Deplacement.Disable();
+        control.Cri.Disable();
     }
     #endregion  //Controls
     #region
@@ -41,28 +43,40 @@ public class MovePlayer : MonoBehaviour
     private float horizontalMovement = 0f;
     #endregion  // déplacement
     Animator anim;
+    private Vector3 scale;
 
+
+    public int CriSelected = 1;
+    public int CriNumMax = 3;
     private void Start()
     {
         anim = GetComponent<Animator>();
+        scale = transform.eulerAngles;
     }
     void FixedUpdate()
     {
+        transform.eulerAngles = scale;
         isGrounded = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckLeft.position);
-
-            horizontalMovement = control.Deplacement.Deplacement.ReadValue<float>() * moveSpeed;
-
-       /*if (control.Deplacement.Jump.triggered && isGrounded)
-        {
-            isJuming = true;
-        }*/
+        horizontalMovement = control.Deplacement.Deplacement.ReadValue<float>() * moveSpeed;
         PlayerMove(horizontalMovement);
+
+        anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        if (control.Deplacement.Deplacement.ReadValue<float>() == 1)
+        {
+            scale.y = 180;
+        }
+        if (control.Deplacement.Deplacement.ReadValue<float>() == -1)
+        {
+            scale.y = 0;
+        }
     }
     private void Update()
     {
+        Debug.Log(control.Cri.CriDown.triggered);
+        Debug.Log(control.Cri.CriUp.triggered);
         if (velocity.y > velocityYMax)
         {
-            velocity.y = velocityYMax; 
+            velocity.y = velocityYMax;
         }
         if (control.Deplacement.Jump.triggered && NumSaut < 1)
         {
@@ -73,16 +87,20 @@ public class MovePlayer : MonoBehaviour
         {
             NumSaut = 0;
         }
-
-        
-        if(rb.velocity.y < 0)
+        if (rb.velocity.y < 0)
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-        } else if (rb.velocity.y > 0 && !control.Deplacement.Jump.triggered)
+        }
+        else if (rb.velocity.y > 0 && !control.Deplacement.Jump.triggered)
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
-        
+        if (isGrounded)
+        {
+            anim.SetBool("Jump", false);
+        }
+        else anim.SetBool("Jump", true);
+        PlayerCri();
     }
 
     void PlayerMove(float _horizontalMovement)
@@ -98,10 +116,30 @@ public class MovePlayer : MonoBehaviour
             }
             if (NumSaut == 1)
             {
-                rb.AddForce(new Vector2(0f, jumpForce/2));
+                rb.AddForce(new Vector2(0f, jumpForce / 2));
             }
             isJuming = false;
         }
 
     }
+
+    public void PlayerCri()
+    {
+        Debug.Log(control.Cri.CriDown.triggered);
+        Debug.Log(control.Cri.CriUp.triggered);
+
+        if (control.Cri.CriUp.triggered)
+        {
+            if (CriSelected < CriNumMax)
+            { CriSelected += 1; }
+            else CriSelected = 1;
+        }
+        if (control.Cri.CriDown.triggered)
+        {
+            if (CriSelected > 1)
+            { CriSelected -= 1; }
+            else CriSelected = CriNumMax;
+        }
+    }
+
 }
