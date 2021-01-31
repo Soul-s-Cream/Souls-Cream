@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="135">
 	<RootPaths>
-		<ProjectRoot>D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -15,6 +15,275 @@
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX" Hash="730854062">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2411999260" Name="CrateFriction" ObjectPath="\Events\Default Work Unit\Objects\CrateFriction" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="465776081" Language="SFX">
+							<ShortName>CrateFriction.wav</ShortName>
+							<Path>SFX\CrateFriction_B1DD9702.wem</Path>
+						</File>
+						<File Id="694567900" Language="SFX">
+							<ShortName>CrateFriction.wav</ShortName>
+							<Path>SFX\CrateFriction_B3F2D557.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1842854950" Name="CrateFriction2" ObjectPath="\Events\Default Work Unit\CrateFriction2" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="465776081" Language="SFX">
+							<ShortName>CrateFriction.wav</ShortName>
+							<Path>SFX\CrateFriction_B1DD9702.wem</Path>
+						</File>
+						<File Id="694567900" Language="SFX">
+							<ShortName>CrateFriction.wav</ShortName>
+							<Path>SFX\CrateFriction_B3F2D557.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="132381101" Name="Interruptor" ObjectPath="\Events\Default Work Unit\Objects\Interruptor" DurationType="OneShot" DurationMin="0.179680" DurationMax="0.241792">
+					<IncludedMemoryFiles>
+						<File Id="167913592" Language="SFX">
+							<ShortName>Interruptor.wav</ShortName>
+							<Path>SFX\Interruptor_5E9C9814.wem</Path>
+						</File>
+						<File Id="190532320" Language="SFX">
+							<ShortName>Interruptor.wav</ShortName>
+							<Path>SFX\Interruptor_9B63C4FD.wem</Path>
+						</File>
+						<File Id="585976924" Language="SFX">
+							<ShortName>Interruptor.wav</ShortName>
+							<Path>SFX\Interruptor_EF5ADE14.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="773707930" Name="MozFootsteps" ObjectPath="\Events\Default Work Unit\Moz\MozFootsteps" DurationType="OneShot" DurationMin="0.091000" DurationMax="0.197959">
+					<IncludedMemoryFiles>
+						<File Id="31055670" Language="SFX">
+							<ShortName>PlayerMozFootsteps.wav</ShortName>
+							<Path>SFX\PlayerMozFootsteps_C44C71A6.wem</Path>
+						</File>
+						<File Id="534699211" Language="SFX">
+							<ShortName>PlayerMozFootsteps.wav</ShortName>
+							<Path>SFX\PlayerMozFootsteps_03957B3B.wem</Path>
+						</File>
+						<File Id="626046583" Language="SFX">
+							<ShortName>PlayerMozFootsteps.wav</ShortName>
+							<Path>SFX\PlayerMozFootsteps_11AFD5D9.wem</Path>
+						</File>
+						<File Id="691460036" Language="SFX">
+							<ShortName>PlayerMozFootsteps.wav</ShortName>
+							<Path>SFX\PlayerMozFootsteps_234E2D56.wem</Path>
+						</File>
+						<File Id="849442749" Language="SFX">
+							<ShortName>PlayerMozFootsteps.wav</ShortName>
+							<Path>SFX\PlayerMozFootsteps_2E6E780A.wem</Path>
+						</File>
+						<File Id="894112917" Language="SFX">
+							<ShortName>PlayerMozFootsteps.wav</ShortName>
+							<Path>SFX\PlayerMozFootsteps_8D8F08A6.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="313744885" Name="MozJump" ObjectPath="\Events\Default Work Unit\Moz\MozJump" DurationType="OneShot" DurationMin="0.238377" DurationMax="0.449217">
+					<IncludedMemoryFiles>
+						<File Id="241080445" Language="SFX">
+							<ShortName>PlayerMozJump.wav</ShortName>
+							<Path>SFX\PlayerMozJump_57DEBAAB.wem</Path>
+						</File>
+						<File Id="526605256" Language="SFX">
+							<ShortName>PlayerMozJump.wav</ShortName>
+							<Path>SFX\PlayerMozJump_6E55FBA6.wem</Path>
+						</File>
+						<File Id="732767810" Language="SFX">
+							<ShortName>PlayerMozJump.wav</ShortName>
+							<Path>SFX\PlayerMozJump_33CEA9B4.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="783075190" Name="MozLanding" ObjectPath="\Events\Default Work Unit\Moz\MozLanding" DurationType="OneShot" DurationMin="0.182289" DurationMax="0.282670">
+					<IncludedMemoryFiles>
+						<File Id="269640153" Language="SFX">
+							<ShortName>PlayerMozJump.wav</ShortName>
+							<Path>SFX\PlayerMozJump_AF8D132B.wem</Path>
+						</File>
+						<File Id="350871938" Language="SFX">
+							<ShortName>PlayerMozJump.wav</ShortName>
+							<Path>SFX\PlayerMozJump_BB85777A.wem</Path>
+						</File>
+						<File Id="629518556" Language="SFX">
+							<ShortName>PlayerMozJump.wav</ShortName>
+							<Path>SFX\PlayerMozJump_CCF48D89.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1730564753" Name="Musics" ObjectPath="\Events\Default Work Unit\Musics" DurationType="OneShot" DurationMin="62.000000" DurationMax="62.000000">
+					<IncludedMemoryFiles>
+						<File Id="366671501" Language="SFX">
+							<ShortName>OzTuto.wav</ShortName>
+							<Path>SFX\OzTuto_D79FB2B7.wem</Path>
+						</File>
+						<File Id="938794312" Language="SFX">
+							<ShortName>MozTuto.wav</ShortName>
+							<Path>SFX\MozTuto_1E5DC3C7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1891947077" Name="OzDoubleJump" ObjectPath="\Events\Default Work Unit\Oz\OzDoubleJump" DurationType="OneShot" DurationMin="0.130030" DurationMax="0.173569">
+					<IncludedMemoryFiles>
+						<File Id="1070454862" Language="SFX">
+							<ShortName>PlayerOzJump.wav</ShortName>
+							<Path>SFX\PlayerOzJump_062C1249.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2515146559" Name="OzFootsteps" ObjectPath="\Events\Default Work Unit\Oz\OzFootsteps" DurationType="OneShot" DurationMin="0.023581" DurationMax="0.039345">
+					<IncludedMemoryFiles>
+						<File Id="340180847" Language="SFX">
+							<ShortName>PlayerOzFootsteps.wav</ShortName>
+							<Path>SFX\PlayerOzFootsteps_5B7EF906.wem</Path>
+						</File>
+						<File Id="383526885" Language="SFX">
+							<ShortName>PlayerOzFootsteps.wav</ShortName>
+							<Path>SFX\PlayerOzFootsteps_E70003E7.wem</Path>
+						</File>
+						<File Id="550278455" Language="SFX">
+							<ShortName>PlayerOzFootsteps.wav</ShortName>
+							<Path>SFX\PlayerOzFootsteps_EDC6B6D9.wem</Path>
+						</File>
+						<File Id="1017059933" Language="SFX">
+							<ShortName>PlayerOzFootsteps.wav</ShortName>
+							<Path>SFX\PlayerOzFootsteps_FDC90899.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1595060770" Name="OzJump" ObjectPath="\Events\Default Work Unit\Oz\OzJump" DurationType="OneShot" DurationMin="0.124497" DurationMax="0.166183">
+					<IncludedMemoryFiles>
+						<File Id="843786119" Language="SFX">
+							<ShortName>PlayerOzJump.wav</ShortName>
+							<Path>SFX\PlayerOzJump_36B4C025.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1035518595" Name="OzLanding" ObjectPath="\Events\Default Work Unit\Oz\OzLanding" DurationType="OneShot" DurationMin="0.088531" DurationMax="0.118175">
+					<IncludedMemoryFiles>
+						<File Id="136186369" Language="SFX">
+							<ShortName>PlayerOzJump.wav</ShortName>
+							<Path>SFX\PlayerOzJump_552D154C.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="31055670" Language="SFX">
+					<ShortName>PlayerMozFootsteps.wav</ShortName>
+					<Path>SFX\PlayerMozFootsteps_C44C71A6.wem</Path>
+				</File>
+				<File Id="136186369" Language="SFX">
+					<ShortName>PlayerOzJump.wav</ShortName>
+					<Path>SFX\PlayerOzJump_552D154C.wem</Path>
+				</File>
+				<File Id="167913592" Language="SFX">
+					<ShortName>Interruptor.wav</ShortName>
+					<Path>SFX\Interruptor_5E9C9814.wem</Path>
+				</File>
+				<File Id="190532320" Language="SFX">
+					<ShortName>Interruptor.wav</ShortName>
+					<Path>SFX\Interruptor_9B63C4FD.wem</Path>
+				</File>
+				<File Id="241080445" Language="SFX">
+					<ShortName>PlayerMozJump.wav</ShortName>
+					<Path>SFX\PlayerMozJump_57DEBAAB.wem</Path>
+				</File>
+				<File Id="269640153" Language="SFX">
+					<ShortName>PlayerMozJump.wav</ShortName>
+					<Path>SFX\PlayerMozJump_AF8D132B.wem</Path>
+				</File>
+				<File Id="340180847" Language="SFX">
+					<ShortName>PlayerOzFootsteps.wav</ShortName>
+					<Path>SFX\PlayerOzFootsteps_5B7EF906.wem</Path>
+				</File>
+				<File Id="350871938" Language="SFX">
+					<ShortName>PlayerMozJump.wav</ShortName>
+					<Path>SFX\PlayerMozJump_BB85777A.wem</Path>
+				</File>
+				<File Id="366671501" Language="SFX">
+					<ShortName>OzTuto.wav</ShortName>
+					<Path>SFX\OzTuto_D79FB2B7.wem</Path>
+				</File>
+				<File Id="383526885" Language="SFX">
+					<ShortName>PlayerOzFootsteps.wav</ShortName>
+					<Path>SFX\PlayerOzFootsteps_E70003E7.wem</Path>
+				</File>
+				<File Id="465776081" Language="SFX">
+					<ShortName>CrateFriction.wav</ShortName>
+					<Path>SFX\CrateFriction_B1DD9702.wem</Path>
+				</File>
+				<File Id="526605256" Language="SFX">
+					<ShortName>PlayerMozJump.wav</ShortName>
+					<Path>SFX\PlayerMozJump_6E55FBA6.wem</Path>
+				</File>
+				<File Id="534699211" Language="SFX">
+					<ShortName>PlayerMozFootsteps.wav</ShortName>
+					<Path>SFX\PlayerMozFootsteps_03957B3B.wem</Path>
+				</File>
+				<File Id="550278455" Language="SFX">
+					<ShortName>PlayerOzFootsteps.wav</ShortName>
+					<Path>SFX\PlayerOzFootsteps_EDC6B6D9.wem</Path>
+				</File>
+				<File Id="585976924" Language="SFX">
+					<ShortName>Interruptor.wav</ShortName>
+					<Path>SFX\Interruptor_EF5ADE14.wem</Path>
+				</File>
+				<File Id="626046583" Language="SFX">
+					<ShortName>PlayerMozFootsteps.wav</ShortName>
+					<Path>SFX\PlayerMozFootsteps_11AFD5D9.wem</Path>
+				</File>
+				<File Id="629518556" Language="SFX">
+					<ShortName>PlayerMozJump.wav</ShortName>
+					<Path>SFX\PlayerMozJump_CCF48D89.wem</Path>
+				</File>
+				<File Id="691460036" Language="SFX">
+					<ShortName>PlayerMozFootsteps.wav</ShortName>
+					<Path>SFX\PlayerMozFootsteps_234E2D56.wem</Path>
+				</File>
+				<File Id="694567900" Language="SFX">
+					<ShortName>CrateFriction.wav</ShortName>
+					<Path>SFX\CrateFriction_B3F2D557.wem</Path>
+				</File>
+				<File Id="732767810" Language="SFX">
+					<ShortName>PlayerMozJump.wav</ShortName>
+					<Path>SFX\PlayerMozJump_33CEA9B4.wem</Path>
+				</File>
+				<File Id="843786119" Language="SFX">
+					<ShortName>PlayerOzJump.wav</ShortName>
+					<Path>SFX\PlayerOzJump_36B4C025.wem</Path>
+				</File>
+				<File Id="849442749" Language="SFX">
+					<ShortName>PlayerMozFootsteps.wav</ShortName>
+					<Path>SFX\PlayerMozFootsteps_2E6E780A.wem</Path>
+				</File>
+				<File Id="894112917" Language="SFX">
+					<ShortName>PlayerMozFootsteps.wav</ShortName>
+					<Path>SFX\PlayerMozFootsteps_8D8F08A6.wem</Path>
+				</File>
+				<File Id="938794312" Language="SFX">
+					<ShortName>MozTuto.wav</ShortName>
+					<Path>SFX\MozTuto_1E5DC3C7.wem</Path>
+				</File>
+				<File Id="1017059933" Language="SFX">
+					<ShortName>PlayerOzFootsteps.wav</ShortName>
+					<Path>SFX\PlayerOzFootsteps_FDC90899.wem</Path>
+				</File>
+				<File Id="1070454862" Language="SFX">
+					<ShortName>PlayerOzJump.wav</ShortName>
+					<Path>SFX\PlayerOzJump_062C1249.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

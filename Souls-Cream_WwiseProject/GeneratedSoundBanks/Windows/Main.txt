@@ -1,0 +1,41 @@
+Event	ID	Name			Wwise Object Path	Notes
+	132381101	Interruptor			\Default Work Unit\Objects\Interruptor	
+	313744885	MozJump			\Default Work Unit\Moz\MozJump	
+	773707930	MozFootsteps			\Default Work Unit\Moz\MozFootsteps	
+	783075190	MozLanding			\Default Work Unit\Moz\MozLanding	
+	1035518595	OzLanding			\Default Work Unit\Oz\OzLanding	
+	1595060770	OzJump			\Default Work Unit\Oz\OzJump	
+	1730564753	Musics			\Default Work Unit\Musics	
+	1842854950	CrateFriction2			\Default Work Unit\CrateFriction2	
+	1891947077	OzDoubleJump			\Default Work Unit\Oz\OzDoubleJump	
+	2411999260	CrateFriction			\Default Work Unit\Objects\CrateFriction	
+	2515146559	OzFootsteps			\Default Work Unit\Oz\OzFootsteps	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	31055670	MozFootsteps_03	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\PlayerMozFootsteps_C44C71A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozFootsteps\MozFootsteps_03		25896
+	136186369	OzLanding	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\PlayerOzJump_552D154C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Oz\OzLanding		21480
+	167913592	Interruptor1	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\Interruptor_5E9C9814.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\Interruptor\Interruptor1		40828
+	190532320	Interruptor2	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\Interruptor_9B63C4FD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\Interruptor\Interruptor2		38788
+	241080445	MozJump3	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\PlayerMozJump_57DEBAAB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozJump\MozJump3		54460
+	269640153	MozLanding2	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\PlayerMozJump_AF8D132B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozLanding\MozLanding2		48416
+	340180847	OzFootsteps1	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\PlayerOzFootsteps_5B7EF906.wem		\Actor-Mixer Hierarchy\Default Work Unit\Oz\OzFootsteps\OzFootsteps1		7196
+	350871938	MozLanding3	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\PlayerMozJump_BB85777A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozLanding\MozLanding3		42372
+	366671501	OzTuto	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\OzTuto_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\OzTuto\OzTuto		11904192
+	383526885	OzFootsteps4	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\PlayerOzFootsteps_E70003E7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Oz\OzFootsteps\OzFootsteps4		6624
+	465776081	CrateFriction1	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\CrateFriction_B1DD9702.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\CrateFriction\CrateFriction1		809028
+	526605256	MozJump1	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\PlayerMozJump_6E55FBA6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozJump\MozJump1		72592
+	534699211	MozFootsteps_04	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\PlayerMozFootsteps_03957B3B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozFootsteps\MozFootsteps_04		29720
+	550278455	OzFootsteps3	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\PlayerOzFootsteps_EDC6B6D9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Oz\OzFootsteps\OzFootsteps3		6052
+	585976924	Interruptor3	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\Interruptor_EF5ADE14.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\Interruptor\Interruptor3		43884
+	626046583	MozFootsteps_02	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\PlayerMozFootsteps_11AFD5D9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozFootsteps\MozFootsteps_02		29720
+	629518556	MozLanding1	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\PlayerMozJump_CCF48D89.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozLanding\MozLanding1		39348
+	691460036	MozFootsteps_05	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\PlayerMozFootsteps_234E2D56.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozFootsteps\MozFootsteps_05		35940
+	694567900	CrateFriction2	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\CrateFriction_B3F2D557.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\CrateFriction\CrateFriction2		969192
+	732767810	MozJump2	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\PlayerMozJump_33CEA9B4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozJump\MozJump2		51440
+	843786119	OzJump	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\PlayerOzJump_36B4C025.wem		\Actor-Mixer Hierarchy\Default Work Unit\Oz\OzJump		30260
+	849442749	MozFootsteps	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\PlayerMozFootsteps_2E6E780A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozFootsteps\MozFootsteps		28764
+	894112917	MozFootsteps_01	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\PlayerMozFootsteps_8D8F08A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozFootsteps\MozFootsteps_01		19676
+	938794312	MozTuto	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\MozTuto_1E5DC3C7.wem		\Interactive Music Hierarchy\Default Work Unit\MozTuto\MozTuto		11904240
+	1017059933	OzFootsteps2	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\PlayerOzFootsteps_FDC90899.wem		\Actor-Mixer Hierarchy\Default Work Unit\Oz\OzFootsteps\OzFootsteps2		5772
+	1070454862	OzDoubleJump	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\PlayerOzJump_062C1249.wem		\Actor-Mixer Hierarchy\Default Work Unit\Oz\OzDoubleJump		31520
+
