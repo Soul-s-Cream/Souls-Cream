@@ -72,8 +72,7 @@ public class MovePlayer : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(control.Cri.CriDown.triggered);
-        Debug.Log(control.Cri.CriUp.triggered);
+
         if (velocity.y > velocityYMax)
         {
             velocity.y = velocityYMax;
@@ -100,6 +99,7 @@ public class MovePlayer : MonoBehaviour
             anim.SetBool("Jump", false);
         }
         else anim.SetBool("Jump", true);
+        PlayerCriSelect();
         PlayerCri();
     }
 
@@ -123,10 +123,9 @@ public class MovePlayer : MonoBehaviour
 
     }
 
-    public void PlayerCri()
+    public void PlayerCriSelect()
     {
-        Debug.Log(control.Cri.CriDown.triggered);
-        Debug.Log(control.Cri.CriUp.triggered);
+
 
         if (control.Cri.CriUp.triggered)
         {
@@ -141,5 +140,13 @@ public class MovePlayer : MonoBehaviour
             else CriSelected = CriNumMax;
         }
     }
+    public void PlayerCri()
+    {
 
+        if (control.Cri.Cri.triggered)
+        {
+            anim.SetInteger("Cri", CriSelected);
+        }else anim.SetInteger("Cri", 0);
+
+    }
 }

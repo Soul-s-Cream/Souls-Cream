@@ -147,6 +147,14 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Cri"",
+                    ""type"": ""Button"",
+                    ""id"": ""81257850-969f-4c59-a415-bf9010c53253"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -169,6 +177,17 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""CriDown"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""489dee20-827c-407a-9ee1-aa43fb51b41a"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Cri"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -257,6 +276,7 @@ public class @Controls : IInputActionCollection, IDisposable
         m_Cri = asset.FindActionMap("Cri", throwIfNotFound: true);
         m_Cri_CriUp = m_Cri.FindAction("CriUp", throwIfNotFound: true);
         m_Cri_CriDown = m_Cri.FindAction("CriDown", throwIfNotFound: true);
+        m_Cri_Cri = m_Cri.FindAction("Cri", throwIfNotFound: true);
         // DEBUG
         m_DEBUG = asset.FindActionMap("DEBUG", throwIfNotFound: true);
         m_DEBUG_JumpJ2 = m_DEBUG.FindAction("JumpJ2", throwIfNotFound: true);
@@ -394,12 +414,14 @@ public class @Controls : IInputActionCollection, IDisposable
     private ICriActions m_CriActionsCallbackInterface;
     private readonly InputAction m_Cri_CriUp;
     private readonly InputAction m_Cri_CriDown;
+    private readonly InputAction m_Cri_Cri;
     public struct CriActions
     {
         private @Controls m_Wrapper;
         public CriActions(@Controls wrapper) { m_Wrapper = wrapper; }
         public InputAction @CriUp => m_Wrapper.m_Cri_CriUp;
         public InputAction @CriDown => m_Wrapper.m_Cri_CriDown;
+        public InputAction @Cri => m_Wrapper.m_Cri_Cri;
         public InputActionMap Get() { return m_Wrapper.m_Cri; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -415,6 +437,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @CriDown.started -= m_Wrapper.m_CriActionsCallbackInterface.OnCriDown;
                 @CriDown.performed -= m_Wrapper.m_CriActionsCallbackInterface.OnCriDown;
                 @CriDown.canceled -= m_Wrapper.m_CriActionsCallbackInterface.OnCriDown;
+                @Cri.started -= m_Wrapper.m_CriActionsCallbackInterface.OnCri;
+                @Cri.performed -= m_Wrapper.m_CriActionsCallbackInterface.OnCri;
+                @Cri.canceled -= m_Wrapper.m_CriActionsCallbackInterface.OnCri;
             }
             m_Wrapper.m_CriActionsCallbackInterface = instance;
             if (instance != null)
@@ -425,6 +450,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @CriDown.started += instance.OnCriDown;
                 @CriDown.performed += instance.OnCriDown;
                 @CriDown.canceled += instance.OnCriDown;
+                @Cri.started += instance.OnCri;
+                @Cri.performed += instance.OnCri;
+                @Cri.canceled += instance.OnCri;
             }
         }
     }
@@ -484,6 +512,7 @@ public class @Controls : IInputActionCollection, IDisposable
     {
         void OnCriUp(InputAction.CallbackContext context);
         void OnCriDown(InputAction.CallbackContext context);
+        void OnCri(InputAction.CallbackContext context);
     }
     public interface IDEBUGActions
     {
