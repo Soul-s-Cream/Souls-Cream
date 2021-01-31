@@ -1,6 +1,970 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{1DDF2895-7EAD-4C1C-B399-D67DF281113E}" SchemaVersion="97">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{1DDF2895-7EAD-4C1C-B399-D67DF281113E}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{1DDF2895-7EAD-4C1C-B399-D67DF281113E}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Moz" ID="{5D55B983-1ADE-4A1F-8615-E735C55E8B8D}" ShortID="248642542">
+					<ChildrenList>
+						<RandomSequenceContainer Name="MozJump" ID="{37275AB2-B646-408C-89ED-B41FA263E2CF}" ShortID="893802415">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{5471A23F-43C1-4B79-923A-ADF722A18E93}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-300"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="MozJump" ID="{B7087730-806F-4BF8-AF14-19D1DD5E3D0F}" ShortID="981776590">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PlayerMozJump" ID="{91164C85-5B45-4E52-86D8-7F8204ECFAD7}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0393484626647145"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0393484626647145"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.125915080527086"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.503660322108345"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PlayerMozJump.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="526605256"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PlayerMozJump" ID="{91164C85-5B45-4E52-86D8-7F8204ECFAD7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="MozJump_01" ID="{0E2729CF-F483-4F18-AA50-D9C434E41ED8}" ShortID="366927789">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PlayerMozJump" ID="{9E49D34B-FE84-4EEC-B60A-7B135174E6D6}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0393484626647145"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0393484626647145"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.763360175695461"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.03092972181552"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PlayerMozJump.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="732767810"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PlayerMozJump" ID="{9E49D34B-FE84-4EEC-B60A-7B135174E6D6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="MozJump_02" ID="{E4F2148C-B23F-42F8-9C47-4AC8610E3598}" ShortID="647269093">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PlayerMozJump" ID="{C65B6DD3-25A8-49F7-B240-2BE88393BF06}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0393484626647145"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0393484626647145"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.72346266471449"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.00677159590044"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PlayerMozJump.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="241080445"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PlayerMozJump" ID="{C65B6DD3-25A8-49F7-B240-2BE88393BF06}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="MozFootsteps" ID="{1AECBF93-EA8F-4E09-ABFA-55406A301498}" ShortID="411663125">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{C9CD5C75-E205-4129-8669-BE12CC783AD3}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="MozFootsteps" ID="{7B47BDE7-1CB8-4E58-ADFA-77C16FD863E9}" ShortID="685143579">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PlayerMozFootsteps" ID="{C8B1C128-95E6-4E36-8733-C53D2D2CB611}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0199304538799414"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0174391471449488"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0797218155197657"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.229200219619327"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PlayerMozFootsteps.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="849442749"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PlayerMozFootsteps" ID="{C8B1C128-95E6-4E36-8733-C53D2D2CB611}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="MozFootsteps_01" ID="{25B3EFB8-53B0-4EEC-9949-FAEEA02FF8BC}" ShortID="459112702">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PlayerMozFootsteps" ID="{D675DE40-C2AB-4E2A-9038-6C03616F854B}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0199304538799414"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0174391471449488"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.336326409224011"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.438469985358711"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PlayerMozFootsteps.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="894112917"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PlayerMozFootsteps" ID="{D675DE40-C2AB-4E2A-9038-6C03616F854B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="MozFootsteps_02" ID="{C5993414-3E2F-4D28-B85B-B62654F48575}" ShortID="522096526">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PlayerMozFootsteps" ID="{DD1AEC44-E1A0-47F6-BFA5-41A73B65A01A}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0199304538799414"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0174391471449488"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.580474469253294"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.73493548682284"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PlayerMozFootsteps.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="626046583"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PlayerMozFootsteps" ID="{DD1AEC44-E1A0-47F6-BFA5-41A73B65A01A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="MozFootsteps_03" ID="{FA0196E3-5F3C-4F34-A8BC-82457A4181AD}" ShortID="821461301">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PlayerMozFootsteps" ID="{4B55CB6A-65E1-428A-808C-3C9CE025EC09}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0199304538799414"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0174391471449488"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.829605142752562"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.964135706442166"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PlayerMozFootsteps.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="31055670"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PlayerMozFootsteps" ID="{4B55CB6A-65E1-428A-808C-3C9CE025EC09}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="MozFootsteps_04" ID="{9C6C0F99-71B0-4672-9B7A-F19457A3C424}" ShortID="683980044">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PlayerMozFootsteps" ID="{ADEF7790-1EFD-413D-BA1B-56B5489FDC68}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0199304538799414"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0174391471449488"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.09866627013177"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.25312728770132"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PlayerMozFootsteps.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="534699211"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PlayerMozFootsteps" ID="{ADEF7790-1EFD-413D-BA1B-56B5489FDC68}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="MozFootsteps_05" ID="{04964468-69F3-44CF-BA67-2979EE6FCA60}" ShortID="165646095">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PlayerMozFootsteps" ID="{6BD64237-2319-4D6F-B87F-5A0CAA5844F6}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0199304538799414"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0174391471449488"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.33783171669107"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.52467972181552"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PlayerMozFootsteps.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="691460036"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PlayerMozFootsteps" ID="{6BD64237-2319-4D6F-B87F-5A0CAA5844F6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="MozAterissage" ID="{61089B56-C1B2-475A-9221-22CEE82940A2}" ShortID="348720057">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{9D42FA2C-082B-4BF7-92D9-42EBC63F9551}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-300"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="MozAterissage" ID="{911B740F-27C1-4110-92C7-F2DD5EA84A3C}" ShortID="1002015741">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PlayerMozJump" ID="{FB638CD3-CBC9-4176-970E-9FEE3EEA5349}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0393484626647145"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0393484626647145"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="2.68356515373353"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.89604685212299"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PlayerMozJump.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1043171294"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PlayerMozJump" ID="{FB638CD3-CBC9-4176-970E-9FEE3EEA5349}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="MozAterissage_01" ID="{5E3C400E-FDDE-4937-806D-12938E7EB554}" ShortID="837551135">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PlayerMozJump" ID="{B4B349C3-FF24-4EA7-9CA3-C7D48C981B04}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0393484626647145"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0393484626647145"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="3.50988286969253"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.75384333821376"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PlayerMozJump.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="428969201"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PlayerMozJump" ID="{B4B349C3-FF24-4EA7-9CA3-C7D48C981B04}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="MozAterissage_02" ID="{83EF43AC-16DB-4BD1-9F53-EA4AD7393923}" ShortID="272944502">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PlayerMozJump" ID="{CC3846CE-F50F-4F75-B8E0-0C0C7A5DE23E}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0393484626647145"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0393484626647145"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.46211566617862"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.65098828696925"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PlayerMozJump.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="681591859"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PlayerMozJump" ID="{CC3846CE-F50F-4F75-B8E0-0C0C7A5DE23E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Oz" ID="{864B6AEA-A977-4CC3-93E5-1DAB3FBD64D5}" ShortID="265540729">
+					<ChildrenList>
+						<RandomSequenceContainer Name="OzFootsteps" ID="{8958D319-5C35-4DEF-999B-E0F775B89AC4}" ShortID="984303307">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{8A01F0BA-EDA6-41E4-B95B-21B92FC3C9F7}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="400"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="OzFootsteps1" ID="{B9452A0D-74C8-4A05-90F4-34B8D06A2FF7}" ShortID="730208862">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PlayerOzFootsteps" ID="{13A95289-6935-4A3F-92E7-4FA9550FCC4D}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00594192288921426"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.00445644216691068"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.133693265007321"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.17083028306491"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PlayerOzFootsteps.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="340180847"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PlayerOzFootsteps" ID="{13A95289-6935-4A3F-92E7-4FA9550FCC4D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="OzFootsteps2" ID="{511CE043-3483-4683-8566-45FA5246E389}" ShortID="995774592">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PlayerOzFootsteps" ID="{8B2719B1-F9C1-4D2E-B7A6-1EF44DAC1AD2}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00594192288921426"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.00445644216691068"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.384739507076623"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.414449121522694"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PlayerOzFootsteps.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1017059933"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PlayerOzFootsteps" ID="{8B2719B1-F9C1-4D2E-B7A6-1EF44DAC1AD2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="OzFootsteps3" ID="{9FB752BF-74F8-4C56-8B9E-A7C80BC9B515}" ShortID="602915849">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PlayerOzFootsteps" ID="{56695560-964D-4150-A550-1148CEEA0274}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00594192288921426"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.00445644216691068"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.635785749145925"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.6669808443143"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PlayerOzFootsteps.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="550278455"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PlayerOzFootsteps" ID="{56695560-964D-4150-A550-1148CEEA0274}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="OzFootsteps4" ID="{E170F914-BEC9-4473-904F-D0EB1B8496ED}" ShortID="210821171">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PlayerOzFootsteps" ID="{C3203540-BB82-4E12-9D1D-E071A0D6270D}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00594192288921426"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.00445644216691068"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.885346510492924"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.919512567105906"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PlayerOzFootsteps.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="383526885"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PlayerOzFootsteps" ID="{C3203540-BB82-4E12-9D1D-E071A0D6270D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<Sound Name="OzAterissage" ID="{65082967-85C4-40F7-A3CD-0A970CA528EC}" ShortID="494297352">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{FBCA6E4E-5087-4E4B-9DB5-B27F8A5AE12F}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="400"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="PlayerOzJump" ID="{6C09082E-8824-4AC7-A9D2-BD56EA00D33A}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0209141654465593"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0174284712054661"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2.04261682528063"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.15415904099561"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>PlayerOzJump.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="136186369"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="PlayerOzJump" ID="{6C09082E-8824-4AC7-A9D2-BD56EA00D33A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="OzJump" ID="{4EF44EF9-3C7A-45BD-889C-5E673E78F91C}" ShortID="281741881">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{27561BD7-2D09-4016-9429-118CBA42D2C1}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="400"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="PlayerOzJump" ID="{41CAA624-CC51-4230-8E0B-40106F656216}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0209141654465593"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0174284712054661"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.156856240849194"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>PlayerOzJump.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="843786119"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="PlayerOzJump" ID="{41CAA624-CC51-4230-8E0B-40106F656216}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="OzDoubleJump" ID="{685F2CCB-37D6-4E12-9DC7-6F8CF608FE7E}" ShortID="516902899">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{E31123C4-3421-4A8D-8D87-C5B6D8A88E0A}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="400"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="PlayerOzJump" ID="{18A98F61-85F9-495D-8E4C-DCBDD3F5661F}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0209141654465593"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0174284712054661"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.937651750854076"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.10147938018546"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>PlayerOzJump.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1070454862"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="PlayerOzJump" ID="{18A98F61-85F9-495D-8E4C-DCBDD3F5661F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Objects" ID="{3EBE6FD7-D5C3-4A16-970F-3317E5412D92}" ShortID="609797213">
+					<ChildrenList>
+						<RandomSequenceContainer Name="Interruptor" ID="{E435D070-0FB8-40CC-AF99-4B6AC418A301}" ShortID="541039556">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{C8405AED-2C6A-4C02-89F2-EEC9C5871EAA}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Interruptor1" ID="{2646F8CE-1EA6-4027-A210-F8F877B96CBA}" ShortID="683404597">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Interruptor" ID="{A50ECDB8-2B61-4EB2-A9B7-4F1EBDE0A62B}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0212298682284041"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0265373352855051"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.191068814055637"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.403367496339678"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Interruptor.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="167913592"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Interruptor" ID="{A50ECDB8-2B61-4EB2-A9B7-4F1EBDE0A62B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Interruptor2" ID="{7A7BB1BB-48E3-4633-AF66-40F7E74CE7DA}" ShortID="963455682">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Interruptor" ID="{5843EEE6-911D-49B8-83DF-219514DD8031}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0212298682284041"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0265373352855051"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.22602489019034"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.42770863836018"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Interruptor.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="190532320"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Interruptor" ID="{5843EEE6-911D-49B8-83DF-219514DD8031}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Interruptor3" ID="{6F09F221-08E2-42F3-B4D2-CECFBDA4DC53}" ShortID="57299651">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Interruptor" ID="{E8C446EB-978C-4FD9-99DF-82143EF24851}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0212298682284041"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0265373352855051"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="3.18448023426062"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.41270131771596"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Interruptor.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="585976924"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Interruptor" ID="{E8C446EB-978C-4FD9-99DF-82143EF24851}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="CrateFriction" ID="{3A68A92E-6438-4C93-88A2-8BDCACC9DA86}" ShortID="591577984">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{473F2650-BEAB-4074-BCD0-40641B447E25}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2.5"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="CrateFriction1" ID="{24DF5E6A-5FF3-4A9B-8D37-73214DA418FD}" ShortID="1002207951">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{D857EFF8-66FB-46C2-BFDC-233099E276F2}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="300"/>
+															<Property Name="Min" Type="Real64" Value="-200"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CrateFriction" ID="{9DA53C4B-BFCB-4B09-835B-02BDE4377797}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0848325402635432"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0424162701317714"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0848325402635431"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.29818204001951"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CrateFriction.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="465776081"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CrateFriction" ID="{9DA53C4B-BFCB-4B09-835B-02BDE4377797}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CrateFriction2" ID="{F5258603-99D3-4D79-8C9A-3C90835857BE}" ShortID="951154458">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{59FE43A8-125A-4D79-9FD1-CEADC1B0559D}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="300"/>
+															<Property Name="Min" Type="Real64" Value="-200"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CrateFriction" ID="{1AEFD063-AA18-480C-A54B-4D1CC29A56BE}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.311052647632991"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.52440214738897"/>
+												<Property Name="TrimEnd" Type="Real64" Value="9.57193829306979"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CrateFriction.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="694567900"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CrateFriction" ID="{1AEFD063-AA18-480C-A54B-4D1CC29A56BE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
