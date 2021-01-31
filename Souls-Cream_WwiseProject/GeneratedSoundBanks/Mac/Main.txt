@@ -6,6 +6,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1035518595	OzLanding			\Default Work Unit\Oz\OzLanding	
 	1595060770	OzJump			\Default Work Unit\Oz\OzJump	
 	1730564753	Musics			\Default Work Unit\Musics	
+	1842854950	CrateFriction2			\Default Work Unit\CrateFriction2	
 	1891947077	OzDoubleJump			\Default Work Unit\Oz\OzDoubleJump	
 	2411999260	CrateFriction			\Default Work Unit\Objects\CrateFriction	
 	2515146559	OzFootsteps			\Default Work Unit\Oz\OzFootsteps	

@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID CRATEFRICTION = 2411999260U;
+        static const AkUniqueID CRATEFRICTION2 = 1842854950U;
         static const AkUniqueID INTERRUPTOR = 132381101U;
         static const AkUniqueID MOZFOOTSTEPS = 773707930U;
         static const AkUniqueID MOZJUMP = 313744885U;

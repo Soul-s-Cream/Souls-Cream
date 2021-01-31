@@ -32,7 +32,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="MozJump" ID="{B7087730-806F-4BF8-AF14-19D1DD5E3D0F}" ShortID="981776590">
+								<Sound Name="MozJump1" ID="{B7087730-806F-4BF8-AF14-19D1DD5E3D0F}" ShortID="981776590">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
@@ -61,7 +61,7 @@
 										<ActiveSource Name="PlayerMozJump" ID="{91164C85-5B45-4E52-86D8-7F8204ECFAD7}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="MozJump_01" ID="{0E2729CF-F483-4F18-AA50-D9C434E41ED8}" ShortID="366927789">
+								<Sound Name="MozJump2" ID="{0E2729CF-F483-4F18-AA50-D9C434E41ED8}" ShortID="366927789">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
@@ -90,7 +90,7 @@
 										<ActiveSource Name="PlayerMozJump" ID="{9E49D34B-FE84-4EEC-B60A-7B135174E6D6}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="MozJump_02" ID="{E4F2148C-B23F-42F8-9C47-4AC8610E3598}" ShortID="647269093">
+								<Sound Name="MozJump3" ID="{E4F2148C-B23F-42F8-9C47-4AC8610E3598}" ShortID="647269093">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
@@ -327,22 +327,22 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
-						<RandomSequenceContainer Name="MozAterissage" ID="{61089B56-C1B2-475A-9221-22CEE82940A2}" ShortID="348720057">
+						<RandomSequenceContainer Name="MozLanding" ID="{249E12A2-D8AC-403D-951F-D05F292D4874}" ShortID="1071754312">
 							<PropertyList>
-								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
-											<Modifier Name="" ID="{9D42FA2C-082B-4BF7-92D9-42EBC63F9551}">
+											<Modifier Name="" ID="{43304A83-413C-4C32-AEEA-1F79A863B4F8}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
 													<Property Name="Max" Type="Real64" Value="200"/>
-													<Property Name="Min" Type="Real64" Value="-300"/>
+													<Property Name="Min" Type="Real64" Value="-200"/>
 												</PropertyList>
 											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -353,7 +353,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="MozAterissage" ID="{911B740F-27C1-4110-92C7-F2DD5EA84A3C}" ShortID="1002015741">
+								<Sound Name="MozLanding1" ID="{6DAF138E-121F-4506-859A-47AABC3DB988}" ShortID="854774974">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
@@ -363,26 +363,26 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="PlayerMozJump" ID="{FB638CD3-CBC9-4176-970E-9FEE3EEA5349}">
+										<AudioFileSource Name="PlayerMozJump" ID="{0C015824-C468-4D4D-AD31-7A2F0B5693A2}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.0393484626647145"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.0393484626647145"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="2.68356515373353"/>
-												<Property Name="TrimEnd" Type="Real64" Value="2.89604685212299"/>
+												<Property Name="TrimBegin" Type="Real64" Value="2.69143484626647"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.89604685212298"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>PlayerMozJump.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="1043171294"/>
+												<MediaID ID="629518556"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="PlayerMozJump" ID="{FB638CD3-CBC9-4176-970E-9FEE3EEA5349}" Platform="Linked"/>
+										<ActiveSource Name="PlayerMozJump" ID="{0C015824-C468-4D4D-AD31-7A2F0B5693A2}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="MozAterissage_01" ID="{5E3C400E-FDDE-4937-806D-12938E7EB554}" ShortID="837551135">
+								<Sound Name="MozLanding2" ID="{5EB1A1FE-26E6-496F-8843-673C7CB1FC0E}" ShortID="277305092">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
@@ -392,26 +392,26 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="PlayerMozJump" ID="{B4B349C3-FF24-4EA7-9CA3-C7D48C981B04}">
+										<AudioFileSource Name="PlayerMozJump" ID="{7654D7CA-A3E4-45EA-8256-BDBD355F243A}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.0393484626647145"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.0393484626647145"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 												<Property Name="TrimBegin" Type="Real64" Value="3.50988286969253"/>
-												<Property Name="TrimEnd" Type="Real64" Value="3.75384333821376"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.7617130307467"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>PlayerMozJump.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="428969201"/>
+												<MediaID ID="269640153"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="PlayerMozJump" ID="{B4B349C3-FF24-4EA7-9CA3-C7D48C981B04}" Platform="Linked"/>
+										<ActiveSource Name="PlayerMozJump" ID="{7654D7CA-A3E4-45EA-8256-BDBD355F243A}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="MozAterissage_02" ID="{83EF43AC-16DB-4BD1-9F53-EA4AD7393923}" ShortID="272944502">
+								<Sound Name="MozLanding3" ID="{5877F854-E199-4051-881A-A9A905DC5055}" ShortID="980000256">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
@@ -421,23 +421,23 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="PlayerMozJump" ID="{CC3846CE-F50F-4F75-B8E0-0C0C7A5DE23E}">
+										<AudioFileSource Name="PlayerMozJump" ID="{651FBA14-9BBD-4C2C-A82E-23C90831B1ED}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.0393484626647145"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.0393484626647145"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="4.46211566617862"/>
-												<Property Name="TrimEnd" Type="Real64" Value="4.65098828696925"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.46998535871156"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.69033674963396"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>PlayerMozJump.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="681591859"/>
+												<MediaID ID="350871938"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="PlayerMozJump" ID="{CC3846CE-F50F-4F75-B8E0-0C0C7A5DE23E}" Platform="Linked"/>
+										<ActiveSource Name="PlayerMozJump" ID="{651FBA14-9BBD-4C2C-A82E-23C90831B1ED}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -594,7 +594,7 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
-						<Sound Name="OzAterissage" ID="{65082967-85C4-40F7-A3CD-0A970CA528EC}" ShortID="494297352">
+						<Sound Name="OzLanding" ID="{65082967-85C4-40F7-A3CD-0A970CA528EC}" ShortID="494297352">
 							<PropertyList>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
