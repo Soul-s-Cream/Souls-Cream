@@ -81,7 +81,7 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 }
             ]
-        }
+        },
         {
             ""name"": ""NetTest"",
             ""id"": ""404a201e-945c-4225-91e5-d7ae9e098737"",
@@ -225,11 +225,6 @@ public class @Controls : IInputActionCollection, IDisposable
         }
     }
     public DeplacementActions @Deplacement => new DeplacementActions(this);
-    public interface IDeplacementActions
-    {
-        void OnJump(InputAction.CallbackContext context);
-        void OnDeplacement(InputAction.CallbackContext context);
-    }
 
     // NetTest
     private readonly InputActionMap m_NetTest;
@@ -271,6 +266,11 @@ public class @Controls : IInputActionCollection, IDisposable
         }
     }
     public NetTestActions @NetTest => new NetTestActions(this);
+    public interface IDeplacementActions
+    {
+        void OnJump(InputAction.CallbackContext context);
+        void OnDeplacement(InputAction.CallbackContext context);
+    }
     public interface INetTestActions
     {
         void OnChangeScene(InputAction.CallbackContext context);

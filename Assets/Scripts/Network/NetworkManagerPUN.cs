@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class NetworkManagerPUN : Photon.PunBehaviour
 {
-    public List<GameObject> PrefabPlayers;
-    public Queue<Role> RoleToDeal;
-
     #region Private Fields
+    private static NetworkManagerPUN _instance;
     string gameVersion = "1";
+    #endregion
+
+    #region Public Fields
+    public static NetworkManagerPUN Instance
+    {
+        get { return _instance; }
+    }
     #endregion
 
     private void Awake()
     {
+        //Singleton check
+        if (_instance == null)
+            _instance = this;
+        else if (_instance != this)
+            Destroy(this.gameObject);
+        DontDestroyOnLoad(this.gameObject);
+
         PhotonNetwork.automaticallySyncScene = true;
     }
 
@@ -52,7 +64,8 @@ public class NetworkManagerPUN : Photon.PunBehaviour
 
     public override void OnJoinedRoom()
     {
-        Debug.Log("Photon : Joined a room.");
+        Debug.Log("Photon : Joined a room as Player " + PhotonNetwork.player.ID);
+        GameManager.Instance.InstantiatePlayer();
     }
 
     public override void OnPhotonPlayerConnected(PhotonPlayer newPlayer)
