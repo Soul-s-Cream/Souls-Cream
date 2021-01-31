@@ -82,16 +82,64 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Folder Name="Screams" ID="{9B7493EE-5C12-42BF-B72D-7E87DED24031}" ShortID="910086520">
+							<ChildrenList>
+								<Event Name="Acculation" ID="{359D5A8D-A0CA-4B5D-A2FD-12E71D93E2E3}">
+									<ChildrenList>
+										<Action Name="" ID="{5F985793-F948-433A-B32E-7465F28F76AE}" ShortID="709810913">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Acculation" ID="{39EB623D-0A9C-41C8-B08A-D987D4892CA5}" WorkUnitID="{1DDF2895-7EAD-4C1C-B399-D67DF281113E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Envie" ID="{A3A77A87-01FB-4004-82EB-63D35A006158}">
+									<ChildrenList>
+										<Action Name="" ID="{1AAA201A-E795-47B8-A943-CFECC6164E49}" ShortID="887429351">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Envie" ID="{7437B283-801A-4C4E-8530-1DFD4D2221CE}" WorkUnitID="{1DDF2895-7EAD-4C1C-B399-D67DF281113E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Tristesse" ID="{53A3B30E-938D-4A27-8467-E4892F3E0296}">
+									<ChildrenList>
+										<Action Name="" ID="{934C321E-1960-47F3-9D28-BA0EA6C7E683}" ShortID="146653199">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Tristesse" ID="{4D9EFEEE-7450-40A9-911B-4E4394AC3F12}" WorkUnitID="{1DDF2895-7EAD-4C1C-B399-D67DF281113E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Solitude" ID="{E0B44317-CCF3-4633-B46C-908721B0F0B2}">
+									<ChildrenList>
+										<Action Name="" ID="{DF634D85-53A1-456A-B1B1-2703DAAFE88E}" ShortID="443832846">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Solitude" ID="{E380AC2F-9F8A-4ADE-B5E4-901580726000}" WorkUnitID="{1DDF2895-7EAD-4C1C-B399-D67DF281113E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Oz" ID="{CB6A0956-CBCE-477C-85D5-A14D0571615A}" ShortID="1010496667">
 					<ChildrenList>
 						<Event Name="OzDoubleJump" ID="{934D77B6-2DE5-4D30-9A8A-F1E853CF5F47}">
 							<ChildrenList>
-								<Action Name="" ID="{1745B45A-EB8B-4B23-AEAE-9DB1EFC2A52D}" ShortID="515036371">
+								<Action Name="" ID="{41ADF008-B908-41E7-8392-41974AAA6C03}" ShortID="235301452">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="OzDoubleJump" ID="{685F2CCB-37D6-4E12-9DC7-6F8CF608FE7E}" WorkUnitID="{1DDF2895-7EAD-4C1C-B399-D67DF281113E}"/>
+											<ObjectRef Name="OzDoubleJump" ID="{8804C352-6C67-4DE2-89D1-1409CADEA4CB}" WorkUnitID="{1DDF2895-7EAD-4C1C-B399-D67DF281113E}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -130,6 +178,54 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Folder Name="Screams" ID="{7F7600EA-E3C2-4763-A651-D5A72F1C5943}" ShortID="914843052">
+							<ChildrenList>
+								<Event Name="Joie" ID="{A37FB397-B6D5-4A4B-8F33-EB0E45334E1F}">
+									<ChildrenList>
+										<Action Name="" ID="{07046D86-6740-4CF2-A15C-9E29BED543D2}" ShortID="74333329">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Joie" ID="{7613F4E9-0678-4AE8-8822-CE3A04866498}" WorkUnitID="{1DDF2895-7EAD-4C1C-B399-D67DF281113E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Compassion" ID="{2F1AB9DB-E034-4D26-9ABF-60F02D8187B3}">
+									<ChildrenList>
+										<Action Name="" ID="{FECCF465-8E4E-4B43-A9F1-5B9ACBA570AC}" ShortID="175700228">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Compassion" ID="{7DFF241F-1098-47B5-AC61-8EAA0FFF8E09}" WorkUnitID="{1DDF2895-7EAD-4C1C-B399-D67DF281113E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Fierte" ID="{BD222E93-2D79-4982-96DD-D56FB5D5B8B0}">
+									<ChildrenList>
+										<Action Name="" ID="{A38EE4C2-D998-4660-AAB3-4ADAB9BE7C11}" ShortID="853182492">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Fierte" ID="{C134A2D1-860E-4C8F-816B-BDE993E0CC11}" WorkUnitID="{1DDF2895-7EAD-4C1C-B399-D67DF281113E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Curiosite" ID="{13A56617-D801-48F9-82FB-BAEE28C59314}">
+									<ChildrenList>
+										<Action Name="" ID="{B7493BBC-B9F6-4C0C-A01E-E8719BD33FFB}" ShortID="652364157">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Curiosite" ID="{1508A043-CB4B-4293-873D-C31694E96FAB}" WorkUnitID="{1DDF2895-7EAD-4C1C-B399-D67DF281113E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Event Name="CrateFriction2" ID="{33C0E468-B258-4CEB-BD79-9F6035270C69}">

@@ -13,9 +13,15 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID ACCULATION = 2316268318U;
+        static const AkUniqueID AMBIENCESTHEME = 958723167U;
+        static const AkUniqueID COMPASSION = 4224289095U;
         static const AkUniqueID CRATEFRICTION = 2411999260U;
-        static const AkUniqueID CRATEFRICTION2 = 1842854950U;
+        static const AkUniqueID CURIOSITE = 396009128U;
+        static const AkUniqueID ENVIE = 1698034228U;
+        static const AkUniqueID FIERTE = 2054371306U;
         static const AkUniqueID INTERRUPTOR = 132381101U;
+        static const AkUniqueID JOIE = 3695193454U;
         static const AkUniqueID MOZFOOTSTEPS = 773707930U;
         static const AkUniqueID MOZJUMP = 313744885U;
         static const AkUniqueID MOZLANDING = 783075190U;
@@ -24,6 +30,8 @@ namespace AK
         static const AkUniqueID OZFOOTSTEPS = 2515146559U;
         static const AkUniqueID OZJUMP = 1595060770U;
         static const AkUniqueID OZLANDING = 1035518595U;
+        static const AkUniqueID SOLITUDE = 2952898430U;
+        static const AkUniqueID TRISTESSE = 3375131777U;
     } // namespace EVENTS
 
     namespace BANKS

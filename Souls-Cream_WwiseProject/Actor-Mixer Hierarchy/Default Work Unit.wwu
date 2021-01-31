@@ -681,21 +681,12 @@
 								<ActiveSource Name="PlayerOzJump" ID="{41CAA624-CC51-4230-8E0B-40106F656216}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="OzDoubleJump" ID="{685F2CCB-37D6-4E12-9DC7-6F8CF608FE7E}" ShortID="516902899">
+						<RandomSequenceContainer Name="OzDoubleJump" ID="{8804C352-6C67-4DE2-89D1-1409CADEA4CB}" ShortID="320713615">
 							<PropertyList>
-								<Property Name="Pitch" Type="int32">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{E31123C4-3421-4A8D-8D87-C5B6D8A88E0A}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="400"/>
-													<Property Name="Min" Type="Real64" Value="-100"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -706,25 +697,192 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="PlayerOzJump" ID="{18A98F61-85F9-495D-8E4C-DCBDD3F5661F}">
+								<Sound Name="OzDoubleJump" ID="{685F2CCB-37D6-4E12-9DC7-6F8CF608FE7E}" ShortID="516902899">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.0209141654465593"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.0174284712054661"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.937651750854076"/>
-										<Property Name="TrimEnd" Type="Real64" Value="1.10147938018546"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{E31123C4-3421-4A8D-8D87-C5B6D8A88E0A}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="400"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>PlayerOzJump.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="1070454862"/>
-									</MediaIDList>
-								</AudioFileSource>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PlayerOzJump" ID="{18A98F61-85F9-495D-8E4C-DCBDD3F5661F}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0209141654465593"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0174284712054661"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.937651750854076"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.10147938018546"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PlayerOzJump.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1070454862"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PlayerOzJump" ID="{18A98F61-85F9-495D-8E4C-DCBDD3F5661F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="ScreamDoubleJump" ID="{D7787087-CE1E-4B7F-9A36-AD090D77C287}" ShortID="581566204">
+									<PropertyList>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-16</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Joie" ID="{AA519B3E-FDDF-4199-948E-845EAEE86E5B}" ShortID="209375973">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Joie" ID="{B08B4F58-ACAD-4425-A134-156F969FB436}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0937042459736457"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0585651537335286"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.784773060029283"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.20644216691069"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Joie.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="225508645"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Joie" ID="{B08B4F58-ACAD-4425-A134-156F969FB436}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Joie_01" ID="{1B72E16B-D3C0-4328-BE8B-6C42A0825762}" ShortID="1004881447">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Joie" ID="{455DA48E-E0A8-430F-9511-3E69745596D5}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0937042459736457"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0585651537335286"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="2.99853587115666"/>
+														<Property Name="TrimEnd" Type="Real64" Value="3.37335285505125"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Joie.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="298470587"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Joie" ID="{455DA48E-E0A8-430F-9511-3E69745596D5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Joie_02" ID="{5C5AE73F-7409-44BB-9935-995C67F7FD0B}" ShortID="60942501">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Joie" ID="{2CEE01FD-3F36-4786-8214-6D9DA2EE8E98}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0937042459736457"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0585651537335286"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="5.09516837481699"/>
+														<Property Name="TrimEnd" Type="Real64" Value="5.49341142020498"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Joie.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="454457796"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Joie" ID="{2CEE01FD-3F36-4786-8214-6D9DA2EE8E98}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Joie_03" ID="{3DFC6D1B-61C1-4676-B769-75CCFB76D829}" ShortID="80436997">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Joie" ID="{62679E79-8BE3-4C29-A2D2-9EFB1B0B4733}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0937042459736457"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0585651537335286"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="7.10980966325037"/>
+														<Property Name="TrimEnd" Type="Real64" Value="7.54319180087848"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Joie.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="579854240"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Joie" ID="{62679E79-8BE3-4C29-A2D2-9EFB1B0B4733}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
 							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="PlayerOzJump" ID="{18A98F61-85F9-495D-8E4C-DCBDD3F5661F}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
+							<Playlist>
+								<ItemRef Name="OzDoubleJump" ID="{685F2CCB-37D6-4E12-9DC7-6F8CF608FE7E}"/>
+								<ItemRef Name="ScreamDoubleJump" ID="{D7787087-CE1E-4B7F-9A36-AD090D77C287}"/>
+							</Playlist>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Objects" ID="{3EBE6FD7-D5C3-4A16-970F-3317E5412D92}" ShortID="609797213">
@@ -962,6 +1120,1018 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="ScreamOzMoz" ID="{C95A55EB-86C1-4561-AC80-248EE4BEFBA5}" ShortID="524744423">
+					<ChildrenList>
+						<Folder Name="ScreamOz" ID="{87A4099C-F98F-4D90-B98B-C60C6A19677E}" ShortID="37920413">
+							<ChildrenList>
+								<RandomSequenceContainer Name="Compassion" ID="{7DFF241F-1098-47B5-AC61-8EAA0FFF8E09}" ShortID="852651225">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Compassion" ID="{AD9254E4-BEBD-4BF7-B953-5598188525E3}" ShortID="763818107">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Compassion" ID="{69D1DEDB-DBA1-4B28-B812-1F41CE79D6AC}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.119692532942899"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.239385065885798"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.239385065885798"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.2542093704246"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Compassion.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="396106840"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Compassion" ID="{69D1DEDB-DBA1-4B28-B812-1F41CE79D6AC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Compassion_01" ID="{CDE53EEC-0BE5-404D-AD68-D765A6122FC1}" ShortID="239477838">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Compassion" ID="{534AC8F9-862C-4F45-9B62-B435523F69A3}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.119692532942899"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.239385065885798"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="4.1493411420205"/>
+														<Property Name="TrimEnd" Type="Real64" Value="6.34370424597365"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Compassion.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="349596643"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Compassion" ID="{534AC8F9-862C-4F45-9B62-B435523F69A3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Compassion_02" ID="{12522A81-780A-453F-A2DA-D81650BD395E}" ShortID="422381481">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Compassion" ID="{A19A3207-464C-4C6E-B6CA-0203D1BBC571}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.119692532942899"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.239385065885798"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="7.38103953147877"/>
+														<Property Name="TrimEnd" Type="Real64" Value="9.1165812591508"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Compassion.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="299611119"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Compassion" ID="{A19A3207-464C-4C6E-B6CA-0203D1BBC571}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Compassion_03" ID="{F0BF35BF-3E2B-46F9-B010-57E15A6CA0F1}" ShortID="922704291">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Compassion" ID="{1CC607B2-0DCC-4771-803C-0362534DBD37}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.119692532942899"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.239385065885798"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="10.5129941434846"/>
+														<Property Name="TrimEnd" Type="Real64" Value="12.6076134699854"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Compassion.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="869900004"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Compassion" ID="{1CC607B2-0DCC-4771-803C-0362534DBD37}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Curiosite" ID="{1508A043-CB4B-4293-873D-C31694E96FAB}" ShortID="262903382">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Curiosité" ID="{E9C1B0D0-B11E-479C-AE7D-C70E190C570F}" ShortID="613437627">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Curiosité" ID="{333A64A6-4B79-4A0C-A787-2C204C2E64E0}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0351390922401171"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0966325036603221"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0527086383601757"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.61493411420205"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Curiosité.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="821152830"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Curiosité" ID="{333A64A6-4B79-4A0C-A787-2C204C2E64E0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Curiosité_01" ID="{E72DD618-A883-42EF-B9FF-AD02F1BAD17B}" ShortID="1073035577">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Curiosité" ID="{6274974E-6DDE-417A-8F65-48E65E6D3475}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0351390922401171"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0966325036603221"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.83601756954612"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.15226939970717"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Curiosité.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="867340386"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Curiosité" ID="{6274974E-6DDE-417A-8F65-48E65E6D3475}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Curiosité_02" ID="{7969E8EA-AE86-489E-BBC9-EFA57DCD2677}" ShortID="956592376">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Curiosité" ID="{2D8F8EED-B602-480C-82C9-E3824F70722C}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0351390922401171"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0966325036603221"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="4.46266471449488"/>
+														<Property Name="TrimEnd" Type="Real64" Value="4.96339677891654"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Curiosité.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="210463932"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Curiosité" ID="{2D8F8EED-B602-480C-82C9-E3824F70722C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Joie" ID="{7613F4E9-0678-4AE8-8822-CE3A04866498}" ShortID="866591704">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Joie" ID="{3CF5288B-B4E7-4ACA-933D-039A67E33D97}" ShortID="980863599">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Joie" ID="{90BA2E9A-EDA2-4995-B721-96F1FCD7B57B}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0937042459736457"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0585651537335286"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.491947291361642"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Joie.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="482076826"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Joie" ID="{90BA2E9A-EDA2-4995-B721-96F1FCD7B57B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Joie_01" ID="{0E2D3DBB-357D-4E8F-B6D3-B036C73C335D}" ShortID="122764373">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Joie" ID="{237B4338-C865-4E2D-A611-754DACF060AB}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0937042459736457"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0585651537335286"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="2.13177159590044"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.75256222547585"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Joie.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="240533999"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Joie" ID="{237B4338-C865-4E2D-A611-754DACF060AB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Joie_02" ID="{2B2195A0-6B6B-4F8A-87BD-D80F81B997BB}" ShortID="606239386">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Joie" ID="{CB736ED9-92AD-4185-B1F4-561F0DA4DA1E}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0937042459736457"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0585651537335286"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="4.24011713030747"/>
+														<Property Name="TrimEnd" Type="Real64" Value="4.76720351390923"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Joie.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="284632716"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Joie" ID="{CB736ED9-92AD-4185-B1F4-561F0DA4DA1E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Joie_03" ID="{4584A953-210C-4457-AA3D-8A1CD3F2D3DB}" ShortID="311540491">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Joie" ID="{11F8D70F-B140-4E19-82AC-AE5BFB65ECBA}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0937042459736457"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0585651537335286"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="6.10248901903367"/>
+														<Property Name="TrimEnd" Type="Real64" Value="6.81698389458272"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Joie.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="488237281"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Joie" ID="{11F8D70F-B140-4E19-82AC-AE5BFB65ECBA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Fierte" ID="{C134A2D1-860E-4C8F-816B-BDE993E0CC11}" ShortID="871442665">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Fierte" ID="{7C5EB2F0-B606-425A-B89D-EAA330E33C31}" ShortID="124193554">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Fierté2" ID="{344D1162-EF85-45FA-AAC9-0DEE3E01EC00}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0988286969253294"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0889458272327964"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.256954612005857"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.32430453879941"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Fierté2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="150424399"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Fierté2" ID="{344D1162-EF85-45FA-AAC9-0DEE3E01EC00}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Fierte_01" ID="{30C69E04-35C7-4E94-AD16-EE8E4CF44CFD}" ShortID="896929589">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Fierté2" ID="{F6C1AA5B-767A-4A9E-B13E-6609583B1308}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0988286969253294"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0889458272327964"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="2.38177159590044"/>
+														<Property Name="TrimEnd" Type="Real64" Value="3.26134699853587"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Fierté2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="713776206"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Fierté2" ID="{F6C1AA5B-767A-4A9E-B13E-6609583B1308}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Fierte_02" ID="{35DB2BD6-812D-4312-8828-2792238EE04A}" ShortID="397336514">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Fierté2" ID="{114E3061-7E30-4AE3-BFED-804B1254A770}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0988286969253294"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.217423133235725"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="4.2298682284041"/>
+														<Property Name="TrimEnd" Type="Real64" Value="5.55417276720351"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Fierté2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="53780424"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Fierté2" ID="{114E3061-7E30-4AE3-BFED-804B1254A770}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="ScreamMoz" ID="{A99B4923-F32F-45B7-9606-D30125B787A6}" ShortID="580092532">
+							<ChildrenList>
+								<RandomSequenceContainer Name="Acculation" ID="{39EB623D-0A9C-41C8-B08A-D987D4892CA5}" ShortID="857976492">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Acculation" ID="{60BFAEFA-5E32-42CA-8B93-3811FB1B1164}" ShortID="892698316">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Acculation" ID="{3F3651A0-50AB-416B-91DC-0755B0031252}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0629575402635432"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.18887262079063"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.141654465592972"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.35358711566618"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Acculation.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="538573252"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Acculation" ID="{3F3651A0-50AB-416B-91DC-0755B0031252}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Acculation_01" ID="{0B18C479-C02A-4543-9348-160155238AA7}" ShortID="528028460">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Acculation" ID="{657E3066-0035-4897-8262-97F12FE9AFC7}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0629575402635432"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.18887262079063"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="2.14055636896047"/>
+														<Property Name="TrimEnd" Type="Real64" Value="3.50988286969253"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Acculation.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="285008469"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Acculation" ID="{657E3066-0035-4897-8262-97F12FE9AFC7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Acculation_02" ID="{DBE19154-8EE1-487E-AF40-F8C6DA2DFF06}" ShortID="480933569">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Acculation" ID="{35330185-A40A-4A6B-BED0-67125FCE2067}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0629575402635432"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.18887262079063"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="5.3199121522694"/>
+														<Property Name="TrimEnd" Type="Real64" Value="6.73645680819912"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Acculation.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="60450093"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Acculation" ID="{35330185-A40A-4A6B-BED0-67125FCE2067}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Acculation_03" ID="{685784B7-B271-4F4D-BB2D-8EA1FBC67173}" ShortID="60343928">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Acculation" ID="{642F44F3-C9D9-482C-A69D-313C622E56E7}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0629575402635432"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.18887262079063"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="8.56222547584187"/>
+														<Property Name="TrimEnd" Type="Real64" Value="10.1833821376281"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Acculation.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="538901042"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Acculation" ID="{642F44F3-C9D9-482C-A69D-313C622E56E7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Envie" ID="{7437B283-801A-4C4E-8530-1DFD4D2221CE}" ShortID="307086794">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Envie" ID="{97915148-F6BE-461D-959A-B1CC38F7394A}" ShortID="692746004">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Envie" ID="{9CEF4033-0869-497C-981A-2632F371EB5F}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0543557833089311"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.181185944363104"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.199304538799414"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.75750366032211"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Envie.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="30785870"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Envie" ID="{9CEF4033-0869-497C-981A-2632F371EB5F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Envie_01" ID="{3962F9ED-7943-4D3E-B345-91A7B9D2737C}" ShortID="1048602214">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Envie" ID="{1A2EB44C-F9AE-42A3-AB58-1AB5A61844A0}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0543557833089311"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.181185944363104"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="3.11639824304539"/>
+														<Property Name="TrimEnd" Type="Real64" Value="4.62024158125915"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Envie.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="333600656"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Envie" ID="{1A2EB44C-F9AE-42A3-AB58-1AB5A61844A0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Envie_02" ID="{EEAF9F56-F29D-4B03-9B73-58C11F5B4C9C}" ShortID="11354260">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Envie" ID="{6DA5F14F-1DDB-472D-B639-50FF33048FCE}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0543557833089311"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.181185944363104"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="6.57704978038067"/>
+														<Property Name="TrimEnd" Type="Real64" Value="8.08089311859443"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Envie.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="941325618"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Envie" ID="{6DA5F14F-1DDB-472D-B639-50FF33048FCE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Envie_03" ID="{7BE841FF-5C71-403B-9E1F-16602DDC4645}" ShortID="302032805">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Envie" ID="{900315F2-B29B-4B3F-9A8E-2236FBADBB03}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0543557833089311"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.181185944363104"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="10.2007686676428"/>
+														<Property Name="TrimEnd" Type="Real64" Value="11.9582723279649"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Envie.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="373510585"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Envie" ID="{900315F2-B29B-4B3F-9A8E-2236FBADBB03}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Solitude" ID="{E380AC2F-9F8A-4ADE-B5E4-901580726000}" ShortID="595474729">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Solitude" ID="{7F3D7B84-447F-4B7F-AFF5-94DCB2A481AE}" ShortID="536399361">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Solitude" ID="{C20349ED-9D01-404A-AC67-0C719A1C20D0}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0658857979502196"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0219619326500728"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.241581259150805"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.08711566617862"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Solitude.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="57836437"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Solitude" ID="{C20349ED-9D01-404A-AC67-0C719A1C20D0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Solitude_01" ID="{03AFC969-91EC-4833-9E74-6ED913E85841}" ShortID="200646459">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Solitude" ID="{AF7DE5B0-38DF-4D52-9668-3312F5182AAB}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0658857979502196"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0219619326500728"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="2.80014641288433"/>
+														<Property Name="TrimEnd" Type="Real64" Value="3.8103953147877"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Solitude.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="651849547"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Solitude" ID="{AF7DE5B0-38DF-4D52-9668-3312F5182AAB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Solitude_02" ID="{1C3B68FF-1853-4E8D-81E5-C41ABDCAF7E6}" ShortID="312241810">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Solitude" ID="{596516B2-338E-48AF-BF50-80159BC8EA62}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0658857979502196"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0658857979502185"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="5.83089311859444"/>
+														<Property Name="TrimEnd" Type="Real64" Value="6.93997071742313"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Solitude.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="206612315"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Solitude" ID="{596516B2-338E-48AF-BF50-80159BC8EA62}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Tristesse" ID="{4D9EFEEE-7450-40A9-911B-4E4394AC3F12}" ShortID="853336097">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Tristesse" ID="{97FC7DDD-7992-446D-893F-B07738CB81CD}" ShortID="717085681">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Tristesse" ID="{3E1D1E5F-6B9E-4511-A53E-6C6AA17CF005}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0832723279648608"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.183199121522694"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.133235724743777"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.66544655929722"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Tristesse.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="305168362"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tristesse" ID="{3E1D1E5F-6B9E-4511-A53E-6C6AA17CF005}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Tristesse_01" ID="{BBE6BE67-3E6B-4A17-A857-E4DFF953188B}" ShortID="36655511">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Tristesse" ID="{D12966DE-58EC-4ED7-9552-DDD2A18482A4}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0832723279648608"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.183199121522694"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="2.49816983894583"/>
+														<Property Name="TrimEnd" Type="Real64" Value="4.04703513909224"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Tristesse.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="461476743"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tristesse" ID="{D12966DE-58EC-4ED7-9552-DDD2A18482A4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Tristesse_02" ID="{4C240C36-7DF8-45FC-8724-2D5B7CC67015}" ShortID="1043546571">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Tristesse" ID="{A296AB6A-8E0B-4BBA-9604-C569DA9AB65D}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0832723279648608"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.183199121522694"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="5.66251830161054"/>
+														<Property Name="TrimEnd" Type="Real64" Value="7.19472913616398"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Tristesse.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="858844633"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tristesse" ID="{A296AB6A-8E0B-4BBA-9604-C569DA9AB65D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Tristesse_03" ID="{A00BCD35-EBAC-43C0-B1FC-CF36483708B6}" ShortID="671750842">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Tristesse" ID="{6AD8B959-3430-4F4C-A11C-AF28BA666D2E}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0832723279648608"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.183199121522694"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="9.52635431918008"/>
+														<Property Name="TrimEnd" Type="Real64" Value="10.9586383601757"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Tristesse.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="987408608"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tristesse" ID="{6AD8B959-3430-4F4C-A11C-AF28BA666D2E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
