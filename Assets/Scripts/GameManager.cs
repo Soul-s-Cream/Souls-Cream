@@ -106,4 +106,9 @@ public class GameManager : Photon.PunBehaviour
 
         InstantiatePlayer();
     }
+
+    public void EndLevel()
+    {
+        Debug.Log("Niveau terminé");
+    }
 }

@@ -14,11 +14,19 @@ public class GameEvents : MonoBehaviour
         }
     }
     #region Définition des événements
-    public delegate void CustomEventTypeExample(object obj, string aString);
+    public delegate void CustomEventTypeExample(GameObject obj, string aString);
     public event CustomEventTypeExample customEventExample;
 
+    public delegate void GameEvent(GameObject gameObject);
+    public event GameEvent PlayerReachEnd;
+
     public event Action BasicEventExemple;
+    public delegate void SwitchEvent(List<GameObject> gameObjects);
+    public event SwitchEvent switchOn;
+    public event SwitchEvent switchOff;
+
     #endregion
+
 
     private void Awake()
     {
@@ -26,5 +34,29 @@ public class GameEvents : MonoBehaviour
             _instance = this;
         else if (_instance != this)
             Destroy(this);
+
+    }
+    
+    public void LaunchPlayerReachEnd(GameObject gameObject)
+    {
+        PlayerReachEnd(gameObject);
+    }
+
+    public void DoorwayTriggerEnter()
+    {
+        Debug.Log("DoorWay");
+        if (BasicEventExemple != null)
+        {
+            BasicEventExemple();
+        }
+    }
+    public void SwitchTriggerOn(List<GameObject> gameObjects )
+    {
+        if (switchOn != null)
+        {
+            switchOn(gameObjects);
+        }
     }
 }
+
+
