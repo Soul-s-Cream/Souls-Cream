@@ -11,4 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleNetworkScene2.unity
     guid: 57339c7fcaf866e418ceb42584efa879
+    path: Assets/Scenes/SplitScreen.unity
+    guid: f6202533f78347b4db4ecc43c07639c4
   m_configObjects: {}
