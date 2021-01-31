@@ -24,19 +24,21 @@ public class BoxController : MonoBehaviour
      private void BoxMove(List<GameObject> gameObjects)
      {
         BoxController BC;
+        Rigidbody2D rg; 
          if (!BoxMoveOn)
          {
             BoxMoveOn = true;
-            Debug.Log("ici ça marche");
             foreach (GameObject gameObject in gameObjects)
             {
-                Debug.Log("ici ça ne marche plus");
 
-
+                
                 BC = gameObject.GetComponent<BoxController>();
+                rg = gameObject.GetComponent<Rigidbody2D>();
                  if (BC != null && BC == this)
                  {
-                     transform.DOMoveX(transform.position.x + 5, 1f);
+                    rg.constraints = RigidbodyConstraints2D.None;
+                    rg.constraints = RigidbodyConstraints2D.FreezeRotation;/*| RigidbodyConstraints2D.FreezePositionY*/
+                     //transform.DOMoveX(transform.position.x + 5, 1f);
                          break;
                  }
              }

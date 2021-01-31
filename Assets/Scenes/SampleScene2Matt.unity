@@ -374,7 +374,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!114 &293060810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439,7 +439,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e612601b0beb6544cbd14be10b7af3cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Box: []
+  Box:
+  - {fileID: 293060805}
   CriN1: 0
   NumSaut: 0
   fallMultiplier: 2.5
@@ -1687,7 +1688,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.08, y: 1}
   m_EdgeRadius: 0
---- !u!1 &1651031215
+--- !u!1 &1651031215 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 854869220396571370, guid: af128534d7d16064b95e3532c0c94a4f, type: 3}
   m_PrefabInstance: {fileID: 854869219828803141}

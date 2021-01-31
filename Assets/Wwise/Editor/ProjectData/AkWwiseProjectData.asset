@@ -49,8 +49,17 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 338a40dff62d0c4b8fe84e8994defc20
     GuidInternal: 
-    m_lastTime: -8585894936120959851
-    List: []
+    m_lastTime: -8585894807879117744
+    List:
+    - name: Main
+      guid: 3085d8906006fc43b479a58e3dc0504e
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Main
+        ObjectType: 7
+      Path: Default Work Unit\Main
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -59,8 +68,350 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: a3e106a80bc5484598947af11861b916
     GuidInternal: 
-    m_lastTime: -8585894936121019679
-    List: []
+    m_lastTime: -8585894807882379009
+    List:
+    - name: Acculation
+      guid: 8d5a9d35caa05d4ba2fd12e71d93e2e3
+      id: 2316268318
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Moz
+        ObjectType: 4
+      - ElementName: Screams
+        ObjectType: 4
+      - ElementName: Acculation
+        ObjectType: 3
+      Path: Default Work Unit\Moz\Screams\Acculation
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Compassion
+      guid: dbb91a2f34e0264d9abf60f02d8187b3
+      id: 4224289095
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Oz
+        ObjectType: 4
+      - ElementName: Screams
+        ObjectType: 4
+      - ElementName: Compassion
+        ObjectType: 3
+      Path: Default Work Unit\Oz\Screams\Compassion
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: CrateFriction
+      guid: db2d02c30b0bde4088de262ba8417c86
+      id: 2411999260
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Objects
+        ObjectType: 4
+      - ElementName: CrateFriction
+        ObjectType: 3
+      Path: Default Work Unit\Objects\CrateFriction
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: CrateFriction2
+      guid: 68e4c03358b2eb4cbd799f6035270c69
+      id: 1842854950
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: CrateFriction2
+        ObjectType: 3
+      Path: Default Work Unit\CrateFriction2
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Curiosite
+      guid: 1766a51301d8f94882fbbaee28c59314
+      id: 396009128
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Oz
+        ObjectType: 4
+      - ElementName: Screams
+        ObjectType: 4
+      - ElementName: Curiosite
+        ObjectType: 3
+      Path: Default Work Unit\Oz\Screams\Curiosite
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Envie
+      guid: 877aa7a3fb01044082eb63d35a006158
+      id: 1698034228
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Moz
+        ObjectType: 4
+      - ElementName: Screams
+        ObjectType: 4
+      - ElementName: Envie
+        ObjectType: 3
+      Path: Default Work Unit\Moz\Screams\Envie
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Fierte
+      guid: 932e22bd792d824996ddd56fb5d5b8b0
+      id: 2054371306
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Oz
+        ObjectType: 4
+      - ElementName: Screams
+        ObjectType: 4
+      - ElementName: Fierte
+        ObjectType: 3
+      Path: Default Work Unit\Oz\Screams\Fierte
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Interruptor
+      guid: f7c20885b91072478159c654a5586ebc
+      id: 132381101
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Objects
+        ObjectType: 4
+      - ElementName: Interruptor
+        ObjectType: 3
+      Path: Default Work Unit\Objects\Interruptor
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Joie
+      guid: 97b37fa3d5b64b4a8f33eb0e45334e1f
+      id: 3695193454
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Oz
+        ObjectType: 4
+      - ElementName: Screams
+        ObjectType: 4
+      - ElementName: Joie
+        ObjectType: 3
+      Path: Default Work Unit\Oz\Screams\Joie
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Moz
+      guid: f2c60ee2cc407149813a9b8e77ac1827
+      id: 1082004769
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Moz
+        ObjectType: 4
+      Path: Default Work Unit\Moz
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: MozFootsteps
+      guid: 477b1e9c2b811c4e9b7c2402a9c57bf9
+      id: 773707930
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Moz
+        ObjectType: 4
+      - ElementName: MozFootsteps
+        ObjectType: 3
+      Path: Default Work Unit\Moz\MozFootsteps
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: MozJump
+      guid: c33c0a5b486eb84ba344b244a528d380
+      id: 313744885
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Moz
+        ObjectType: 4
+      - ElementName: MozJump
+        ObjectType: 3
+      Path: Default Work Unit\Moz\MozJump
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: MozLanding
+      guid: abef87294cd0c64eba82dab3fc6cc697
+      id: 783075190
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Moz
+        ObjectType: 4
+      - ElementName: MozLanding
+        ObjectType: 3
+      Path: Default Work Unit\Moz\MozLanding
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Musics
+      guid: afb0cfbcabe1dc4da7e978d72a9413af
+      id: 1730564753
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Musics
+        ObjectType: 3
+      Path: Default Work Unit\Musics
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Objects
+      guid: 4d2a1ba9c5c4694ea18901b0f9c70390
+      id: 1695690031
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Objects
+        ObjectType: 4
+      Path: Default Work Unit\Objects
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Oz
+      guid: 56096acbcecb7c4785d5a14d0571615a
+      id: 1651971882
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Oz
+        ObjectType: 4
+      Path: Default Work Unit\Oz
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: OzDoubleJump
+      guid: b6774d93e52d304d9a8af1e853cf5f47
+      id: 1891947077
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Oz
+        ObjectType: 4
+      - ElementName: OzDoubleJump
+        ObjectType: 3
+      Path: Default Work Unit\Oz\OzDoubleJump
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: OzFootsteps
+      guid: 6b272a1c397c4c4a813b129748a89399
+      id: 2515146559
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Oz
+        ObjectType: 4
+      - ElementName: OzFootsteps
+        ObjectType: 3
+      Path: Default Work Unit\Oz\OzFootsteps
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: OzJump
+      guid: c0e54d7a17bbf148b29d330784048971
+      id: 1595060770
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Oz
+        ObjectType: 4
+      - ElementName: OzJump
+        ObjectType: 3
+      Path: Default Work Unit\Oz\OzJump
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: OzLanding
+      guid: 381e7ad6528b5040a3daf8c56800725c
+      id: 1035518595
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Oz
+        ObjectType: 4
+      - ElementName: OzLanding
+        ObjectType: 3
+      Path: Default Work Unit\Oz\OzLanding
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Screams
+      guid: ea00767fc2e36347a651d5a72f1c5943
+      id: 2812860249
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Oz
+        ObjectType: 4
+      - ElementName: Screams
+        ObjectType: 4
+      Path: Default Work Unit\Oz\Screams
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Screams
+      guid: ee93749b125cbf42b72d7e87ded24031
+      id: 2812860249
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Moz
+        ObjectType: 4
+      - ElementName: Screams
+        ObjectType: 4
+      Path: Default Work Unit\Moz\Screams
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Solitude
+      guid: 1743b4e0f3cc3346b46c908721b0f0b2
+      id: 2952898430
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Moz
+        ObjectType: 4
+      - ElementName: Screams
+        ObjectType: 4
+      - ElementName: Solitude
+        ObjectType: 3
+      Path: Default Work Unit\Moz\Screams\Solitude
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Tristesse
+      guid: 0eb3a3538d93274a8467e4892f3e0296
+      id: 3375131777
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Moz
+        ObjectType: 4
+      - ElementName: Screams
+        ObjectType: 4
+      - ElementName: Tristesse
+        ObjectType: 3
+      Path: Default Work Unit\Moz\Screams\Tristesse
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:

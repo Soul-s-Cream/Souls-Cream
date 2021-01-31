@@ -163,7 +163,5 @@ public class MovePlayer : MonoBehaviour
             CriN1 = false;
         }
 
-
-
     }
 }
