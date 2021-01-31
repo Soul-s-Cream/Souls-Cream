@@ -16,11 +16,63 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="730854062">
+		<SoundBank Id="3161908922" Language="SFX" Hash="2834268014">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2316268318" Name="Acculation" ObjectPath="\Events\Default Work Unit\Moz\Screams\Acculation" DurationType="OneShot" DurationMin="1.211933" DurationMax="1.621157">
+					<IncludedMemoryFiles>
+						<File Id="60450093" Language="SFX">
+							<ShortName>Acculation.wav</ShortName>
+							<Path>SFX\Acculation_6FFACA5D.wem</Path>
+						</File>
+						<File Id="285008469" Language="SFX">
+							<ShortName>Acculation.wav</ShortName>
+							<Path>SFX\Acculation_FB4A67BA.wem</Path>
+						</File>
+						<File Id="538573252" Language="SFX">
+							<ShortName>Acculation.wav</ShortName>
+							<Path>SFX\Acculation_568C62BE.wem</Path>
+						</File>
+						<File Id="538901042" Language="SFX">
+							<ShortName>Acculation.wav</ShortName>
+							<Path>SFX\Acculation_021975C7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="958723167" Name="AmbiencesTheme" ObjectPath="\Events\Default Work Unit\AmbiencesTheme" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="465776081" Language="SFX">
+							<ShortName>CrateFriction.wav</ShortName>
+							<Path>SFX\CrateFriction_B1DD9702.wem</Path>
+						</File>
+						<File Id="694567900" Language="SFX">
+							<ShortName>CrateFriction.wav</ShortName>
+							<Path>SFX\CrateFriction_B3F2D557.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4224289095" Name="Compassion" ObjectPath="\Events\Default Work Unit\Oz\Screams\Compassion" DurationType="OneShot" DurationMin="1.735542" DurationMax="2.194363">
+					<IncludedMemoryFiles>
+						<File Id="299611119" Language="SFX">
+							<ShortName>Compassion.wav</ShortName>
+							<Path>SFX\Compassion_015D5893.wem</Path>
+						</File>
+						<File Id="349596643" Language="SFX">
+							<ShortName>Compassion.wav</ShortName>
+							<Path>SFX\Compassion_B9949105.wem</Path>
+						</File>
+						<File Id="396106840" Language="SFX">
+							<ShortName>Compassion.wav</ShortName>
+							<Path>SFX\Compassion_FBC2E213.wem</Path>
+						</File>
+						<File Id="869900004" Language="SFX">
+							<ShortName>Compassion.wav</ShortName>
+							<Path>SFX\Compassion_08D78D98.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2411999260" Name="CrateFriction" ObjectPath="\Events\Default Work Unit\Objects\CrateFriction" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="465776081" Language="SFX">
@@ -33,15 +85,55 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1842854950" Name="CrateFriction2" ObjectPath="\Events\Default Work Unit\CrateFriction2" DurationType="Infinite">
+				<Event Id="396009128" Name="Curiosite" ObjectPath="\Events\Default Work Unit\Oz\Screams\Curiosite" DurationType="OneShot" DurationMin="0.316252" DurationMax="0.562225">
 					<IncludedMemoryFiles>
-						<File Id="465776081" Language="SFX">
-							<ShortName>CrateFriction.wav</ShortName>
-							<Path>SFX\CrateFriction_B1DD9702.wem</Path>
+						<File Id="210463932" Language="SFX">
+							<ShortName>Curiosité.wav</ShortName>
+							<Path>SFX\Curiosité_4A47D0A5.wem</Path>
 						</File>
-						<File Id="694567900" Language="SFX">
-							<ShortName>CrateFriction.wav</ShortName>
-							<Path>SFX\CrateFriction_B3F2D557.wem</Path>
+						<File Id="821152830" Language="SFX">
+							<ShortName>Curiosité.wav</ShortName>
+							<Path>SFX\Curiosité_F302DDBF.wem</Path>
+						</File>
+						<File Id="867340386" Language="SFX">
+							<ShortName>Curiosité.wav</ShortName>
+							<Path>SFX\Curiosité_EBEF77E5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1698034228" Name="Envie" ObjectPath="\Events\Default Work Unit\Moz\Screams\Envie" DurationType="OneShot" DurationMin="1.503843" DurationMax="1.757504">
+					<IncludedMemoryFiles>
+						<File Id="30785870" Language="SFX">
+							<ShortName>Envie.wav</ShortName>
+							<Path>SFX\Envie_AE4F4F82.wem</Path>
+						</File>
+						<File Id="333600656" Language="SFX">
+							<ShortName>Envie.wav</ShortName>
+							<Path>SFX\Envie_F5D9E147.wem</Path>
+						</File>
+						<File Id="373510585" Language="SFX">
+							<ShortName>Envie.wav</ShortName>
+							<Path>SFX\Envie_FC3A73A0.wem</Path>
+						</File>
+						<File Id="941325618" Language="SFX">
+							<ShortName>Envie.wav</ShortName>
+							<Path>SFX\Envie_3E929F1E.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2054371306" Name="Fierte" ObjectPath="\Events\Default Work Unit\Oz\Screams\Fierte" DurationType="OneShot" DurationMin="0.879575" DurationMax="1.324305">
+					<IncludedMemoryFiles>
+						<File Id="53780424" Language="SFX">
+							<ShortName>Fierté2.wav</ShortName>
+							<Path>SFX\Fierté2_EE1720D6.wem</Path>
+						</File>
+						<File Id="150424399" Language="SFX">
+							<ShortName>Fierté2.wav</ShortName>
+							<Path>SFX\Fierté2_78CE6848.wem</Path>
+						</File>
+						<File Id="713776206" Language="SFX">
+							<ShortName>Fierté2.wav</ShortName>
+							<Path>SFX\Fierté2_7FFB7622.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -58,6 +150,26 @@
 						<File Id="585976924" Language="SFX">
 							<ShortName>Interruptor.wav</ShortName>
 							<Path>SFX\Interruptor_EF5ADE14.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3695193454" Name="Joie" ObjectPath="\Events\Default Work Unit\Oz\Screams\Joie" DurationType="OneShot" DurationMin="0.491947" DurationMax="0.714495">
+					<IncludedMemoryFiles>
+						<File Id="240533999" Language="SFX">
+							<ShortName>Joie.wav</ShortName>
+							<Path>SFX\Joie_DA5146E2.wem</Path>
+						</File>
+						<File Id="284632716" Language="SFX">
+							<ShortName>Joie.wav</ShortName>
+							<Path>SFX\Joie_FB483824.wem</Path>
+						</File>
+						<File Id="482076826" Language="SFX">
+							<ShortName>Joie.wav</ShortName>
+							<Path>SFX\Joie_9C624B1E.wem</Path>
+						</File>
+						<File Id="488237281" Language="SFX">
+							<ShortName>Joie.wav</ShortName>
+							<Path>SFX\Joie_06DD16EC.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -133,8 +245,24 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1891947077" Name="OzDoubleJump" ObjectPath="\Events\Default Work Unit\Oz\OzDoubleJump" DurationType="OneShot" DurationMin="0.130030" DurationMax="0.173569">
+				<Event Id="1891947077" Name="OzDoubleJump" ObjectPath="\Events\Default Work Unit\Oz\OzDoubleJump" DurationType="OneShot" DurationMin="0.439832" DurationMax="0.520167">
 					<IncludedMemoryFiles>
+						<File Id="225508645" Language="SFX">
+							<ShortName>Joie.wav</ShortName>
+							<Path>SFX\Joie_0506C171.wem</Path>
+						</File>
+						<File Id="298470587" Language="SFX">
+							<ShortName>Joie.wav</ShortName>
+							<Path>SFX\Joie_98512CC5.wem</Path>
+						</File>
+						<File Id="454457796" Language="SFX">
+							<ShortName>Joie.wav</ShortName>
+							<Path>SFX\Joie_44398C8B.wem</Path>
+						</File>
+						<File Id="579854240" Language="SFX">
+							<ShortName>Joie.wav</ShortName>
+							<Path>SFX\Joie_29FF9312.wem</Path>
+						</File>
 						<File Id="1070454862" Language="SFX">
 							<ShortName>PlayerOzJump.wav</ShortName>
 							<Path>SFX\PlayerOzJump_062C1249.wem</Path>
@@ -177,15 +305,71 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2952898430" Name="Solitude" ObjectPath="\Events\Default Work Unit\Moz\Screams\Solitude" DurationType="OneShot" DurationMin="0.845534" DurationMax="1.109078">
+					<IncludedMemoryFiles>
+						<File Id="57836437" Language="SFX">
+							<ShortName>Solitude.wav</ShortName>
+							<Path>SFX\Solitude_01971F3C.wem</Path>
+						</File>
+						<File Id="206612315" Language="SFX">
+							<ShortName>Solitude.wav</ShortName>
+							<Path>SFX\Solitude_20C9E9E6.wem</Path>
+						</File>
+						<File Id="651849547" Language="SFX">
+							<ShortName>Solitude.wav</ShortName>
+							<Path>SFX\Solitude_F0D36204.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3375131777" Name="Tristesse" ObjectPath="\Events\Default Work Unit\Moz\Screams\Tristesse" DurationType="OneShot" DurationMin="1.432284" DurationMax="1.548865">
+					<IncludedMemoryFiles>
+						<File Id="305168362" Language="SFX">
+							<ShortName>Tristesse.wav</ShortName>
+							<Path>SFX\Tristesse_ACD13E50.wem</Path>
+						</File>
+						<File Id="461476743" Language="SFX">
+							<ShortName>Tristesse.wav</ShortName>
+							<Path>SFX\Tristesse_9E8682D5.wem</Path>
+						</File>
+						<File Id="858844633" Language="SFX">
+							<ShortName>Tristesse.wav</ShortName>
+							<Path>SFX\Tristesse_B868EF83.wem</Path>
+						</File>
+						<File Id="987408608" Language="SFX">
+							<ShortName>Tristesse.wav</ShortName>
+							<Path>SFX\Tristesse_C731B110.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="30785870" Language="SFX">
+					<ShortName>Envie.wav</ShortName>
+					<Path>SFX\Envie_AE4F4F82.wem</Path>
+				</File>
 				<File Id="31055670" Language="SFX">
 					<ShortName>PlayerMozFootsteps.wav</ShortName>
 					<Path>SFX\PlayerMozFootsteps_C44C71A6.wem</Path>
 				</File>
+				<File Id="53780424" Language="SFX">
+					<ShortName>Fierté2.wav</ShortName>
+					<Path>SFX\Fierté2_EE1720D6.wem</Path>
+				</File>
+				<File Id="57836437" Language="SFX">
+					<ShortName>Solitude.wav</ShortName>
+					<Path>SFX\Solitude_01971F3C.wem</Path>
+				</File>
+				<File Id="60450093" Language="SFX">
+					<ShortName>Acculation.wav</ShortName>
+					<Path>SFX\Acculation_6FFACA5D.wem</Path>
+				</File>
 				<File Id="136186369" Language="SFX">
 					<ShortName>PlayerOzJump.wav</ShortName>
 					<Path>SFX\PlayerOzJump_552D154C.wem</Path>
+				</File>
+				<File Id="150424399" Language="SFX">
+					<ShortName>Fierté2.wav</ShortName>
+					<Path>SFX\Fierté2_78CE6848.wem</Path>
 				</File>
 				<File Id="167913592" Language="SFX">
 					<ShortName>Interruptor.wav</ShortName>
@@ -195,6 +379,22 @@
 					<ShortName>Interruptor.wav</ShortName>
 					<Path>SFX\Interruptor_9B63C4FD.wem</Path>
 				</File>
+				<File Id="206612315" Language="SFX">
+					<ShortName>Solitude.wav</ShortName>
+					<Path>SFX\Solitude_20C9E9E6.wem</Path>
+				</File>
+				<File Id="210463932" Language="SFX">
+					<ShortName>Curiosité.wav</ShortName>
+					<Path>SFX\Curiosité_4A47D0A5.wem</Path>
+				</File>
+				<File Id="225508645" Language="SFX">
+					<ShortName>Joie.wav</ShortName>
+					<Path>SFX\Joie_0506C171.wem</Path>
+				</File>
+				<File Id="240533999" Language="SFX">
+					<ShortName>Joie.wav</ShortName>
+					<Path>SFX\Joie_DA5146E2.wem</Path>
+				</File>
 				<File Id="241080445" Language="SFX">
 					<ShortName>PlayerMozJump.wav</ShortName>
 					<Path>SFX\PlayerMozJump_57DEBAAB.wem</Path>
@@ -203,9 +403,37 @@
 					<ShortName>PlayerMozJump.wav</ShortName>
 					<Path>SFX\PlayerMozJump_AF8D132B.wem</Path>
 				</File>
+				<File Id="284632716" Language="SFX">
+					<ShortName>Joie.wav</ShortName>
+					<Path>SFX\Joie_FB483824.wem</Path>
+				</File>
+				<File Id="285008469" Language="SFX">
+					<ShortName>Acculation.wav</ShortName>
+					<Path>SFX\Acculation_FB4A67BA.wem</Path>
+				</File>
+				<File Id="298470587" Language="SFX">
+					<ShortName>Joie.wav</ShortName>
+					<Path>SFX\Joie_98512CC5.wem</Path>
+				</File>
+				<File Id="299611119" Language="SFX">
+					<ShortName>Compassion.wav</ShortName>
+					<Path>SFX\Compassion_015D5893.wem</Path>
+				</File>
+				<File Id="305168362" Language="SFX">
+					<ShortName>Tristesse.wav</ShortName>
+					<Path>SFX\Tristesse_ACD13E50.wem</Path>
+				</File>
+				<File Id="333600656" Language="SFX">
+					<ShortName>Envie.wav</ShortName>
+					<Path>SFX\Envie_F5D9E147.wem</Path>
+				</File>
 				<File Id="340180847" Language="SFX">
 					<ShortName>PlayerOzFootsteps.wav</ShortName>
 					<Path>SFX\PlayerOzFootsteps_5B7EF906.wem</Path>
+				</File>
+				<File Id="349596643" Language="SFX">
+					<ShortName>Compassion.wav</ShortName>
+					<Path>SFX\Compassion_B9949105.wem</Path>
 				</File>
 				<File Id="350871938" Language="SFX">
 					<ShortName>PlayerMozJump.wav</ShortName>
@@ -215,13 +443,41 @@
 					<ShortName>OzTuto.wav</ShortName>
 					<Path>SFX\OzTuto_D79FB2B7.wem</Path>
 				</File>
+				<File Id="373510585" Language="SFX">
+					<ShortName>Envie.wav</ShortName>
+					<Path>SFX\Envie_FC3A73A0.wem</Path>
+				</File>
 				<File Id="383526885" Language="SFX">
 					<ShortName>PlayerOzFootsteps.wav</ShortName>
 					<Path>SFX\PlayerOzFootsteps_E70003E7.wem</Path>
 				</File>
+				<File Id="396106840" Language="SFX">
+					<ShortName>Compassion.wav</ShortName>
+					<Path>SFX\Compassion_FBC2E213.wem</Path>
+				</File>
+				<File Id="401307811" Language="SFX">
+					<ShortName>ambiences plateaux\OzThemeAmbience.wav</ShortName>
+					<Path>SFX\ambiences plateaux\OzThemeAmbience_D79FB2B7.wem</Path>
+				</File>
+				<File Id="454457796" Language="SFX">
+					<ShortName>Joie.wav</ShortName>
+					<Path>SFX\Joie_44398C8B.wem</Path>
+				</File>
+				<File Id="461476743" Language="SFX">
+					<ShortName>Tristesse.wav</ShortName>
+					<Path>SFX\Tristesse_9E8682D5.wem</Path>
+				</File>
 				<File Id="465776081" Language="SFX">
 					<ShortName>CrateFriction.wav</ShortName>
 					<Path>SFX\CrateFriction_B1DD9702.wem</Path>
+				</File>
+				<File Id="482076826" Language="SFX">
+					<ShortName>Joie.wav</ShortName>
+					<Path>SFX\Joie_9C624B1E.wem</Path>
+				</File>
+				<File Id="488237281" Language="SFX">
+					<ShortName>Joie.wav</ShortName>
+					<Path>SFX\Joie_06DD16EC.wem</Path>
 				</File>
 				<File Id="526605256" Language="SFX">
 					<ShortName>PlayerMozJump.wav</ShortName>
@@ -231,9 +487,21 @@
 					<ShortName>PlayerMozFootsteps.wav</ShortName>
 					<Path>SFX\PlayerMozFootsteps_03957B3B.wem</Path>
 				</File>
+				<File Id="538573252" Language="SFX">
+					<ShortName>Acculation.wav</ShortName>
+					<Path>SFX\Acculation_568C62BE.wem</Path>
+				</File>
+				<File Id="538901042" Language="SFX">
+					<ShortName>Acculation.wav</ShortName>
+					<Path>SFX\Acculation_021975C7.wem</Path>
+				</File>
 				<File Id="550278455" Language="SFX">
 					<ShortName>PlayerOzFootsteps.wav</ShortName>
 					<Path>SFX\PlayerOzFootsteps_EDC6B6D9.wem</Path>
+				</File>
+				<File Id="579854240" Language="SFX">
+					<ShortName>Joie.wav</ShortName>
+					<Path>SFX\Joie_29FF9312.wem</Path>
 				</File>
 				<File Id="585976924" Language="SFX">
 					<ShortName>Interruptor.wav</ShortName>
@@ -247,6 +515,10 @@
 					<ShortName>PlayerMozJump.wav</ShortName>
 					<Path>SFX\PlayerMozJump_CCF48D89.wem</Path>
 				</File>
+				<File Id="651849547" Language="SFX">
+					<ShortName>Solitude.wav</ShortName>
+					<Path>SFX\Solitude_F0D36204.wem</Path>
+				</File>
 				<File Id="691460036" Language="SFX">
 					<ShortName>PlayerMozFootsteps.wav</ShortName>
 					<Path>SFX\PlayerMozFootsteps_234E2D56.wem</Path>
@@ -255,9 +527,21 @@
 					<ShortName>CrateFriction.wav</ShortName>
 					<Path>SFX\CrateFriction_B3F2D557.wem</Path>
 				</File>
+				<File Id="713776206" Language="SFX">
+					<ShortName>Fierté2.wav</ShortName>
+					<Path>SFX\Fierté2_7FFB7622.wem</Path>
+				</File>
 				<File Id="732767810" Language="SFX">
 					<ShortName>PlayerMozJump.wav</ShortName>
 					<Path>SFX\PlayerMozJump_33CEA9B4.wem</Path>
+				</File>
+				<File Id="758109884" Language="SFX">
+					<ShortName>ambiences plateaux\OzMozThemAmbience.wav</ShortName>
+					<Path>SFX\ambiences plateaux\OzMozThemAmbience_D79FB2B7.wem</Path>
+				</File>
+				<File Id="821152830" Language="SFX">
+					<ShortName>Curiosité.wav</ShortName>
+					<Path>SFX\Curiosité_F302DDBF.wem</Path>
 				</File>
 				<File Id="843786119" Language="SFX">
 					<ShortName>PlayerOzJump.wav</ShortName>
@@ -267,6 +551,18 @@
 					<ShortName>PlayerMozFootsteps.wav</ShortName>
 					<Path>SFX\PlayerMozFootsteps_2E6E780A.wem</Path>
 				</File>
+				<File Id="858844633" Language="SFX">
+					<ShortName>Tristesse.wav</ShortName>
+					<Path>SFX\Tristesse_B868EF83.wem</Path>
+				</File>
+				<File Id="867340386" Language="SFX">
+					<ShortName>Curiosité.wav</ShortName>
+					<Path>SFX\Curiosité_EBEF77E5.wem</Path>
+				</File>
+				<File Id="869900004" Language="SFX">
+					<ShortName>Compassion.wav</ShortName>
+					<Path>SFX\Compassion_08D78D98.wem</Path>
+				</File>
 				<File Id="894112917" Language="SFX">
 					<ShortName>PlayerMozFootsteps.wav</ShortName>
 					<Path>SFX\PlayerMozFootsteps_8D8F08A6.wem</Path>
@@ -274,6 +570,18 @@
 				<File Id="938794312" Language="SFX">
 					<ShortName>MozTuto.wav</ShortName>
 					<Path>SFX\MozTuto_1E5DC3C7.wem</Path>
+				</File>
+				<File Id="941325618" Language="SFX">
+					<ShortName>Envie.wav</ShortName>
+					<Path>SFX\Envie_3E929F1E.wem</Path>
+				</File>
+				<File Id="946962883" Language="SFX">
+					<ShortName>ambiences plateaux\MozThemeAmbience.wav</ShortName>
+					<Path>SFX\ambiences plateaux\MozThemeAmbience_D79FB2B7.wem</Path>
+				</File>
+				<File Id="987408608" Language="SFX">
+					<ShortName>Tristesse.wav</ShortName>
+					<Path>SFX\Tristesse_C731B110.wem</Path>
 				</File>
 				<File Id="1017059933" Language="SFX">
 					<ShortName>PlayerOzFootsteps.wav</ShortName>

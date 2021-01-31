@@ -3,17 +3,27 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{903F1C27-14F7-4ECD-AF40-5AADFEA9AFA0}">
 			<PropertyList>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\Utilisateur\Desktop\Global Game Jam 2021\Global Game Jam 2021\Cris\"/>
+				<Property Name="Event Action List\{13A56617-D801-48F9-82FB-BAEE28C59314}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{19F977AA-18B3-4DFE-A09F-C5319DEE049F}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{1C2A276B-7C39-4A4C-813B-129748A89399}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{2987EFAB-D04C-4EC6-BA82-DAB3FC6CC697}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{2F1AB9DB-E034-4D26-9ABF-60F02D8187B3}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{33C0E468-B258-4CEB-BD79-9F6035270C69}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{359D5A8D-A0CA-4B5D-A2FD-12E71D93E2E3}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{53A3B30E-938D-4A27-8467-E4892F3E0296}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{5B0A3CC3-6E48-4BB8-A344-B244A528D380}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{7A4DE5C0-BB17-48F1-B29D-330784048971}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{8508C2F7-10B9-4772-8159-C654A5586EBC}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{934D77B6-2DE5-4D30-9A8A-F1E853CF5F47}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{9C1E7B47-812B-4E1C-9B7C-2402A9C57BF9}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{A37FB397-B6D5-4A4B-8F33-EB0E45334E1F}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{A3A77A87-01FB-4004-82EB-63D35A006158}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{BCCFB0AF-E1AB-4DDC-A7E9-78D72A9413AF}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{BD222E93-2D79-4982-96DD-D56FB5D5B8B0}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{C3022DDB-0B0B-40DE-88DE-262BA8417C86}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{D67A1E38-8B52-4050-A3DA-F8C56800725C}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{E0B44317-CCF3-4633-B46C-908721B0F0B2}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
 						<Value Platform="Mac"></Value>
