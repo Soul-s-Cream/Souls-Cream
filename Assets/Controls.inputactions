@@ -68,6 +68,52 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "NetTest",
+            "id": "404a201e-945c-4225-91e5-d7ae9e098737",
+            "actions": [
+                {
+                    "name": "ChangeScene",
+                    "type": "Button",
+                    "id": "8f2c7179-3cf3-4e41-afbd-d77d0cebeccb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "927d7639-6d6a-4efa-8469-0ef0fa95056b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "26ac07b2-36b0-4d6b-974b-01126cf8e28e",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeScene",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "409ac340-ca0d-4f47-822f-54e631b6eda4",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

@@ -81,6 +81,52 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 }
             ]
+        },
+        {
+            ""name"": ""NetTest"",
+            ""id"": ""404a201e-945c-4225-91e5-d7ae9e098737"",
+            ""actions"": [
+                {
+                    ""name"": ""ChangeScene"",
+                    ""type"": ""Button"",
+                    ""id"": ""8f2c7179-3cf3-4e41-afbd-d77d0cebeccb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""927d7639-6d6a-4efa-8469-0ef0fa95056b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""26ac07b2-36b0-4d6b-974b-01126cf8e28e"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeScene"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""409ac340-ca0d-4f47-822f-54e631b6eda4"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -89,6 +135,10 @@ public class @Controls : IInputActionCollection, IDisposable
         m_Deplacement = asset.FindActionMap("Deplacement", throwIfNotFound: true);
         m_Deplacement_Jump = m_Deplacement.FindAction("Jump", throwIfNotFound: true);
         m_Deplacement_Deplacement = m_Deplacement.FindAction("Deplacement", throwIfNotFound: true);
+        // NetTest
+        m_NetTest = asset.FindActionMap("NetTest", throwIfNotFound: true);
+        m_NetTest_ChangeScene = m_NetTest.FindAction("ChangeScene", throwIfNotFound: true);
+        m_NetTest_Jump = m_NetTest.FindAction("Jump", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -175,9 +225,55 @@ public class @Controls : IInputActionCollection, IDisposable
         }
     }
     public DeplacementActions @Deplacement => new DeplacementActions(this);
+
+    // NetTest
+    private readonly InputActionMap m_NetTest;
+    private INetTestActions m_NetTestActionsCallbackInterface;
+    private readonly InputAction m_NetTest_ChangeScene;
+    private readonly InputAction m_NetTest_Jump;
+    public struct NetTestActions
+    {
+        private @Controls m_Wrapper;
+        public NetTestActions(@Controls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @ChangeScene => m_Wrapper.m_NetTest_ChangeScene;
+        public InputAction @Jump => m_Wrapper.m_NetTest_Jump;
+        public InputActionMap Get() { return m_Wrapper.m_NetTest; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(NetTestActions set) { return set.Get(); }
+        public void SetCallbacks(INetTestActions instance)
+        {
+            if (m_Wrapper.m_NetTestActionsCallbackInterface != null)
+            {
+                @ChangeScene.started -= m_Wrapper.m_NetTestActionsCallbackInterface.OnChangeScene;
+                @ChangeScene.performed -= m_Wrapper.m_NetTestActionsCallbackInterface.OnChangeScene;
+                @ChangeScene.canceled -= m_Wrapper.m_NetTestActionsCallbackInterface.OnChangeScene;
+                @Jump.started -= m_Wrapper.m_NetTestActionsCallbackInterface.OnJump;
+                @Jump.performed -= m_Wrapper.m_NetTestActionsCallbackInterface.OnJump;
+                @Jump.canceled -= m_Wrapper.m_NetTestActionsCallbackInterface.OnJump;
+            }
+            m_Wrapper.m_NetTestActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @ChangeScene.started += instance.OnChangeScene;
+                @ChangeScene.performed += instance.OnChangeScene;
+                @ChangeScene.canceled += instance.OnChangeScene;
+                @Jump.started += instance.OnJump;
+                @Jump.performed += instance.OnJump;
+                @Jump.canceled += instance.OnJump;
+            }
+        }
+    }
+    public NetTestActions @NetTest => new NetTestActions(this);
     public interface IDeplacementActions
     {
         void OnJump(InputAction.CallbackContext context);
         void OnDeplacement(InputAction.CallbackContext context);
+    }
+    public interface INetTestActions
+    {
+        void OnChangeScene(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
     }
 }

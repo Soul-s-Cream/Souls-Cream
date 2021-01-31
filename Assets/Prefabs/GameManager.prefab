@@ -43,3 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 519cd5aa6c249a64d865369118fa0b70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  role: 0
+  PlayerPrefabs: []
+  SpawnPointsList: []
