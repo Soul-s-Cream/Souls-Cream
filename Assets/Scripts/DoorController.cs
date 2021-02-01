@@ -18,12 +18,13 @@ public class DoorController : MonoBehaviour
         DoorController DC;
         if (!DoorOpen)
         {
-            DoorOpen = true;
+
             foreach (GameObject gameObject in gameObjects)
             {
                 DC = gameObject.GetComponent<DoorController>();
                 if (DC != null && DC == this)
                 {
+                    DoorOpen = true;
                     transform.DOMoveY(transform.position.y + directionPorte, 1f);
                     break;
                 }
