@@ -243,6 +243,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="OzMozMenuTheme" ID="{B9C37EC0-A6B4-49FC-8847-50B455193BA5}">
+					<ChildrenList>
+						<Action Name="" ID="{19F0AB3F-0287-4643-B05C-00CE3B17EA38}" ShortID="673457303">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="OzMozMenuTheme" ID="{5B94B4E0-3D54-4CD2-AEBB-52362430432A}" WorkUnitID="{E81B4073-D7EF-43F2-ADD4-0375B4FA2B20}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1392341006">
+		<SoundBank Id="3161908922" Language="SFX" Hash="2590716295">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -289,6 +289,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3278785808" Name="OzMozMenuTheme" ObjectPath="\Events\Default Work Unit\OzMozMenuTheme" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="323730778" Language="SFX">
+							<ShortName>OzMozMenuTheme.wav</ShortName>
+							<Path>SFX\OzMozMenuTheme_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3147785334" Name="OzMozThemeAmbiences" ObjectPath="\Events\Default Work Unit\OzMozThemeAmbiences" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="497282913" Language="SFX">
@@ -430,6 +438,10 @@
 				<File Id="305168362" Language="SFX">
 					<ShortName>Tristesse.wav</ShortName>
 					<Path>SFX\Tristesse_66BC4A00.wem</Path>
+				</File>
+				<File Id="323730778" Language="SFX">
+					<ShortName>OzMozMenuTheme.wav</ShortName>
+					<Path>SFX\OzMozMenuTheme_D79FB2B7.wem</Path>
 				</File>
 				<File Id="333600656" Language="SFX">
 					<ShortName>Envie.wav</ShortName>

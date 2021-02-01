@@ -16,6 +16,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2515146559	OzFootsteps			\Default Work Unit\Oz\OzFootsteps	
 	2952898430	Solitude			\Default Work Unit\Moz\Screams\Solitude	
 	3147785334	OzMozThemeAmbiences			\Default Work Unit\OzMozThemeAmbiences	
+	3278785808	OzMozMenuTheme			\Default Work Unit\OzMozMenuTheme	
 	3375131777	Tristesse			\Default Work Unit\Moz\Screams\Tristesse	
 	3695193454	Joie			\Default Work Unit\Oz\Screams\Joie	
 	4224289095	Compassion			\Default Work Unit\Oz\Screams\Compassion	
@@ -52,6 +53,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	298470587	Joie_01	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Joie_A194A63F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Oz\OzDoubleJump\ScreamDoubleJump\Joie_01		72028
 	299611119	Compassion_02	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Compassion_F067829C.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamOz\Compassion\Compassion_02		333288
 	305168362	Tristesse	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Tristesse_66BC4A00.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamMoz\Tristesse\Tristesse		294248
+	323730778	OzMozMenuTheme	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\OzMozMenuTheme_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\OzMozMenuTheme\OzMozMenuTheme\OzMozMenuTheme		12160192
 	333600656	Envie_01	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Envie_16892D2B.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamMoz\Envie\Envie_01		288804
 	340180847	OzFootsteps1	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\PlayerOzFootsteps_5B7EF906.wem		\Actor-Mixer Hierarchy\Default Work Unit\Oz\OzFootsteps\OzFootsteps1		7196
 	349596643	Compassion_01	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Compassion_03EDAA98.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamOz\Compassion\Compassion_01		421384
