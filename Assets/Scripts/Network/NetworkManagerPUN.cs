@@ -30,17 +30,30 @@ public class NetworkManagerPUN : Photon.PunBehaviour
 
     private void Start()
     {
-        Connect();
-    }
-
-    public void Connect()
-    {
-        if (PhotonNetwork.connected)
-            PhotonNetwork.JoinRandomRoom();
-        else
+        if (!PhotonNetwork.connected)
         {
             PhotonNetwork.ConnectUsingSettings(gameVersion);
         }
+    }
+
+    public bool ConnectRoom(string roomName)
+    {
+        if (PhotonNetwork.JoinRoom(roomName))
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    public bool CreateRoom(string roomName)
+    {
+        if (PhotonNetwork.CreateRoom(roomName))
+        {
+            return true;
+        }
+
+        return false;
     }
 
     #region Photon.PunBehaviour Callbacks
@@ -48,7 +61,6 @@ public class NetworkManagerPUN : Photon.PunBehaviour
     public override void OnConnectedToMaster()
     {
         Debug.Log("Photon : Connected to Master.");
-        PhotonNetwork.JoinRandomRoom();
     }
 
     public override void OnDisconnectedFromPhoton()
@@ -65,13 +77,15 @@ public class NetworkManagerPUN : Photon.PunBehaviour
     public override void OnJoinedRoom()
     {
         Debug.Log("Photon : Joined a room as Player " + PhotonNetwork.player.ID);
-        GameManager.Instance.InstantiatePlayer();
+        // GameManager.Instance.InstantiatePlayer();
     }
 
     public override void OnPhotonPlayerConnected(PhotonPlayer newPlayer)
     {
         Debug.Log("Photon : player "+ newPlayer.ID +" joined the room");
     }
+
+    
 
     #endregion
 
