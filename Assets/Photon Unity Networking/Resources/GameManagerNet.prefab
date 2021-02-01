@@ -44,8 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 519cd5aa6c249a64d865369118fa0b70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1Role: 0
-  player2Role: 0
   PlayerPrefabs:
   - {fileID: 1247230456913524052, guid: 75047898931fb1b43a7feaf9ecdabe0c, type: 3}
   - {fileID: 2771368512392874816, guid: e4ec2eb500446a0428e4e23291b17def, type: 3}
@@ -66,12 +64,12 @@ MonoBehaviour:
   group: 0
   OwnerShipWasTransfered: 0
   prefixBackup: -1
-  synchronization: 3
+  synchronization: 0
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
   ObservedComponents:
-  - {fileID: 8661276566698531251}
+  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 0
   instantiationId: -1

@@ -49,7 +49,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 338a40dff62d0c4b8fe84e8994defc20
     GuidInternal: 
-    m_lastTime: -8585894807879117744
+    m_lastTime: -8585894167338047323
     List:
     - name: Main
       guid: 3085d8906006fc43b479a58e3dc0504e
@@ -68,7 +68,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: a3e106a80bc5484598947af11861b916
     GuidInternal: 
-    m_lastTime: -8585894807882379009
+    m_lastTime: -8585893974577941994
     List:
     - name: Acculation
       guid: 8d5a9d35caa05d4ba2fd12e71d93e2e3
@@ -113,18 +113,6 @@ MonoBehaviour:
       - ElementName: CrateFriction
         ObjectType: 3
       Path: Default Work Unit\Objects\CrateFriction
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: CrateFriction2
-      guid: 68e4c03358b2eb4cbd799f6035270c69
-      id: 1842854950
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: CrateFriction2
-        ObjectType: 3
-      Path: Default Work Unit\CrateFriction2
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -260,15 +248,15 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Musics
-      guid: afb0cfbcabe1dc4da7e978d72a9413af
-      id: 1730564753
+    - name: MozTuto
+      guid: 2ac032d77f21d34fab011ed43d4225ae
+      id: 1861470019
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Musics
+      - ElementName: MozTuto
         ObjectType: 3
-      Path: Default Work Unit\Musics
+      Path: Default Work Unit\MozTuto
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -352,6 +340,42 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: OzMozMenuTheme
+      guid: c07ec3b9b4a6fc49884750b455193ba5
+      id: 3278785808
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: OzMozMenuTheme
+        ObjectType: 3
+      Path: Default Work Unit\OzMozMenuTheme
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: OzMozThemeAmbiences
+      guid: 8e665db95930d0488c94ee85ccbba633
+      id: 3147785334
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: OzMozThemeAmbiences
+        ObjectType: 3
+      Path: Default Work Unit\OzMozThemeAmbiences
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: OzTuto
+      guid: bbb96180f9f8a247a51c77eca3799d69
+      id: 567465712
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: OzTuto
+        ObjectType: 3
+      Path: Default Work Unit\OzTuto
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Screams
       guid: ea00767fc2e36347a651d5a72f1c5943
       id: 2812860249
@@ -430,8 +454,70 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 7b76c7a5a23e3e499aa16bf43b47532b
     GuidInternal: 
-    m_lastTime: -8585894891448631648
-    List: []
+    m_lastTime: -8585893974529834361
+    List:
+    - name: CrateMoving
+      guid: 9e07556062f2f7429cf246c1e7588b9b
+      id: 3302081756
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: CrateMoving
+        ObjectType: 9
+      Path: Default Work Unit\CrateMoving
+      values:
+      - name: Moving
+        guid: 549d4810eb1be0449eea0e91a99e22b4
+        id: 2649703675
+        PathAndIcons:
+        - ElementName: Moving
+          ObjectType: 8
+      - name: None
+        guid: d293459bbf54494d8d3739a19ea047c7
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      - name: Stop
+        guid: f723521aaa0f004ba4cd8358057953ef
+        id: 788884573
+        PathAndIcons:
+        - ElementName: Stop
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: OzMozThemeAmbience
+      guid: 73169cc2423f3d4d90079d41e22412bb
+      id: 3961447175
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: OzMozThemeAmbience
+        ObjectType: 9
+      Path: Default Work Unit\OzMozThemeAmbience
+      values:
+      - name: MozBig
+        guid: 4030f8fae253ae41847454358bdc50ce
+        id: 1634287737
+        PathAndIcons:
+        - ElementName: MozBig
+          ObjectType: 8
+      - name: None
+        guid: c2b3abbf02452d4493a04085d33e4ad4
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      - name: OzBig
+        guid: 05b11882bab0ee47ac00c0cd54508af5
+        id: 935025152
+        PathAndIcons:
+        - ElementName: OzBig
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -452,6 +538,12 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585895842250852815
     List: []
-  ExpandedItems: []
+  ExpandedItems:
+  - /Souls-Cream_WwiseProject
+  - /Souls-Cream_WwiseProject/Events
+  - /Souls-Cream_WwiseProject/Events/Default Work Unit
+  - /Souls-Cream_WwiseProject/States
+  - /Souls-Cream_WwiseProject/States/Default Work Unit
+  - /Souls-Cream_WwiseProject/States/Default Work Unit/OzMozThemeAmbience
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

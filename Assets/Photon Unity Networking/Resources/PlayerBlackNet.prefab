@@ -150,6 +150,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e612601b0beb6544cbd14be10b7af3cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boxes: []
+  CriN1: 0
+  dist: 0
+  distMax: 4
   NumSaut: 0
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
@@ -164,6 +168,7 @@ MonoBehaviour:
   rb: {fileID: 1247230456913524072}
   CriSelected: 1
   CriNumMax: 2
+  role: 1
 --- !u!95 &1247230456913524053
 Animator:
   serializedVersion: 3

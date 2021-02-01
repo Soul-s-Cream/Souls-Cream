@@ -6,27 +6,11 @@ using UnityEngine;
 public class MovePlayer : MonoBehaviour
 {
     #region Public Field
-    private Controls control;
     public List<BoxController> boxes;
     public bool CriN1 = false;
     public float dist;
     public float distMax = 4f;
 
-    private void Awake()
-    {
-        control = new Controls();
-    }
-    private void OnEnable()
-    {
-        control.Deplacement.Enable();
-        control.Cri.Enable();
-    }
-    private void OnDisable()
-    {
-        control.Deplacement.Disable();
-        control.Cri.Disable();
-    }
-    #endregion  //Controls
     public int NumSaut = 0;
 
     public float fallMultiplier = 2.5f;
@@ -49,7 +33,7 @@ public class MovePlayer : MonoBehaviour
     public int CriSelected = 1;
     public int CriNumMax = 3;
     public Role role;
-    #endregion
+    #endregion  //Controls
 
     #region Private Fields
     Animator anim;

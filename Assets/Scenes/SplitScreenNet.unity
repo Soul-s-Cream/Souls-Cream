@@ -2231,13 +2231,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManagerNet
       objectReference: {fileID: 0}
-    - target: {fileID: 8798266051421040268, guid: 8ce20f025447ceb458111fe5d84a2247, type: 3}
-      propertyPath: viewIdField
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8798266051421040268, guid: 8ce20f025447ceb458111fe5d84a2247, type: 3}
-      propertyPath: instantiationId
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ce20f025447ceb458111fe5d84a2247, type: 3}

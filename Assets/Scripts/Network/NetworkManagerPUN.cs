@@ -99,8 +99,11 @@ public class NetworkManagerPUN : Photon.PunBehaviour
     {
         Debug.Log("Photon : Joined a room as Player " + PhotonNetwork.player.ID);
 
-        Hashtable paramPlayer = new Hashtable();
-        paramPlayer.Add("role", "0");
+        Hashtable paramPlayer = new Hashtable
+        {
+            { "role", "0" }
+        };
+
         if (PhotonNetwork.player.IsMasterClient)
         {
             paramPlayer["role"] = Role.BLANC;
@@ -108,8 +111,21 @@ public class NetworkManagerPUN : Photon.PunBehaviour
         else
         {
             Role roleMaster = (Role)PhotonNetwork.masterClient.CustomProperties["role"];
-            paramPlayer.Add("role", roleMaster == Role.BLANC ? Role.NOIR : Role.BLANC);
+            paramPlayer["role"] = roleMaster == Role.BLANC ? Role.NOIR : Role.BLANC;
         }
+
+        string roleNameDebug = "";
+        switch (paramPlayer["role"])
+        {
+            case Role.BLANC:
+                roleNameDebug = "BLANC";
+                break;
+            case Role.NOIR:
+                roleNameDebug = "NOIR";
+                break;
+        }
+        Debug.Log("Change role of Player " + PhotonNetwork.player.ID + " to " + roleNameDebug);
+
         PhotonNetwork.player.SetCustomProperties(paramPlayer);
     }
 
@@ -126,10 +142,21 @@ public class NetworkManagerPUN : Photon.PunBehaviour
         //Si le joueur affecté n'est pas le joueur local
         if (playerChanged != PhotonNetwork.player)
         {
-            if(properties.ContainsKey("role"))
+            if(properties.ContainsKey("role") && properties["role"] == PhotonNetwork.player.CustomProperties["role"])
             {
                 Hashtable newProperties = new Hashtable();
                 newProperties.Add("role", (Role) properties["role"] == Role.BLANC ? Role.NOIR : Role.BLANC);
+                string roleNameDebug = "";
+                switch(newProperties["role"])
+                {
+                    case Role.BLANC:
+                        roleNameDebug = "BLANC";
+                        break;
+                    case Role.NOIR:
+                        roleNameDebug = "NOIR";
+                        break;
+                }
+                Debug.Log("Change role of Player " + PhotonNetwork.player.ID + " to " + roleNameDebug);
                 PhotonNetwork.player.SetCustomProperties(newProperties);
             }
         }

@@ -17,9 +17,10 @@ public class GameManager : Photon.PunBehaviour
     #endregion
 
     #region Public Fields
-    [Tooltip("Prefabs � instancier pour le multijoueur")]
+    [Tooltip("Prefabs à instancier pour le multijoueur")]
     public List<GameObject> PlayerPrefabs;
     public List<SpawnPoint> SpawnPointsList;
+    public GameObject localPlayerInstance;
     #endregion
 
     /// <summary>
@@ -42,6 +43,11 @@ public class GameManager : Photon.PunBehaviour
         #endregion
 
         controls = new Controls();
+        
+    }
+
+    private void Start()
+    {
         AddListener();
     }
 
@@ -71,7 +77,7 @@ public class GameManager : Photon.PunBehaviour
 
     public void InstantiatePlayer()
     {
-        if(PlayerPrefabs == null)
+        if(PlayerPrefabs == null || PlayerPrefabs.Count == 0)
         {
             Debug.LogError("<Color=Red><a>Missing</a></Color> playerPrefab Reference. Please set it up in GameObject 'Game Manager'", this);
         }
@@ -79,7 +85,7 @@ public class GameManager : Photon.PunBehaviour
         {
             Debug.LogWarning("<Color=Red><a>Missing</a></Color> SpawnPoint Reference. No spawning", this);
         }
-        else
+        else if(localPlayerInstance == null)
         {
             Debug.Log("We are Instantiating LocalPlayer from " + SceneManager.GetActiveScene().name);
             string prefabName = "";
@@ -105,7 +111,8 @@ public class GameManager : Photon.PunBehaviour
             }
 
             // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.
-            PhotonNetwork.Instantiate(prefabName, spawnPoint.transform.position , Quaternion.identity, 0);
+            Debug.Log("Instantiating prefab " + prefabName + " for Player " + PhotonNetwork.player.ID);
+            localPlayerInstance = PhotonNetwork.Instantiate(prefabName, spawnPoint.transform.position , Quaternion.identity, 0);
         }
     }
 
@@ -123,6 +130,7 @@ public class GameManager : Photon.PunBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode loadMode)
     {
+        Debug.Log("On Scene Loaded");
         SpawnPointsList.Clear();
         GameObject[] spawns = GameObject.FindGameObjectsWithTag("Spawn");
         foreach(GameObject spawn in spawns)
