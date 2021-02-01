@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{A5C7767B-3EA2-493E-9AA1-6BF43B47532B}" SchemaVersion="97">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{A5C7767B-3EA2-493E-9AA1-6BF43B47532B}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{A5C7767B-3EA2-493E-9AA1-6BF43B47532B}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="OzMozThemeAmbience" ID="{C29C1673-3F42-4D3D-9007-9D41E22412BB}">
+					<ChildrenList>
+						<State Name="None" ID="{BFABB3C2-4502-442D-93A0-4085D33E4AD4}"/>
+						<State Name="OzBig" ID="{8218B105-B0BA-47EE-AC00-C0CD54508AF5}"/>
+						<State Name="MozBig" ID="{FAF83040-53E2-41AE-8474-54358BDC50CE}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="CrateMoving" ID="{6055079E-F262-42F7-9CF2-46C1E7588B9B}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.2"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{9B4593D2-54BF-4D49-8D37-39A19EA047C7}"/>
+						<State Name="Moving" ID="{10489D54-1BEB-44E0-9EEA-0E91A99E22B4}"/>
+						<State Name="Stop" ID="{1A5223F7-0FAA-4B00-A4CD-8358057953EF}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

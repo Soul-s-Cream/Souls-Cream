@@ -3,24 +3,6 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{A806E1A3-C50B-4548-9894-7AF11861B916}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Musics" ID="{BCCFB0AF-E1AB-4DDC-A7E9-78D72A9413AF}">
-					<ChildrenList>
-						<Action Name="" ID="{91CCFBDF-A81F-4756-B107-DD137B300749}" ShortID="522886442">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="MozTuto" ID="{12A5DF4C-50D5-45AC-8015-EE30BED3381A}" WorkUnitID="{E81B4073-D7EF-43F2-ADD4-0375B4FA2B20}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{7ECD360C-77D6-4261-B455-BEAF62FC6AC2}" ShortID="547452463">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="OzTuto" ID="{CAEB7317-4E49-4961-9CE7-EAF1AA1D71B9}" WorkUnitID="{E81B4073-D7EF-43F2-ADD4-0375B4FA2B20}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Folder Name="Objects" ID="{A91B2A4D-C4C5-4E69-A189-01B0F9C70390}" ShortID="900515559">
 					<ChildrenList>
 						<Event Name="CrateFriction" ID="{C3022DDB-0B0B-40DE-88DE-262BA8417C86}">
@@ -228,12 +210,45 @@
 						</Folder>
 					</ChildrenList>
 				</Folder>
-				<Event Name="CrateFriction2" ID="{33C0E468-B258-4CEB-BD79-9F6035270C69}">
+				<Event Name="OzTuto" ID="{8061B9BB-F8F9-47A2-A51C-77ECA3799D69}">
 					<ChildrenList>
-						<Action Name="" ID="{91D2DCC7-9F60-45BF-80BE-E1BF25942C2D}" ShortID="1060322540">
+						<Action Name="" ID="{C60B1F2C-FE2C-46F9-A442-7ACF2036322B}" ShortID="21395649">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="CrateFriction" ID="{3A68A92E-6438-4C93-88A2-8BDCACC9DA86}" WorkUnitID="{1DDF2895-7EAD-4C1C-B399-D67DF281113E}"/>
+									<ObjectRef Name="OzTuto" ID="{CAEB7317-4E49-4961-9CE7-EAF1AA1D71B9}" WorkUnitID="{E81B4073-D7EF-43F2-ADD4-0375B4FA2B20}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MozTuto" ID="{D732C02A-217F-4FD3-AB01-1ED43D4225AE}">
+					<ChildrenList>
+						<Action Name="" ID="{C2465EAC-2154-4272-95A4-BD06342167A7}" ShortID="331134311">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MozTuto" ID="{CE129AE6-947E-4BA9-88A4-0B9D57CFD84F}" WorkUnitID="{E81B4073-D7EF-43F2-ADD4-0375B4FA2B20}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="OzMozThemeAmbiences" ID="{B95D668E-3059-48D0-8C94-EE85CCBBA633}">
+					<ChildrenList>
+						<Action Name="" ID="{CD73F9A7-BECD-417F-A51E-522551AD210E}" ShortID="227768573">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="OzMozThemeAmbience" ID="{59801BE3-23FA-41AE-AFB2-A85C7C8AC46B}" WorkUnitID="{E81B4073-D7EF-43F2-ADD4-0375B4FA2B20}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="OzMozMenuTheme" ID="{B9C37EC0-A6B4-49FC-8847-50B455193BA5}">
+					<ChildrenList>
+						<Action Name="" ID="{19F0AB3F-0287-4643-B05C-00CE3B17EA38}" ShortID="673457303">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="OzMozMenuTheme" ID="{5B94B4E0-3D54-4CD2-AEBB-52362430432A}" WorkUnitID="{E81B4073-D7EF-43F2-ADD4-0375B4FA2B20}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

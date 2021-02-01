@@ -712,6 +712,11 @@
 												</ModifierInfo>
 											</ModifierList>
 										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>8</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -743,7 +748,13 @@
 								</Sound>
 								<RandomSequenceContainer Name="ScreamDoubleJump" ID="{D7787087-CE1E-4B7F-9A36-AD090D77C287}" ShortID="581566204">
 									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>200</Value>
+											</ValueList>
+										</Property>
 										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-16</Value>
@@ -1119,6 +1130,27 @@
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="CrateMoving" ID="{6055079E-F262-42F7-9CF2-46C1E7588B9B}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Moving" ID="{10489D54-1BEB-44E0-9EEA-0E91A99E22B4}"/>
+										<CustomState Name="" ID="{97217187-EDF5-4D09-A7AE-99F28641D17E}" ShortID="139119317"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Stop" ID="{1A5223F7-0FAA-4B00-A4CD-8358057953EF}"/>
+										<CustomState Name="" ID="{5CE33F99-8F77-4ABD-801D-03F358AD1EFB}" ShortID="694063259">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-96"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
@@ -1129,6 +1161,11 @@
 								<RandomSequenceContainer Name="Compassion" ID="{7DFF241F-1098-47B5-AC61-8EAA0FFF8E09}" ShortID="852651225">
 									<PropertyList>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>200</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-8</Value>
@@ -1265,6 +1302,11 @@
 								<RandomSequenceContainer Name="Curiosite" ID="{1508A043-CB4B-4293-873D-C31694E96FAB}" ShortID="262903382">
 									<PropertyList>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>200</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-8</Value>
@@ -1372,6 +1414,11 @@
 								<RandomSequenceContainer Name="Joie" ID="{7613F4E9-0678-4AE8-8822-CE3A04866498}" ShortID="866591704">
 									<PropertyList>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>200</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-8</Value>
@@ -1507,6 +1554,11 @@
 								<RandomSequenceContainer Name="Fierte" ID="{C134A2D1-860E-4C8F-816B-BDE993E0CC11}" ShortID="871442665">
 									<PropertyList>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>200</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-8</Value>

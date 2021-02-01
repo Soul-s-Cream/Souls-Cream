@@ -1,3 +1,15 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	3302081756	CrateMoving			\Default Work Unit\CrateMoving	
+	3961447175	OzMozThemeAmbience			\Default Work Unit\OzMozThemeAmbience	
+
+State	ID	Name	State Group			Notes
+	748895195	None	CrateMoving			
+	788884573	Stop	CrateMoving			
+	2649703675	Moving	CrateMoving			
+	748895195	None	OzMozThemeAmbience			
+	935025152	OzBig	OzMozThemeAmbience			
+	1634287737	MozBig	OzMozThemeAmbience			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
