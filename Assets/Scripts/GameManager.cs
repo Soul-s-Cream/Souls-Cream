@@ -11,38 +11,35 @@ public enum Role
 
 public class GameManager : Photon.PunBehaviour
 {
-    
-
+    #region Private Fields
     private static GameManager _instance;
     Controls controls;
+    #endregion
 
-    [Tooltip("Le r�le de joueur du Client")]
-    public Role player1Role = Role.BLANC;
-    public Role player2Role = Role.NOIR;
-
+    #region Public Fields
+    [Tooltip("Prefabs � instancier pour le multijoueur")]
     public List<GameObject> PlayerPrefabs;
     public List<SpawnPoint> SpawnPointsList;
+    #endregion
 
     /// <summary>
     /// Return the actual instance of the GameManager
     /// </summary>
     public static  GameManager Instance
     {
-        get
-        {
-            return _instance;
-        }
+        get { return _instance; }
     }
 
     private void Awake()
     {
-        //Singleton Patter
+        #region Singleton
         if (_instance == null)
             _instance = this;
         else if (_instance != this)
             Destroy(this.gameObject);
 
         DontDestroyOnLoad(this.gameObject);
+        #endregion
 
         controls = new Controls();
         AddListener();
@@ -78,73 +75,46 @@ public class GameManager : Photon.PunBehaviour
         {
             Debug.LogError("<Color=Red><a>Missing</a></Color> playerPrefab Reference. Please set it up in GameObject 'Game Manager'", this);
         }
+        else if (SpawnPointsList == null)
+        {
+            Debug.LogWarning("<Color=Red><a>Missing</a></Color> SpawnPoint Reference. No spawning", this);
+        }
         else
         {
             Debug.Log("We are Instantiating LocalPlayer from " + SceneManager.GetActiveScene().name);
             string prefabName = "";
             SpawnPoint spawnPoint = SpawnPointsList[0];
-
-            switch(PhotonNetwork.player.ID)
+            Role role = (Role)PhotonNetwork.player.CustomProperties["role"];
+            //On cherche l'avatar appropri� pour le r�le du joueur
+            foreach (GameObject prefab in PlayerPrefabs)
             {
-                case 1:
-                    foreach(GameObject prefab in PlayerPrefabs)
-                    {
-                        if (player1Role == Role.BLANC && prefab.name == "PlayerWhiteNet")
-                            prefabName = prefab.name;
-                        else if (player1Role == Role.NOIR && prefab.name == "PlayerBlackNet")
-                            prefabName = prefab.name;
-                    }
-                    foreach (SpawnPoint spawn in SpawnPointsList)
-                    {
-                        if (spawn.role == player1Role)
-                            spawnPoint = spawn;
-                    }
+                if(prefab.GetComponent<MovePlayer>().role == role)
+                {
+                    prefabName = prefab.name;
                     break;
-                case 2:
-                    foreach (GameObject prefab in PlayerPrefabs)
-                    {
-                        if (player2Role == Role.BLANC && prefab.name == "PlayerWhiteNet")
-                            prefabName = prefab.name;
-                        else if (player2Role == Role.NOIR && prefab.name == "PlayerBlackNet")
-                            prefabName = prefab.name;
-                    }
-                    foreach (SpawnPoint spawn in SpawnPointsList)
-                    {
-                        if (spawn.role == player1Role)
-                            spawnPoint = spawn;
-                    }
-                    break;
+                }
             }
+            //On cherche le point de Spawn appropri� pour l'avatar du joueur
+            foreach(SpawnPoint spawn in SpawnPointsList)
+            {
+                if(spawn.role == role)
+                {
+                    spawnPoint = spawn;
+                    break;
+                }
+            }
+
             // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.
             PhotonNetwork.Instantiate(prefabName, spawnPoint.transform.position , Quaternion.identity, 0);
         }
     }
 
-    [PunRPC]
-    public void SwitchRole()
-    {
-        if(player1Role == Role.BLANC)
-        {
-            player1Role = Role.NOIR;
-            player2Role = Role.BLANC;
-        }
-        else
-        {
-            player1Role = Role.BLANC;
-            player2Role = Role.NOIR;
-        }
-    }
-
-    public void SwitchRoleNet()
-    {
-        photonView.RPC("SwitchRole", PhotonTargets.All);
-    }
-
-    #region Callbacks
     public void EndLevel()
     {
         Debug.Log("Niveau termin�");
     }
+
+    #region Unity Callbacks
 
     private void OnDestroy()
     {

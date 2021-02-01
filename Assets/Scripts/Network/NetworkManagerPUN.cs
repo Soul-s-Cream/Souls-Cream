@@ -62,6 +62,21 @@ public class NetworkManagerPUN : Photon.PunBehaviour
         PhotonNetwork.LoadLevel(levelId);
     }
 
+    public void SwitchRole()
+    {
+        Hashtable paramCustom = new Hashtable();
+        if((Role) PhotonNetwork.player.CustomProperties["role"] == Role.BLANC)
+        {
+            paramCustom.Add("role", Role.NOIR);
+        }
+        else
+        {
+            paramCustom.Add("role", Role.BLANC);
+        }
+
+        PhotonNetwork.player.SetCustomProperties(paramCustom);
+    }
+
     #region Photon.PunBehaviour Callbacks
 
     public override void OnConnectedToMaster()
@@ -88,12 +103,12 @@ public class NetworkManagerPUN : Photon.PunBehaviour
         paramPlayer.Add("role", "0");
         if (PhotonNetwork.player.IsMasterClient)
         {
-            paramPlayer["role"] = Role.BLANC.ToString();
+            paramPlayer["role"] = Role.BLANC;
         }
         else
         {
             Role roleMaster = (Role)PhotonNetwork.masterClient.CustomProperties["role"];
-            paramPlayer.Add("role", roleMaster == Role.BLANC ? Role.NOIR.ToString() : Role.BLANC.ToString());
+            paramPlayer.Add("role", roleMaster == Role.BLANC ? Role.NOIR : Role.BLANC);
         }
         PhotonNetwork.player.SetCustomProperties(paramPlayer);
     }
@@ -114,7 +129,7 @@ public class NetworkManagerPUN : Photon.PunBehaviour
             if(properties.ContainsKey("role"))
             {
                 Hashtable newProperties = new Hashtable();
-                newProperties.Add("role", properties["role"].ToString() == Role.BLANC.ToString() ? Role.NOIR.ToString() : Role.BLANC.ToString());
+                newProperties.Add("role", (Role) properties["role"] == Role.BLANC ? Role.NOIR : Role.BLANC);
                 PhotonNetwork.player.SetCustomProperties(newProperties);
             }
         }
