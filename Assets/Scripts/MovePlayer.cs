@@ -69,11 +69,11 @@ public class MovePlayer : MonoBehaviour
         anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         if (control.Deplacement.Deplacement.ReadValue<float>() == 1)
         {
-            GetComponent<SpriteRenderer>().flipY = true;
+            GetComponent<SpriteRenderer>().flipX = true;
         }
         if (control.Deplacement.Deplacement.ReadValue<float>() == -1)
         {
-            GetComponent<SpriteRenderer>().flipY = false;
+            GetComponent<SpriteRenderer>().flipX = false;
         }
     }
     private void Update()
@@ -125,7 +125,7 @@ public class MovePlayer : MonoBehaviour
             }
             if (NumSaut == 1)
             {
-                rb.AddForce(new Vector2(0f, jumpForce / 2));
+                rb.AddForce(new Vector2(0f, jumpForce * 0f));
             }
             isJuming = false;
         }
@@ -165,11 +165,8 @@ public class MovePlayer : MonoBehaviour
                     if (dist <= distMax)
                     {
                         GameEvents.Instance.SwitchBoxOn(box);
-                        Debug.Log("la boite peux bouger");
                     }
-                    else Debug.Log("Je suis trop loin");
                 }
-
             }
         }
         else

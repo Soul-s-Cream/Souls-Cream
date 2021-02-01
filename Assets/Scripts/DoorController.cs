@@ -6,6 +6,8 @@ using DG.Tweening;
 
 public class DoorController : MonoBehaviour
 {
+
+    public float directionPorte = 5;
     private bool DoorOpen = false;
     void Start()
     {
@@ -22,7 +24,7 @@ public class DoorController : MonoBehaviour
                 DC = gameObject.GetComponent<DoorController>();
                 if (DC != null && DC == this)
                 {
-                    transform.DOMoveY(transform.position.y + 5, 1f);
+                    transform.DOMoveY(transform.position.y + directionPorte, 1f);
                     break;
                 }
             }

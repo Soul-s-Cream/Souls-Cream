@@ -56,7 +56,8 @@ public class BoxController : MonoBehaviour
                 BoxMoveOn = true;
                 rg = gameObject.GetComponent<Rigidbody2D>();
                 rg.constraints = RigidbodyConstraints2D.None;
-                rg.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+                rg.constraints = RigidbodyConstraints2D.FreezeRotation /*| RigidbodyConstraints2D.FreezePositionY*/;
             }
 
         }

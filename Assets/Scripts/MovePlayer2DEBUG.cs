@@ -69,11 +69,11 @@ public class MovePlayer2DEBUG : MonoBehaviour
         anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         if (control.DEBUG.DeplacementJ2.ReadValue<float>() == 1)
         {
-            GetComponent<SpriteRenderer>().flipY = true;
+            GetComponent<SpriteRenderer>().flipX = true;
         }
         if (control.DEBUG.DeplacementJ2.ReadValue<float>() == -1)
         {
-            GetComponent<SpriteRenderer>().flipY = false;
+            GetComponent<SpriteRenderer>().flipX = false;
         }
     }
     private void Update()
@@ -159,7 +159,7 @@ public class MovePlayer2DEBUG : MonoBehaviour
             {
                 CriN1 = true;
 
-                foreach (BoxController box in boxes)
+                /*foreach (BoxController box in boxes)
                 {
                     dist = Vector2.Distance(box.transform.position, transform.position);
                     if (dist <= distMax)
@@ -168,7 +168,7 @@ public class MovePlayer2DEBUG : MonoBehaviour
                         Debug.Log("la boite peux bouger");
                     }
                     else Debug.Log("Je suis trop loin");
-                }
+                }*/
 
             }
         }
