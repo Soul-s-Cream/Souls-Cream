@@ -19,11 +19,6 @@ public class NetworkMenu : Photon.PunBehaviour
 
     public Button launchButton;
 
-    public void loadScene(int levelId)
-    {
-        PhotonNetwork.LoadLevel(levelId);
-    }
-
     public void LeaveRoom()
     {
         roomPanel.gameObject.SetActive(false);

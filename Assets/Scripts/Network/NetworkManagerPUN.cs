@@ -56,6 +56,12 @@ public class NetworkManagerPUN : Photon.PunBehaviour
         return false;
     }
 
+    public void LoadScene(int levelId)
+    {
+        PhotonNetwork.LoadLevel(levelId);
+    }
+
+
     #region Photon.PunBehaviour Callbacks
 
     public override void OnConnectedToMaster()
@@ -77,15 +83,13 @@ public class NetworkManagerPUN : Photon.PunBehaviour
     public override void OnJoinedRoom()
     {
         Debug.Log("Photon : Joined a room as Player " + PhotonNetwork.player.ID);
-        // GameManager.Instance.InstantiatePlayer();
+
     }
 
     public override void OnPhotonPlayerConnected(PhotonPlayer newPlayer)
     {
         Debug.Log("Photon : player "+ newPlayer.ID +" joined the room");
     }
-
-    
 
     #endregion
 
