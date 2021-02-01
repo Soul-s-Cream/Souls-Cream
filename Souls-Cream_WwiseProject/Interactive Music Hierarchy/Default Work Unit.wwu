@@ -3,92 +3,6 @@
 	<InteractiveMusic>
 		<WorkUnit Name="Default Work Unit" ID="{E81B4073-D7EF-43F2-ADD4-0375B4FA2B20}" PersistMode="Standalone">
 			<ChildrenList>
-				<MusicSegment Name="MozTuto" ID="{12A5DF4C-50D5-45AC-8015-EE30BED3381A}" ShortID="699536198">
-					<PropertyList>
-						<Property Name="EndPosition" Type="Real64" Value="62000"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<MusicTrack Name="MozTuto" ID="{2BE41561-27BD-45EB-9B4A-44576FB63F34}" ShortID="80309704">
-							<ReferenceList>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="MozTuto" ID="{B898253F-0156-493A-9731-D1E70579B577}">
-									<PropertyList>
-										<Property Name="MarkerInputMode" Type="int16" Value="2"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>MozTuto.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="938794312"/>
-									</MediaIDList>
-									<PluginInnerObjectList>
-										<List Name="Markers">
-											<PluginInnerObject Name="" ID="{F15BD427-7D96-4741-92AA-A95695D45992}" PluginName="Marker" CompanyID="0" PluginID="993">
-												<PropertyList>
-													<Property Name="Label" Type="string" Value="Tempo: 120.0"/>
-												</PropertyList>
-											</PluginInnerObject>
-											<PluginInnerObject Name="" ID="{6D84A514-254F-4627-B978-D3BD1F59AB29}" PluginName="Marker" CompanyID="0" PluginID="993">
-												<PropertyList>
-													<Property Name="Label" Type="string" Value="Marqueur 1"/>
-													<Property Name="Time" Type="Real64" Value="2"/>
-												</PropertyList>
-											</PluginInnerObject>
-											<PluginInnerObject Name="" ID="{47446010-4353-4EBB-B6D8-9253888C3A0D}" PluginName="Marker" CompanyID="0" PluginID="993">
-												<PropertyList>
-													<Property Name="Label" Type="string" Value="Marqueur 2"/>
-													<Property Name="Time" Type="Real64" Value="34"/>
-												</PropertyList>
-											</PluginInnerObject>
-										</List>
-									</PluginInnerObjectList>
-								</AudioFileSource>
-							</ChildrenList>
-							<TransitionList>
-								<MusicTransition Name="Root" ID="{95D90168-F3DB-48FD-8E72-F8D2A28C119B}">
-									<PropertyList>
-										<Property Name="IsFolder" Type="bool" Value="True"/>
-									</PropertyList>
-									<TransitionInfo/>
-								</MusicTransition>
-							</TransitionList>
-							<SequenceList>
-								<MusicTrackSequence Name="" ID="{6F09BE4B-1F42-43CB-AA38-DA5AEC5942DC}">
-									<ClipList>
-										<MusicClip Name="MozTuto" ID="{23D08D8C-E8D1-4DD0-B5E7-4492B34ADFB6}">
-											<PropertyList>
-												<Property Name="EndTrimOffset" Type="Real64" Value="62000"/>
-												<Property Name="FadeInMode" Type="int16" Value="0"/>
-												<Property Name="FadeOutMode" Type="int16" Value="0"/>
-											</PropertyList>
-											<AudioSourceRef Name="MozTuto" ID="{B898253F-0156-493A-9731-D1E70579B577}"/>
-										</MusicClip>
-									</ClipList>
-								</MusicTrackSequence>
-							</SequenceList>
-						</MusicTrack>
-					</ChildrenList>
-					<CueList>
-						<MusicCue Name="Entry Cue" ID="{EBE016E4-8216-497C-A969-651D42FD8C3A}"/>
-						<MusicCue Name="Exit Cue" ID="{E6B18677-E38A-464C-AC7C-D9C691128C90}">
-							<PropertyList>
-								<Property Name="CueType" Type="int16" Value="1"/>
-								<Property Name="TimeMs" Type="Real64" Value="62000"/>
-							</PropertyList>
-						</MusicCue>
-					</CueList>
-				</MusicSegment>
 				<MusicSegment Name="OzTuto" ID="{CAEB7317-4E49-4961-9CE7-EAF1AA1D71B9}" ShortID="10554780">
 					<PropertyList>
 						<Property Name="EndPosition" Type="Real64" Value="62000"/>
@@ -620,6 +534,67 @@
 						</MusicPlaylistItem>
 					</Playlist>
 				</MusicPlaylistContainer>
+				<MusicSegment Name="MozTuto" ID="{CE129AE6-947E-4BA9-88A4-0B9D57CFD84F}" ShortID="789539555">
+					<PropertyList>
+						<Property Name="EndPosition" Type="Real64" Value="64000"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicTrack Name="MozTutoV2" ID="{534339FA-864A-439A-BF66-C8B1904B678C}" ShortID="855212020">
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MozTutoV2" ID="{8BE8522E-42EE-45B4-88B7-48631F2E85E9}">
+									<Language>SFX</Language>
+									<AudioFile>MozTutoV2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="80023791"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{93F3CBD6-7FC8-4900-9791-E97A229B60BE}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<SequenceList>
+								<MusicTrackSequence Name="" ID="{C917971C-27D3-494F-A61A-A83E5203F1D4}">
+									<ClipList>
+										<MusicClip Name="MozTutoV2" ID="{97C78380-7423-4377-8DFB-1D3448F1A57C}">
+											<PropertyList>
+												<Property Name="EndTrimOffset" Type="Real64" Value="64000"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="1473.03733393395"/>
+											</PropertyList>
+											<AudioSourceRef Name="MozTutoV2" ID="{8BE8522E-42EE-45B4-88B7-48631F2E85E9}"/>
+										</MusicClip>
+									</ClipList>
+								</MusicTrackSequence>
+							</SequenceList>
+						</MusicTrack>
+					</ChildrenList>
+					<CueList>
+						<MusicCue Name="Entry Cue" ID="{6AC0D2BE-4C0D-4B97-AF4A-D138ADEB95EF}"/>
+						<MusicCue Name="Exit Cue" ID="{707CF69C-BF31-4234-8BB9-DAF05D98E6D3}">
+							<PropertyList>
+								<Property Name="CueType" Type="int16" Value="1"/>
+								<Property Name="TimeMs" Type="Real64" Value="64000"/>
+							</PropertyList>
+						</MusicCue>
+					</CueList>
+				</MusicSegment>
 			</ChildrenList>
 		</WorkUnit>
 	</InteractiveMusic>

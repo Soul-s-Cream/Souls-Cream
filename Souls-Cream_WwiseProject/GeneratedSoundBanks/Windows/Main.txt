@@ -38,6 +38,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	53780424	Fierte_02	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\Fierté2_EF3E6159.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamOz\Fierte\Fierte_02		254328
 	57836437	Solitude	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\Solitude_9337C1D4.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamMoz\Solitude\Solitude		162408
 	60450093	Acculation_02	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\Acculation_1F096FC2.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamMoz\Acculation\Acculation_02		272040
+	80023791	MozTutoV2	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\MozTutoV2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MozTuto\MozTutoV2		12288272
 	136186369	OzLanding	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\PlayerOzJump_552D154C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Oz\OzLanding		21480
 	150424399	Fierte	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\Fierté2_AECC02D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamOz\Fierte\Fierte		204996
 	167913592	Interruptor1	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\Interruptor_5E9C9814.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\Interruptor\Interruptor1		40828
@@ -91,7 +92,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	867340386	Curiosité_01	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\Curiosité_6BAAE1C4.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamOz\Curiosite\Curiosité_01		60784
 	869900004	Compassion_03	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\Compassion_F482DB1D.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamOz\Compassion\Compassion_03		402228
 	894112917	MozFootsteps_01	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\PlayerMozFootsteps_8D8F08A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozFootsteps\MozFootsteps_01		19676
-	938794312	MozTuto	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\MozTuto_1E5DC3C7.wem		\Interactive Music Hierarchy\Default Work Unit\MozTuto\MozTuto		11904240
 	941325618	Envie_02	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\Envie_14A6C608.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamMoz\Envie\Envie_02		288804
 	987408608	Tristesse_03	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\Tristesse_F4D41E07.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamMoz\Tristesse\Tristesse_03		275064
 	1017059933	OzFootsteps2	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\PlayerOzFootsteps_FDC90899.wem		\Actor-Mixer Hierarchy\Default Work Unit\Oz\OzFootsteps\OzFootsteps2		5772

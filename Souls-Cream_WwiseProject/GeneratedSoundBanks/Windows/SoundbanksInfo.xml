@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="2590716295">
+		<SoundBank Id="3161908922" Language="SFX" Hash="3016280836">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -221,11 +221,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1861470019" Name="MozTuto" ObjectPath="\Events\Default Work Unit\MozTuto" DurationType="OneShot" DurationMin="62.000000" DurationMax="62.000000">
+				<Event Id="1861470019" Name="MozTuto" ObjectPath="\Events\Default Work Unit\MozTuto" DurationType="OneShot" DurationMin="64.000000" DurationMax="64.000000">
 					<IncludedMemoryFiles>
-						<File Id="938794312" Language="SFX">
-							<ShortName>MozTuto.wav</ShortName>
-							<Path>SFX\MozTuto_1E5DC3C7.wem</Path>
+						<File Id="80023791" Language="SFX">
+							<ShortName>MozTutoV2.wav</ShortName>
+							<Path>SFX\MozTutoV2_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -378,6 +378,10 @@
 				<File Id="60450093" Language="SFX">
 					<ShortName>Acculation.wav</ShortName>
 					<Path>SFX\Acculation_1F096FC2.wem</Path>
+				</File>
+				<File Id="80023791" Language="SFX">
+					<ShortName>MozTutoV2.wav</ShortName>
+					<Path>SFX\MozTutoV2_D79FB2B7.wem</Path>
 				</File>
 				<File Id="136186369" Language="SFX">
 					<ShortName>PlayerOzJump.wav</ShortName>
@@ -590,10 +594,6 @@
 				<File Id="894112917" Language="SFX">
 					<ShortName>PlayerMozFootsteps.wav</ShortName>
 					<Path>SFX\PlayerMozFootsteps_8D8F08A6.wem</Path>
-				</File>
-				<File Id="938794312" Language="SFX">
-					<ShortName>MozTuto.wav</ShortName>
-					<Path>SFX\MozTuto_1E5DC3C7.wem</Path>
 				</File>
 				<File Id="941325618" Language="SFX">
 					<ShortName>Envie.wav</ShortName>
