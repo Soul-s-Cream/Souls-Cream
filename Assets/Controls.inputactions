@@ -136,9 +136,17 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Cri",
+                    "name": "CriMoz",
                     "type": "Button",
                     "id": "81257850-969f-4c59-a415-bf9010c53253",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "CriOzWhite",
+                    "type": "Button",
+                    "id": "f2d2950d-6e53-41a0-8af7-20e7fee785f8",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -174,7 +182,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Cri",
+                    "action": "CriMoz",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0872bab1-a8c8-4dd2-8e09-4cec394000c1",
+                    "path": "<Keyboard>/numpad6",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CriOzWhite",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

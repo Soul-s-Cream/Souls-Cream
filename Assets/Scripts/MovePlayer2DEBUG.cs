@@ -65,16 +65,32 @@ public class MovePlayer2DEBUG : MonoBehaviour
         isGrounded = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckLeft.position);
         horizontalMovement = control.DEBUG.DeplacementJ2.ReadValue<float>() * moveSpeed;
         PlayerMove(horizontalMovement);
-
         anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+
+
+
         if (control.DEBUG.DeplacementJ2.ReadValue<float>() == 1)
         {
             GetComponent<SpriteRenderer>().flipX = true;
+            if (isGrounded)
+            {
+                AkSoundEngine.PostEvent("OzFootsteps", gameObject);
+            }
         }
         if (control.DEBUG.DeplacementJ2.ReadValue<float>() == -1)
         {
             GetComponent<SpriteRenderer>().flipX = false;
+            if (isGrounded)
+            {
+                AkSoundEngine.PostEvent("OzFootsteps", gameObject);
+            }
         }
+        if(isGrounded && control.DEBUG.DeplacementJ2.ReadValue<float>()== 0)
+        {
+            AkSoundEngine.PostEvent("OzLanding", gameObject);
+        }
+
+
     }
     private void Update()
     {
@@ -121,10 +137,13 @@ public class MovePlayer2DEBUG : MonoBehaviour
         {
             if (NumSaut == 0)
             {
+                AkSoundEngine.PostEvent("OzJump", gameObject);
+
                 rb.AddForce(new Vector2(0f, jumpForce));
             }
             if (NumSaut == 1)
             {
+                AkSoundEngine.PostEvent("OzDoubleJump", gameObject);
                 rb.AddForce(new Vector2(0f, jumpForce / 2));
             }
             isJuming = false;
@@ -152,10 +171,10 @@ public class MovePlayer2DEBUG : MonoBehaviour
     public void PlayerCri()
     {
 
-        if (control.Cri.Cri.triggered)
+        if (control.Cri.CriOzWhite.triggered)
         {
             anim.SetInteger("Cri", CriSelected);
-            if (CriSelected == 1)
+            if (CriSelected == 1)               //Acculé
             {
                 CriN1 = true;
 
@@ -169,8 +188,22 @@ public class MovePlayer2DEBUG : MonoBehaviour
                     }
                     else Debug.Log("Je suis trop loin");
                 }*/
-
+                AkSoundEngine.PostEvent("Compassion", gameObject);
             }
+            if (CriSelected == 2)
+            {
+                AkSoundEngine.PostEvent("Curiosite", gameObject);
+            }
+            if (CriSelected == 3)
+            {
+                AkSoundEngine.PostEvent("Fierte", gameObject);
+            }
+            if (CriSelected == 4)
+            {
+                AkSoundEngine.PostEvent("Joie", gameObject);
+            }
+
+
         }
         else
         {

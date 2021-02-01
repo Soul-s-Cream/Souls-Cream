@@ -740,9 +740,8 @@ EdgeCollider2D:
   - {x: 8.675703, y: 2.2263803}
   - {x: 6.9600334, y: 2.893073}
   - {x: -9.721871, y: 2.9251208}
-  - {x: -9.72899, y: -2.3035114}
-  - {x: -7.254807, y: -2.3087173}
-  - {x: 10.091131, y: -2.4260623}
+  - {x: -9.658829, y: -2.3748176}
+  - {x: 9.554586, y: -2.3783696}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -1000,7 +999,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625503029}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 43.35, y: 1, z: 0}
+  m_LocalPosition: {x: 43.35, y: 2.03, z: 0}
   m_LocalScale: {x: 1.4, y: 1.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1065,7 +1064,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 5
+  m_Constraints: 1
 --- !u!1 &632648837
 GameObject:
   m_ObjectHideFlags: 0
@@ -1707,6 +1706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 986629723}
   - component: {fileID: 986629722}
+  - component: {fileID: 986629724}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -1754,6 +1754,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &986629724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986629721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de1a5d02bb70a374c81d6407ea71af12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6880d5bbe36b1ac4faa4eba3eb650c69, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &1046734124
 GameObject:
   m_ObjectHideFlags: 0
@@ -2587,8 +2611,8 @@ EdgeCollider2D:
   - {x: -4.643791, y: -2.040375}
   - {x: -4.2099495, y: -1.7455612}
   - {x: -1.690731, y: -1.750308}
-  - {x: -1.7175446, y: -2.0478642}
-  - {x: 6.483322, y: -2.0140119}
+  - {x: -1.6897202, y: -2.221691}
+  - {x: 6.6930084, y: -2.222003}
   - {x: 7.100609, y: -1.5703139}
   - {x: 7.2357025, y: -0.6411885}
   - {x: 9.093777, y: 0.20802474}
@@ -3382,7 +3406,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1723409855}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.76, y: 1, z: 0}
+  m_LocalPosition: {x: 6.2, y: 1.67, z: 0}
   m_LocalScale: {x: 1.4, y: 1.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3665,6 +3689,22 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 290643585306977306, guid: 4d13b8bf1245d164b93f77d25b03c240, type: 3}
+      propertyPath: distMax
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 290643585306977306, guid: 4d13b8bf1245d164b93f77d25b03c240, type: 3}
+      propertyPath: CriNumMax
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 290643585306977306, guid: 4d13b8bf1245d164b93f77d25b03c240, type: 3}
+      propertyPath: jumpForce
+      value: 420
+      objectReference: {fileID: 0}
+    - target: {fileID: 290643585306977306, guid: 4d13b8bf1245d164b93f77d25b03c240, type: 3}
+      propertyPath: boxes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 290643585306977306, guid: 4d13b8bf1245d164b93f77d25b03c240, type: 3}
       propertyPath: boxes.Array.data[0]
       value: 
       objectReference: {fileID: 1723409858}
@@ -3678,7 +3718,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 290643585306977310, guid: 4d13b8bf1245d164b93f77d25b03c240, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.61
+      value: 7.95
       objectReference: {fileID: 0}
     - target: {fileID: 290643585306977310, guid: 4d13b8bf1245d164b93f77d25b03c240, type: 3}
       propertyPath: m_LocalPosition.y
