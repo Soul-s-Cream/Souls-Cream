@@ -5,11 +5,14 @@ using UnityEngine;
 public class BoutonScript : MonoBehaviour
 {
     public List<GameObject> triggers;
-
+    public GameObject clef;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameEvents.Instance.SwitchTriggerOn(triggers);
+        if (collision.name == clef.name)
+        {
+            GameEvents.Instance.SwitchTriggerOn(triggers);
+        }
     }
 }

@@ -1,10 +1,16 @@
-
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MovePlayer2DEBUG : MonoBehaviour
 {
     #region
     private Controls control;
+    public List<BoxController> boxes;
+    public bool CriN1 = false;
+    public float dist;
+    public float distMax = 4f;
 
     private void Awake()
     {
@@ -63,17 +69,16 @@ public class MovePlayer2DEBUG : MonoBehaviour
         anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         if (control.DEBUG.DeplacementJ2.ReadValue<float>() == 1)
         {
-            scale.y = 180;
+            GetComponent<SpriteRenderer>().flipX = true;
         }
         if (control.DEBUG.DeplacementJ2.ReadValue<float>() == -1)
         {
-            scale.y = 0;
+            GetComponent<SpriteRenderer>().flipX = false;
         }
     }
     private void Update()
     {
-        Debug.Log(control.Cri.CriDown.triggered);
-        Debug.Log(control.Cri.CriUp.triggered);
+
         if (velocity.y > velocityYMax)
         {
             velocity.y = velocityYMax;
@@ -100,6 +105,10 @@ public class MovePlayer2DEBUG : MonoBehaviour
             anim.SetBool("Jump", false);
         }
         else anim.SetBool("Jump", true);
+
+
+
+        PlayerCriSelect();
         PlayerCri();
     }
 
@@ -123,10 +132,9 @@ public class MovePlayer2DEBUG : MonoBehaviour
 
     }
 
-    public void PlayerCri()
+    public void PlayerCriSelect()
     {
-        Debug.Log(control.Cri.CriDown.triggered);
-        Debug.Log(control.Cri.CriUp.triggered);
+
 
         if (control.Cri.CriUp.triggered)
         {
@@ -141,5 +149,34 @@ public class MovePlayer2DEBUG : MonoBehaviour
             else CriSelected = CriNumMax;
         }
     }
+    public void PlayerCri()
+    {
 
+        if (control.Cri.Cri.triggered)
+        {
+            anim.SetInteger("Cri", CriSelected);
+            if (CriSelected == 1)
+            {
+                CriN1 = true;
+
+                /*foreach (BoxController box in boxes)
+                {
+                    dist = Vector2.Distance(box.transform.position, transform.position);
+                    if (dist <= distMax)
+                    {
+                        GameEvents.Instance.SwitchBoxOn(box);
+                        Debug.Log("la boite peux bouger");
+                    }
+                    else Debug.Log("Je suis trop loin");
+                }*/
+
+            }
+        }
+        else
+        {
+            anim.SetInteger("Cri", 0);
+            CriN1 = false;
+        }
+
+    }
 }

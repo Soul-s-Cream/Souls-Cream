@@ -1,10 +1,16 @@
-
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MovePlayer : MonoBehaviour
 {
     #region
     private Controls control;
+    public List<BoxController> boxes;
+    public bool CriN1 = false;
+    public float dist;
+    public float distMax = 4f;
 
     private void Awake()
     {
@@ -63,11 +69,11 @@ public class MovePlayer : MonoBehaviour
         anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         if (control.Deplacement.Deplacement.ReadValue<float>() == 1)
         {
-            scale.y = 180;
+            GetComponent<SpriteRenderer>().flipX = true;
         }
         if (control.Deplacement.Deplacement.ReadValue<float>() == -1)
         {
-            scale.y = 0;
+            GetComponent<SpriteRenderer>().flipX = false;
         }
     }
     private void Update()
@@ -99,6 +105,9 @@ public class MovePlayer : MonoBehaviour
             anim.SetBool("Jump", false);
         }
         else anim.SetBool("Jump", true);
+
+
+
         PlayerCriSelect();
         PlayerCri();
     }
@@ -116,7 +125,7 @@ public class MovePlayer : MonoBehaviour
             }
             if (NumSaut == 1)
             {
-                rb.AddForce(new Vector2(0f, jumpForce / 2));
+                rb.AddForce(new Vector2(0f, jumpForce * 0f));
             }
             isJuming = false;
         }
@@ -146,7 +155,25 @@ public class MovePlayer : MonoBehaviour
         if (control.Cri.Cri.triggered)
         {
             anim.SetInteger("Cri", CriSelected);
-        }else anim.SetInteger("Cri", 0);
+            if (CriSelected == 1)
+            {
+                CriN1 = true;
+
+                foreach (BoxController box in boxes)
+                {
+                    dist = Vector2.Distance(box.transform.position, transform.position);
+                    if (dist <= distMax)
+                    {
+                        GameEvents.Instance.SwitchBoxOn(box);
+                    }
+                }
+            }
+        }
+        else
+        {
+            anim.SetInteger("Cri", 0);
+            CriN1 = false;
+        }
 
     }
 }
