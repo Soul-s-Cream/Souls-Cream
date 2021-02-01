@@ -11,10 +11,10 @@ public enum Role
 
 public class GameManager : Photon.PunBehaviour
 {
-
-    Controls controls;
+    
 
     private static GameManager _instance;
+    Controls controls;
 
     [Tooltip("Le r�le de joueur du Client")]
     public Role player1Role = Role.BLANC;
@@ -75,7 +75,7 @@ public class GameManager : Photon.PunBehaviour
     public void InstantiatePlayer()
     {
         if(PlayerPrefabs == null)
-{
+        {
             Debug.LogError("<Color=Red><a>Missing</a></Color> playerPrefab Reference. Please set it up in GameObject 'Game Manager'", this);
         }
         else
@@ -83,6 +83,7 @@ public class GameManager : Photon.PunBehaviour
             Debug.Log("We are Instantiating LocalPlayer from " + SceneManager.GetActiveScene().name);
             string prefabName = "";
             SpawnPoint spawnPoint = SpawnPointsList[0];
+
             switch(PhotonNetwork.player.ID)
             {
                 case 1:
