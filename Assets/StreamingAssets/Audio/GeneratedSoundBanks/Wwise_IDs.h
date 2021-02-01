@@ -50,6 +50,18 @@ namespace AK
             } // namespace STATE
         } // namespace CRATEMOVING
 
+        namespace MUSICPLAYSTOP
+        {
+            static const AkUniqueID GROUP = 2648525292U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID PLAY = 1256202815U;
+                static const AkUniqueID STOP = 788884573U;
+            } // namespace STATE
+        } // namespace MUSICPLAYSTOP
+
         namespace OZMOZTHEMEAMBIENCE
         {
             static const AkUniqueID GROUP = 3961447175U;

@@ -18,8 +18,14 @@
 					<ChildrenList>
 						<MusicTrack Name="OzTuto" ID="{1C13A801-41A7-4C6D-99E9-971B18925A49}" ShortID="936844725">
 							<ReferenceList>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Stop" ID="{839450E1-BFDC-4DE8-A058-EB146D972FAC}" WorkUnitID="{A5C7767B-3EA2-493E-9AA1-6BF43B47532B}"/>
+								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="MusicPlayStop" ID="{64656CB5-D059-442F-AC97-DAFB51A01BD4}" WorkUnitID="{A5C7767B-3EA2-493E-9AA1-6BF43B47532B}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -36,6 +42,11 @@
 									<PropertyList>
 										<Property Name="IsFolder" Type="bool" Value="True"/>
 									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{C78551EE-7397-4F5C-A78D-6B39C20F8C4B}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
 									<TransitionInfo/>
 								</MusicTransition>
 							</TransitionList>
@@ -51,10 +62,32 @@
 											<AudioSourceRef Name="OzTuto" ID="{6ECF7256-F184-484B-99A7-3A7610095343}"/>
 										</MusicClip>
 									</ClipList>
+									<ReferenceList/>
 								</MusicTrackSequence>
 							</SequenceList>
 						</MusicTrack>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="MusicPlayStop" ID="{64656CB5-D059-442F-AC97-DAFB51A01BD4}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Play" ID="{E8AA43D5-838B-4885-A76B-09FF38A29218}"/>
+								<CustomState Name="" ID="{821C5383-D9AA-49CE-8F25-453271F242A7}" ShortID="17819887"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Stop" ID="{839450E1-BFDC-4DE8-A058-EB146D972FAC}"/>
+								<CustomState Name="" ID="{49C38489-CAAA-4C15-BCF5-FDE7FC19FA35}" ShortID="525180304">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-96"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<CueList>
 						<MusicCue Name="Entry Cue" ID="{4DE0AA9A-6D3A-43CC-B9A8-069C4BE7F424}"/>
 						<MusicCue Name="Exit Cue" ID="{43EA4840-9AFE-4553-AECF-D533026046F0}">
@@ -316,6 +349,27 @@
 							</CueList>
 						</MusicSegment>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="MusicPlayStop" ID="{64656CB5-D059-442F-AC97-DAFB51A01BD4}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Play" ID="{E8AA43D5-838B-4885-A76B-09FF38A29218}"/>
+								<CustomState Name="" ID="{0CEE8351-059B-4E0E-BE24-356C42465327}" ShortID="72046279"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Stop" ID="{839450E1-BFDC-4DE8-A058-EB146D972FAC}"/>
+								<CustomState Name="" ID="{CEF77346-2BB9-4D58-8DAA-824A26A09DF9}" ShortID="34385856">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-96"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<TransitionList>
 						<MusicTransition Name="Root" ID="{0750FE36-C158-4AD5-B08C-583E35F51E76}">
 							<PropertyList>
@@ -505,6 +559,27 @@
 							</CueList>
 						</MusicSegment>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="MusicPlayStop" ID="{64656CB5-D059-442F-AC97-DAFB51A01BD4}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Play" ID="{E8AA43D5-838B-4885-A76B-09FF38A29218}"/>
+								<CustomState Name="" ID="{92A00F71-597F-4045-B02C-E7BA3F8786F3}" ShortID="89215040"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Stop" ID="{839450E1-BFDC-4DE8-A058-EB146D972FAC}"/>
+								<CustomState Name="" ID="{B3C54A7B-F31B-4F0C-A71A-ECECBFE13C70}" ShortID="722079427">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-96"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<TransitionList>
 						<MusicTransition Name="Root" ID="{25790A2F-82CD-441C-937B-4B169A6160C2}">
 							<PropertyList>
@@ -585,6 +660,27 @@
 							</SequenceList>
 						</MusicTrack>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="MusicPlayStop" ID="{64656CB5-D059-442F-AC97-DAFB51A01BD4}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Play" ID="{E8AA43D5-838B-4885-A76B-09FF38A29218}"/>
+								<CustomState Name="" ID="{4373D5D8-014F-4B18-90BF-B9284FAE8F61}" ShortID="257017435"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Stop" ID="{839450E1-BFDC-4DE8-A058-EB146D972FAC}"/>
+								<CustomState Name="" ID="{5C083C91-DDFE-4F3B-A308-9007917C735E}" ShortID="891359592">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-96"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<CueList>
 						<MusicCue Name="Entry Cue" ID="{6AC0D2BE-4C0D-4B97-AF4A-D138ADEB95EF}"/>
 						<MusicCue Name="Exit Cue" ID="{707CF69C-BF31-4234-8BB9-DAF05D98E6D3}">

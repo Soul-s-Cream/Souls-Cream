@@ -11,12 +11,12 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3591768645">
+		<SoundBank Id="1355168291" Language="SFX" Hash="4002127898">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="3016280836">
+		<SoundBank Id="3161908922" Language="SFX" Hash="4227122024">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -613,6 +613,13 @@
 				</File>
 			</IncludedMemoryFiles>
 			<StateGroups>
+				<StateGroup Id="2648525292" Name="MusicPlayStop" ObjectPath="\States\Default Work Unit\MusicPlayStop">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\MusicPlayStop\None"/>
+						<State Id="1256202815" Name="Play" ObjectPath="\States\Default Work Unit\MusicPlayStop\Play"/>
+						<State Id="788884573" Name="Stop" ObjectPath="\States\Default Work Unit\MusicPlayStop\Stop"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="3961447175" Name="OzMozThemeAmbience" ObjectPath="\States\Default Work Unit\OzMozThemeAmbience">
 					<States>
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\OzMozThemeAmbience\None"/>

@@ -22,15 +22,23 @@ Event	ID	Name			Wwise Object Path	Notes
 	4224289095	Compassion			\Default Work Unit\Oz\Screams\Compassion	
 
 State Group	ID	Name			Wwise Object Path	Notes
+	2648525292	MusicPlayStop			\Default Work Unit\MusicPlayStop	
 	3302081756	CrateMoving			\Default Work Unit\CrateMoving	
 
 State	ID	Name	State Group			Notes
+	748895195	None	MusicPlayStop			
+	788884573	Stop	MusicPlayStop			
+	1256202815	Play	MusicPlayStop			
 	748895195	None	CrateMoving			
 	788884573	Stop	CrateMoving			
 	2649703675	Moving	CrateMoving			
 
 Custom State	ID	Name	State Group	Owner		Notes
+	34385856	Stop	MusicPlayStop	\Interactive Music Hierarchy\Default Work Unit\OzMozThemeAmbience		
+	525180304	Stop	MusicPlayStop	\Interactive Music Hierarchy\Default Work Unit\OzTuto		
 	694063259	Stop	CrateMoving	\Actor-Mixer Hierarchy\Default Work Unit\Objects\CrateFriction		
+	722079427	Stop	MusicPlayStop	\Interactive Music Hierarchy\Default Work Unit\OzMozMenuTheme		
+	891359592	Stop	MusicPlayStop	\Interactive Music Hierarchy\Default Work Unit\MozTuto		
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	30785870	Envie	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\Envie_EC6248D1.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamMoz\Envie\Envie		299236
