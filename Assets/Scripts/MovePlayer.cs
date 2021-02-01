@@ -7,8 +7,10 @@ public class MovePlayer : MonoBehaviour
 {
     #region
     private Controls control;
-    public List<GameObject> Box;
+    public List<BoxController> boxes;
     public bool CriN1 = false;
+    public float dist;
+    public float distMax = 4f;
 
     private void Awake()
     {
@@ -103,6 +105,9 @@ public class MovePlayer : MonoBehaviour
             anim.SetBool("Jump", false);
         }
         else anim.SetBool("Jump", true);
+
+
+
         PlayerCriSelect();
         PlayerCri();
     }
@@ -153,9 +158,19 @@ public class MovePlayer : MonoBehaviour
             if (CriSelected == 1)
             {
                 CriN1 = true;
-                GameEvents.Instance.SwitchBoxOn(Box);
-            }
 
+                foreach (BoxController box in boxes)
+                {
+                    dist = Vector2.Distance(box.transform.position, transform.position);
+                    if (dist <= distMax)
+                    {
+                        GameEvents.Instance.SwitchBoxOn(box);
+                        Debug.Log("la boite peux bouger");
+                    }
+                    else Debug.Log("Je suis trop loin");
+                }
+
+            }
         }
         else
         {

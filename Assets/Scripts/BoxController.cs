@@ -5,43 +5,60 @@ using DG.Tweening;
 
 public class BoxController : MonoBehaviour
 {
+    public GameObject BoxSoeur;
     private bool BoxMoveOn = false;
-    /*private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (!BoxMoveOn)
-        {
+    private Vector2 distBoxSoeur;
+    private Vector2 posBoxSoeur;
+    private Vector2 posIniBoxSoeur;
 
+    private Vector2 distIniBoxSoeur;
+    private Vector2 position;
+
+
+
+    void Start()
+    {
+        GameEvents.Instance.switchBox += BoxMove;
+        position = transform.position;
+        if (BoxSoeur != null)
+        {
+            posBoxSoeur = BoxSoeur.transform.position;
+            posIniBoxSoeur = BoxSoeur.transform.position;
         }
 
-    }*/
+    }
 
-
-
-     void Start()
-     {
-         GameEvents.Instance.switchBox += BoxMove;
-     }
-     private void BoxMove(List<GameObject> gameObjects)
-     {
-        BoxController BC;
-        Rigidbody2D rg; 
-         if (!BoxMoveOn)
-         {
-            BoxMoveOn = true;
-            foreach (GameObject gameObject in gameObjects)
+    private void Update()
+    {
+        if (BoxSoeur != null)
+        {
+            posBoxSoeur = BoxSoeur.transform.position;
+            if (Mathf.Abs (posBoxSoeur.x - posIniBoxSoeur.x) >= 0.001f)
             {
+                distBoxSoeur.x =  posBoxSoeur.x - posIniBoxSoeur.x;
+                position.x += distBoxSoeur.x; 
+                posIniBoxSoeur.x = posBoxSoeur.x;
+                transform.position = position;
+            }
+            if (Mathf.Abs(posBoxSoeur.y - posIniBoxSoeur.y) >= 0.001f)
+            {
+                position.y = transform.position.y;
+            }
+        }
+    }
 
-                
-                BC = gameObject.GetComponent<BoxController>();
+    private void BoxMove(BoxController box)
+    {
+        if (box== this) {
+        Rigidbody2D rg;
+            if (!BoxMoveOn)
+            {
+                BoxMoveOn = true;
                 rg = gameObject.GetComponent<Rigidbody2D>();
-                 if (BC != null && BC == this)
-                 {
-                    rg.constraints = RigidbodyConstraints2D.None;
-                    rg.constraints = RigidbodyConstraints2D.FreezeRotation;/*| RigidbodyConstraints2D.FreezePositionY*/
-                     //transform.DOMoveX(transform.position.x + 5, 1f);
-                         break;
-                 }
-             }
-         }
-     }
+                rg.constraints = RigidbodyConstraints2D.None;
+                rg.constraints = RigidbodyConstraints2D.FreezeRotation;
+            }
+
+        }
+    }
 }

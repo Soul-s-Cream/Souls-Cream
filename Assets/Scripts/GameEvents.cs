@@ -24,7 +24,9 @@ public class GameEvents : MonoBehaviour
     public delegate void SwitchEvent(List<GameObject> gameObjects);
     public event SwitchEvent switchOn;
     public event SwitchEvent switchOff;
-    public event SwitchEvent switchBox;
+    public delegate void SwitchEventBox(BoxController box);
+
+    public event SwitchEventBox switchBox;
 
     #endregion
 
@@ -58,11 +60,11 @@ public class GameEvents : MonoBehaviour
             switchOn(gameObjects);
         }
     }
-    public void SwitchBoxOn(List<GameObject> gameObjects)
+    public void SwitchBoxOn(BoxController box)
     {
         if (switchBox != null)
         {
-            switchBox(gameObjects);
+            switchBox(box);
         }
     }
 }
