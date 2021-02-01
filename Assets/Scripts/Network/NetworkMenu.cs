@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-[RequireComponent(typeof(NetworkManagerPUN))]
 public class NetworkMenu : Photon.PunBehaviour
 {
     public Text roomNameField;
@@ -23,7 +21,6 @@ public class NetworkMenu : Photon.PunBehaviour
 
     public void loadScene(int levelId)
     {
-        PhotonNetwork.automaticallySyncScene = true;
         PhotonNetwork.LoadLevel(levelId);
     }
 
@@ -47,11 +44,6 @@ public class NetworkMenu : Photon.PunBehaviour
         }
     }
 
-    public void UpdateNickname()
-    {
-        PhotonNetwork.player.NickName = playerNameField.text;
-    }
-
     public void JoinRoom()
     {
         if (NetworkManagerPUN.Instance.ConnectRoom(roomNameField.text))
@@ -68,7 +60,7 @@ public class NetworkMenu : Photon.PunBehaviour
     {
         if (PhotonNetwork.room.PlayerCount >= 1)
         {
-            player1Name.text = PhotonNetwork.playerList[0].NickName + " is connected";
+            player1Name.text = PhotonNetwork.playerList[0].ID + " is connected";
             player1Toggle.isOn = true;
         }
         else
@@ -79,7 +71,7 @@ public class NetworkMenu : Photon.PunBehaviour
 
         if (PhotonNetwork.room.PlayerCount >= 2)
         {
-            player2Name.text = PhotonNetwork.playerList[1].NickName + " is connected";
+            player2Name.text = PhotonNetwork.playerList[1].ID + " is connected";
             player2Toggle.isOn = true;
         }
         else
@@ -89,11 +81,6 @@ public class NetworkMenu : Photon.PunBehaviour
         }
 
         launchButton.interactable = PhotonNetwork.room.PlayerCount >= 2;
-    }
-
-    public override void OnConnectedToMaster()
-    {
-        UpdateNickname();
     }
 
     public override void OnJoinedRoom()
