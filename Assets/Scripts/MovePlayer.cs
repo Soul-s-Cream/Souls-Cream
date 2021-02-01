@@ -69,11 +69,11 @@ public class MovePlayer : MonoBehaviour
         anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         if (control.Deplacement.Deplacement.ReadValue<float>() == 1)
         {
-            scale.y = 180;
+            GetComponent<SpriteRenderer>().flipY = true;
         }
         if (control.Deplacement.Deplacement.ReadValue<float>() == -1)
         {
-            scale.y = 0;
+            GetComponent<SpriteRenderer>().flipY = false;
         }
     }
     private void Update()
