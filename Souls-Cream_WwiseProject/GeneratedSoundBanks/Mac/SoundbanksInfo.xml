@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="655131441">
+		<SoundBank Id="3161908922" Language="SFX" Hash="3462507548">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -342,6 +342,14 @@
 						<File Id="136186369" Language="SFX">
 							<ShortName>PlayerOzJump.wav</ShortName>
 							<Path>SFX\PlayerOzJump_552D154C.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1579895492" Name="OzMozEndSong" ObjectPath="\Events\Default Work Unit\OzMozEndSong" DurationType="OneShot" DurationMin="62.000000" DurationMax="62.000000">
+					<IncludedMemoryFiles>
+						<File Id="743192087" Language="SFX">
+							<ShortName>OzMozEndTheme.wav</ShortName>
+							<Path>SFX\OzMozEndTheme_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -682,6 +690,10 @@
 				<File Id="732767810" Language="SFX">
 					<ShortName>PlayerMozJump.wav</ShortName>
 					<Path>SFX\PlayerMozJump_33CEA9B4.wem</Path>
+				</File>
+				<File Id="743192087" Language="SFX">
+					<ShortName>OzMozEndTheme.wav</ShortName>
+					<Path>SFX\OzMozEndTheme_D79FB2B7.wem</Path>
 				</File>
 				<File Id="777475882" Language="SFX">
 					<ShortName>ambiences plateaux\MozThemeAmbience.wav</ShortName>

@@ -390,6 +390,17 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="OzMozEndSong" ID="{5DD44678-F8CB-43E4-A5A1-B760D2115AEA}">
+					<ChildrenList>
+						<Action Name="" ID="{F71C54EE-F657-4837-932B-9BDF9E11CEDE}" ShortID="721152109">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="OzMozEndSong" ID="{AF13FDDB-BDA8-4C6C-BC07-DEDAF68C0011}" WorkUnitID="{E81B4073-D7EF-43F2-ADD4-0375B4FA2B20}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

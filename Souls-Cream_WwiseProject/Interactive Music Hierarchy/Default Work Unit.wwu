@@ -691,6 +691,130 @@
 						</MusicCue>
 					</CueList>
 				</MusicSegment>
+				<MusicSegment Name="OzMozEndSong" ID="{AF13FDDB-BDA8-4C6C-BC07-DEDAF68C0011}" ShortID="846362636">
+					<PropertyList>
+						<Property Name="EndPosition" Type="Real64" Value="66000"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicTrack Name="OzMozEndTheme" ID="{76DF27E6-A82A-4313-BFE4-1409CB059BB6}" ShortID="516627365">
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="OzMozEndTheme" ID="{69FC5461-3831-40E8-A1C4-D1EE36FDDA60}">
+									<Language>SFX</Language>
+									<AudioFile>OzMozEndTheme.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="743192087"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{66D36ECF-B27F-476B-ADBD-FE0DD622573D}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<SequenceList>
+								<MusicTrackSequence Name="" ID="{A9C01D5D-1FE4-47B2-8C01-2887E98ED100}">
+									<ClipList>
+										<MusicClip Name="OzMozEndTheme" ID="{D59883F2-B620-4BAF-8395-BF824B8DE8A7}">
+											<PropertyList>
+												<Property Name="BeginTrimOffset" Type="Real64" Value="1190.37199124727"/>
+												<Property Name="EndTrimOffset" Type="Real64" Value="63190.3719912473"/>
+												<Property Name="FadeInMode" Type="int16" Value="0"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="3921.22538293216"/>
+												<Property Name="FadeOutShape" Type="int16" Value="1"/>
+												<Property Name="PlayAt" Type="Real64" Value="-1190.37199124727"/>
+											</PropertyList>
+											<AudioSourceRef Name="OzMozEndTheme" ID="{69FC5461-3831-40E8-A1C4-D1EE36FDDA60}"/>
+											<PropertyCurveList>
+												<PropertyCurve PropertyName="Highpass">
+													<Curve Name="" ID="{69A1A2C8-E16F-4662-8EA1-E38952724B15}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="1"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>1.19037</XPos>
+																<YPos>0</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>63.19037</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</PropertyCurve>
+												<PropertyCurve PropertyName="Lowpass">
+													<Curve Name="" ID="{E177B8E8-9E5E-456A-909A-AF8DD6401197}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="1"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>1.19037</XPos>
+																<YPos>0</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>63.19037</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</PropertyCurve>
+												<PropertyCurve PropertyName="Volume">
+													<Curve Name="" ID="{2E8BEAA8-E81A-438E-AFFC-FED4B2C707F4}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>1.19037</XPos>
+																<YPos>0</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>63.19037</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</PropertyCurve>
+											</PropertyCurveList>
+										</MusicClip>
+									</ClipList>
+								</MusicTrackSequence>
+							</SequenceList>
+						</MusicTrack>
+					</ChildrenList>
+					<CueList>
+						<MusicCue Name="Entry Cue" ID="{64A253F5-9624-4D21-ADEA-B8D13BF64ADA}"/>
+						<MusicCue Name="Exit Cue" ID="{978095BD-C05F-4BE8-B068-EE2539165524}">
+							<PropertyList>
+								<Property Name="CueType" Type="int16" Value="1"/>
+								<Property Name="TimeMs" Type="Real64" Value="62000"/>
+							</PropertyList>
+						</MusicCue>
+					</CueList>
+				</MusicSegment>
 			</ChildrenList>
 		</WorkUnit>
 	</InteractiveMusic>

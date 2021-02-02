@@ -12,6 +12,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1035518595	OzLanding			\Default Work Unit\Oz\OzLanding	
 	1256202815	PLAY			\Default Work Unit\MenuVoices\PLAY	
 	1559875400	Back			\Default Work Unit\MenuVoices\Back	
+	1579895492	OzMozEndSong			\Default Work Unit\OzMozEndSong	
 	1595060770	OzJump			\Default Work Unit\Oz\OzJump	
 	1698034228	Envie			\Default Work Unit\Moz\Screams\Envie	
 	1861470019	MozTuto			\Default Work Unit\MozTuto	
@@ -110,6 +111,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	694567900	CrateFriction2	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\CrateFriction_B3F2D557.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\CrateFriction\CrateFriction2		969192
 	713776206	Fierte_01	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Fierté2_28E9D432.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamOz\Fierte\Fierte_01		168944
 	732767810	MozJump2	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\PlayerMozJump_33CEA9B4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozJump\MozJump2		51440
+	743192087	OzMozEndTheme	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\OzMozEndTheme_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\OzMozEndSong\OzMozEndTheme		12288320
 	777475882	MozThemeAmbience	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\ambiences plateaux\MozThemeAmbience_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\OzMozThemeAmbience\ambiences plateaux\MozThemeAmbience		6912192
 	821152830	Curiosité	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Curiosité_EDB17340.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamOz\Curiosite\Curiosité		108012
 	827214385	Swap	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Menu Voices_5F9B240D.wem		\Actor-Mixer Hierarchy\Default Work Unit\MenuVoices\Swap		125160

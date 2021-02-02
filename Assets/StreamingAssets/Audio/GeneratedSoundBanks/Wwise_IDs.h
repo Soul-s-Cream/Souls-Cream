@@ -36,6 +36,7 @@ namespace AK
         static const AkUniqueID OZFOOTSTEPS = 2515146559U;
         static const AkUniqueID OZJUMP = 1595060770U;
         static const AkUniqueID OZLANDING = 1035518595U;
+        static const AkUniqueID OZMOZENDSONG = 1579895492U;
         static const AkUniqueID OZMOZMENUTHEME = 3278785808U;
         static const AkUniqueID OZMOZTHEMEAMBIENCES = 3147785334U;
         static const AkUniqueID OZTUTO = 567465712U;

@@ -3,7 +3,7 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{903F1C27-14F7-4ECD-AF40-5AADFEA9AFA0}">
 			<PropertyList>
-				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\Utilisateur\Desktop\Global Game Jam 2021\Global Game Jam 2021\Cris\"/>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\Utilisateur\Desktop\Global Game Jam 2021\Global Game Jam 2021\Musique\"/>
 				<Property Name="Event Action List\{0465BC4B-7A81-4F00-A532-C8BF9B48736A}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{13A56617-D801-48F9-82FB-BAEE28C59314}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{19F977AA-18B3-4DFE-A09F-C5319DEE049F}\x64_Expand States" Type="string" Value=""/>
@@ -19,6 +19,7 @@
 				<Property Name="Event Action List\{53A3B30E-938D-4A27-8467-E4892F3E0296}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{55617D0A-0450-403F-8000-3B74FA0929E7}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{5B0A3CC3-6E48-4BB8-A344-B244A528D380}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{5DD44678-F8CB-43E4-A5A1-B760D2115AEA}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{71F4146C-4FF8-431E-9FC6-91BBA7D57892}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{7A4DE5C0-BB17-48F1-B29D-330784048971}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{8061B9BB-F8F9-47A2-A51C-77ECA3799D69}\x64_Expand States" Type="string" Value=""/>
