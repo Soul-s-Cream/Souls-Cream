@@ -44,4 +44,5 @@ MonoBehaviour:
   - RequestForPickupTimes
   - TaggedPlayer
   - SwitchRole
+  - FlipToggleSprite
   DisableAutoOpenWizard: 1
