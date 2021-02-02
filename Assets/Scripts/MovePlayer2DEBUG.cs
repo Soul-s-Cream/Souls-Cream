@@ -34,7 +34,7 @@ public class MovePlayer2DEBUG : MonoBehaviour
     public float lowJumpMultiplier = 2f;
     public float velocityYMax = 50f;
 
-    public float moveSpeed; // vitesse de déplacement
+    public float moveSpeed; // vitesse de dï¿½placement
     public float jumpForce;
     public float maxSpeed;
 
@@ -47,7 +47,7 @@ public class MovePlayer2DEBUG : MonoBehaviour
     public Rigidbody2D rb;
     private Vector3 velocity = Vector3.zero;
     private float horizontalMovement = 0f;
-    #endregion  // déplacement
+    #endregion  // dï¿½placement
     Animator anim;
     private Vector3 scale;
 

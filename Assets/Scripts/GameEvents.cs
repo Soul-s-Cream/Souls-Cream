@@ -13,7 +13,7 @@ public class GameEvents : MonoBehaviour
             return _instance;
         }
     }
-    #region Définition des événements
+    #region Dï¿½finition des ï¿½vï¿½nements
     public delegate void CustomEventTypeExample(GameObject obj, string aString);
     public event CustomEventTypeExample customEventExample;
 
@@ -23,10 +23,15 @@ public class GameEvents : MonoBehaviour
     public event Action BasicEventExemple;
     public delegate void SwitchEvent(GameObject[] gameObjects);
     public event SwitchEvent switchOn;
-    public event SwitchEvent switchOff;
-    public delegate void SwitchEventBox(BoxController box);
+    //public event SwitchEvent switchOff;
 
+    public delegate void SwitchEventBox(BoxController box);
     public event SwitchEventBox switchBox;
+
+    public delegate void AnimIconesCrisEvent(GameObject icone);
+    public event AnimIconesCrisEvent IconeAnimSelected;
+    public event AnimIconesCrisEvent IconeAnimUnselected;
+
 
     #endregion
 
@@ -44,16 +49,6 @@ public class GameEvents : MonoBehaviour
     {
         PlayerReachEnd(gameObject);
     }
-
-    /*public void DoorwayTriggerEnter()
-    {
-        Debug.Log("DoorWay");
-        if (BasicEventExemple != null)
-        {
-            BasicEventExemple();
-        }
-    }*/
-
     public void SwitchTriggerOn(GameObject[] gameObjects )
     {
         if (switchOn != null)
@@ -67,6 +62,21 @@ public class GameEvents : MonoBehaviour
         if (switchBox != null)
         {
             switchBox(box);
+        }
+    }
+
+    public void SwitchIconeUp(GameObject Icone)
+    {
+        if (Icone != null)
+        {
+            IconeAnimSelected(Icone);
+        }
+    }
+    public void SwitchIconeDown(GameObject Icone)
+    {
+        if (Icone != null)
+        {
+            IconeAnimUnselected(Icone);
         }
     }
 }

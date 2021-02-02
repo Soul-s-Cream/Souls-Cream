@@ -55,6 +55,7 @@ public class MovePlayer : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         scale = transform.eulerAngles;
+//        AkSoundEngine.PostEvent("MozTuto", gameObject);
     }
 
     void FixedUpdate()
@@ -68,10 +69,22 @@ public class MovePlayer : MonoBehaviour
         if (control.Deplacement.Deplacement.ReadValue<float>() == 1)
         {
             GetComponent<SpriteRenderer>().flipX = true;
+            if (isGrounded)
+            {
+                AkSoundEngine.PostEvent("MozFootsteps", gameObject);
+            }
         }
         if (control.Deplacement.Deplacement.ReadValue<float>() == -1)
         {
             GetComponent<SpriteRenderer>().flipX = false;
+            if (isGrounded)
+            {
+                AkSoundEngine.PostEvent("MozFootsteps", gameObject);
+            }
+        }
+        if (isGrounded && control.Deplacement.Deplacement.ReadValue<float>() == 0)
+        {
+            //AkSoundEngine.PostEvent("MozLanding", gameObject);
         }
     }
     private void Update()
@@ -119,10 +132,13 @@ public class MovePlayer : MonoBehaviour
         {
             if (NumSaut == 0)
             {
+                AkSoundEngine.PostEvent("MozJump", gameObject);
+                //AkSoundEngine.SetState("OzMozThemeAmbience", "MozBig");
                 rb.AddForce(new Vector2(0f, jumpForce));
             }
             if (NumSaut == 1)
             {
+
                 rb.AddForce(new Vector2(0f, jumpForce * 0f));
             }
             isJuming = false;
@@ -166,7 +182,22 @@ public class MovePlayer : MonoBehaviour
                         GameEvents.Instance.SwitchBoxOn(box);
                     }
                 }
+                AkSoundEngine.PostEvent("Acculation", gameObject);
             }
+            if (CriSelected == 2)
+            {
+                AkSoundEngine.PostEvent("Envie", gameObject);
+            }
+            if (CriSelected == 3)
+            {
+                AkSoundEngine.PostEvent("Solitude", gameObject);
+            }
+            if (CriSelected == 4)
+            {
+                AkSoundEngine.PostEvent("Tristesse", gameObject);
+            }
+
+
         }
         else
         {
