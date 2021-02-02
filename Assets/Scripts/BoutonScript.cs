@@ -22,8 +22,6 @@ public class BoutonScript : Photon.PunBehaviour
             {
                this.photonView.RPC("SwitchOn", PhotonTargets.All);
             }
-            BoutonOn = true;
-            GetComponent<Animator>().SetBool("BoutonON", true);
         }
     }
     
@@ -31,5 +29,7 @@ public class BoutonScript : Photon.PunBehaviour
     public void SwitchOn()
     {
         GameEvents.Instance.SwitchTriggerOn(triggers);
+        BoutonOn = true;
+        GetComponent<Animator>().SetBool("BoutonON", true);
     }
 }
