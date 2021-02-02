@@ -64,15 +64,12 @@ public class NetworkManagerPUN : Photon.PunBehaviour
 
     public void SwitchRole()
     {
-        Hashtable paramCustom = new Hashtable();
-        if((Role) PhotonNetwork.player.CustomProperties["role"] == Role.BLANC)
+        Debug.Log("Switching Roles");
+        Role role = (Role)PhotonNetwork.player.CustomProperties["role"];
+        Hashtable paramCustom = new Hashtable
         {
-            paramCustom.Add("role", Role.NOIR);
-        }
-        else
-        {
-            paramCustom.Add("role", Role.BLANC);
-        }
+            { "role", role == Role.BLANC ? Role.NOIR : Role.BLANC } 
+        };
 
         PhotonNetwork.player.SetCustomProperties(paramCustom);
     }
@@ -131,7 +128,7 @@ public class NetworkManagerPUN : Photon.PunBehaviour
 
     public override void OnPhotonPlayerConnected(PhotonPlayer newPlayer)
     {
-        Debug.Log("Photon : player "+ newPlayer.ID +" joined the room");
+        Debug.Log("Photon : player " + newPlayer.ID + " joined the room");
     }
 
     public override void OnPhotonPlayerPropertiesChanged(object[] playerAndUpdatedProps)
@@ -142,12 +139,12 @@ public class NetworkManagerPUN : Photon.PunBehaviour
         //Si le joueur affecté n'est pas le joueur local
         if (playerChanged != PhotonNetwork.player)
         {
-            if(properties.ContainsKey("role") && properties["role"] == PhotonNetwork.player.CustomProperties["role"])
+            if (properties.ContainsKey("role") && properties["role"] == PhotonNetwork.player.CustomProperties["role"])
             {
                 Hashtable newProperties = new Hashtable();
-                newProperties.Add("role", (Role) properties["role"] == Role.BLANC ? Role.NOIR : Role.BLANC);
+                newProperties.Add("role", (Role)properties["role"] == Role.BLANC ? Role.NOIR : Role.BLANC);
                 string roleNameDebug = "";
-                switch(newProperties["role"])
+                switch (newProperties["role"])
                 {
                     case Role.BLANC:
                         roleNameDebug = "BLANC";
