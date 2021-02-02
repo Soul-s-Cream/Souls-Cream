@@ -13,7 +13,7 @@ public class DoorController : MonoBehaviour
     {
         GameEvents.Instance.switchOn += OnDoorwayOpen;
     }
-    private void OnDoorwayOpen(List<GameObject> gameObjects)
+    private void OnDoorwayOpen(GameObject[] gameObjects)
     {
         DoorController DC;
         if (!DoorOpen)

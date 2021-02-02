@@ -45,4 +45,7 @@ MonoBehaviour:
   - TaggedPlayer
   - SwitchRole
   - FlipToggleSprite
+  - SwitchBoxOn
+  - SwitchTriggerOn
+  - SwitchOn
   DisableAutoOpenWizard: 1

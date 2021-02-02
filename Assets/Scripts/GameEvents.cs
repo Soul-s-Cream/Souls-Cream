@@ -21,7 +21,7 @@ public class GameEvents : MonoBehaviour
     public event GameEvent PlayerReachEnd;
 
     public event Action BasicEventExemple;
-    public delegate void SwitchEvent(List<GameObject> gameObjects);
+    public delegate void SwitchEvent(GameObject[] gameObjects);
     public event SwitchEvent switchOn;
     public event SwitchEvent switchOff;
     public delegate void SwitchEventBox(BoxController box);
@@ -53,13 +53,15 @@ public class GameEvents : MonoBehaviour
             BasicEventExemple();
         }
     }*/
-    public void SwitchTriggerOn(List<GameObject> gameObjects )
+
+    public void SwitchTriggerOn(GameObject[] gameObjects )
     {
         if (switchOn != null)
         {
             switchOn(gameObjects);
         }
     }
+
     public void SwitchBoxOn(BoxController box)
     {
         if (switchBox != null)

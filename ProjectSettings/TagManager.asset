@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Beam
   - Spawn
+  - Crate
   layers:
   - Default
   - TransparentFX

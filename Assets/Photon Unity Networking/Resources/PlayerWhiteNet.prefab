@@ -346,7 +346,7 @@ MonoBehaviour:
     SynchronizeType: 1
     Name: Jump
   - Type: 3
-    SynchronizeType: 1
+    SynchronizeType: 2
     Name: Cri
   m_SynchronizeLayers:
   - SynchronizeType: 1

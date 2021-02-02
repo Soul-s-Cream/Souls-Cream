@@ -169,14 +169,12 @@ public class MovePlayerNet : Photon.PunBehaviour
             if (CriSelected == 1)
             {
                 CriN1 = true;
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(new Vector2(this.transform.position.x, this.transform.position.y), distMax);
 
-                foreach (BoxController box in boxes)
+                foreach (Collider2D collider in colliders)
                 {
-                    dist = Vector2.Distance(box.transform.position, transform.position);
-                    if (dist <= distMax)
-                    {
-                        GameEvents.Instance.SwitchBoxOn(box);
-                    }
+                    if(collider.gameObject.CompareTag("Crate"))
+                        GameEvents.Instance.SwitchBoxOn(collider.GetComponent<BoxController>());
                 }
             }
         }
