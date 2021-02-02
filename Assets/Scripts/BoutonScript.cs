@@ -2,17 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoutonScript : MonoBehaviour
+public class BoutonScript : Photon.PunBehaviour
 {
-    public List<GameObject> triggers;
-    public GameObject clef;
+    public GameObject[] triggers;
 
+    [TagSelector]
+    public string tagFilter = "";
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.name == clef.name)
+        if (collision.CompareTag(tagFilter))
         {
-            GameEvents.Instance.SwitchTriggerOn(triggers);
+            if(!PhotonNetwork.connected)
+            {
+                SwitchOn();
+            }
+            else
+            {
+               this.photonView.RPC("SwitchOn", PhotonTargets.All);
+            }
         }
+    }
+    
+    [PunRPC]
+    public void SwitchOn()
+    {
+        GameEvents.Instance.SwitchTriggerOn(triggers);
     }
 }

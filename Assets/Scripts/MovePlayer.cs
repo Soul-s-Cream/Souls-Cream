@@ -5,36 +5,20 @@ using UnityEngine;
 
 public class MovePlayer : MonoBehaviour
 {
-    #region
-    private Controls control;
+    #region Public Field
     public List<BoxController> boxes;
     public bool CriN1 = false;
     public float dist;
     public float distMax = 4f;
 
-    private void Awake()
-    {
-        control = new Controls();
-    }
-    private void OnEnable()
-    {
-        control.Deplacement.Enable();
-        control.Cri.Enable();
-    }
-    private void OnDisable()
-    {
-        control.Deplacement.Disable();
-        control.Cri.Disable();
-    }
-    #endregion  //Controls
-    #region
     public int NumSaut = 0;
 
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
     public float velocityYMax = 50f;
 
-    public float moveSpeed; // vitesse de déplacement
+    // vitesse de dï¿½placement
+    public float moveSpeed;
     public float jumpForce;
     public float maxSpeed;
 
@@ -45,20 +29,34 @@ public class MovePlayer : MonoBehaviour
     public Transform groundCheckRight;
 
     public Rigidbody2D rb;
-    private Vector3 velocity = Vector3.zero;
-    private float horizontalMovement = 0f;
-    #endregion  // déplacement
-    Animator anim;
-    private Vector3 scale;
-
 
     public int CriSelected = 1;
     public int CriNumMax = 3;
+    public Role role;
+    #endregion  //Controls
+
+    #region Private Fields
+    Animator anim;
+    private Vector3 scale;
+
+    private Vector3 velocity = Vector3.zero;
+    // dï¿½placement
+    private float horizontalMovement = 0f;
+
+    private Controls control;
+    #endregion
+
+    private void Awake()
+    {
+        control = new Controls();
+    }
+
     private void Start()
     {
         anim = GetComponent<Animator>();
         scale = transform.eulerAngles;
     }
+
     void FixedUpdate()
     {
         transform.eulerAngles = scale;
@@ -132,6 +130,7 @@ public class MovePlayer : MonoBehaviour
 
     }
 
+    #region Cri
     public void PlayerCriSelect()
     {
 
@@ -176,4 +175,18 @@ public class MovePlayer : MonoBehaviour
         }
 
     }
+    #endregion
+
+    #region Unity Callbacks
+    private void OnEnable()
+    {
+        control.Deplacement.Enable();
+        control.Cri.Enable();
+    }
+    private void OnDisable()
+    {
+        control.Deplacement.Disable();
+        control.Cri.Disable();
+    }
+    #endregion
 }

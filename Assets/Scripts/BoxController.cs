@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class BoxController : MonoBehaviour
+public class BoxController : Photon.PunBehaviour
 {
     public GameObject BoxSoeur;
     private bool BoxMoveOn = false;
@@ -49,8 +49,16 @@ public class BoxController : MonoBehaviour
 
     private void BoxMove(BoxController box)
     {
-        if (box== this) {
-        Rigidbody2D rg;
+        if (box== this) 
+        {
+            Rigidbody2D rg;
+             
+            if(PhotonNetwork.connected)
+            {
+                this.photonView.RequestOwnership();
+                this.BoxSoeur.GetPhotonView().RequestOwnership();
+            }
+
             if (!BoxMoveOn)
             {
                 BoxMoveOn = true;
