@@ -1338,7 +1338,7 @@ MonoBehaviour:
   synchronization: 3
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
-  ownershipTransfer: 0
+  ownershipTransfer: 1
   ObservedComponents:
   - {fileID: 673406425}
   ObservedComponentsFoldoutOpen: 1
@@ -1675,8 +1675,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 2
-  instantiationId: 2
+  viewIdField: 66
+  instantiationId: 66
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!1001 &841528100
@@ -3240,7 +3240,7 @@ MonoBehaviour:
   synchronization: 3
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
-  ownershipTransfer: 0
+  ownershipTransfer: 2
   ObservedComponents:
   - {fileID: 1846045870}
   ObservedComponentsFoldoutOpen: 1
