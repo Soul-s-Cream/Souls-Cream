@@ -474,13 +474,14 @@ GameObject:
   - component: {fileID: 550236477}
   - component: {fileID: 550236476}
   - component: {fileID: 550236475}
+  - component: {fileID: 550236479}
   m_Layer: 0
   m_Name: Camera W Down
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &550236474
 Transform:
   m_ObjectHideFlags: 0
@@ -570,7 +571,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 550236473}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -606,6 +607,19 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &550236479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550236473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5b7f4eccc17d4498e7683cefaaa2a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 2011563880}
 --- !u!1 &573759406
 GameObject:
   m_ObjectHideFlags: 0
@@ -1524,6 +1538,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390070106}
   m_CullTransparentMesh: 1
+--- !u!1 &1439207750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1439207752}
+  - component: {fileID: 1439207751}
+  m_Layer: 0
+  m_Name: CameraSet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1439207751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439207750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d49cc10e1cd665d43b12e806c5571c5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraSetsRole:
+  - role: 0
+    cameras:
+    - {fileID: 1328753102}
+    - {fileID: 2011563880}
+  - role: 1
+    cameras:
+    - {fileID: 550236478}
+    - {fileID: 1461488286}
+  cameraSetSpecial: []
+  cameras: []
+--- !u!4 &1439207752
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439207750}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 36.717796, y: 3.2987444, z: -1.350451}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1461488281
 GameObject:
   m_ObjectHideFlags: 0
@@ -1543,7 +1611,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1461488282
 Transform:
   m_ObjectHideFlags: 0
@@ -1633,7 +1701,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1461488281}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -2230,6 +2298,14 @@ PrefabInstance:
     - target: {fileID: 8661276566698531250, guid: 8ce20f025447ceb458111fe5d84a2247, type: 3}
       propertyPath: m_Name
       value: GameManagerNet
+      objectReference: {fileID: 0}
+    - target: {fileID: 8798266051421040268, guid: 8ce20f025447ceb458111fe5d84a2247, type: 3}
+      propertyPath: viewIdField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8798266051421040268, guid: 8ce20f025447ceb458111fe5d84a2247, type: 3}
+      propertyPath: instantiationId
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ce20f025447ceb458111fe5d84a2247, type: 3}

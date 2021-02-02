@@ -116,6 +116,11 @@ public class GameManager : Photon.PunBehaviour
         }
     }
 
+    public void LoadCameraRole()
+    {
+        CameraSets._instance.DisplayCameraRole((Role) PhotonNetwork.player.CustomProperties["role"]);
+    }
+
     public void EndLevel()
     {
         Debug.Log("Niveau termin�");
@@ -139,6 +144,7 @@ public class GameManager : Photon.PunBehaviour
         }
 
         InstantiatePlayer();
+        LoadCameraRole();
     }
 
     #endregion
