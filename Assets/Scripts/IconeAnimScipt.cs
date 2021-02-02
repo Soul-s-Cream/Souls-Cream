@@ -6,7 +6,6 @@ using DG.Tweening;
 public class IconeAnimScipt : MonoBehaviour
 {
     private Vector3 scaleCri;
-    SpriteRenderer spriteAlpha;
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +14,6 @@ public class IconeAnimScipt : MonoBehaviour
         GameEvents.Instance.IconeAnimUnselected += IconeDesactive;
 
         scaleCri = transform.localScale;
-        spriteAlpha = GetComponent<SpriteRenderer>();
     }
 
     void IconeActive(GameObject thisIcone)

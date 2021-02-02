@@ -8,7 +8,9 @@ public class SelectionCriScript : MonoBehaviour
     public List<GameObject> Cris;
     public int criSelected = 0;
     private Vector3 Rot;
-    private Vector3 scaleCri;
+    public bool roueActive = false;
+    private Coroutine timeToDie;
+
 
     #region
     private Controls control;
@@ -31,20 +33,22 @@ public class SelectionCriScript : MonoBehaviour
     private void Start()
     {
         Rot = transform.eulerAngles;
-        scaleCri = Cris[criSelected].transform.localScale;
+        StartCoroutine(TimeToDie());
     }
     private void Update()
     {
         if (control.Cri.CriUp.triggered)
         {
+
             if (criSelected < 4)
             {
                 criSelected += 1;
             }
             else criSelected = 0;
-
-            RotationUpVoid();
             AnimIcon();
+            ResetTimeToDie();
+            RotationVoid(72);
+            roueActive = true;
         }
         if (control.Cri.CriDown.triggered)
         {
@@ -53,26 +57,41 @@ public class SelectionCriScript : MonoBehaviour
                 criSelected -= 1;
             }
             else criSelected = 4;
-            RotationDownVoid();
+            RotationVoid(-72);
             AnimIcon();
+            ResetTimeToDie();
+            roueActive = true;
         }
     }
 
-    private void RotationUpVoid()
+    private void ResetTimeToDie()
     {
-        Rot.z += 72;
-        transform.DORotate(Rot, 1f);
+        if (timeToDie != null)
+        {
+            StopCoroutine(timeToDie);
+        }
+        timeToDie = StartCoroutine(TimeToDie());
     }
-    private void RotationDownVoid()
+
+    private void RotationVoid(int rotat)
     {
-        Rot.z -= 72;
+
+        if (Rot.z + rotat >= 360)
+        {
+            Rot.z += rotat - 360;
+        }
+        else if (Rot.z + rotat <= 0)
+        {
+            Rot.z += rotat + 360;
+        } else
+            Rot.z += rotat;
+
         transform.DORotate(Rot, 1f);
     }
 
     public void AnimIcon()
     {
         GameEvents.Instance.SwitchIconeUp(Cris[criSelected]);
-
         foreach (GameObject icone in Cris)
         {
             if (icone != Cris[criSelected])
@@ -80,7 +99,11 @@ public class SelectionCriScript : MonoBehaviour
                 GameEvents.Instance.SwitchIconeDown(icone);
             }
         }
-
-
+    }
+    IEnumerator TimeToDie()
+    {
+        yield return new WaitForSeconds(2f);
+        roueActive = false;
+        GameEvents.Instance.SwitchIconeDown(Cris[criSelected]);
     }
 }
