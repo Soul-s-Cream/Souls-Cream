@@ -118,7 +118,10 @@ public class GameManager : Photon.PunBehaviour
 
     public void LoadCameraRole()
     {
-        CameraSets._instance.DisplayCameraRole((Role) PhotonNetwork.player.CustomProperties["role"]);
+        if(CameraSets._instance != null)
+        {
+            CameraSets._instance.DisplayCameraRole((Role)PhotonNetwork.player.CustomProperties["role"]);
+        }
     }
 
     public void EndLevel()
