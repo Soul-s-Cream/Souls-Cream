@@ -136,13 +136,13 @@ public class MovePlayer2DEBUG : MonoBehaviour
     {
 
 
-        if (control.Cri.CriUp.triggered)
+        if (control.DEBUG.CriUp.triggered)
         {
             if (CriSelected < CriNumMax)
             { CriSelected += 1; }
             else CriSelected = 1;
         }
-        if (control.Cri.CriDown.triggered)
+        if (control.DEBUG.CriDown.triggered)
         {
             if (CriSelected > 1)
             { CriSelected -= 1; }
@@ -152,7 +152,7 @@ public class MovePlayer2DEBUG : MonoBehaviour
     public void PlayerCri()
     {
 
-        if (control.Cri.Cri.triggered)
+        if (control.DEBUG.Cri.triggered)
         {
             anim.SetInteger("Cri", CriSelected);
             if (CriSelected == 1)
