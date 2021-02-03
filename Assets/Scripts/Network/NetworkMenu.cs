@@ -18,10 +18,10 @@ public class NetworkMenu : Photon.PunBehaviour
     public Toggle player1ReadyToggle;
     public Toggle player2ReadyToggle;
     [Header("Flip Connect / Disconnect Display")]
-    public Toggle player1Connect;
-    public Toggle player1Disonnect;
-    public Toggle player2Connect;
-    public Toggle player2Disonnect;
+    public Image player1Connect;
+    public Image player1Disonnect;
+    public Image player2Connect;
+    public Image player2Disonnect;
     [Header("Role Display")]
     public Toggle player1RoleW;
     public Toggle player1RoleB;
@@ -69,7 +69,7 @@ public class NetworkMenu : Photon.PunBehaviour
         {
             Hashtable customProps = new Hashtable
             {
-                { "ready", player1ReadyToggle.isOn }
+                { "ready", playerId == 1 ? player1ReadyToggle.isOn : player2ReadyToggle.isOn}
             };
             PhotonNetwork.player.SetCustomProperties(customProps);
         }
@@ -78,6 +78,18 @@ public class NetworkMenu : Photon.PunBehaviour
     public void SwitchRole()
     {
         NetworkManagerPUN.Instance.SwitchRole();
+        if (PhotonNetwork.isMasterClient)
+        {
+            Hashtable customProps = new Hashtable
+        {
+            { "ready", false}
+        };
+
+            foreach (PhotonPlayer player in PhotonNetwork.playerList)
+            {
+                player.SetCustomProperties(customProps);
+            }
+        }
     }
 
     public void UpdateRole()
@@ -104,15 +116,21 @@ public class NetworkMenu : Photon.PunBehaviour
     {
         if (PhotonNetwork.room.PlayerCount == 1)
         {
-            player1Connect.isOn = true;
-            player2Disonnect.isOn = true;
+            Debug.Log("1 Player in Room");
+            player1Connect.gameObject.SetActive(true);
+            player1Disonnect.gameObject.SetActive(false);
+            player2Connect.gameObject.SetActive(false);
+            player2Disonnect.gameObject.SetActive(true);
             player1RoleB.isOn = true;
             player1RoleW.isOn = true;
         }
         else if (PhotonNetwork.room.PlayerCount == 2)
         {
-            player1Connect.isOn = true;
-            player2Connect.isOn = true;
+            Debug.Log("2 Player in Room");
+            player1Connect.gameObject.SetActive(true);
+            player1Disonnect.gameObject.SetActive(false);
+            player2Connect.gameObject.SetActive(false);
+            player2Disonnect.gameObject.SetActive(true);
             player1RoleB.isOn = true;
             player1RoleW.isOn = true;
             player2RoleB.isOn = true;
@@ -120,8 +138,11 @@ public class NetworkMenu : Photon.PunBehaviour
         }
         else
         {
-            player1Disonnect.isOn = true;
-            player2Disonnect.isOn = true;
+            Debug.Log("No player in Room");
+            player1Connect.gameObject.SetActive(false);
+            player1Disonnect.gameObject.SetActive(true);
+            player2Connect.gameObject.SetActive(false);
+            player2Disonnect.gameObject.SetActive(true);
             player1RoleB.isOn = false;
             player1RoleW.isOn = false;
             player2RoleB.isOn = false;
@@ -130,13 +151,17 @@ public class NetworkMenu : Photon.PunBehaviour
         }
     }
 
+    void UpdatePlayButton()
+    {
+        if (PhotonNetwork.room.PlayerCount == 2 && player1ReadyToggle.isOn && player2ReadyToggle.isOn)
+            launchButton.interactable = true;
+    }
+
     private void UpdateAll()
     {
         UpdateConnections();
         UpdateRole();
-        
-        if (PhotonNetwork.room.PlayerCount == 2 && player1ReadyToggle.isOn && player2ReadyToggle.isOn)
-            launchButton.interactable = true;
+        UpdatePlayButton();
     }
 
     #region Photon.PUNBehaviour Callbacks
@@ -164,7 +189,6 @@ public class NetworkMenu : Photon.PunBehaviour
 
         if (!PhotonNetwork.player.IsMasterClient)
         {
-            player1ReadyToggle.isOn = (bool)PhotonNetwork.masterClient.CustomProperties["ready"];
             //On désactive l'affichage pour Play si pas Master
             launchButton.gameObject.SetActive(false);
             switchButton.gameObject.SetActive(false);
@@ -206,10 +230,8 @@ public class NetworkMenu : Photon.PunBehaviour
                 }
             }
         }
-        if (properties.ContainsKey("role"))
-        {
-            UpdateRole();
-        }
+
+        UpdateAll();
     }
     #endregion
 }
