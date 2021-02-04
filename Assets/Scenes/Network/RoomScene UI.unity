@@ -515,7 +515,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 208948}
         m_TargetAssemblyTypeName: NetworkMenu, Assembly-CSharp
-        m_MethodName: loadScene
+        m_MethodName: StartGame
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2903,7 +2903,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.25, y: -166}
+  m_AnchoredPosition: {x: -4, y: -166}
   m_SizeDelta: {x: -515.235, y: -474.311}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1222900532

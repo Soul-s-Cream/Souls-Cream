@@ -63,6 +63,11 @@ public class NetworkMenu : Photon.PunBehaviour
         }
     }
 
+    public void StartGame(int sceneID)
+    {
+        NetworkManagerPUN.Instance.LoadScene(sceneID);
+    }
+
     public void ToggleReady(int playerId)
     {
         if (playerId == PhotonNetwork.player.ID)
@@ -199,6 +204,11 @@ public class NetworkMenu : Photon.PunBehaviour
     }
 
     public override void OnPhotonPlayerConnected(PhotonPlayer newPlayer)
+    {
+        UpdateAll();
+    }
+
+    public override void OnPhotonPlayerDisconnected(PhotonPlayer otherPlayer)
     {
         UpdateAll();
     }
