@@ -43,12 +43,12 @@ public class GameManager : Photon.PunBehaviour
         #endregion
 
         controls = new Controls();
-        
     }
 
     private void Start()
     {
         AddListener();
+        InstantiatePlayer();
     }
 
     #region Ajout des Listeners
@@ -63,21 +63,20 @@ public class GameManager : Photon.PunBehaviour
     }
     #endregion
 
-    private void Update()
+    public void GetSpawnPoints()
     {
-        if (controls.NetTest.ChangeScene.triggered)
-            ChangeScene();
-    }
-
-    public void ChangeScene()
-    {
-        Debug.Log("Changing scene...");
-        //CustomNetworkManager.singleton.ServerChangeScene("SampleNetworkScene2");
+        SpawnPointsList.Clear();
+        GameObject[] spawns = GameObject.FindGameObjectsWithTag("Spawn");
+        foreach (GameObject spawn in spawns)
+        {
+            SpawnPointsList.Add(spawn.GetComponent<SpawnPoint>());
+        }
     }
 
     public void InstantiatePlayer()
     {
-        if(PlayerPrefabs == null || PlayerPrefabs.Count == 0)
+        GetSpawnPoints();
+        if (PlayerPrefabs == null || PlayerPrefabs.Count == 0)
         {
             Debug.LogError("<Color=Red><a>Missing</a></Color> playerPrefab Reference. Please set it up in GameObject 'Game Manager'", this);
         }
@@ -91,6 +90,11 @@ public class GameManager : Photon.PunBehaviour
             string prefabName = "";
             SpawnPoint spawnPoint = SpawnPointsList[0];
             Role role = (Role)PhotonNetwork.player.CustomProperties["role"];
+            string roleName = role == Role.BLANC ? "BLANC" : "NOIR";
+            Debug.Log("Local player is " + roleName);
+
+            LoadCameraRole(role);
+
             //On cherche l'avatar appropri� pour le r�le du joueur
             foreach (GameObject prefab in PlayerPrefabs)
             {
@@ -116,17 +120,21 @@ public class GameManager : Photon.PunBehaviour
         }
     }
 
-    public void LoadCameraRole()
+    public void LoadCameraRole(Role role)
     {
+        Debug.Log("No camera set found");
         if(CameraSets._instance != null)
         {
-            CameraSets._instance.DisplayCameraRole((Role)PhotonNetwork.player.CustomProperties["role"]);
+            string roleName = role == Role.BLANC ? "BLANC" : "NOIR";
+            Debug.Log("Loading camera for " + roleName);
+            CameraSets._instance.DisplayCameraRole(role);
         }
     }
 
     public void EndLevel()
     {
-        Debug.Log("Niveau termin�");
+        Debug.Log("Niveau terminé");
+        NetworkManagerPUN.Instance.LoadScene(2);
     }
 
     #region Unity Callbacks
@@ -139,15 +147,8 @@ public class GameManager : Photon.PunBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode loadMode)
     {
         Debug.Log("On Scene Loaded");
-        SpawnPointsList.Clear();
-        GameObject[] spawns = GameObject.FindGameObjectsWithTag("Spawn");
-        foreach(GameObject spawn in spawns)
-        {
-            SpawnPointsList.Add(spawn.GetComponent<SpawnPoint>());
-        }
-
+        
         InstantiatePlayer();
-        LoadCameraRole();
     }
 
     #endregion
