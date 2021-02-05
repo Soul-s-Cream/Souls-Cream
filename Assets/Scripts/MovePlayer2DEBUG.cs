@@ -34,7 +34,7 @@ public class MovePlayer2DEBUG : MonoBehaviour
     public float lowJumpMultiplier = 2f;
     public float velocityYMax = 50f;
 
-    public float moveSpeed; // vitesse de déplacement
+    public float moveSpeed; // vitesse de dï¿½placement
     public float jumpForce;
     public float maxSpeed;
 
@@ -47,7 +47,7 @@ public class MovePlayer2DEBUG : MonoBehaviour
     public Rigidbody2D rb;
     private Vector3 velocity = Vector3.zero;
     private float horizontalMovement = 0f;
-    #endregion  // déplacement
+    #endregion  // dï¿½placement
     Animator anim;
     private Vector3 scale;
 
@@ -136,13 +136,13 @@ public class MovePlayer2DEBUG : MonoBehaviour
     {
 
 
-        if (control.Cri.CriUp.triggered)
+        if (control.DEBUG.CriUp.triggered)
         {
             if (CriSelected < CriNumMax)
             { CriSelected += 1; }
             else CriSelected = 1;
         }
-        if (control.Cri.CriDown.triggered)
+        if (control.DEBUG.CriDown.triggered)
         {
             if (CriSelected > 1)
             { CriSelected -= 1; }
@@ -152,7 +152,7 @@ public class MovePlayer2DEBUG : MonoBehaviour
     public void PlayerCri()
     {
 
-        if (control.Cri.Cri.triggered)
+        if (control.DEBUG.Cri.triggered)
         {
             anim.SetInteger("Cri", CriSelected);
             if (CriSelected == 1)

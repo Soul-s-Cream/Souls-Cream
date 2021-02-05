@@ -5,6 +5,7 @@ using UnityEngine;
 public class BoutonScript : Photon.PunBehaviour
 {
     public GameObject[] triggers;
+    private bool BoutonOn = false;
 
     [TagSelector]
     public string tagFilter = "";
@@ -28,5 +29,7 @@ public class BoutonScript : Photon.PunBehaviour
     public void SwitchOn()
     {
         GameEvents.Instance.SwitchTriggerOn(triggers);
+        BoutonOn = true;
+        GetComponent<Animator>().SetBool("BoutonON", true);
     }
 }
