@@ -11,12 +11,12 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3591768645">
+		<SoundBank Id="1355168291" Language="SFX" Hash="4002127898">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="3016280836">
+		<SoundBank Id="3161908922" Language="SFX" Hash="3462507548">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -38,6 +38,14 @@
 						<File Id="538901042" Language="SFX">
 							<ShortName>Acculation.wav</ShortName>
 							<Path>SFX\Acculation_F030CF85.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1559875400" Name="Back" ObjectPath="\Events\Default Work Unit\MenuVoices\Back" DurationType="OneShot" DurationMin="0.684114" DurationMax="0.684114">
+					<IncludedMemoryFiles>
+						<File Id="455910488" Language="SFX">
+							<ShortName>Menu Voices.wav</ShortName>
+							<Path>SFX\Menu Voices_4DBC3BEE.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -73,6 +81,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2201105581" Name="Credits" ObjectPath="\Events\Default Work Unit\MenuVoices\Credits" DurationType="OneShot" DurationMin="0.944729" DurationMax="0.944729">
+					<IncludedMemoryFiles>
+						<File Id="853797293" Language="SFX">
+							<ShortName>Menu Voices.wav</ShortName>
+							<Path>SFX\Menu Voices_C456C26C.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="396009128" Name="Curiosite" ObjectPath="\Events\Default Work Unit\Oz\Screams\Curiosite" DurationType="OneShot" DurationMin="0.281748" DurationMax="0.500886">
 					<IncludedMemoryFiles>
 						<File Id="210463932" Language="SFX">
@@ -86,6 +102,14 @@
 						<File Id="867340386" Language="SFX">
 							<ShortName>Curiosité.wav</ShortName>
 							<Path>SFX\Curiosité_6BAAE1C4.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="480594535" Name="Disconnect" ObjectPath="\Events\Default Work Unit\MenuVoices\Disconnect" DurationType="OneShot" DurationMin="1.270498" DurationMax="1.270498">
+					<IncludedMemoryFiles>
+						<File Id="70583681" Language="SFX">
+							<ShortName>Menu Voices.wav</ShortName>
+							<Path>SFX\Menu Voices_BB60002F.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -125,6 +149,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3617624947" Name="Host" ObjectPath="\Events\Default Work Unit\MenuVoices\Host" DurationType="OneShot" DurationMin="0.618960" DurationMax="0.618960">
+					<IncludedMemoryFiles>
+						<File Id="910675003" Language="SFX">
+							<ShortName>Menu Voices.wav</ShortName>
+							<Path>SFX\Menu Voices_7FA54ACC.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="132381101" Name="Interruptor" ObjectPath="\Events\Default Work Unit\Objects\Interruptor" DurationType="OneShot" DurationMin="0.179680" DurationMax="0.241792">
 					<IncludedMemoryFiles>
 						<File Id="167913592" Language="SFX">
@@ -158,6 +190,14 @@
 						<File Id="488237281" Language="SFX">
 							<ShortName>Joie.wav</ShortName>
 							<Path>SFX\Joie_6F6C18AC.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3695193445" Name="Join" ObjectPath="\Events\Default Work Unit\MenuVoices\Join" DurationType="OneShot" DurationMin="0.879575" DurationMax="0.879575">
+					<IncludedMemoryFiles>
+						<File Id="132019384" Language="SFX">
+							<ShortName>Menu Voices.wav</ShortName>
+							<Path>SFX\Menu Voices_82FB7420.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -229,6 +269,22 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="982796106" Name="Next" ObjectPath="\Events\Default Work Unit\MenuVoices\Next" DurationType="OneShot" DurationMin="0.723238" DurationMax="0.723238">
+					<IncludedMemoryFiles>
+						<File Id="268320748" Language="SFX">
+							<ShortName>Menu Voices.wav</ShortName>
+							<Path>SFX\Menu Voices_49327588.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3176198653" Name="NotReady" ObjectPath="\Events\Default Work Unit\MenuVoices\NotReady" DurationType="OneShot" DurationMin="1.335652" DurationMax="1.335652">
+					<IncludedMemoryFiles>
+						<File Id="431094485" Language="SFX">
+							<ShortName>Menu Voices.wav</ShortName>
+							<Path>SFX\Menu Voices_10C65C04.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1891947077" Name="OzDoubleJump" ObjectPath="\Events\Default Work Unit\Oz\OzDoubleJump" DurationType="OneShot" DurationMin="0.398939" DurationMax="0.472884">
 					<IncludedMemoryFiles>
 						<File Id="225508645" Language="SFX">
@@ -289,6 +345,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1579895492" Name="OzMozEndSong" ObjectPath="\Events\Default Work Unit\OzMozEndSong" DurationType="OneShot" DurationMin="62.000000" DurationMax="62.000000">
+					<IncludedMemoryFiles>
+						<File Id="743192087" Language="SFX">
+							<ShortName>OzMozEndTheme.wav</ShortName>
+							<Path>SFX\OzMozEndTheme_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3278785808" Name="OzMozMenuTheme" ObjectPath="\Events\Default Work Unit\OzMozMenuTheme" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="323730778" Language="SFX">
@@ -321,6 +385,38 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1256202815" Name="PLAY" ObjectPath="\Events\Default Work Unit\MenuVoices\PLAY" DurationType="OneShot" DurationMin="0.879575" DurationMax="0.879575">
+					<IncludedMemoryFiles>
+						<File Id="908551886" Language="SFX">
+							<ShortName>Menu Voices.wav</ShortName>
+							<Path>SFX\Menu Voices_F4206ACD.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="500558111" Name="Play2" ObjectPath="\Events\Default Work Unit\MenuVoices\Play2" DurationType="OneShot" DurationMin="1.400805" DurationMax="1.400805">
+					<IncludedMemoryFiles>
+						<File Id="104434262" Language="SFX">
+							<ShortName>Menu Voices.wav</ShortName>
+							<Path>SFX\Menu Voices_BEFD499C.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3930794392" Name="Quit" ObjectPath="\Events\Default Work Unit\MenuVoices\Quit" DurationType="OneShot" DurationMin="0.651537" DurationMax="0.651537">
+					<IncludedMemoryFiles>
+						<File Id="906615684" Language="SFX">
+							<ShortName>Menu Voices.wav</ShortName>
+							<Path>SFX\Menu Voices_0E6D0471.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3701637754" Name="Ready" ObjectPath="\Events\Default Work Unit\MenuVoices\Ready" DurationType="OneShot" DurationMin="1.042460" DurationMax="1.042460">
+					<IncludedMemoryFiles>
+						<File Id="1043257698" Language="SFX">
+							<ShortName>Menu Voices.wav</ShortName>
+							<Path>SFX\Menu Voices_D383DBB4.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2952898430" Name="Solitude" ObjectPath="\Events\Default Work Unit\Moz\Screams\Solitude" DurationType="OneShot" DurationMin="0.845534" DurationMax="1.109078">
 					<IncludedMemoryFiles>
 						<File Id="57836437" Language="SFX">
@@ -334,6 +430,14 @@
 						<File Id="651849547" Language="SFX">
 							<ShortName>Solitude.wav</ShortName>
 							<Path>SFX\Solitude_B74686AF.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="286100424" Name="Swap" ObjectPath="\Events\Default Work Unit\MenuVoices\Swap" DurationType="OneShot" DurationMin="0.651537" DurationMax="0.651537">
+					<IncludedMemoryFiles>
+						<File Id="827214385" Language="SFX">
+							<ShortName>Menu Voices.wav</ShortName>
+							<Path>SFX\Menu Voices_5F9B240D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -379,9 +483,21 @@
 					<ShortName>Acculation.wav</ShortName>
 					<Path>SFX\Acculation_1F096FC2.wem</Path>
 				</File>
+				<File Id="70583681" Language="SFX">
+					<ShortName>Menu Voices.wav</ShortName>
+					<Path>SFX\Menu Voices_BB60002F.wem</Path>
+				</File>
 				<File Id="80023791" Language="SFX">
 					<ShortName>MozTutoV2.wav</ShortName>
 					<Path>SFX\MozTutoV2_D79FB2B7.wem</Path>
+				</File>
+				<File Id="104434262" Language="SFX">
+					<ShortName>Menu Voices.wav</ShortName>
+					<Path>SFX\Menu Voices_BEFD499C.wem</Path>
+				</File>
+				<File Id="132019384" Language="SFX">
+					<ShortName>Menu Voices.wav</ShortName>
+					<Path>SFX\Menu Voices_82FB7420.wem</Path>
 				</File>
 				<File Id="136186369" Language="SFX">
 					<ShortName>PlayerOzJump.wav</ShortName>
@@ -418,6 +534,10 @@
 				<File Id="241080445" Language="SFX">
 					<ShortName>PlayerMozJump.wav</ShortName>
 					<Path>SFX\PlayerMozJump_57DEBAAB.wem</Path>
+				</File>
+				<File Id="268320748" Language="SFX">
+					<ShortName>Menu Voices.wav</ShortName>
+					<Path>SFX\Menu Voices_49327588.wem</Path>
 				</File>
 				<File Id="269640153" Language="SFX">
 					<ShortName>PlayerMozJump.wav</ShortName>
@@ -479,9 +599,17 @@
 					<ShortName>Compassion.wav</ShortName>
 					<Path>SFX\Compassion_4E0C5D31.wem</Path>
 				</File>
+				<File Id="431094485" Language="SFX">
+					<ShortName>Menu Voices.wav</ShortName>
+					<Path>SFX\Menu Voices_10C65C04.wem</Path>
+				</File>
 				<File Id="454457796" Language="SFX">
 					<ShortName>Joie.wav</ShortName>
 					<Path>SFX\Joie_F526A7D6.wem</Path>
+				</File>
+				<File Id="455910488" Language="SFX">
+					<ShortName>Menu Voices.wav</ShortName>
+					<Path>SFX\Menu Voices_4DBC3BEE.wem</Path>
 				</File>
 				<File Id="461476743" Language="SFX">
 					<ShortName>Tristesse.wav</ShortName>
@@ -563,6 +691,10 @@
 					<ShortName>PlayerMozJump.wav</ShortName>
 					<Path>SFX\PlayerMozJump_33CEA9B4.wem</Path>
 				</File>
+				<File Id="743192087" Language="SFX">
+					<ShortName>OzMozEndTheme.wav</ShortName>
+					<Path>SFX\OzMozEndTheme_D79FB2B7.wem</Path>
+				</File>
 				<File Id="777475882" Language="SFX">
 					<ShortName>ambiences plateaux\MozThemeAmbience.wav</ShortName>
 					<Path>SFX\ambiences plateaux\MozThemeAmbience_D79FB2B7.wem</Path>
@@ -571,6 +703,10 @@
 					<ShortName>Curiosité.wav</ShortName>
 					<Path>SFX\Curiosité_EDB17340.wem</Path>
 				</File>
+				<File Id="827214385" Language="SFX">
+					<ShortName>Menu Voices.wav</ShortName>
+					<Path>SFX\Menu Voices_5F9B240D.wem</Path>
+				</File>
 				<File Id="843786119" Language="SFX">
 					<ShortName>PlayerOzJump.wav</ShortName>
 					<Path>SFX\PlayerOzJump_36B4C025.wem</Path>
@@ -578,6 +714,10 @@
 				<File Id="849442749" Language="SFX">
 					<ShortName>PlayerMozFootsteps.wav</ShortName>
 					<Path>SFX\PlayerMozFootsteps_2E6E780A.wem</Path>
+				</File>
+				<File Id="853797293" Language="SFX">
+					<ShortName>Menu Voices.wav</ShortName>
+					<Path>SFX\Menu Voices_C456C26C.wem</Path>
 				</File>
 				<File Id="858844633" Language="SFX">
 					<ShortName>Tristesse.wav</ShortName>
@@ -595,6 +735,18 @@
 					<ShortName>PlayerMozFootsteps.wav</ShortName>
 					<Path>SFX\PlayerMozFootsteps_8D8F08A6.wem</Path>
 				</File>
+				<File Id="906615684" Language="SFX">
+					<ShortName>Menu Voices.wav</ShortName>
+					<Path>SFX\Menu Voices_0E6D0471.wem</Path>
+				</File>
+				<File Id="908551886" Language="SFX">
+					<ShortName>Menu Voices.wav</ShortName>
+					<Path>SFX\Menu Voices_F4206ACD.wem</Path>
+				</File>
+				<File Id="910675003" Language="SFX">
+					<ShortName>Menu Voices.wav</ShortName>
+					<Path>SFX\Menu Voices_7FA54ACC.wem</Path>
+				</File>
 				<File Id="941325618" Language="SFX">
 					<ShortName>Envie.wav</ShortName>
 					<Path>SFX\Envie_14A6C608.wem</Path>
@@ -607,12 +759,23 @@
 					<ShortName>PlayerOzFootsteps.wav</ShortName>
 					<Path>SFX\PlayerOzFootsteps_FDC90899.wem</Path>
 				</File>
+				<File Id="1043257698" Language="SFX">
+					<ShortName>Menu Voices.wav</ShortName>
+					<Path>SFX\Menu Voices_D383DBB4.wem</Path>
+				</File>
 				<File Id="1070454862" Language="SFX">
 					<ShortName>PlayerOzJump.wav</ShortName>
 					<Path>SFX\PlayerOzJump_062C1249.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 			<StateGroups>
+				<StateGroup Id="2648525292" Name="MusicPlayStop" ObjectPath="\States\Default Work Unit\MusicPlayStop">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\MusicPlayStop\None"/>
+						<State Id="1256202815" Name="Play" ObjectPath="\States\Default Work Unit\MusicPlayStop\Play"/>
+						<State Id="788884573" Name="Stop" ObjectPath="\States\Default Work Unit\MusicPlayStop\Stop"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="3961447175" Name="OzMozThemeAmbience" ObjectPath="\States\Default Work Unit\OzMozThemeAmbience">
 					<States>
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\OzMozThemeAmbience\None"/>
