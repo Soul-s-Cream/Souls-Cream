@@ -160,10 +160,11 @@ public class MovePlayerNet : Photon.PunBehaviour
             else CriSelected = CriNumMax;
         }
     }
+
     public void PlayerCri()
     {
-
-        if (control.Cri.Cri.triggered)
+        Debug.LogWarning("La touche de cri à été changé, mais n'a pas été correctement mis à jour. Veuillez la mettre à jour au plus vite.");
+        if (control.Cri.CriMoz.triggered)
         {
             anim.SetInteger("Cri", CriSelected);
             if (CriSelected == 1)
