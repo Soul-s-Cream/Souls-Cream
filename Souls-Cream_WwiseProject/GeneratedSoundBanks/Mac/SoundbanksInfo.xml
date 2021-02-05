@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="135">
 	<RootPaths>
-		<ProjectRoot>D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="3462507548">
+		<SoundBank Id="3161908922" Language="SFX" Hash="385938939">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -45,7 +45,7 @@
 					<IncludedMemoryFiles>
 						<File Id="455910488" Language="SFX">
 							<ShortName>Menu Voices.wav</ShortName>
-							<Path>SFX\Menu Voices_4DBC3BEE.wem</Path>
+							<Path>SFX\Menu Voices_19AE7245.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -85,7 +85,7 @@
 					<IncludedMemoryFiles>
 						<File Id="853797293" Language="SFX">
 							<ShortName>Menu Voices.wav</ShortName>
-							<Path>SFX\Menu Voices_C456C26C.wem</Path>
+							<Path>SFX\Menu Voices_0DC284A7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -109,7 +109,7 @@
 					<IncludedMemoryFiles>
 						<File Id="70583681" Language="SFX">
 							<ShortName>Menu Voices.wav</ShortName>
-							<Path>SFX\Menu Voices_BB60002F.wem</Path>
+							<Path>SFX\Menu Voices_DCF95EDD.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -153,7 +153,7 @@
 					<IncludedMemoryFiles>
 						<File Id="910675003" Language="SFX">
 							<ShortName>Menu Voices.wav</ShortName>
-							<Path>SFX\Menu Voices_7FA54ACC.wem</Path>
+							<Path>SFX\Menu Voices_9FD5F238.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -197,7 +197,7 @@
 					<IncludedMemoryFiles>
 						<File Id="132019384" Language="SFX">
 							<ShortName>Menu Voices.wav</ShortName>
-							<Path>SFX\Menu Voices_82FB7420.wem</Path>
+							<Path>SFX\Menu Voices_A485F43A.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -273,7 +273,7 @@
 					<IncludedMemoryFiles>
 						<File Id="268320748" Language="SFX">
 							<ShortName>Menu Voices.wav</ShortName>
-							<Path>SFX\Menu Voices_49327588.wem</Path>
+							<Path>SFX\Menu Voices_B0A865E2.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -281,7 +281,7 @@
 					<IncludedMemoryFiles>
 						<File Id="431094485" Language="SFX">
 							<ShortName>Menu Voices.wav</ShortName>
-							<Path>SFX\Menu Voices_10C65C04.wem</Path>
+							<Path>SFX\Menu Voices_51FD4A9D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -389,7 +389,7 @@
 					<IncludedMemoryFiles>
 						<File Id="908551886" Language="SFX">
 							<ShortName>Menu Voices.wav</ShortName>
-							<Path>SFX\Menu Voices_F4206ACD.wem</Path>
+							<Path>SFX\Menu Voices_7A292EBE.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -397,7 +397,7 @@
 					<IncludedMemoryFiles>
 						<File Id="104434262" Language="SFX">
 							<ShortName>Menu Voices.wav</ShortName>
-							<Path>SFX\Menu Voices_BEFD499C.wem</Path>
+							<Path>SFX\Menu Voices_8302121D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -405,7 +405,7 @@
 					<IncludedMemoryFiles>
 						<File Id="906615684" Language="SFX">
 							<ShortName>Menu Voices.wav</ShortName>
-							<Path>SFX\Menu Voices_0E6D0471.wem</Path>
+							<Path>SFX\Menu Voices_4168ACC8.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -413,7 +413,7 @@
 					<IncludedMemoryFiles>
 						<File Id="1043257698" Language="SFX">
 							<ShortName>Menu Voices.wav</ShortName>
-							<Path>SFX\Menu Voices_D383DBB4.wem</Path>
+							<Path>SFX\Menu Voices_DD8FE6CD.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -437,7 +437,7 @@
 					<IncludedMemoryFiles>
 						<File Id="827214385" Language="SFX">
 							<ShortName>Menu Voices.wav</ShortName>
-							<Path>SFX\Menu Voices_5F9B240D.wem</Path>
+							<Path>SFX\Menu Voices_C7111403.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -485,7 +485,7 @@
 				</File>
 				<File Id="70583681" Language="SFX">
 					<ShortName>Menu Voices.wav</ShortName>
-					<Path>SFX\Menu Voices_BB60002F.wem</Path>
+					<Path>SFX\Menu Voices_DCF95EDD.wem</Path>
 				</File>
 				<File Id="80023791" Language="SFX">
 					<ShortName>MozTutoV2.wav</ShortName>
@@ -493,11 +493,11 @@
 				</File>
 				<File Id="104434262" Language="SFX">
 					<ShortName>Menu Voices.wav</ShortName>
-					<Path>SFX\Menu Voices_BEFD499C.wem</Path>
+					<Path>SFX\Menu Voices_8302121D.wem</Path>
 				</File>
 				<File Id="132019384" Language="SFX">
 					<ShortName>Menu Voices.wav</ShortName>
-					<Path>SFX\Menu Voices_82FB7420.wem</Path>
+					<Path>SFX\Menu Voices_A485F43A.wem</Path>
 				</File>
 				<File Id="136186369" Language="SFX">
 					<ShortName>PlayerOzJump.wav</ShortName>
@@ -537,7 +537,7 @@
 				</File>
 				<File Id="268320748" Language="SFX">
 					<ShortName>Menu Voices.wav</ShortName>
-					<Path>SFX\Menu Voices_49327588.wem</Path>
+					<Path>SFX\Menu Voices_B0A865E2.wem</Path>
 				</File>
 				<File Id="269640153" Language="SFX">
 					<ShortName>PlayerMozJump.wav</ShortName>
@@ -601,7 +601,7 @@
 				</File>
 				<File Id="431094485" Language="SFX">
 					<ShortName>Menu Voices.wav</ShortName>
-					<Path>SFX\Menu Voices_10C65C04.wem</Path>
+					<Path>SFX\Menu Voices_51FD4A9D.wem</Path>
 				</File>
 				<File Id="454457796" Language="SFX">
 					<ShortName>Joie.wav</ShortName>
@@ -609,7 +609,7 @@
 				</File>
 				<File Id="455910488" Language="SFX">
 					<ShortName>Menu Voices.wav</ShortName>
-					<Path>SFX\Menu Voices_4DBC3BEE.wem</Path>
+					<Path>SFX\Menu Voices_19AE7245.wem</Path>
 				</File>
 				<File Id="461476743" Language="SFX">
 					<ShortName>Tristesse.wav</ShortName>
@@ -705,7 +705,7 @@
 				</File>
 				<File Id="827214385" Language="SFX">
 					<ShortName>Menu Voices.wav</ShortName>
-					<Path>SFX\Menu Voices_5F9B240D.wem</Path>
+					<Path>SFX\Menu Voices_C7111403.wem</Path>
 				</File>
 				<File Id="843786119" Language="SFX">
 					<ShortName>PlayerOzJump.wav</ShortName>
@@ -717,7 +717,7 @@
 				</File>
 				<File Id="853797293" Language="SFX">
 					<ShortName>Menu Voices.wav</ShortName>
-					<Path>SFX\Menu Voices_C456C26C.wem</Path>
+					<Path>SFX\Menu Voices_0DC284A7.wem</Path>
 				</File>
 				<File Id="858844633" Language="SFX">
 					<ShortName>Tristesse.wav</ShortName>
@@ -737,15 +737,15 @@
 				</File>
 				<File Id="906615684" Language="SFX">
 					<ShortName>Menu Voices.wav</ShortName>
-					<Path>SFX\Menu Voices_0E6D0471.wem</Path>
+					<Path>SFX\Menu Voices_4168ACC8.wem</Path>
 				</File>
 				<File Id="908551886" Language="SFX">
 					<ShortName>Menu Voices.wav</ShortName>
-					<Path>SFX\Menu Voices_F4206ACD.wem</Path>
+					<Path>SFX\Menu Voices_7A292EBE.wem</Path>
 				</File>
 				<File Id="910675003" Language="SFX">
 					<ShortName>Menu Voices.wav</ShortName>
-					<Path>SFX\Menu Voices_7FA54ACC.wem</Path>
+					<Path>SFX\Menu Voices_9FD5F238.wem</Path>
 				</File>
 				<File Id="941325618" Language="SFX">
 					<ShortName>Envie.wav</ShortName>
@@ -761,7 +761,7 @@
 				</File>
 				<File Id="1043257698" Language="SFX">
 					<ShortName>Menu Voices.wav</ShortName>
-					<Path>SFX\Menu Voices_D383DBB4.wem</Path>
+					<Path>SFX\Menu Voices_DD8FE6CD.wem</Path>
 				</File>
 				<File Id="1070454862" Language="SFX">
 					<ShortName>PlayerOzJump.wav</ShortName>
