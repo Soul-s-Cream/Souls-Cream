@@ -4,15 +4,19 @@ using UnityEngine;
 using UnityEngine.UI;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 
+/// <summary>
+/// S'occupe de gérer la logique du menu du jeu
+/// </summary>
 public class NetworkMenu : Photon.PunBehaviour
 {
     [Header("Panels Menus")]
-    public Text roomNameField;
+    public RectTransform titleMenuPanel;
     public RectTransform errorMessagePanel;
     public RectTransform successMessagePanel;
     public RectTransform connectionPanel;
     public RectTransform roomPanel;
     [Header("Texts")]
+    public Text roomNameField;
     public Text roomNameText;
     [Header("Ready Toggles")]
     public Toggle player1ReadyToggle;
@@ -31,10 +35,57 @@ public class NetworkMenu : Photon.PunBehaviour
     public Button launchButton;
     public Button switchButton;
 
+    //La vue de menu actuellement affichée
+    RectTransform viewDisplayed;
+
+    #region Menu View Logic
+    /// <summary>
+    /// Permet d'afficher la vue en paramètre en masquant l'actuelle affichée
+    /// </summary>
+    /// <param name="viewToDisplay">La vue de menu à afficher</param>
+    public void DisplayView(RectTransform viewToDisplay)
+    {
+        try
+        {
+            if(viewDisplayed != null)
+                viewDisplayed.gameObject.SetActive(false);
+            viewDisplayed = viewToDisplay;
+            viewDisplayed.gameObject.SetActive(true);
+        }
+        catch (System.NullReferenceException e)
+        {
+            Debug.Log("A view is not referenced : " + e.Source.ToString());
+        }
+    }
+    #endregion
+
+    #region Title Menu Logic
+    private void Start()
+    {
+        DisplayView(titleMenuPanel);
+    }
+
+    public void DisplayNetworkMenu()
+    {
+        DisplayView(connectionPanel);
+    }
+
+    public void DisplayCredits()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    #endregion
+
+    #region Network Menu Logic
     public void LeaveRoom()
     {
-        roomPanel.gameObject.SetActive(false);
-        connectionPanel.gameObject.SetActive(true);
+        DisplayView(connectionPanel);
 
         PhotonNetwork.LeaveRoom();
     }
@@ -47,7 +98,7 @@ public class NetworkMenu : Photon.PunBehaviour
         }
         else
         {
-            errorMessagePanel.gameObject.SetActive(true);
+            DisplayView(errorMessagePanel);
         }
     }
 
@@ -59,7 +110,7 @@ public class NetworkMenu : Photon.PunBehaviour
         }
         else
         {
-            errorMessagePanel.gameObject.SetActive(true);
+            DisplayView(errorMessagePanel);
         }
     }
 
@@ -168,12 +219,12 @@ public class NetworkMenu : Photon.PunBehaviour
         UpdateRole();
         UpdatePlayButton();
     }
+    #endregion
 
     #region Photon.PUNBehaviour Callbacks
     public override void OnJoinedRoom()
     {
-        successMessagePanel.gameObject.SetActive(true);
-        connectionPanel.gameObject.SetActive(false);
+        DisplayView(successMessagePanel);
         roomNameText.text = PhotonNetwork.room.Name;
 
         switch (PhotonNetwork.player.ID)
@@ -215,8 +266,7 @@ public class NetworkMenu : Photon.PunBehaviour
 
     public override void OnDisconnectedFromPhoton()
     {
-        roomPanel.gameObject.SetActive(false);
-        connectionPanel.gameObject.SetActive(true);
+        DisplayView(connectionPanel);
     }
 
     public override void OnPhotonPlayerPropertiesChanged(object[] playerAndUpdatedProps)
