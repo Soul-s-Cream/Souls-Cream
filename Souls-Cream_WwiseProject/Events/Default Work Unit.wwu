@@ -33,7 +33,7 @@
 					<ChildrenList>
 						<Event Name="MozFootsteps" ID="{9C1E7B47-812B-4E1C-9B7C-2402A9C57BF9}">
 							<ChildrenList>
-								<Action Name="" ID="{C1406079-9619-48E5-AE89-9FEBECF528BB}" ShortID="373597961">
+								<Action Name="" ID="{40FE360F-6191-4377-99F4-5EFF49456A62}" ShortID="206942909">
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="MozFootsteps" ID="{1AECBF93-EA8F-4E09-ABFA-55406A301498}" WorkUnitID="{1DDF2895-7EAD-4C1C-B399-D67DF281113E}"/>
@@ -129,7 +129,7 @@
 						</Event>
 						<Event Name="OzFootsteps" ID="{1C2A276B-7C39-4A4C-813B-129748A89399}">
 							<ChildrenList>
-								<Action Name="" ID="{5356E840-2EB9-4039-AA13-18C846A64336}" ShortID="589359244">
+								<Action Name="" ID="{F246A04B-6604-4E07-B432-7DF191C58429}" ShortID="809789964">
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="OzFootsteps" ID="{8958D319-5C35-4DEF-999B-E0F775B89AC4}" WorkUnitID="{1DDF2895-7EAD-4C1C-B399-D67DF281113E}"/>

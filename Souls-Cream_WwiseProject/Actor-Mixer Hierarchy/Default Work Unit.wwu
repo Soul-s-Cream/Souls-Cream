@@ -141,6 +141,7 @@
 								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
 								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.2"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -326,6 +327,27 @@
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="PlayerMoving" ID="{C935EFB2-DD8E-4033-925E-D11F1D2F6049}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Stop" ID="{50FF4F95-528A-4602-B9F7-8EDD190A81C9}"/>
+										<CustomState Name="" ID="{BCDDB87F-AEE3-4745-88CD-34BE5A13EC52}" ShortID="568312194">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-96"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Moving" ID="{3566702A-DBE5-4CF1-8AED-DB04C413C899}"/>
+										<CustomState Name="" ID="{729459BA-D91C-4474-8242-4F552886E20D}" ShortID="983161764"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="MozLanding" ID="{249E12A2-D8AC-403D-951F-D05F292D4874}" ShortID="1071754312">
 							<PropertyList>
@@ -466,6 +488,35 @@
 								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
 								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.2"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{813A5F2D-C3E8-4691-9309-B79D0C0A376B}" ShortID="356787452">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="PlayerMoving" ID="{D24517E9-C78A-4ACA-9749-463BF551BF6E}" WorkUnitID="{CE709FC6-E33E-43F4-B8D3-FC03C4BC2167}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{34934A00-9C53-4324-8E54-9F2B46DF5054}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>1</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">

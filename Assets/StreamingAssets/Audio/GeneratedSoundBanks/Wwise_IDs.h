@@ -87,7 +87,24 @@ namespace AK
             } // namespace STATE
         } // namespace OZMOZTHEMEAMBIENCE
 
+        namespace PLAYERMOVING
+        {
+            static const AkUniqueID GROUP = 545959236U;
+
+            namespace STATE
+            {
+                static const AkUniqueID MOVING = 2649703675U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID STOP = 788884573U;
+            } // namespace STATE
+        } // namespace PLAYERMOVING
+
     } // namespace STATES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID PLAYERMOVING = 545959236U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {
