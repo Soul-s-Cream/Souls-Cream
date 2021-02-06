@@ -62,7 +62,6 @@
 											<AudioSourceRef Name="OzTuto" ID="{6ECF7256-F184-484B-99A7-3A7610095343}"/>
 										</MusicClip>
 									</ClipList>
-									<ReferenceList/>
 								</MusicTrackSequence>
 							</SequenceList>
 						</MusicTrack>
@@ -330,6 +329,221 @@
 													<ObjectRef Name="MozBig" ID="{FAF83040-53E2-41AE-8474-54358BDC50CE}" WorkUnitID="{A5C7767B-3EA2-493E-9AA1-6BF43B47532B}"/>
 												</Reference>
 											</ReferenceList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+								<MusicTrack Name="MozAmbienceTheme" ID="{49A19138-1A79-46D8-81CD-6C61188052C5}" ShortID="221809594">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="DefaultSwitchOrState">
+											<ObjectRef Name="None" ID="{BFABB3C2-4502-442D-93A0-4085D33E4AD4}" WorkUnitID="{A5C7767B-3EA2-493E-9AA1-6BF43B47532B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="OzMozThemeAmbience" ID="{C29C1673-3F42-4D3D-9007-9D41E22412BB}" WorkUnitID="{A5C7767B-3EA2-493E-9AA1-6BF43B47532B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MozAmbienceTheme" ID="{4B24825E-0D7E-4EF3-9C2E-735527601379}">
+											<Language>SFX</Language>
+											<AudioFile>MozAmbienceTheme.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="568339149"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{E45306CC-A6CD-4138-8224-DB68BDF862D6}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{AC783F60-2328-4A7A-BDD1-5F20E9984392}">
+													<PropertyList>
+														<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+														<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+														<Property Name="ExitSourceAt" Type="int16" Value="3"/>
+													</PropertyList>
+													<TransitionInfo>
+														<SourceFadeOut>
+															<MusicFade Name="Source Fade-out" ID="{4BCFAD71-3A33-4A62-9D90-FE6BBDE29616}">
+																<PropertyList>
+																	<Property Name="FadeOffset" Type="Real64" Value="1"/>
+																	<Property Name="FadeTime" Type="Real64" Value="2"/>
+																	<Property Name="FadeType" Type="int16" Value="1"/>
+																</PropertyList>
+															</MusicFade>
+														</SourceFadeOut>
+														<DestinationFadeIn>
+															<MusicFade Name="Destination Fade-in" ID="{4CEFCC03-9DAA-49D1-8CEB-84DD65A8FBC1}">
+																<PropertyList>
+																	<Property Name="FadeOffset" Type="Real64" Value="-2"/>
+																	<Property Name="FadeTime" Type="Real64" Value="2"/>
+																</PropertyList>
+															</MusicFade>
+														</DestinationFadeIn>
+													</TransitionInfo>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{042FC0E5-2066-45C8-A3B8-54035F91F609}">
+											<ClipList>
+												<MusicClip Name="MozAmbienceTheme" ID="{C91976C5-891F-4F0C-9B91-CF3977E563B4}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="36000"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="1733.04157549234"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1772.42888402626"/>
+														<Property Name="FadeOutShape" Type="int16" Value="2"/>
+													</PropertyList>
+													<AudioSourceRef Name="MozAmbienceTheme" ID="{4B24825E-0D7E-4EF3-9C2E-735527601379}"/>
+												</MusicClip>
+											</ClipList>
+											<ReferenceList>
+												<Reference Name="TrackSequenceSwitch">
+													<ObjectRef Name="MozBig" ID="{FAF83040-53E2-41AE-8474-54358BDC50CE}" WorkUnitID="{A5C7767B-3EA2-493E-9AA1-6BF43B47532B}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicTrackSequence>
+										<MusicTrackSequence Name="" ID="{38803E1F-0353-4BF2-AD46-11B078C2E8DE}">
+											<ReferenceList>
+												<Reference Name="TrackSequenceSwitch">
+													<ObjectRef Name="OzBig" ID="{8218B105-B0BA-47EE-AC00-C0CD54508AF5}" WorkUnitID="{A5C7767B-3EA2-493E-9AA1-6BF43B47532B}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+								<MusicTrack Name="OzAmbienceTheme" ID="{54896984-93C9-45ED-B151-1DF812B79397}" ShortID="43239515">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="DefaultSwitchOrState">
+											<ObjectRef Name="None" ID="{BFABB3C2-4502-442D-93A0-4085D33E4AD4}" WorkUnitID="{A5C7767B-3EA2-493E-9AA1-6BF43B47532B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="OzMozThemeAmbience" ID="{C29C1673-3F42-4D3D-9007-9D41E22412BB}" WorkUnitID="{A5C7767B-3EA2-493E-9AA1-6BF43B47532B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="OzAmbienceTheme" ID="{9EDADCE7-F13D-493C-AE26-B9F5F5D48A28}">
+											<Language>SFX</Language>
+											<AudioFile>OzAmbienceTheme.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="213501784"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{3419A252-3C89-437C-8CD7-67C8FBA7AC3B}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{895F0072-523E-46EA-B603-841CE4B41CB0}">
+													<PropertyList>
+														<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+														<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+														<Property Name="ExitSourceAt" Type="int16" Value="3"/>
+													</PropertyList>
+													<TransitionInfo>
+														<SourceFadeOut>
+															<MusicFade Name="Source Fade-out" ID="{6DB6335F-C203-47AB-8D24-05F9E9482372}">
+																<PropertyList>
+																	<Property Name="FadeOffset" Type="Real64" Value="2"/>
+																	<Property Name="FadeTime" Type="Real64" Value="2"/>
+																	<Property Name="FadeType" Type="int16" Value="1"/>
+																</PropertyList>
+															</MusicFade>
+														</SourceFadeOut>
+														<DestinationFadeIn>
+															<MusicFade Name="Destination Fade-in" ID="{53A20C20-ADE4-4029-ACE6-5D282DAD1F55}">
+																<PropertyList>
+																	<Property Name="FadeOffset" Type="Real64" Value="-2"/>
+																	<Property Name="FadeTime" Type="Real64" Value="2"/>
+																</PropertyList>
+															</MusicFade>
+														</DestinationFadeIn>
+													</TransitionInfo>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{26A682F4-9A3F-4589-B299-8949CF450DFE}">
+											<ClipList>
+												<MusicClip Name="OzAmbienceTheme" ID="{004C63A1-5A32-4BC8-B1F0-F44D620E3451}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="36000"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="1890.59080962801"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1851.20350109409"/>
+														<Property Name="FadeOutShape" Type="int16" Value="2"/>
+													</PropertyList>
+													<AudioSourceRef Name="OzAmbienceTheme" ID="{9EDADCE7-F13D-493C-AE26-B9F5F5D48A28}"/>
+												</MusicClip>
+											</ClipList>
+											<ReferenceList>
+												<Reference Name="TrackSequenceSwitch">
+													<ObjectRef Name="OzBig" ID="{8218B105-B0BA-47EE-AC00-C0CD54508AF5}" WorkUnitID="{A5C7767B-3EA2-493E-9AA1-6BF43B47532B}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicTrackSequence>
+										<MusicTrackSequence Name="" ID="{31E648A8-78D8-4825-92FC-245E80F31DF9}">
+											<ReferenceList>
+												<Reference Name="TrackSequenceSwitch">
+													<ObjectRef Name="MozBig" ID="{FAF83040-53E2-41AE-8474-54358BDC50CE}" WorkUnitID="{A5C7767B-3EA2-493E-9AA1-6BF43B47532B}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+								<MusicTrack Name="OzMozAmbienceTheme" ID="{147DA1C6-8789-4F6A-8709-5C2CD5C7C1CC}" ShortID="567358408">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="OzMozAmbienceTheme" ID="{024E147C-7D7E-48FE-9EEC-E821E59B339C}">
+											<Language>SFX</Language>
+											<AudioFile>OzMozAmbienceTheme.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="21678370"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{8C996AD5-61A4-4A8C-B832-4983CEC54619}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{918819C6-BB90-4023-882D-0EB7800E33F3}">
+											<ClipList>
+												<MusicClip Name="OzMozAmbienceTheme" ID="{2FE7DA7C-AAB2-4D19-B683-D5625D90003F}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="36000"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="2048.14004376368"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="2008.75273522975"/>
+														<Property Name="FadeOutShape" Type="int16" Value="2"/>
+													</PropertyList>
+													<AudioSourceRef Name="OzMozAmbienceTheme" ID="{024E147C-7D7E-48FE-9EEC-E821E59B339C}"/>
+												</MusicClip>
+											</ClipList>
 										</MusicTrackSequence>
 									</SequenceList>
 								</MusicTrack>
