@@ -32,7 +32,7 @@ public class GameEvents : MonoBehaviour
     public event AnimIconesCrisEvent IconeAnimSelected;
     public event AnimIconesCrisEvent IconeAnimUnselected;
 
-    public delegate void BrisDeEcranEvent(GameObject cassur);
+    public delegate void BrisDeEcranEvent(GameObject[] cassur);
     public event BrisDeEcranEvent BrisDeEcranVoid; 
 
 
@@ -82,11 +82,11 @@ public class GameEvents : MonoBehaviour
             IconeAnimUnselected(Icone);
         }
     }
-    public void BDR(GameObject brokenWindow)
+    public void BDR(GameObject[] brokenWindow)
     {
         if (brokenWindow != null)
         {
-            IconeAnimUnselected(brokenWindow);
+            BrisDeEcranVoid(brokenWindow);
         }
     }
 }

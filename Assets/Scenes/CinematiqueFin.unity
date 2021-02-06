@@ -491,8 +491,10 @@ PlayableDirector:
     value: {fileID: 1761304304}
   - key: {fileID: 4027828478221802033, guid: 885e794c792d4fc419f43034544dd982, type: 2}
     value: {fileID: 1534352967}
-  - key: {fileID: -1545744010153079194, guid: 885e794c792d4fc419f43034544dd982, type: 2}
-    value: {fileID: 1862519820}
+  - key: {fileID: -8853968368890998387, guid: 885e794c792d4fc419f43034544dd982, type: 2}
+    value: {fileID: 468759328}
+  - key: {fileID: 7620835198532700682, guid: 885e794c792d4fc419f43034544dd982, type: 2}
+    value: {fileID: 398079695}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &398079697
@@ -536,7 +538,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &416397717
 Animator:
   serializedVersion: 3
@@ -668,6 +670,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b797db9b87228f49b718a5bdfa8c1d9, type: 3}
+--- !u!1 &468759327 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 290643585306977307, guid: 4d13b8bf1245d164b93f77d25b03c240, type: 3}
+  m_PrefabInstance: {fileID: 559601628}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &468759328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468759327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 6e919f17a11d5d445ae7fa165fc58c2a, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 468759329}
+          m_TargetAssemblyTypeName: MovePlayer, Assembly-CSharp
+          m_MethodName: DernierCri
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &468759329 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 290643585306977306, guid: 4d13b8bf1245d164b93f77d25b03c240, type: 3}
+  m_PrefabInstance: {fileID: 559601628}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468759327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e612601b0beb6544cbd14be10b7af3cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &476985918
 GameObject:
   m_ObjectHideFlags: 0
@@ -760,7 +808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &487917596
 Animator:
   serializedVersion: 3
@@ -2402,36 +2450,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &1862519820
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1862519821}
-  m_Layer: 0
-  m_Name: NeSertQuAEtreDesactive
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1862519821
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1862519820}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.31842595, y: 3.248837, z: -142.49786}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1884883357
 GameObject:
   m_ObjectHideFlags: 0

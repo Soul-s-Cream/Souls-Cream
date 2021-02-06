@@ -3,27 +3,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovePlayer : MonoBehaviour
+public class MovePlayer : MonoBehaviour             //Script attache au joueur noir
 {
     #region Public Field
     public List<BoxController> boxes;
-    public bool CriN1 = false;
-    public float dist;
+
+    public bool criN1Joie = false;
+    public bool criN2Fierte = false;
+    public bool criN3Curiosite = false;
+    public bool criN4Compassion = false;
+    public bool isJuming;
+    public bool isGrounded;
+
     public float distMax = 4f;
-
-    public int NumSaut = 0;
-
-    public float fallMultiplier = 2.5f;
-    public float lowJumpMultiplier = 2f;
     public float velocityYMax = 50f;
-
-    // vitesse de d�placement
     public float moveSpeed;
     public float jumpForce;
     public float maxSpeed;
 
-    public bool isJuming;
-    public bool isGrounded;
+
 
     public Transform groundCheckLeft;
     public Transform groundCheckRight;
@@ -36,14 +34,22 @@ public class MovePlayer : MonoBehaviour
     #endregion  //Controls
 
     #region Private Fields
-    Animator anim;
-    private Vector3 scale;
+
+    private Animator anim;
+    private Controls control;
+    private Coroutine timeToDie;
 
     private Vector3 velocity = Vector3.zero;
-    // d�placement
+
+    private float fallMultiplier = 2.5f;
+    private float lowJumpMultiplier = 2f;
+    private float dist;
     private float horizontalMovement = 0f;
 
-    private Controls control;
+    private bool dernierCriActive = false;
+
+    private int NumSaut = 0;
+
     #endregion
 
     private void Awake()
@@ -54,14 +60,12 @@ public class MovePlayer : MonoBehaviour
     private void Start()
     {
         anim = GetComponent<Animator>();
-        scale = transform.eulerAngles;
 //        AkSoundEngine.PostEvent("MozTuto", gameObject);
     }
 
     void FixedUpdate()
     {
-        transform.eulerAngles = scale;
-        isGrounded = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckLeft.position);
+        isGrounded = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckLeft.position);                 // le personnage est considere au sol
         horizontalMovement = control.Deplacement.Deplacement.ReadValue<float>() * moveSpeed;
         PlayerMove(horizontalMovement);
 
@@ -150,7 +154,6 @@ public class MovePlayer : MonoBehaviour
     public void PlayerCriSelect()
     {
 
-
         if (control.Cri.CriUp.triggered)
         {
             if (CriSelected < CriNumMax)
@@ -163,17 +166,20 @@ public class MovePlayer : MonoBehaviour
             { CriSelected -= 1; }
             else CriSelected = CriNumMax;
         }
-    }
+    }                                                           // polish : essayer de changer cette valeur en fonction du script SelectionCriScript
     public void PlayerCri()
     {
 
         if (control.Cri.Cri.triggered)
         {
-            anim.SetInteger("Cri", CriSelected);
-            if (CriSelected == 1)
-            {
-                CriN1 = true;
+            anim.SetInteger("Cri", CriSelected);                                                // utilise l'animation du cri du perso
+            ResetTimeToDie();                                                                   // Coroutine de déactivation du cri
 
+
+
+            if (CriSelected == 1)                                                               // Cri de déplacement de bloc
+            {
+                criN1Joie = true;
                 foreach (BoxController box in boxes)
                 {
                     dist = Vector2.Distance(box.transform.position, transform.position);
@@ -201,11 +207,36 @@ public class MovePlayer : MonoBehaviour
         }
         else
         {
-            anim.SetInteger("Cri", 0);
-            CriN1 = false;
+            anim.SetInteger("Cri", 0);                                      // personnage en position de IDLE
         }
 
     }
+
+    public void DernierCri()                        // s'active au cour de la dernière cinematique
+    {
+        dernierCriActive = true;
+        Debug.Log("DernierCrie = " + dernierCriActive); 
+    }
+
+
+    private IEnumerator TimeToDie()                 //Permet de déactive le pouvoir du cri
+    {
+        yield return new WaitForSeconds(2f);
+        criN1Joie = false;
+        criN2Fierte = false;
+        criN3Curiosite = false;
+        criN4Compassion = false;
+    }
+    private void ResetTimeToDie()
+    {
+        if (timeToDie != null)
+        {
+            StopCoroutine(timeToDie);
+        }
+        timeToDie = StartCoroutine(TimeToDie());
+    }
+
+
     #endregion
 
     #region Unity Callbacks

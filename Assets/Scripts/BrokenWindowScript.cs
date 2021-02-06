@@ -6,14 +6,24 @@ public class BrokenWindowScript : MonoBehaviour
 {
     private void Start()
     {
-        GameEvents.Instance.BrisDeEcran += activeSprite;
+        GameEvents.Instance.BrisDeEcranVoid += activeSprite;
     }
-    public void activeSprite(GameObject spritCassure)
+    public void activeSprite(GameObject[] spritCassure)
     {
-        if (spritCassure == this.gameObject)
-        {
-            GetComponent<Renderer>().enabled = true;
 
+        BrokenWindowScript BW;
+
+
+        foreach (GameObject sprit in spritCassure)
+        {
+            BW = gameObject.GetComponent<BrokenWindowScript>();
+            if (BW != null && BW == this && this.GetComponent<Renderer>().enabled == false)
+            {
+                this.GetComponent<Renderer>().enabled = true;
+                break;
+            }
         }
+
+
     }
 }
