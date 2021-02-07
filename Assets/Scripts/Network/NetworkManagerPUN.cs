@@ -15,6 +15,17 @@ public class NetworkManagerPUN : Photon.PunBehaviour
     {
         get { return _instance; }
     }
+
+    public bool offlineMode;
+
+    public bool OfflineMode
+    {
+        set
+        {
+            offlineMode = value;
+            PhotonNetwork.offlineMode = offlineMode;
+        }
+    }
     #endregion
 
     private void Awake()
@@ -31,6 +42,8 @@ public class NetworkManagerPUN : Photon.PunBehaviour
 
     private void Start()
     {
+        PhotonNetwork.offlineMode = offlineMode;
+
         if (!PhotonNetwork.connected)
         {
             PhotonNetwork.ConnectUsingSettings(gameVersion);
