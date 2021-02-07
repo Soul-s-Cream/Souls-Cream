@@ -10,8 +10,8 @@ public class IconeAnimScipt : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {    
-        GameEvents.Instance.IconeAnimSelected += IconeActive;
-        GameEvents.Instance.IconeAnimUnselected += IconeDesactive;
+        GameEvents.Instance.iconAnimSelected += IconeActive;
+        GameEvents.Instance.iconAnimUnselected += IconeDesactive;
 
         scaleCri = transform.localScale;
     }
