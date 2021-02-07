@@ -48,4 +48,5 @@ MonoBehaviour:
   - SwitchBoxOn
   - SwitchTriggerOn
   - SwitchOn
+  - SwitchOff
   DisableAutoOpenWizard: 1

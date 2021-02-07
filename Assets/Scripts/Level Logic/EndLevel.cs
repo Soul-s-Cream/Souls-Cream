@@ -19,12 +19,12 @@ public class EndLevel : MonoBehaviour
 
     void AddListener()
     {
-        GameEvents.Instance.PlayerReachEnd += OnPlayerReachEnd;
+        GameEvents.Instance.playerReachEnd += OnPlayerReachEnd;
     }
 
     void RemoveListener()
     {
-        GameEvents.Instance.PlayerReachEnd -= OnPlayerReachEnd;
+        GameEvents.Instance.playerReachEnd -= OnPlayerReachEnd;
     }
 
     private void OnDestroy()
@@ -44,7 +44,7 @@ public class EndLevel : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isPlayerReachEnd = true;
-            GameEvents.Instance.LaunchPlayerReachEnd(this.gameObject);
+            GameEvents.Instance.TriggerPlayerReachEnd(this.gameObject);
         }
     }
 

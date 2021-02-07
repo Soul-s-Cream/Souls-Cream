@@ -91,12 +91,12 @@ public class SelectionCriScript : MonoBehaviour
 
     public void AnimIcon()
     {
-        GameEvents.Instance.SwitchIconeUp(Cris[criSelected]);
+        GameEvents.Instance.TriggerSwitchIconeUp(Cris[criSelected]);
         foreach (GameObject icone in Cris)
         {
             if (icone != Cris[criSelected])
             {
-                GameEvents.Instance.SwitchIconeDown(icone);
+                GameEvents.Instance.TriggerSwitchIconeDown(icone);
             }
         }
     }
@@ -104,6 +104,6 @@ public class SelectionCriScript : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         roueActive = false;
-        GameEvents.Instance.SwitchIconeDown(Cris[criSelected]);
+        GameEvents.Instance.TriggerSwitchIconeDown(Cris[criSelected]);
     }
 }

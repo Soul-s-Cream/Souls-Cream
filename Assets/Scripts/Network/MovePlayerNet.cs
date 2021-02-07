@@ -175,7 +175,7 @@ public class MovePlayerNet : Photon.PunBehaviour
                 foreach (Collider2D collider in colliders)
                 {
                     if(collider.gameObject.CompareTag("Crate"))
-                        GameEvents.Instance.SwitchBoxOn(collider.GetComponent<BoxController>());
+                        GameEvents.Instance.TriggerSwitchBoxOn(collider.GetComponent<BoxController>());
                 }
             }
         }

@@ -179,7 +179,7 @@ public class MovePlayer : MonoBehaviour
                     dist = Vector2.Distance(box.transform.position, transform.position);
                     if (dist <= distMax)
                     {
-                        GameEvents.Instance.SwitchBoxOn(box);
+                        GameEvents.Instance.TriggerSwitchBoxOn(box);
                     }
                 }
                 AkSoundEngine.PostEvent("Acculation", gameObject);

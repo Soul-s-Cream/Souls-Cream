@@ -1848,6 +1848,10 @@ PrefabInstance:
       propertyPath: directionPorte
       value: -2
       objectReference: {fileID: 0}
+    - target: {fileID: 854869220396571383, guid: af128534d7d16064b95e3532c0c94a4f, type: 3}
+      propertyPath: openingDirection
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af128534d7d16064b95e3532c0c94a4f, type: 3}
 --- !u!1 &564366019 stripped
@@ -1886,6 +1890,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 854869220396571380, guid: af128534d7d16064b95e3532c0c94a4f, type: 3}
   m_PrefabInstance: {fileID: 564366018}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &564366022 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 854869220396571383, guid: af128534d7d16064b95e3532c0c94a4f, type: 3}
+  m_PrefabInstance: {fileID: 564366018}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564366019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3447ce01433a73d48866b66e64feb4f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &577288075
 GameObject:
   m_ObjectHideFlags: 0
@@ -2370,6 +2385,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3320239133668934217, guid: 26acae912801af341a85423b4333c945, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 32cb32bfa6582b7418080db5f35e7a5c, type: 3}
     - target: {fileID: 3320239133668934219, guid: 26acae912801af341a85423b4333c945, type: 3}
       propertyPath: clef
       value: 
@@ -2379,9 +2398,17 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3320239133668934219, guid: 26acae912801af341a85423b4333c945, type: 3}
+      propertyPath: triggers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320239133668934219, guid: 26acae912801af341a85423b4333c945, type: 3}
       propertyPath: triggers.Array.data[0]
       value: 
-      objectReference: {fileID: 1446763089}
+      objectReference: {fileID: 564366022}
+    - target: {fileID: 3320239133668934219, guid: 26acae912801af341a85423b4333c945, type: 3}
+      propertyPath: triggers.Array.data[1]
+      value: 
+      objectReference: {fileID: 1446763092}
     - target: {fileID: 3320239133668934222, guid: 26acae912801af341a85423b4333c945, type: 3}
       propertyPath: m_Name
       value: ButtonWhit (2)
@@ -2435,7 +2462,7 @@ Animator:
   m_GameObject: {fileID: 767806490}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 70f8b332dc2c0f2428759def23319dff, type: 2}
+  m_Controller: {fileID: 9100000, guid: d14aba944399ad24da8fc2f6942f5ac4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2495,6 +2522,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.514
       objectReference: {fileID: 0}
+    - target: {fileID: 3320239133668934217, guid: 26acae912801af341a85423b4333c945, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: eee530009b7fc1d4184d601b7d41d673, type: 3}
     - target: {fileID: 3320239133668934219, guid: 26acae912801af341a85423b4333c945, type: 3}
       propertyPath: clef
       value: 
@@ -2510,11 +2541,11 @@ PrefabInstance:
     - target: {fileID: 3320239133668934219, guid: 26acae912801af341a85423b4333c945, type: 3}
       propertyPath: triggers.Array.data[0]
       value: 
-      objectReference: {fileID: 564366019}
+      objectReference: {fileID: 1446763092}
     - target: {fileID: 3320239133668934219, guid: 26acae912801af341a85423b4333c945, type: 3}
       propertyPath: triggers.Array.data[1]
       value: 
-      objectReference: {fileID: 1446763089}
+      objectReference: {fileID: 564366022}
     - target: {fileID: 3320239133668934222, guid: 26acae912801af341a85423b4333c945, type: 3}
       propertyPath: m_Name
       value: ButtonBlack (1)
@@ -2730,6 +2761,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3320239133668934217, guid: 26acae912801af341a85423b4333c945, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: eee530009b7fc1d4184d601b7d41d673, type: 3}
     - target: {fileID: 3320239133668934219, guid: 26acae912801af341a85423b4333c945, type: 3}
       propertyPath: clef
       value: 
@@ -2745,11 +2780,11 @@ PrefabInstance:
     - target: {fileID: 3320239133668934219, guid: 26acae912801af341a85423b4333c945, type: 3}
       propertyPath: triggers.Array.data[0]
       value: 
-      objectReference: {fileID: 1052718492}
+      objectReference: {fileID: 1052718495}
     - target: {fileID: 3320239133668934219, guid: 26acae912801af341a85423b4333c945, type: 3}
       propertyPath: triggers.Array.data[1]
       value: 
-      objectReference: {fileID: 968680794}
+      objectReference: {fileID: 968680798}
     - target: {fileID: 3320239133668934222, guid: 26acae912801af341a85423b4333c945, type: 3}
       propertyPath: m_Name
       value: ButtonBlack
@@ -2936,6 +2971,17 @@ MonoBehaviour:
   instantiationId: 7
   currentMasterID: -1
   isRuntimeInstantiated: 0
+--- !u!114 &968680798 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 854869220396571383, guid: af128534d7d16064b95e3532c0c94a4f, type: 3}
+  m_PrefabInstance: {fileID: 968680793}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968680794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3447ce01433a73d48866b66e64feb4f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1029940991
 GameObject:
   m_ObjectHideFlags: 0
@@ -3126,6 +3172,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 854869220396571380, guid: af128534d7d16064b95e3532c0c94a4f, type: 3}
   m_PrefabInstance: {fileID: 1052718491}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1052718495 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 854869220396571383, guid: af128534d7d16064b95e3532c0c94a4f, type: 3}
+  m_PrefabInstance: {fileID: 1052718491}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052718492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3447ce01433a73d48866b66e64feb4f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1121614954
 GameObject:
   m_ObjectHideFlags: 0
@@ -3607,6 +3664,10 @@ PrefabInstance:
       propertyPath: directionPorte
       value: -2
       objectReference: {fileID: 0}
+    - target: {fileID: 854869220396571383, guid: af128534d7d16064b95e3532c0c94a4f, type: 3}
+      propertyPath: openingDirection
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af128534d7d16064b95e3532c0c94a4f, type: 3}
 --- !u!1 &1446763089 stripped
@@ -3645,6 +3706,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 854869220396571380, guid: af128534d7d16064b95e3532c0c94a4f, type: 3}
   m_PrefabInstance: {fileID: 1446763088}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1446763092 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 854869220396571383, guid: af128534d7d16064b95e3532c0c94a4f, type: 3}
+  m_PrefabInstance: {fileID: 1446763088}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446763089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3447ce01433a73d48866b66e64feb4f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1451978290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4031,10 +4103,14 @@ PrefabInstance:
     - target: {fileID: 3320239133668934217, guid: 26acae912801af341a85423b4333c945, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: eee530009b7fc1d4184d601b7d41d673, type: 3}
+      objectReference: {fileID: 21300000, guid: 32cb32bfa6582b7418080db5f35e7a5c, type: 3}
     - target: {fileID: 3320239133668934219, guid: 26acae912801af341a85423b4333c945, type: 3}
       propertyPath: clef
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320239133668934219, guid: 26acae912801af341a85423b4333c945, type: 3}
+      propertyPath: tagFilter
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3320239133668934219, guid: 26acae912801af341a85423b4333c945, type: 3}
       propertyPath: triggers.Array.size
@@ -4043,11 +4119,11 @@ PrefabInstance:
     - target: {fileID: 3320239133668934219, guid: 26acae912801af341a85423b4333c945, type: 3}
       propertyPath: triggers.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1052718495}
     - target: {fileID: 3320239133668934219, guid: 26acae912801af341a85423b4333c945, type: 3}
       propertyPath: triggers.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 968680798}
     - target: {fileID: 3320239133668934222, guid: 26acae912801af341a85423b4333c945, type: 3}
       propertyPath: m_Name
       value: ButtonWhit (3)
