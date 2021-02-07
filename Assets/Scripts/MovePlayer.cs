@@ -14,6 +14,7 @@ public class MovePlayer : MonoBehaviour             //Script attache au joueur n
     public bool criN4Compassion = false;
     public bool isJuming;
     public bool isGrounded;
+    public bool chuteLibre = false;
 
     public float distMax = 4f;
     public float velocityYMax = 50f;
@@ -91,7 +92,7 @@ public class MovePlayer : MonoBehaviour             //Script attache au joueur n
             //AkSoundEngine.PostEvent("MozLanding", gameObject);
         }
     }
-    private void Update()
+    private void Update()                                   // a mettre dans la classe
     {
 
         if (velocity.y > velocityYMax)
@@ -115,7 +116,7 @@ public class MovePlayer : MonoBehaviour             //Script attache au joueur n
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
-        if (isGrounded)
+        if (isGrounded && !chuteLibre)
         {
             anim.SetBool("Jump", false);
         }
@@ -127,12 +128,12 @@ public class MovePlayer : MonoBehaviour             //Script attache au joueur n
         PlayerCri();
     }
 
-    void PlayerMove(float _horizontalMovement)
+    void PlayerMove(float _horizontalMovement)                                  // a mettre dans la classe
     {
         Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
         rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
 
-        if (isJuming == true)
+        if (isJuming == true && !chuteLibre)
         {
             if (NumSaut == 0)
             {
@@ -143,7 +144,7 @@ public class MovePlayer : MonoBehaviour             //Script attache au joueur n
             if (NumSaut == 1)
             {
 
-                rb.AddForce(new Vector2(0f, jumpForce * 0f));
+                rb.AddForce(new Vector2(0f, jumpForce * 0f));                   // !!! valeur de 0 pour le joueur noir !!!
             }
             isJuming = false;
         }
