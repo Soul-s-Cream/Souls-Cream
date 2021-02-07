@@ -23,15 +23,19 @@ namespace AK
         static const AkUniqueID ENVIE = 1698034228U;
         static const AkUniqueID FIERTE = 2054371306U;
         static const AkUniqueID HOST = 3617624947U;
-        static const AkUniqueID INTERRUPTOR = 132381101U;
+        static const AkUniqueID INTERRUPTORHEAVY = 10711758U;
+        static const AkUniqueID INTERRUPTORHIGH = 2112482585U;
         static const AkUniqueID JOIE = 3695193454U;
         static const AkUniqueID JOIN = 3695193445U;
         static const AkUniqueID MOZFOOTSTEPS = 773707930U;
         static const AkUniqueID MOZJUMP = 313744885U;
         static const AkUniqueID MOZLANDING = 783075190U;
+        static const AkUniqueID MOZLARME = 3574164184U;
         static const AkUniqueID MOZTUTO = 1861470019U;
+        static const AkUniqueID NEWSCREAMUNLOCKED = 1671407757U;
         static const AkUniqueID NEXT = 982796106U;
         static const AkUniqueID NOTREADY = 3176198653U;
+        static const AkUniqueID OPENGATE = 604601532U;
         static const AkUniqueID OZDOUBLEJUMP = 1891947077U;
         static const AkUniqueID OZFOOTSTEPS = 2515146559U;
         static const AkUniqueID OZJUMP = 1595060770U;
@@ -104,6 +108,7 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID PLAYERMOVING = 545959236U;
+        static const AkUniqueID WETFLOOR = 34521763U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS

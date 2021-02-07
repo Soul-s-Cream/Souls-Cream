@@ -9,6 +9,7 @@
 						<Property Name="Max" Type="Real64" Value="1"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="WetFloor" ID="{01A64B69-4A37-4E40-A27A-189F056BB60F}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

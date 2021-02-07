@@ -49,7 +49,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 338a40dff62d0c4b8fe84e8994defc20
     GuidInternal: 
-    m_lastTime: -8585890719551814349
+    m_lastTime: -8585889753205681215
     List:
     - name: Main
       guid: 3085d8906006fc43b479a58e3dc0504e
@@ -68,7 +68,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: a3e106a80bc5484598947af11861b916
     GuidInternal: 
-    m_lastTime: -8585890719555464587
+    m_lastTime: -8585888999143483955
     List:
     - name: Acculation
       guid: 8d5a9d35caa05d4ba2fd12e71d93e2e3
@@ -220,17 +220,31 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Interruptor
-      guid: f7c20885b91072478159c654a5586ebc
-      id: 132381101
+    - name: InterruptorHeavy
+      guid: ee2f7f0da3fb044eb32800cd4da802bb
+      id: 10711758
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: Objects
         ObjectType: 4
-      - ElementName: Interruptor
+      - ElementName: InterruptorHeavy
         ObjectType: 3
-      Path: Default Work Unit\Objects\Interruptor
+      Path: Default Work Unit\Objects\InterruptorHeavy
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: InterruptorHigh
+      guid: f7c20885b91072478159c654a5586ebc
+      id: 2112482585
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Objects
+        ObjectType: 4
+      - ElementName: InterruptorHigh
+        ObjectType: 3
+      Path: Default Work Unit\Objects\InterruptorHigh
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -636,8 +650,26 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: c69f70ce3ee3f443b8d3fc03c4bc2167
     GuidInternal: 
-    m_lastTime: -8585890719555444636
-    List: []
+    m_lastTime: -8585889131777117108
+    List:
+    - name: PlayerMoving
+      guid: e91745d28ac7ca4a9749463bf551bf6e
+      id: 545959236
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PlayerMoving
+        ObjectType: 13
+      Path: Default Work Unit\PlayerMoving
+    - name: WetFloor
+      guid: 694ba601374a404ea27a189f056bb60f
+      id: 34521763
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: WetFloor
+        ObjectType: 13
+      Path: Default Work Unit\WetFloor
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -646,7 +678,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 7b76c7a5a23e3e499aa16bf43b47532b
     GuidInternal: 
-    m_lastTime: -8585890089875751584
+    m_lastTime: -8585889757588173236
     List:
     - name: CrateMoving
       guid: 9e07556062f2f7429cf246c1e7588b9b
@@ -741,6 +773,37 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
+    - name: PlayerMoving
+      guid: b2ef35c98edd3340925ed11f1d2f6049
+      id: 545959236
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PlayerMoving
+        ObjectType: 9
+      Path: Default Work Unit\PlayerMoving
+      values:
+      - name: Moving
+        guid: 2a706635e5dbf14c8aeddb04c413c899
+        id: 2649703675
+        PathAndIcons:
+        - ElementName: Moving
+          ObjectType: 8
+      - name: None
+        guid: 3ebe4c1b1efeb24ea41d86e0dc796964
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      - name: Stop
+        guid: 954fff508a520246b9f78edd190a81c9
+        id: 788884573
+        PathAndIcons:
+        - ElementName: Stop
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -763,15 +826,5 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Souls-Cream_WwiseProject
-  - /Souls-Cream_WwiseProject/Events
-  - /Souls-Cream_WwiseProject/Events/Default Work Unit
-  - /Souls-Cream_WwiseProject/Events/Default Work Unit/MenuVoices
-  - /Souls-Cream_WwiseProject/Events/Default Work Unit/Moz
-  - /Souls-Cream_WwiseProject/Events/Default Work Unit/Moz/Screams
-  - /Souls-Cream_WwiseProject/Events/Default Work Unit/Oz
-  - /Souls-Cream_WwiseProject/Events/Default Work Unit/Oz/Screams
-  - /Souls-Cream_WwiseProject/SoundBanks
-  - /Souls-Cream_WwiseProject/SoundBanks/Default Work Unit
-  - /Souls-Cream_WwiseProject/States
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

@@ -11,12 +11,12 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="1633310808">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2468581739">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1966040564">
+		<SoundBank Id="3161908922" Language="SFX" Hash="2062365955">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -75,9 +75,17 @@
 							<ShortName>CrateFriction.wav</ShortName>
 							<Path>SFX\CrateFriction_B1DD9702.wem</Path>
 						</File>
+						<File Id="557949847" Language="SFX">
+							<ShortName>CrateFrictionWet.wav</ShortName>
+							<Path>SFX\CrateFrictionWet_230D2EB5.wem</Path>
+						</File>
 						<File Id="694567900" Language="SFX">
 							<ShortName>CrateFriction.wav</ShortName>
 							<Path>SFX\CrateFriction_B3F2D557.wem</Path>
+						</File>
+						<File Id="1001770249" Language="SFX">
+							<ShortName>CrateFrictionWet.wav</ShortName>
+							<Path>SFX\CrateFrictionWet_A3E6A7D4.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -157,7 +165,23 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="132381101" Name="Interruptor" ObjectPath="\Events\Default Work Unit\Objects\Interruptor" DurationType="OneShot" DurationMin="0.179680" DurationMax="0.241792">
+				<Event Id="10711758" Name="InterruptorHeavy" ObjectPath="\Events\Default Work Unit\Objects\InterruptorHeavy" DurationType="OneShot" DurationMin="0.405704" DurationMax="0.649246">
+					<IncludedMemoryFiles>
+						<File Id="167913592" Language="SFX">
+							<ShortName>Interruptor.wav</ShortName>
+							<Path>SFX\Interruptor_5E9C9814.wem</Path>
+						</File>
+						<File Id="190532320" Language="SFX">
+							<ShortName>Interruptor.wav</ShortName>
+							<Path>SFX\Interruptor_9B63C4FD.wem</Path>
+						</File>
+						<File Id="585976924" Language="SFX">
+							<ShortName>Interruptor.wav</ShortName>
+							<Path>SFX\Interruptor_EF5ADE14.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2112482585" Name="InterruptorHigh" ObjectPath="\Events\Default Work Unit\Objects\InterruptorHigh" DurationType="OneShot" DurationMin="0.179680" DurationMax="0.241792">
 					<IncludedMemoryFiles>
 						<File Id="167913592" Language="SFX">
 							<ShortName>Interruptor.wav</ShortName>
@@ -207,9 +231,25 @@
 							<ShortName>PlayerMozFootsteps.wav</ShortName>
 							<Path>SFX\PlayerMozFootsteps_C44C71A6.wem</Path>
 						</File>
+						<File Id="72853813" Language="SFX">
+							<ShortName>MozFootstepsWet.wav</ShortName>
+							<Path>SFX\MozFootstepsWet_E4E559D3.wem</Path>
+						</File>
+						<File Id="101099822" Language="SFX">
+							<ShortName>MozFootstepsWet.wav</ShortName>
+							<Path>SFX\MozFootstepsWet_07D64CBA.wem</Path>
+						</File>
+						<File Id="161831740" Language="SFX">
+							<ShortName>MozFootstepsWet.wav</ShortName>
+							<Path>SFX\MozFootstepsWet_7C902752.wem</Path>
+						</File>
 						<File Id="534699211" Language="SFX">
 							<ShortName>PlayerMozFootsteps.wav</ShortName>
 							<Path>SFX\PlayerMozFootsteps_03957B3B.wem</Path>
+						</File>
+						<File Id="561214518" Language="SFX">
+							<ShortName>MozFootstepsWet.wav</ShortName>
+							<Path>SFX\MozFootstepsWet_E711CD2E.wem</Path>
 						</File>
 						<File Id="626046583" Language="SFX">
 							<ShortName>PlayerMozFootsteps.wav</ShortName>
@@ -223,9 +263,17 @@
 							<ShortName>PlayerMozFootsteps.wav</ShortName>
 							<Path>SFX\PlayerMozFootsteps_2E6E780A.wem</Path>
 						</File>
+						<File Id="886444032" Language="SFX">
+							<ShortName>MozFootstepsWet.wav</ShortName>
+							<Path>SFX\MozFootstepsWet_CD2ED21F.wem</Path>
+						</File>
 						<File Id="894112917" Language="SFX">
 							<ShortName>PlayerMozFootsteps.wav</ShortName>
 							<Path>SFX\PlayerMozFootsteps_8D8F08A6.wem</Path>
+						</File>
+						<File Id="975142216" Language="SFX">
+							<ShortName>MozFootstepsWet.wav</ShortName>
+							<Path>SFX\MozFootstepsWet_C9AAA242.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -261,11 +309,59 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3574164184" Name="MozLarme" ObjectPath="\Events\Default Work Unit\Moz\MozLarme" DurationType="OneShot" DurationMin="1.336346" DurationMax="1.537646">
+					<IncludedMemoryFiles>
+						<File Id="20390223" Language="SFX">
+							<ShortName>LarmesMoz.wav</ShortName>
+							<Path>SFX\LarmesMoz_D7A3976B.wem</Path>
+						</File>
+						<File Id="531807002" Language="SFX">
+							<ShortName>LarmesMoz.wav</ShortName>
+							<Path>SFX\LarmesMoz_C5960E0D.wem</Path>
+						</File>
+						<File Id="621290499" Language="SFX">
+							<ShortName>LarmesMoz.wav</ShortName>
+							<Path>SFX\LarmesMoz_3478A238.wem</Path>
+						</File>
+						<File Id="629603167" Language="SFX">
+							<ShortName>LarmesMoz.wav</ShortName>
+							<Path>SFX\LarmesMoz_38CF81DE.wem</Path>
+						</File>
+						<File Id="725877669" Language="SFX">
+							<ShortName>LarmesMoz.wav</ShortName>
+							<Path>SFX\LarmesMoz_9EE7E6CD.wem</Path>
+						</File>
+						<File Id="848601756" Language="SFX">
+							<ShortName>LarmesMoz.wav</ShortName>
+							<Path>SFX\LarmesMoz_C2152A00.wem</Path>
+						</File>
+						<File Id="962922270" Language="SFX">
+							<ShortName>LarmesMoz.wav</ShortName>
+							<Path>SFX\LarmesMoz_92A41F69.wem</Path>
+						</File>
+						<File Id="965584582" Language="SFX">
+							<ShortName>LarmesMoz.wav</ShortName>
+							<Path>SFX\LarmesMoz_DAEE5D02.wem</Path>
+						</File>
+						<File Id="1011164212" Language="SFX">
+							<ShortName>LarmesMoz.wav</ShortName>
+							<Path>SFX\LarmesMoz_A16D1396.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1861470019" Name="MozTuto" ObjectPath="\Events\Default Work Unit\MozTuto" DurationType="OneShot" DurationMin="64.000000" DurationMax="64.000000">
 					<IncludedMemoryFiles>
 						<File Id="80023791" Language="SFX">
 							<ShortName>MozTutoV2.wav</ShortName>
 							<Path>SFX\MozTutoV2_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1671407757" Name="NewScreamUnlocked" ObjectPath="\Events\Default Work Unit\Objects\NewScreamUnlocked" DurationType="OneShot" DurationMin="5.886275" DurationMax="7.416242">
+					<IncludedMemoryFiles>
+						<File Id="149137566" Language="SFX">
+							<ShortName>NewScreamUnlocked.wav</ShortName>
+							<Path>SFX\NewScreamUnlocked_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -282,6 +378,22 @@
 						<File Id="431094485" Language="SFX">
 							<ShortName>Menu Voices.wav</ShortName>
 							<Path>SFX\Menu Voices_51FD4A9D.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="604601532" Name="OpenGate" ObjectPath="\Events\Default Work Unit\Objects\OpenGate" DurationType="OneShot" DurationMin="2.130069" DurationMax="3.118407">
+					<IncludedMemoryFiles>
+						<File Id="329682438" Language="SFX">
+							<ShortName>PorteOuverture.wav</ShortName>
+							<Path>SFX\PorteOuverture_AEDE31E7.wem</Path>
+						</File>
+						<File Id="816920437" Language="SFX">
+							<ShortName>PorteOuverture.wav</ShortName>
+							<Path>SFX\PorteOuverture_F97A1E9E.wem</Path>
+						</File>
+						<File Id="943190417" Language="SFX">
+							<ShortName>PorteOuverture.wav</ShortName>
+							<Path>SFX\PorteOuverture_90D46854.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -371,21 +483,9 @@
 							<ShortName>OzAmbienceTheme.wav</ShortName>
 							<Path>SFX\OzAmbienceTheme_D79FB2B7.wem</Path>
 						</File>
-						<File Id="497282913" Language="SFX">
-							<ShortName>ambiences plateaux\OzThemeAmbience.wav</ShortName>
-							<Path>SFX\ambiences plateaux\OzThemeAmbience_D79FB2B7.wem</Path>
-						</File>
-						<File Id="526442740" Language="SFX">
-							<ShortName>ambiences plateaux\OzMozThemAmbience.wav</ShortName>
-							<Path>SFX\ambiences plateaux\OzMozThemAmbience_D79FB2B7.wem</Path>
-						</File>
 						<File Id="568339149" Language="SFX">
 							<ShortName>MozAmbienceTheme.wav</ShortName>
 							<Path>SFX\MozAmbienceTheme_D79FB2B7.wem</Path>
-						</File>
-						<File Id="777475882" Language="SFX">
-							<ShortName>ambiences plateaux\MozThemeAmbience.wav</ShortName>
-							<Path>SFX\ambiences plateaux\MozThemeAmbience_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -475,6 +575,10 @@
 				</Event>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="20390223" Language="SFX">
+					<ShortName>LarmesMoz.wav</ShortName>
+					<Path>SFX\LarmesMoz_D7A3976B.wem</Path>
+				</File>
 				<File Id="21678370" Language="SFX">
 					<ShortName>OzMozAmbienceTheme.wav</ShortName>
 					<Path>SFX\OzMozAmbienceTheme_D79FB2B7.wem</Path>
@@ -503,9 +607,17 @@
 					<ShortName>Menu Voices.wav</ShortName>
 					<Path>SFX\Menu Voices_DCF95EDD.wem</Path>
 				</File>
+				<File Id="72853813" Language="SFX">
+					<ShortName>MozFootstepsWet.wav</ShortName>
+					<Path>SFX\MozFootstepsWet_E4E559D3.wem</Path>
+				</File>
 				<File Id="80023791" Language="SFX">
 					<ShortName>MozTutoV2.wav</ShortName>
 					<Path>SFX\MozTutoV2_D79FB2B7.wem</Path>
+				</File>
+				<File Id="101099822" Language="SFX">
+					<ShortName>MozFootstepsWet.wav</ShortName>
+					<Path>SFX\MozFootstepsWet_07D64CBA.wem</Path>
 				</File>
 				<File Id="104434262" Language="SFX">
 					<ShortName>Menu Voices.wav</ShortName>
@@ -519,9 +631,17 @@
 					<ShortName>PlayerOzJump.wav</ShortName>
 					<Path>SFX\PlayerOzJump_552D154C.wem</Path>
 				</File>
+				<File Id="149137566" Language="SFX">
+					<ShortName>NewScreamUnlocked.wav</ShortName>
+					<Path>SFX\NewScreamUnlocked_10C4C929.wem</Path>
+				</File>
 				<File Id="150424399" Language="SFX">
 					<ShortName>Fierté2.wav</ShortName>
 					<Path>SFX\Fierté2_AECC02D2.wem</Path>
+				</File>
+				<File Id="161831740" Language="SFX">
+					<ShortName>MozFootstepsWet.wav</ShortName>
+					<Path>SFX\MozFootstepsWet_7C902752.wem</Path>
 				</File>
 				<File Id="167913592" Language="SFX">
 					<ShortName>Interruptor.wav</ShortName>
@@ -587,6 +707,10 @@
 					<ShortName>OzMozMenuTheme.wav</ShortName>
 					<Path>SFX\OzMozMenuTheme_D79FB2B7.wem</Path>
 				</File>
+				<File Id="329682438" Language="SFX">
+					<ShortName>PorteOuverture.wav</ShortName>
+					<Path>SFX\PorteOuverture_AEDE31E7.wem</Path>
+				</File>
 				<File Id="333600656" Language="SFX">
 					<ShortName>Envie.wav</ShortName>
 					<Path>SFX\Envie_16892D2B.wem</Path>
@@ -647,17 +771,13 @@
 					<ShortName>Joie.wav</ShortName>
 					<Path>SFX\Joie_6F6C18AC.wem</Path>
 				</File>
-				<File Id="497282913" Language="SFX">
-					<ShortName>ambiences plateaux\OzThemeAmbience.wav</ShortName>
-					<Path>SFX\ambiences plateaux\OzThemeAmbience_D79FB2B7.wem</Path>
-				</File>
-				<File Id="526442740" Language="SFX">
-					<ShortName>ambiences plateaux\OzMozThemAmbience.wav</ShortName>
-					<Path>SFX\ambiences plateaux\OzMozThemAmbience_D79FB2B7.wem</Path>
-				</File>
 				<File Id="526605256" Language="SFX">
 					<ShortName>PlayerMozJump.wav</ShortName>
 					<Path>SFX\PlayerMozJump_6E55FBA6.wem</Path>
+				</File>
+				<File Id="531807002" Language="SFX">
+					<ShortName>LarmesMoz.wav</ShortName>
+					<Path>SFX\LarmesMoz_C5960E0D.wem</Path>
 				</File>
 				<File Id="534699211" Language="SFX">
 					<ShortName>PlayerMozFootsteps.wav</ShortName>
@@ -675,6 +795,14 @@
 					<ShortName>PlayerOzFootsteps.wav</ShortName>
 					<Path>SFX\PlayerOzFootsteps_EDC6B6D9.wem</Path>
 				</File>
+				<File Id="557949847" Language="SFX">
+					<ShortName>CrateFrictionWet.wav</ShortName>
+					<Path>SFX\CrateFrictionWet_230D2EB5.wem</Path>
+				</File>
+				<File Id="561214518" Language="SFX">
+					<ShortName>MozFootstepsWet.wav</ShortName>
+					<Path>SFX\MozFootstepsWet_E711CD2E.wem</Path>
+				</File>
 				<File Id="568339149" Language="SFX">
 					<ShortName>MozAmbienceTheme.wav</ShortName>
 					<Path>SFX\MozAmbienceTheme_D79FB2B7.wem</Path>
@@ -687,6 +815,10 @@
 					<ShortName>Interruptor.wav</ShortName>
 					<Path>SFX\Interruptor_EF5ADE14.wem</Path>
 				</File>
+				<File Id="621290499" Language="SFX">
+					<ShortName>LarmesMoz.wav</ShortName>
+					<Path>SFX\LarmesMoz_3478A238.wem</Path>
+				</File>
 				<File Id="626046583" Language="SFX">
 					<ShortName>PlayerMozFootsteps.wav</ShortName>
 					<Path>SFX\PlayerMozFootsteps_11AFD5D9.wem</Path>
@@ -694,6 +826,10 @@
 				<File Id="629518556" Language="SFX">
 					<ShortName>PlayerMozJump.wav</ShortName>
 					<Path>SFX\PlayerMozJump_F3B320D9.wem</Path>
+				</File>
+				<File Id="629603167" Language="SFX">
+					<ShortName>LarmesMoz.wav</ShortName>
+					<Path>SFX\LarmesMoz_38CF81DE.wem</Path>
 				</File>
 				<File Id="651849547" Language="SFX">
 					<ShortName>Solitude.wav</ShortName>
@@ -711,6 +847,10 @@
 					<ShortName>Fierté2.wav</ShortName>
 					<Path>SFX\Fierté2_28E9D432.wem</Path>
 				</File>
+				<File Id="725877669" Language="SFX">
+					<ShortName>LarmesMoz.wav</ShortName>
+					<Path>SFX\LarmesMoz_9EE7E6CD.wem</Path>
+				</File>
 				<File Id="732767810" Language="SFX">
 					<ShortName>PlayerMozJump.wav</ShortName>
 					<Path>SFX\PlayerMozJump_33CEA9B4.wem</Path>
@@ -719,9 +859,9 @@
 					<ShortName>OzMozEndTheme.wav</ShortName>
 					<Path>SFX\OzMozEndTheme_D79FB2B7.wem</Path>
 				</File>
-				<File Id="777475882" Language="SFX">
-					<ShortName>ambiences plateaux\MozThemeAmbience.wav</ShortName>
-					<Path>SFX\ambiences plateaux\MozThemeAmbience_D79FB2B7.wem</Path>
+				<File Id="816920437" Language="SFX">
+					<ShortName>PorteOuverture.wav</ShortName>
+					<Path>SFX\PorteOuverture_F97A1E9E.wem</Path>
 				</File>
 				<File Id="821152830" Language="SFX">
 					<ShortName>Curiosité.wav</ShortName>
@@ -734,6 +874,10 @@
 				<File Id="843786119" Language="SFX">
 					<ShortName>PlayerOzJump.wav</ShortName>
 					<Path>SFX\PlayerOzJump_36B4C025.wem</Path>
+				</File>
+				<File Id="848601756" Language="SFX">
+					<ShortName>LarmesMoz.wav</ShortName>
+					<Path>SFX\LarmesMoz_C2152A00.wem</Path>
 				</File>
 				<File Id="849442749" Language="SFX">
 					<ShortName>PlayerMozFootsteps.wav</ShortName>
@@ -755,6 +899,10 @@
 					<ShortName>Compassion.wav</ShortName>
 					<Path>SFX\Compassion_F482DB1D.wem</Path>
 				</File>
+				<File Id="886444032" Language="SFX">
+					<ShortName>MozFootstepsWet.wav</ShortName>
+					<Path>SFX\MozFootstepsWet_CD2ED21F.wem</Path>
+				</File>
 				<File Id="894112917" Language="SFX">
 					<ShortName>PlayerMozFootsteps.wav</ShortName>
 					<Path>SFX\PlayerMozFootsteps_8D8F08A6.wem</Path>
@@ -775,9 +923,33 @@
 					<ShortName>Envie.wav</ShortName>
 					<Path>SFX\Envie_14A6C608.wem</Path>
 				</File>
+				<File Id="943190417" Language="SFX">
+					<ShortName>PorteOuverture.wav</ShortName>
+					<Path>SFX\PorteOuverture_90D46854.wem</Path>
+				</File>
+				<File Id="962922270" Language="SFX">
+					<ShortName>LarmesMoz.wav</ShortName>
+					<Path>SFX\LarmesMoz_92A41F69.wem</Path>
+				</File>
+				<File Id="965584582" Language="SFX">
+					<ShortName>LarmesMoz.wav</ShortName>
+					<Path>SFX\LarmesMoz_DAEE5D02.wem</Path>
+				</File>
+				<File Id="975142216" Language="SFX">
+					<ShortName>MozFootstepsWet.wav</ShortName>
+					<Path>SFX\MozFootstepsWet_C9AAA242.wem</Path>
+				</File>
 				<File Id="987408608" Language="SFX">
 					<ShortName>Tristesse.wav</ShortName>
 					<Path>SFX\Tristesse_F4D41E07.wem</Path>
+				</File>
+				<File Id="1001770249" Language="SFX">
+					<ShortName>CrateFrictionWet.wav</ShortName>
+					<Path>SFX\CrateFrictionWet_A3E6A7D4.wem</Path>
+				</File>
+				<File Id="1011164212" Language="SFX">
+					<ShortName>LarmesMoz.wav</ShortName>
+					<Path>SFX\LarmesMoz_A16D1396.wem</Path>
 				</File>
 				<File Id="1017059933" Language="SFX">
 					<ShortName>PlayerOzFootsteps.wav</ShortName>
@@ -793,6 +965,7 @@
 				</File>
 			</IncludedMemoryFiles>
 			<GameParameters>
+				<GameParameter Id="34521763" Name="WetFloor" ObjectPath="\Game Parameters\Default Work Unit\WetFloor"/>
 				<GameParameter Id="545959236" Name="PlayerMoving" ObjectPath="\Game Parameters\Default Work Unit\PlayerMoving"/>
 			</GameParameters>
 			<StateGroups>

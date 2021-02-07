@@ -14,14 +14,54 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{F1DEFB75-B585-4083-B710-C155FE248D75}" ShortID="340228266">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="CrateFrictionWet" ID="{45CBF0E0-A3AC-479F-94EE-4A4C071813B7}" WorkUnitID="{1DDF2895-7EAD-4C1C-B399-D67DF281113E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Interruptor" ID="{8508C2F7-10B9-4772-8159-C654A5586EBC}">
+						<Event Name="InterruptorHigh" ID="{8508C2F7-10B9-4772-8159-C654A5586EBC}">
 							<ChildrenList>
 								<Action Name="" ID="{CED9194D-2787-4B85-AE07-F423526F8D1E}" ShortID="151776683">
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="InterruptorHigh" ID="{E435D070-0FB8-40CC-AF99-4B6AC418A301}" WorkUnitID="{1DDF2895-7EAD-4C1C-B399-D67DF281113E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="InterruptorHeavy" ID="{0D7F2FEE-FBA3-4E04-B328-00CD4DA802BB}">
+							<ChildrenList>
+								<Action Name="" ID="{81D772A0-14A3-44E7-9497-AC8A4D4AE8D9}" ShortID="630459014">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="InterruptorHeavy" ID="{F44420B2-F79E-4384-BA82-9916F468FC30}" WorkUnitID="{1DDF2895-7EAD-4C1C-B399-D67DF281113E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="OpenGate" ID="{1F79D06D-1104-4D89-BBBF-B073E0569945}">
+							<ChildrenList>
+								<Action Name="" ID="{057FA1D0-EB93-4CCC-98B5-75A6608539FC}" ShortID="156634880">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="OpenGate" ID="{B9D01AB7-E01B-4025-9000-18F4E2067CB7}" WorkUnitID="{1DDF2895-7EAD-4C1C-B399-D67DF281113E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="NewScreamUnlocked" ID="{D09C1CAA-D420-481B-BB0D-33CDA4D147BD}">
+							<ChildrenList>
+								<Action Name="" ID="{DE674222-0B62-4C10-A971-6C4A46C059DF}" ShortID="212977486">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="NewScreamUnlocked" ID="{93E55213-9CB9-4942-B166-4E6B4139F9F9}" WorkUnitID="{1DDF2895-7EAD-4C1C-B399-D67DF281113E}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -37,6 +77,13 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="MozFootsteps" ID="{1AECBF93-EA8F-4E09-ABFA-55406A301498}" WorkUnitID="{1DDF2895-7EAD-4C1C-B399-D67DF281113E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4D127C9F-507B-4979-893A-6FB5AFC5FDDE}" ShortID="628085593">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MozFootstepsWet" ID="{CFDDC29F-2D98-4679-A619-A3E1CEC2605C}" WorkUnitID="{1DDF2895-7EAD-4C1C-B399-D67DF281113E}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -112,6 +159,17 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Event Name="MozLarme" ID="{995B7766-A11B-47D4-BB15-6D1CF7EE53B1}">
+							<ChildrenList>
+								<Action Name="" ID="{E68EE2A9-7E57-4903-A18A-37CB7D7AAAD0}" ShortID="854563221">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MozLarme" ID="{BFD53B47-3E98-4FD8-B70B-F6E4A4BC5AA1}" WorkUnitID="{1DDF2895-7EAD-4C1C-B399-D67DF281113E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Oz" ID="{CB6A0956-CBCE-477C-85D5-A14D0571615A}" ShortID="1010496667">
