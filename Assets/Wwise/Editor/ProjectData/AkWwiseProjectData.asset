@@ -68,7 +68,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: a3e106a80bc5484598947af11861b916
     GuidInternal: 
-    m_lastTime: -8585890458920002659
+    m_lastTime: -8585888771249180065
     List:
     - name: Acculation
       guid: 8d5a9d35caa05d4ba2fd12e71d93e2e3
@@ -646,7 +646,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 7b76c7a5a23e3e499aa16bf43b47532b
     GuidInternal: 
-    m_lastTime: -8585890458915492829
+    m_lastTime: -8585888771241067388
     List:
     - name: CrateMoving
       guid: 9e07556062f2f7429cf246c1e7588b9b
@@ -761,11 +761,6 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585895842250852815
     List: []
-  ExpandedItems:
-  - /Souls-Cream_WwiseProject
-  - /Souls-Cream_WwiseProject/Events
-  - /Souls-Cream_WwiseProject/Events/Default Work Unit
-  - /Souls-Cream_WwiseProject/States
-  - /Souls-Cream_WwiseProject/States/Default Work Unit
+  ExpandedItems: []
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
