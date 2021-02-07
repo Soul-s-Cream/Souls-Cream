@@ -6,11 +6,7 @@ using UnityEngine;
 public class MovePlayer2DEBUG : MonoBehaviour
 {
     #region
-    private Controls control;
-    public List<BoxController> boxes;
-    public bool CriN1 = false;
-    public float dist;
-    public float distMax = 4f;
+
 
     private void Awake()
     {
@@ -27,14 +23,29 @@ public class MovePlayer2DEBUG : MonoBehaviour
         control.Cri.Disable();
     }
     #endregion  //Controls
-    #region
+    #region variables
+
+
+    public List<BoxController> boxes;
+    public bool criN1Tristesse = false;
+    public bool criN2Accule = false;
+    public bool criN3Solitude = false;
+    public bool criN4Envie = false;
+
+
+    public float dist;
+    public float distMax = 4f;
+
+
     public int NumSaut = 0;
+    public int CriSelected = 1;
+    public int CriNumMax = 4;
 
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
     public float velocityYMax = 50f;
 
-    public float moveSpeed; // vitesse de d�placement
+    public float moveSpeed;
     public float jumpForce;
     public float maxSpeed;
 
@@ -44,24 +55,24 @@ public class MovePlayer2DEBUG : MonoBehaviour
     public Transform groundCheckLeft;
     public Transform groundCheckRight;
 
-    public Rigidbody2D rb;
+
+    private Controls control;
+    private Animator anim;
+    private Rigidbody2D rb;
     private Vector3 velocity = Vector3.zero;
     private float horizontalMovement = 0f;
-    #endregion  // d�placement
-    Animator anim;
-    private Vector3 scale;
+    #endregion
 
 
-    public int CriSelected = 1;
-    public int CriNumMax = 3;
+
+
     private void Start()
     {
         anim = GetComponent<Animator>();
-        scale = transform.eulerAngles;
     }
     void FixedUpdate()
     {
-        transform.eulerAngles = scale;
+
         isGrounded = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckLeft.position);
         horizontalMovement = control.DEBUG.DeplacementJ2.ReadValue<float>() * moveSpeed;
         PlayerMove(horizontalMovement);
@@ -157,25 +168,17 @@ public class MovePlayer2DEBUG : MonoBehaviour
             anim.SetInteger("Cri", CriSelected);
             if (CriSelected == 1)
             {
-                CriN1 = true;
-
-                /*foreach (BoxController box in boxes)
-                {
-                    dist = Vector2.Distance(box.transform.position, transform.position);
-                    if (dist <= distMax)
-                    {
-                        GameEvents.Instance.SwitchBoxOn(box);
-                        Debug.Log("la boite peux bouger");
-                    }
-                    else Debug.Log("Je suis trop loin");
-                }*/
-
+                criN1Tristesse = true;
             }
         }
         else
         {
             anim.SetInteger("Cri", 0);
-            CriN1 = false;
+            criN1Tristesse = false;
+            criN2Accule = false;
+            criN3Solitude = false;
+            criN4Envie = false;
+
         }
 
     }
