@@ -27,30 +27,45 @@ public class Switch : Photon.PunBehaviour
     {
         if (collision.CompareTag(tagFilter))
         {
-            if(!PhotonNetwork.connected)
+            if(PhotonNetwork.connected)
             {
-                SwitchOn();
+                this.photonView.RPC("SwitchOn", PhotonTargets.All); 
             }
             else
             {
-               this.photonView.RPC("SwitchOn", PhotonTargets.All);
+                SwitchOn();
             }
         }
     }
-    
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag(tagFilter))
+        {
+            if (PhotonNetwork.connected)
+            {
+                this.photonView.RPC("SwitchOff", PhotonTargets.All);
+            }
+            else
+            {
+                SwitchOff();
+            }
+        }
+    }
+
     [PunRPC]
     public void SwitchOn()
     {
         GameEvents.Instance.TriggerSwitchOn(triggers);
         BoutonOn = true;
-        GetComponent<Animator>().SetBool("BoutonON", true);
+        animator.SetBool("BoutonON", true);
     }
 
     [PunRPC]
     public void SwitchOff()
     {
         GameEvents.Instance.TriggerSwitchOff(triggers);
-        BoutonOn = true;
-        GetComponent<Animator>().SetBool("BoutonON", false);
+        BoutonOn = false;
+        animator.SetBool("BoutonON", false);
     }
 }
