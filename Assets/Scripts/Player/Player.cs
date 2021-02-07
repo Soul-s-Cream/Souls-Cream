@@ -3,40 +3,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovePlayer : MonoBehaviour
+[RequireComponent(typeof(Rigidbody2D))]
+public class Player : MonoBehaviour
 {
     #region Public Field
-    public List<BoxController> boxes;
-    public bool CriN1 = false;
-    public float dist;
-    public float distMax = 4f;
+    public int jumpAmount = 0;
 
-    public int NumSaut = 0;
+    public float moveSpeed;
+    public float moveSmooth = .05f;
+    public float jumpForce;
+    public float maxSpeed;
 
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
     public float velocityYMax = 50f;
 
-    // vitesse de d�placement
-    public float moveSpeed;
-    public float jumpForce;
-    public float maxSpeed;
-
-    public bool isJuming;
-    public bool isGrounded;
-
     public Transform groundCheckLeft;
     public Transform groundCheckRight;
 
-    public Rigidbody2D rb;
+    [Header("Transform where the screams will be instantiate")]
+    public Transform screamCenter;
+    [Header("List of scream (must be located in the Resources folder)")]
+    public List<Scream> screams;
 
-    public int CriSelected = 1;
-    public int CriNumMax = 3;
+    private int selectedScream = 0;
     public Role role;
     #endregion  //Controls
 
     #region Private Fields
-    Animator anim;
+    private bool isJuming;
+    private bool isGrounded;
+    private Animator anim;
+    private Rigidbody2D rb;
     private Vector3 scale;
 
     private Vector3 velocity = Vector3.zero;
@@ -54,6 +52,7 @@ public class MovePlayer : MonoBehaviour
     private void Start()
     {
         anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
         scale = transform.eulerAngles;
 //        AkSoundEngine.PostEvent("MozTuto", gameObject);
     }
@@ -89,19 +88,18 @@ public class MovePlayer : MonoBehaviour
     }
     private void Update()
     {
-
         if (velocity.y > velocityYMax)
         {
             velocity.y = velocityYMax;
         }
-        if (control.Deplacement.Jump.triggered && NumSaut < 1)
+        if (control.Deplacement.Jump.triggered && jumpAmount < 1)
         {
             isJuming = true;
-            NumSaut += 1;
+            jumpAmount += 1;
         }
         if (isGrounded)
         {
-            NumSaut = 0;
+            jumpAmount = 0;
         }
         if (rb.velocity.y < 0)
         {
@@ -119,92 +117,55 @@ public class MovePlayer : MonoBehaviour
 
 
 
-        PlayerCriSelect();
-        PlayerCri();
+        ScreamSelection();
+        Screaming();
     }
 
     void PlayerMove(float _horizontalMovement)
     {
         Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
-        rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
+        rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, moveSmooth);
 
         if (isJuming == true)
         {
-            if (NumSaut == 0)
+            if (jumpAmount == 0)
             {
                 AkSoundEngine.PostEvent("MozJump", gameObject);
                 //AkSoundEngine.SetState("OzMozThemeAmbience", "MozBig");
                 rb.AddForce(new Vector2(0f, jumpForce));
             }
-            if (NumSaut == 1)
+            if (jumpAmount == 1)
             {
 
                 rb.AddForce(new Vector2(0f, jumpForce * 0f));
             }
             isJuming = false;
         }
-
     }
 
-    #region Cri
-    public void PlayerCriSelect()
+    #region Scream
+    public void ScreamSelection()
     {
-
-
         if (control.Cri.CriUp.triggered)
         {
-            if (CriSelected < CriNumMax)
-            { CriSelected += 1; }
-            else CriSelected = 1;
+            selectedScream = (selectedScream + 1) % screams.Count;
         }
         if (control.Cri.CriDown.triggered)
         {
-            if (CriSelected > 1)
-            { CriSelected -= 1; }
-            else CriSelected = CriNumMax;
+            selectedScream = (selectedScream - 1) % screams.Count;
         }
     }
-    public void PlayerCri()
+    public void Screaming()
     {
-
         if (control.Cri.Cri.triggered)
         {
-            anim.SetInteger("Cri", CriSelected);
-            if (CriSelected == 1)
-            {
-                CriN1 = true;
-
-                foreach (BoxController box in boxes)
-                {
-                    dist = Vector2.Distance(box.transform.position, transform.position);
-                    if (dist <= distMax)
-                    {
-                        GameEvents.Instance.SwitchBoxOn(box);
-                    }
-                }
-                AkSoundEngine.PostEvent("Acculation", gameObject);
-            }
-            if (CriSelected == 2)
-            {
-                AkSoundEngine.PostEvent("Envie", gameObject);
-            }
-            if (CriSelected == 3)
-            {
-                AkSoundEngine.PostEvent("Solitude", gameObject);
-            }
-            if (CriSelected == 4)
-            {
-                AkSoundEngine.PostEvent("Tristesse", gameObject);
-            }
-
-
+            anim.SetInteger("Scream", selectedScream);
+            PhotonNetwork.Instantiate(screams[selectedScream].name, screamCenter.position, screamCenter.rotation, 0);
         }
         else
         {
-            anim.SetInteger("Cri", 0);
-            CriN1 = false;
+            anim.SetInteger("Scream", 0);
         }
-
     }
     #endregion
 

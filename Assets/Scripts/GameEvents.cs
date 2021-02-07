@@ -22,6 +22,7 @@ public class GameEvents : MonoBehaviour
 
     public event Action BasicEventExemple;
     public delegate void SwitchEvent(GameObject[] gameObjects);
+
     public event SwitchEvent switchOn;
     //public event SwitchEvent switchOff;
 
@@ -57,6 +58,15 @@ public class GameEvents : MonoBehaviour
         }
     }
 
+    internal void receiveScream(ScreamReceiver screamReceiver)
+    {
+        if (screamReceiver)
+        {
+            screamReceiver.Receive();
+        }
+    }
+
+    // Deprecated
     public void SwitchBoxOn(BoxController box)
     {
         if (switchBox != null)
