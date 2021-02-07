@@ -13,7 +13,7 @@ public class GameEvents : MonoBehaviour
             return _instance;
         }
     }
-    #region D�finition des �v�nements
+    #region Définition des événements
     public delegate void CustomEventTypeExample(GameObject obj, string aString);
     public event CustomEventTypeExample customEventExample;
 
@@ -21,9 +21,9 @@ public class GameEvents : MonoBehaviour
     public event GameEvent PlayerReachEnd;
 
     public event Action BasicEventExemple;
-    public delegate void SwitchEvent(GameObject[] gameObjects);
+    public delegate void SwitchEvent(Mecanism[] mecanism);
     public event SwitchEvent switchOn;
-    //public event SwitchEvent switchOff;
+    public event SwitchEvent switchOff;
 
     public delegate void SwitchEventBox(BoxController box);
     public event SwitchEventBox switchBox;
@@ -49,7 +49,7 @@ public class GameEvents : MonoBehaviour
     {
         PlayerReachEnd(gameObject);
     }
-    public void SwitchTriggerOn(GameObject[] gameObjects )
+    public void SwitchTriggerOn(Mecanism[] gameObjects )
     {
         if (switchOn != null)
         {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BoutonScript : Photon.PunBehaviour
 {
-    public GameObject[] triggers;
+    public Mecanism[] triggers;
     private bool BoutonOn = false;
 
     [TagSelector]
