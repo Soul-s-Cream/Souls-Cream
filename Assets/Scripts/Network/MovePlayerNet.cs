@@ -80,6 +80,7 @@ public class MovePlayerNet : Photon.PunBehaviour
             photonView.RPC("FlipToggleSprite", PhotonTargets.All, false);
         }
     }
+
     private void Update()
     {
         if (!photonView.isMine)
