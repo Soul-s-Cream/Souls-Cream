@@ -1,41 +1,28 @@
-using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
 
 [RequireComponent(typeof(Camera))]
 public class FlipCamera : MonoBehaviour
 {
-    public Camera camera;
-    private void Start()
-    {
-        camera = GetComponent<Camera>();
+    public Camera m_camera;
 
-        Matrix4x4 mat = camera.projectionMatrix;
-        mat *= Matrix4x4.Scale(new Vector3(-1, 1, 1));
-        camera.projectionMatrix = mat;
+    void OnPreCull()
+    {
+        m_camera.ResetWorldToCameraMatrix();
+        m_camera.ResetProjectionMatrix();
+        m_camera.projectionMatrix *= Matrix4x4.Scale(new Vector3(-1, 1, 1));
     }
 
-
-    /*void OnPreCull()
-    {
-        Matrix4x4 scale;
-        if (camera.aspect > 2)
-        {
-            scale = Matrix4x4.Scale(new Vector3(-1, 1, 1));
-        }
-        else
-        {
-            scale = Matrix4x4.Scale(new Vector3(1, -1, 1));
-        }
-        camera.ResetWorldToCameraMatrix();
-        camera.ResetProjectionMatrix();
-        camera.projectionMatrix = camera.projectionMatrix * scale;
-    }
     void OnPreRender()
     {
         GL.invertCulling = true;
     }
+
     void OnPostRender()
     {
         GL.invertCulling = false;
-    }*/
+    }
+
 }
