@@ -24,7 +24,7 @@ public class Door : Mecanism
 
     #region Private Fields
     private bool DoorOpen = false;
-    private SpriteRenderer spriteRender;
+    public SpriteRenderer spriteRender;
     #endregion
 
     private void Awake()
@@ -77,6 +77,11 @@ public class Door : Mecanism
                     break;
             }
         }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        
     }
 }
 

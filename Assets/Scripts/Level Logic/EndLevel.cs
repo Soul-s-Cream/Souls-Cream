@@ -3,13 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(Animator))]
 public class EndLevel : MonoBehaviour
 {
     private bool isPlayerReachEnd = false;
+    private Animator animator;
 
     public bool IsPlayerReachEnd
     {
         get { return isPlayerReachEnd;  }
+    }
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -34,8 +41,14 @@ public class EndLevel : MonoBehaviour
 
     void OnPlayerReachEnd(GameObject gameObject)
     {
+        EndLevel endPoint = gameObject.GetComponent<EndLevel>();
+
         if (gameObject != this.gameObject && this.isPlayerReachEnd)
+        {
+            animator.SetBool("EndLevel", true);
+            endPoint.GetComponent<Animator>().SetBool("EndLevel", true);
             GameManager.Instance.EndLevel();
+        }
 
     }
 
