@@ -7,7 +7,7 @@ public class MovePlayer2DEBUG : MonoBehaviour
 {
     #region
     private Controls control;
-    public List<BoxController> boxes;
+    public List<MoveableBox> boxes;
     public bool CriN1 = false;
     public float dist;
     public float distMax = 4f;

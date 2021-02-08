@@ -28,7 +28,7 @@ public class GameEvents : MonoBehaviour
     public event SwitchEvent switchOn;
     public event SwitchEvent switchOff;
 
-    public delegate void SwitchEventBox(BoxController box);
+    public delegate void SwitchEventBox(MoveableBox box);
     public event SwitchEventBox switchBox;
 
     public delegate void AnimIconesCrisEvent(GameObject icone);
@@ -81,7 +81,7 @@ public class GameEvents : MonoBehaviour
     /// Appelle l'événement 'switchBox'
     /// </summary>
     /// <param name="box">BoxController qui doit être activé</param>
-    public void TriggerSwitchBoxOn(BoxController box)
+    public void TriggerSwitchBoxOn(MoveableBox box)
     {
         switchBox?.Invoke(box);
     }

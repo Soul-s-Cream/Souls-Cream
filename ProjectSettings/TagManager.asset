@@ -9,6 +9,8 @@ TagManager:
   - Crate
   - WhitePlayer
   - BlackPlayer
+  - Humidity
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -16,14 +18,14 @@ TagManager:
   - Player
   - Water
   - UI
-  - Cornered Scream
-  - Envy Scream
-  - Solitude Scream
-  - Sadness Scream
-  - Compassion Scream
-  - Curiosity Scream
-  - Pride Scream
-  - Joy Scream
+  - Humidity
+  - Curiosity
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 

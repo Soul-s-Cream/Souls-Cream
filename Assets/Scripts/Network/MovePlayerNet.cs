@@ -6,7 +6,7 @@ using UnityEngine;
 public class MovePlayerNet : Photon.PunBehaviour
 {
     #region Public Field
-    public List<BoxController> boxes;
+    public List<MoveableBox> boxes;
     public bool CriN1 = false;
     public float dist;
     public float distMax = 4f;
@@ -175,7 +175,7 @@ public class MovePlayerNet : Photon.PunBehaviour
                 foreach (Collider2D collider in colliders)
                 {
                     if(collider.gameObject.CompareTag("Crate"))
-                        GameEvents.Instance.TriggerSwitchBoxOn(collider.GetComponent<BoxController>());
+                        GameEvents.Instance.TriggerSwitchBoxOn(collider.GetComponent<MoveableBox>());
                 }
             }
         }
