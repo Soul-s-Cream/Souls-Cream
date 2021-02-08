@@ -100,7 +100,7 @@ public class GameManager : Photon.PunBehaviour
             //On cherche l'avatar approprié pour le rôle du joueur
             foreach (GameObject prefab in PlayerPrefabs)
             {
-                if(prefab.GetComponent<MovePlayerNet>().role == role)
+                if(prefab.GetComponent<Player>().role == role)
                 {
                     prefabName = prefab.name;
                     break;

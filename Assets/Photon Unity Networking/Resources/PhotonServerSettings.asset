@@ -46,4 +46,12 @@ MonoBehaviour:
   - SwitchOn
   - SwitchOff
   - TaggedPlayer
+  - CompassionScream
+  - CorneredScream
+  - CuriosityScream
+  - EnvyScream
+  - JoyScream
+  - PrideScream
+  - SadnessScream
+  - SolitudeScream
   DisableAutoOpenWizard: 1
