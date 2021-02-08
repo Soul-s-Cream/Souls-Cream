@@ -27,6 +27,16 @@
 						<State Name="Stop" ID="{839450E1-BFDC-4DE8-A058-EB146D972FAC}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="PlayerMoving" ID="{C935EFB2-DD8E-4033-925E-D11F1D2F6049}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{1B4CBE3E-FE1E-4EB2-A41D-86E0DC796964}"/>
+						<State Name="Moving" ID="{3566702A-DBE5-4CF1-8AED-DB04C413C899}"/>
+						<State Name="Stop" ID="{50FF4F95-528A-4602-B9F7-8EDD190A81C9}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>
