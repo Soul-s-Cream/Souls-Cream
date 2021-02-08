@@ -15,6 +15,7 @@ public class MovePlayer : MonoBehaviour             //Script attache au joueur n
     public bool isJuming;
     public bool isGrounded;
     public bool chuteLibre = false;
+    public bool freezeMove = false;
 
     public float distMax = 4f;
     public float velocityYMax = 50f;
@@ -61,74 +62,79 @@ public class MovePlayer : MonoBehaviour             //Script attache au joueur n
     private void Start()
     {
         anim = GetComponent<Animator>();
-//        AkSoundEngine.PostEvent("MozTuto", gameObject);
+        //        AkSoundEngine.PostEvent("MozTuto", gameObject);
     }
 
     void FixedUpdate()
     {
-        isGrounded = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckLeft.position);                 // le personnage est considere au sol
-        horizontalMovement = control.Deplacement.Deplacement.ReadValue<float>() * moveSpeed;
-        PlayerMove(horizontalMovement);
+        if (!freezeMove)
+        {
+            isGrounded = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckLeft.position);                 // le personnage est considere au sol
+            horizontalMovement = control.Deplacement.Deplacement.ReadValue<float>() * moveSpeed;
+            PlayerMove(horizontalMovement);
 
-        anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
-        if (control.Deplacement.Deplacement.ReadValue<float>() == 1)
-        {
-            GetComponent<SpriteRenderer>().flipX = true;
-            if (isGrounded)
+            anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+            if (control.Deplacement.Deplacement.ReadValue<float>() == 1)
             {
-                AkSoundEngine.PostEvent("MozFootsteps", gameObject);
+                GetComponent<SpriteRenderer>().flipX = true;
+                if (isGrounded)
+                {
+                    AkSoundEngine.PostEvent("MozFootsteps", gameObject);
+                }
             }
-        }
-        if (control.Deplacement.Deplacement.ReadValue<float>() == -1)
-        {
-            GetComponent<SpriteRenderer>().flipX = false;
-            if (isGrounded)
+            if (control.Deplacement.Deplacement.ReadValue<float>() == -1)
             {
-                AkSoundEngine.PostEvent("MozFootsteps", gameObject);
+                GetComponent<SpriteRenderer>().flipX = false;
+                if (isGrounded)
+                {
+                    AkSoundEngine.PostEvent("MozFootsteps", gameObject);
+                }
             }
-        }
-        if (isGrounded && control.Deplacement.Deplacement.ReadValue<float>() == 0)
-        {
-            //AkSoundEngine.PostEvent("MozLanding", gameObject);
+            if (isGrounded && control.Deplacement.Deplacement.ReadValue<float>() == 0)
+            {
+                //AkSoundEngine.PostEvent("MozLanding", gameObject);
+            }
         }
     }
     private void Update()                                   // a mettre dans la classe
     {
+        if (!freezeMove)
+        {
+            if (velocity.y > velocityYMax)
+            {
+                velocity.y = velocityYMax;
+            }
+            if (control.Deplacement.Jump.triggered && NumSaut < 1)
+            {
+                isJuming = true;
+                NumSaut += 1;
+            }
+            if (isGrounded)
+            {
+                NumSaut = 0;
+            }
+            if (rb.velocity.y < 0)
+            {
+                rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+            }
+            else if (rb.velocity.y > 0 && !control.Deplacement.Jump.triggered)
+            {
+                rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+            }
+            if (isGrounded && !chuteLibre)
+            {
+                anim.SetBool("Jump", false);
+            }
+            else anim.SetBool("Jump", true);
 
-        if (velocity.y > velocityYMax)
-        {
-            velocity.y = velocityYMax;
-        }
-        if (control.Deplacement.Jump.triggered && NumSaut < 1)
-        {
-            isJuming = true;
-            NumSaut += 1;
-        }
-        if (isGrounded)
-        {
-            NumSaut = 0;
-        }
-        if (rb.velocity.y < 0)
-        {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-        }
-        else if (rb.velocity.y > 0 && !control.Deplacement.Jump.triggered)
-        {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
-        }
-        if (isGrounded && !chuteLibre)
-        {
-            anim.SetBool("Jump", false);
-        }
-        else anim.SetBool("Jump", true);
 
 
-
-        PlayerCriSelect();
-        PlayerCri();
+            PlayerCriSelect();
+            PlayerCri();
+        }
     }
 
-    void PlayerMove(float _horizontalMovement)                                  // a mettre dans la classe
+    void PlayerMove(float _horizontalMovement)                                  // a mettre dans la classe Player
     {
         Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
         rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
@@ -167,7 +173,7 @@ public class MovePlayer : MonoBehaviour             //Script attache au joueur n
             { CriSelected -= 1; }
             else CriSelected = CriNumMax;
         }
-    }                                                           // polish : essayer de changer cette valeur en fonction du script SelectionCriScript
+    }                                                           // polish : essayer de changer cette valeur en fonction du script SelectionCriScript /////// a mettre dans la classe player
     public void PlayerCri()
     {
 
@@ -216,7 +222,6 @@ public class MovePlayer : MonoBehaviour             //Script attache au joueur n
     public void DernierCri()                        // s'active au cour de la dernière cinematique
     {
         dernierCriActive = true;
-        Debug.Log("DernierCrie = " + dernierCriActive); 
     }
 
 
@@ -237,6 +242,27 @@ public class MovePlayer : MonoBehaviour             //Script attache au joueur n
         timeToDie = StartCoroutine(TimeToDie());
     }
 
+    public void ChuteLibre()                    // a ajouter dans la classe Player
+    {
+        freezeMove = true;
+        chuteLibre = !chuteLibre;
+        if (chuteLibre)
+        {
+            rb.gravityScale = 0;
+            rb.velocity -= rb.velocity;
+        }
+        else
+        {
+            rb.gravityScale = 1;
+            StartCoroutine(PosFin());
+        }
+    }
+    private IEnumerator PosFin()
+    {
+        yield return new WaitForSeconds(0.4f);
+        anim.SetBool("positionFinalBool", true);
+
+    }
 
     #endregion
 
