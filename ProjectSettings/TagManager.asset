@@ -9,6 +9,7 @@ TagManager:
   - Crate
   - WhitePlayer
   - BlackPlayer
+  - Shootable
   layers:
   - Default
   - TransparentFX
@@ -26,6 +27,9 @@ TagManager:
   - Joy Scream
   - 
   - 
+  - Lighting
+  - Ground
+  - Postprocessing
   - 
   - 
   - 
@@ -43,6 +47,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Fire
+    uniqueID: 3804908061
+    locked: 0
   - name: Background
     uniqueID: 3438782485
     locked: 0
