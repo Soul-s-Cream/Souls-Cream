@@ -33,6 +33,7 @@ MonoBehaviour:
   - DestroyRpc
   - DoJump
   - Flash
+  - FlipToggleSprite
   - InstantiateRpc
   - Marco
   - PickupItemInit
@@ -42,11 +43,7 @@ MonoBehaviour:
   - PunRespawn
   - RequestForPickupItems
   - RequestForPickupTimes
-  - TaggedPlayer
-  - SwitchRole
-  - FlipToggleSprite
-  - SwitchBoxOn
-  - SwitchTriggerOn
   - SwitchOn
   - SwitchOff
+  - TaggedPlayer
   DisableAutoOpenWizard: 1
