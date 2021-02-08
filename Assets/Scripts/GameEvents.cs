@@ -58,15 +58,6 @@ public class GameEvents : MonoBehaviour
         }
     }
 
-    internal void receiveScream(ScreamReceiver screamReceiver)
-    {
-        if (screamReceiver)
-        {
-            screamReceiver.Receive();
-        }
-    }
-
-    // Deprecated
     public void SwitchBoxOn(BoxController box)
     {
         if (switchBox != null)

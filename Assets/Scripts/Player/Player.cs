@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class Player : MonoBehaviour
+public class Player : Photon.PunBehaviour
 {
     #region Public Field
-    public int jumpAmount = 0;
+    [Header("Movements")]
 
     public float moveSpeed;
     public float moveSmooth = .05f;
@@ -21,21 +21,47 @@ public class Player : MonoBehaviour
     public Transform groundCheckLeft;
     public Transform groundCheckRight;
 
-    [Header("Transform where the screams will be instantiate")]
-    public Transform screamCenter;
-    [Header("List of scream (must be located in the Resources folder)")]
-    public List<Scream> screams;
+    [Header("Screams")]
+    public LayerMask sadnessScreamLayer;
+    [Tooltip("Radius of the curiosity scream revealling effect")]
+    public float curiosityScreamRadius;
+    [Tooltip("Layer of objects to reveal by using the curiosity scream")]
+    public LayerMask curiosityScreamLayer;
 
-    private int selectedScream = 0;
+    [Header("Tags (used to get few specifics objects)")]
+    [Tooltip("")]
+    public string whitePlayerTag;
+    [Tooltip("")]
+    public string blackPlayerTag;
+    [Tooltip("The tag of the wall impacted by the solitude scream")]
+    public string solitudeScreamReceiversTag;
+
+    private float currentSadnessScreamRadius;
+
+    public enum ScreamType
+    {
+        Cornered,
+        Envy,
+        Solitude,
+        Sadness,
+        Compassion,
+        Curiosity,
+        Pride,
+        Joy
+    }
+
+    public ScreamType selectedScream;
     public Role role;
     #endregion  //Controls
 
     #region Private Fields
+    private int jumpAmount = 0;
     private bool isJuming;
     private bool isGrounded;
     private Animator anim;
     private Rigidbody2D rb;
     private Vector3 scale;
+    private bool isScreaming;
 
     private Vector3 velocity = Vector3.zero;
     // d�placement
@@ -115,14 +141,17 @@ public class Player : MonoBehaviour
         }
         else anim.SetBool("Jump", true);
 
-
-
         ScreamSelection();
         Screaming();
     }
 
     void PlayerMove(float _horizontalMovement)
     {
+        if (isScreaming)
+        {
+            return;
+        }
+
         Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
         rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, moveSmooth);
 
@@ -148,23 +177,140 @@ public class Player : MonoBehaviour
     {
         if (control.Cri.CriUp.triggered)
         {
-            selectedScream = (selectedScream + 1) % screams.Count;
+            selectedScream = (ScreamType) ((int) (selectedScream + 1) % Enum.GetValues(typeof(ScreamType)).Length);
         }
         if (control.Cri.CriDown.triggered)
         {
-            selectedScream = (selectedScream - 1) % screams.Count;
+            selectedScream = (ScreamType)((int)(selectedScream - 1) % Enum.GetValues(typeof(ScreamType)).Length);
         }
     }
     public void Screaming()
     {
-        if (control.Cri.Cri.triggered)
+        if (control.Cri.Cri.triggered && !isScreaming)
         {
-            anim.SetInteger("Scream", selectedScream);
-            PhotonNetwork.Instantiate(screams[selectedScream].name, screamCenter.position, screamCenter.rotation, 0);
+            anim.SetTrigger(Enum.GetName(typeof(ScreamType), selectedScream));
+
+            if (PhotonNetwork.connected)
+            {
+                switch (selectedScream)
+                {
+                    case ScreamType.Compassion: photonView.RPC("CompassionScream", PhotonTargets.AllBufferedViaServer); break;
+                    case ScreamType.Cornered: photonView.RPC("CorneredScream", PhotonTargets.AllBufferedViaServer); break;
+                    case ScreamType.Curiosity: photonView.RPC("CuriosityScream", PhotonTargets.AllBufferedViaServer); break;
+                    case ScreamType.Envy: photonView.RPC("EnvyScream", PhotonTargets.AllBufferedViaServer); break;
+                    case ScreamType.Joy: photonView.RPC("JoyScream", PhotonTargets.AllBufferedViaServer); break;
+                    case ScreamType.Sadness: break;
+                    case ScreamType.Pride: photonView.RPC("PrideScream", PhotonTargets.AllBufferedViaServer); break;
+                    case ScreamType.Solitude: photonView.RPC("SolitudeScream", PhotonTargets.AllBufferedViaServer); break;
+                }
+            }
+            else
+            {
+                switch (selectedScream)
+                {
+                    case ScreamType.Compassion: CompassionScream(); break;
+                    case ScreamType.Cornered: CorneredScream(); break;
+                    case ScreamType.Curiosity: CuriosityScream(); break;
+                    case ScreamType.Envy: EnvyScream(); break;
+                    case ScreamType.Joy: JoyScream(); break;
+                    case ScreamType.Sadness: break;
+                    case ScreamType.Pride: PrideScream(); break;
+                    case ScreamType.Solitude: SolitudeScream(); break;
+                }
+            }
+
+            StartCoroutine(WaitDuringScreaming());
         }
         else
         {
             anim.SetInteger("Scream", 0);
+        }
+
+        photonView.RPC("SadnessScream", PhotonTargets.AllBufferedViaServer);
+    }
+
+    IEnumerator WaitDuringScreaming()
+    {
+        isScreaming = true;
+        yield return new WaitForSeconds(1);
+        isScreaming = false;
+    }
+    #endregion
+
+    #region screamsRPC
+    public void CompassionScream()
+    {
+        // endgame
+    }
+
+    public void CorneredScream()
+    {
+        Player whitePlayer = GameObject.FindGameObjectWithTag(whitePlayerTag).GetComponent<Player>();
+        Player blackPlayer = GameObject.FindGameObjectWithTag(blackPlayerTag).GetComponent<Player>();
+        //whitePlayer.transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
+        blackPlayer.transform.localScale.Set(0.45f, 0.45f, 0.45f);
+    }
+
+    public void CuriosityScream()
+    {
+        foreach (Collider2D collider in Physics2D.OverlapCircleAll(transform.position, curiosityScreamRadius, curiosityScreamLayer))
+        {
+            collider.GetComponent<CuriosityObject>().Reveal();
+        }
+
+        StartCoroutine(WaitForCuriosityScream());
+    }
+
+    private IEnumerator WaitForCuriosityScream()
+    {
+        yield return new WaitForSeconds(5);
+
+        foreach (Collider2D collider in Physics2D.OverlapCircleAll(transform.position, curiosityScreamRadius, curiosityScreamLayer))
+        {
+            collider.GetComponent<CuriosityObject>().Mask();
+        }
+    }
+
+    public void EnvyScream()
+    {
+        // endgame
+    }
+
+    public void JoyScream()
+    {
+        jumpAmount = 2;
+    }
+
+    public void PrideScream()
+    {
+        Player whitePlayer = GameObject.FindGameObjectWithTag(whitePlayerTag).GetComponent<Player>();
+        Player blackPlayer = GameObject.FindGameObjectWithTag(blackPlayerTag).GetComponent<Player>();
+        whitePlayer.transform.localScale += new Vector3(0.5f, 0.5f, 0.5f);
+        blackPlayer.transform.localScale -= new Vector3(0.5f, 0.5f, 0.5f);
+    }
+
+    public void SadnessScream()
+    {
+        // instantiate water areas that can hit boxes
+    }
+
+    public void SolitudeScream()
+    {
+        foreach(GameObject platform in GameObject.FindGameObjectsWithTag(solitudeScreamReceiversTag))
+        {
+            platform.SetActive(false);
+        }
+
+        StartCoroutine(WaitForSolitudeScream());
+    }
+
+    private IEnumerator WaitForSolitudeScream()
+    {
+        yield return new WaitForSeconds(5);
+
+        foreach (GameObject platform in GameObject.FindGameObjectsWithTag(solitudeScreamReceiversTag))
+        {
+            platform.SetActive(true);
         }
     }
     #endregion

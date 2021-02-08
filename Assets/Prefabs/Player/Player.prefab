@@ -467,7 +467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f75a1b1b5203d74b99a8c4a284cee1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CriSelection: {fileID: 734501567}
+  selectionCriScript: {fileID: 734501569}
 --- !u!1 &1054528037
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,9 +672,10 @@ GameObject:
   - component: {fileID: 290643585306977306}
   - component: {fileID: 2043408424}
   - component: {fileID: 2043408419}
+  - component: {fileID: -8156019241142287066}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: BlackPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -781,19 +782,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e612601b0beb6544cbd14be10b7af3cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpAmount: 0
   moveSpeed: 5
-  moveSmooth: 0.05
-  jumpForce: 400
+  moveSmooth: 0.1
+  jumpForce: 500
   maxSpeed: 0
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
   velocityYMax: 50
   groundCheckLeft: {fileID: 290643585317130451}
   groundCheckRight: {fileID: 290643587093099140}
-  screamCenter: {fileID: 165316739}
-  screams:
-  - {fileID: 7003150827884874189, guid: dc152a134b35ebe4b9a6340d5b70527c, type: 3}
+  sadnessScreamLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  curiosityScreamRadius: 5
+  curiosityScreamLayer:
+    serializedVersion: 2
+    m_Bits: 2048
+  whitePlayerTag: WhitePlayer
+  blackPlayerTag: BlackPlayer
+  solitudeScreamReceiversTag: SolitudeScream
+  selectedScream: 0
   role: 0
 --- !u!95 &2043408424
 Animator:
@@ -830,6 +838,33 @@ CapsuleCollider2D:
   m_Offset: {x: -0.06, y: -0.15}
   m_Size: {x: 1.83, y: 3.98}
   m_Direction: 0
+--- !u!114 &-8156019241142287066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290643585306977307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 0
+  instantiationId: -1
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &290643585317130444
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,7 +877,7 @@ GameObject:
   m_Layer: 0
   m_Name: GroundCheckLeft
   m_TagString: Untagged
-  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -854,7 +889,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 290643585317130444}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.8, y: -2.149, z: 0}
+  m_LocalPosition: {x: -0.688, y: -2.149, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 290643585306977310}
@@ -872,7 +907,7 @@ GameObject:
   m_Layer: 0
   m_Name: GroundCheckRight
   m_TagString: Untagged
-  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -884,7 +919,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 290643587093099141}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9, y: -2.149, z: 0}
+  m_LocalPosition: {x: 0.401, y: -2.149, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 290643585306977310}
