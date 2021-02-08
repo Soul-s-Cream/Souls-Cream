@@ -6,12 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Network/RoomScene UI.unity
-    guid: 65a35c9098766964d82bfbff625b0ce1
+    path: Assets/Scenes/TitleMenu.unity
+    guid: 83b804d46da2135419621f2c30c3201f
   - enabled: 1
-    path: Assets/Scenes/Network/Level1Net.unity
+    path: Assets/Scenes/Network/Level1.unity
     guid: 1c24bbc20f94c3140a8a0e58f2c02244
-  - enabled: 1
-    path: Assets/Scenes/Network/EndGame.unity
-    guid: 668d630ed14c3f24f96695cbce1cfb7f
   m_configObjects: {}

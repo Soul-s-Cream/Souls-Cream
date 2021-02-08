@@ -31,6 +31,8 @@ public class GameManager : Photon.PunBehaviour
         get { return _instance; }
     }
 
+    
+
     private void Awake()
     {
         #region Singleton
@@ -95,10 +97,10 @@ public class GameManager : Photon.PunBehaviour
 
             LoadCameraRole(role);
 
-            //On cherche l'avatar appropri� pour le r�le du joueur
+            //On cherche l'avatar approprié pour le rôle du joueur
             foreach (GameObject prefab in PlayerPrefabs)
             {
-                if(prefab.GetComponent<MovePlayerNet>().role == role)
+                if(prefab.GetComponent<Player>().role == role)
                 {
                     prefabName = prefab.name;
                     break;

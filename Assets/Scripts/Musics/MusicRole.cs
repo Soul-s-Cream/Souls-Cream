@@ -14,11 +14,11 @@ public class MusicRole : MonoBehaviour
     {
         if (GameManager.Instance.localPlayerInstance != null)
         {
-            if(GameManager.Instance.localPlayerInstance.GetComponent<MovePlayerNet>() != null && GameManager.Instance.localPlayerInstance.GetComponent<MovePlayerNet>().role == role)
+            if(GameManager.Instance.localPlayerInstance.GetComponent<Player>() != null && GameManager.Instance.localPlayerInstance.GetComponent<Player>().role == role)
             {
                 music.Post(gameObject);
             }
-            else if(GameManager.Instance.localPlayerInstance.GetComponent<MovePlayer>() != null && GameManager.Instance.localPlayerInstance.GetComponent<MovePlayer>().role == role)
+            else if(GameManager.Instance.localPlayerInstance.GetComponent<Player>() != null && GameManager.Instance.localPlayerInstance.GetComponent<Player>().role == role)
             {
                 music.Post(gameObject);
             }

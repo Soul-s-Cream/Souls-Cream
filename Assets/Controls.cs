@@ -149,17 +149,9 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""CriMoz"",
+                    ""name"": ""Cri"",
                     ""type"": ""Button"",
-                    ""id"": ""81257850-969f-4c59-a415-bf9010c53253"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""CriOzWhite"",
-                    ""type"": ""Button"",
-                    ""id"": ""f2d2950d-6e53-41a0-8af7-20e7fee785f8"",
+                    ""id"": ""8d4a3d8b-489a-4eaf-829e-fb471938a6f6"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -190,23 +182,12 @@ public class @Controls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""489dee20-827c-407a-9ee1-aa43fb51b41a"",
+                    ""id"": ""53bfa8f7-eb22-4bd1-ab9b-a071653dd5c1"",
                     ""path"": ""<Keyboard>/r"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""CriMoz"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""0872bab1-a8c8-4dd2-8e09-4cec394000c1"",
-                    ""path"": ""<Keyboard>/numpad6"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""CriOzWhite"",
+                    ""action"": ""Cri"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -228,6 +209,30 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""name"": ""DeplacementJ2"",
                     ""type"": ""Button"",
                     ""id"": ""d641c3aa-e723-4f78-88f9-d16b54e9a25a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Cri"",
+                    ""type"": ""Button"",
+                    ""id"": ""78217ffe-744d-4d57-bbfe-d4f0b276b886"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""CriUp"",
+                    ""type"": ""Button"",
+                    ""id"": ""33702425-ae22-489d-ac73-f77cde5b7ffa"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""CriDown"",
+                    ""type"": ""Button"",
+                    ""id"": ""14bd49af-e9ab-4e37-b857-7962b03a7691"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -277,6 +282,39 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""action"": ""DeplacementJ2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""20f5b5c9-8af9-4441-9d44-aaff9975e316"",
+                    ""path"": ""<Keyboard>/numpad6"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Cri"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bdbf81ce-acfa-43c7-aec8-79634bb49d80"",
+                    ""path"": ""<Keyboard>/numpad4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CriUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8e3dcd82-9c36-472b-a2c2-073143cfbafd"",
+                    ""path"": ""<Keyboard>/numpad5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CriDown"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -295,12 +333,14 @@ public class @Controls : IInputActionCollection, IDisposable
         m_Cri = asset.FindActionMap("Cri", throwIfNotFound: true);
         m_Cri_CriUp = m_Cri.FindAction("CriUp", throwIfNotFound: true);
         m_Cri_CriDown = m_Cri.FindAction("CriDown", throwIfNotFound: true);
-        m_Cri_CriMoz = m_Cri.FindAction("CriMoz", throwIfNotFound: true);
-        m_Cri_CriOzWhite = m_Cri.FindAction("CriOzWhite", throwIfNotFound: true);
+        m_Cri_Cri = m_Cri.FindAction("Cri", throwIfNotFound: true);
         // DEBUG
         m_DEBUG = asset.FindActionMap("DEBUG", throwIfNotFound: true);
         m_DEBUG_JumpJ2 = m_DEBUG.FindAction("JumpJ2", throwIfNotFound: true);
         m_DEBUG_DeplacementJ2 = m_DEBUG.FindAction("DeplacementJ2", throwIfNotFound: true);
+        m_DEBUG_Cri = m_DEBUG.FindAction("Cri", throwIfNotFound: true);
+        m_DEBUG_CriUp = m_DEBUG.FindAction("CriUp", throwIfNotFound: true);
+        m_DEBUG_CriDown = m_DEBUG.FindAction("CriDown", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -434,16 +474,14 @@ public class @Controls : IInputActionCollection, IDisposable
     private ICriActions m_CriActionsCallbackInterface;
     private readonly InputAction m_Cri_CriUp;
     private readonly InputAction m_Cri_CriDown;
-    private readonly InputAction m_Cri_CriMoz;
-    private readonly InputAction m_Cri_CriOzWhite;
+    private readonly InputAction m_Cri_Cri;
     public struct CriActions
     {
         private @Controls m_Wrapper;
         public CriActions(@Controls wrapper) { m_Wrapper = wrapper; }
         public InputAction @CriUp => m_Wrapper.m_Cri_CriUp;
         public InputAction @CriDown => m_Wrapper.m_Cri_CriDown;
-        public InputAction @CriMoz => m_Wrapper.m_Cri_CriMoz;
-        public InputAction @CriOzWhite => m_Wrapper.m_Cri_CriOzWhite;
+        public InputAction @Cri => m_Wrapper.m_Cri_Cri;
         public InputActionMap Get() { return m_Wrapper.m_Cri; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -459,12 +497,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @CriDown.started -= m_Wrapper.m_CriActionsCallbackInterface.OnCriDown;
                 @CriDown.performed -= m_Wrapper.m_CriActionsCallbackInterface.OnCriDown;
                 @CriDown.canceled -= m_Wrapper.m_CriActionsCallbackInterface.OnCriDown;
-                @CriMoz.started -= m_Wrapper.m_CriActionsCallbackInterface.OnCriMoz;
-                @CriMoz.performed -= m_Wrapper.m_CriActionsCallbackInterface.OnCriMoz;
-                @CriMoz.canceled -= m_Wrapper.m_CriActionsCallbackInterface.OnCriMoz;
-                @CriOzWhite.started -= m_Wrapper.m_CriActionsCallbackInterface.OnCriOzWhite;
-                @CriOzWhite.performed -= m_Wrapper.m_CriActionsCallbackInterface.OnCriOzWhite;
-                @CriOzWhite.canceled -= m_Wrapper.m_CriActionsCallbackInterface.OnCriOzWhite;
+                @Cri.started -= m_Wrapper.m_CriActionsCallbackInterface.OnCri;
+                @Cri.performed -= m_Wrapper.m_CriActionsCallbackInterface.OnCri;
+                @Cri.canceled -= m_Wrapper.m_CriActionsCallbackInterface.OnCri;
             }
             m_Wrapper.m_CriActionsCallbackInterface = instance;
             if (instance != null)
@@ -475,12 +510,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @CriDown.started += instance.OnCriDown;
                 @CriDown.performed += instance.OnCriDown;
                 @CriDown.canceled += instance.OnCriDown;
-                @CriMoz.started += instance.OnCriMoz;
-                @CriMoz.performed += instance.OnCriMoz;
-                @CriMoz.canceled += instance.OnCriMoz;
-                @CriOzWhite.started += instance.OnCriOzWhite;
-                @CriOzWhite.performed += instance.OnCriOzWhite;
-                @CriOzWhite.canceled += instance.OnCriOzWhite;
+                @Cri.started += instance.OnCri;
+                @Cri.performed += instance.OnCri;
+                @Cri.canceled += instance.OnCri;
             }
         }
     }
@@ -491,12 +523,18 @@ public class @Controls : IInputActionCollection, IDisposable
     private IDEBUGActions m_DEBUGActionsCallbackInterface;
     private readonly InputAction m_DEBUG_JumpJ2;
     private readonly InputAction m_DEBUG_DeplacementJ2;
+    private readonly InputAction m_DEBUG_Cri;
+    private readonly InputAction m_DEBUG_CriUp;
+    private readonly InputAction m_DEBUG_CriDown;
     public struct DEBUGActions
     {
         private @Controls m_Wrapper;
         public DEBUGActions(@Controls wrapper) { m_Wrapper = wrapper; }
         public InputAction @JumpJ2 => m_Wrapper.m_DEBUG_JumpJ2;
         public InputAction @DeplacementJ2 => m_Wrapper.m_DEBUG_DeplacementJ2;
+        public InputAction @Cri => m_Wrapper.m_DEBUG_Cri;
+        public InputAction @CriUp => m_Wrapper.m_DEBUG_CriUp;
+        public InputAction @CriDown => m_Wrapper.m_DEBUG_CriDown;
         public InputActionMap Get() { return m_Wrapper.m_DEBUG; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -512,6 +550,15 @@ public class @Controls : IInputActionCollection, IDisposable
                 @DeplacementJ2.started -= m_Wrapper.m_DEBUGActionsCallbackInterface.OnDeplacementJ2;
                 @DeplacementJ2.performed -= m_Wrapper.m_DEBUGActionsCallbackInterface.OnDeplacementJ2;
                 @DeplacementJ2.canceled -= m_Wrapper.m_DEBUGActionsCallbackInterface.OnDeplacementJ2;
+                @Cri.started -= m_Wrapper.m_DEBUGActionsCallbackInterface.OnCri;
+                @Cri.performed -= m_Wrapper.m_DEBUGActionsCallbackInterface.OnCri;
+                @Cri.canceled -= m_Wrapper.m_DEBUGActionsCallbackInterface.OnCri;
+                @CriUp.started -= m_Wrapper.m_DEBUGActionsCallbackInterface.OnCriUp;
+                @CriUp.performed -= m_Wrapper.m_DEBUGActionsCallbackInterface.OnCriUp;
+                @CriUp.canceled -= m_Wrapper.m_DEBUGActionsCallbackInterface.OnCriUp;
+                @CriDown.started -= m_Wrapper.m_DEBUGActionsCallbackInterface.OnCriDown;
+                @CriDown.performed -= m_Wrapper.m_DEBUGActionsCallbackInterface.OnCriDown;
+                @CriDown.canceled -= m_Wrapper.m_DEBUGActionsCallbackInterface.OnCriDown;
             }
             m_Wrapper.m_DEBUGActionsCallbackInterface = instance;
             if (instance != null)
@@ -522,6 +569,15 @@ public class @Controls : IInputActionCollection, IDisposable
                 @DeplacementJ2.started += instance.OnDeplacementJ2;
                 @DeplacementJ2.performed += instance.OnDeplacementJ2;
                 @DeplacementJ2.canceled += instance.OnDeplacementJ2;
+                @Cri.started += instance.OnCri;
+                @Cri.performed += instance.OnCri;
+                @Cri.canceled += instance.OnCri;
+                @CriUp.started += instance.OnCriUp;
+                @CriUp.performed += instance.OnCriUp;
+                @CriUp.canceled += instance.OnCriUp;
+                @CriDown.started += instance.OnCriDown;
+                @CriDown.performed += instance.OnCriDown;
+                @CriDown.canceled += instance.OnCriDown;
             }
         }
     }
@@ -540,12 +596,14 @@ public class @Controls : IInputActionCollection, IDisposable
     {
         void OnCriUp(InputAction.CallbackContext context);
         void OnCriDown(InputAction.CallbackContext context);
-        void OnCriMoz(InputAction.CallbackContext context);
-        void OnCriOzWhite(InputAction.CallbackContext context);
+        void OnCri(InputAction.CallbackContext context);
     }
     public interface IDEBUGActions
     {
         void OnJumpJ2(InputAction.CallbackContext context);
         void OnDeplacementJ2(InputAction.CallbackContext context);
+        void OnCri(InputAction.CallbackContext context);
+        void OnCriUp(InputAction.CallbackContext context);
+        void OnCriDown(InputAction.CallbackContext context);
     }
 }

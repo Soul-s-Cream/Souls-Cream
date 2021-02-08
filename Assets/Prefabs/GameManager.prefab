@@ -45,9 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerPrefabs:
-  - {fileID: 1247230456913524052, guid: 75047898931fb1b43a7feaf9ecdabe0c, type: 3}
-  - {fileID: 2771368512392874816, guid: e4ec2eb500446a0428e4e23291b17def, type: 3}
+  - {fileID: 290643585306977307, guid: 4d13b8bf1245d164b93f77d25b03c240, type: 3}
+  - {fileID: 4961687525731320548, guid: 7f47f505a8b4e75419deb0e0229f06be, type: 3}
   SpawnPointsList: []
+  localPlayerInstance: {fileID: 0}
 --- !u!114 &5304115212609836957
 MonoBehaviour:
   m_ObjectHideFlags: 0

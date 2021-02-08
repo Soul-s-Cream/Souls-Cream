@@ -68,7 +68,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: a3e106a80bc5484598947af11861b916
     GuidInternal: 
-    m_lastTime: -8585888999143483955
+    m_lastTime: -8585888137355772369
     List:
     - name: Acculation
       guid: 8d5a9d35caa05d4ba2fd12e71d93e2e3
@@ -344,6 +344,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: MozLarme
+      guid: 66775b991ba1d447bb156d1cf7ee53b1
+      id: 3574164184
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Moz
+        ObjectType: 4
+      - ElementName: MozLarme
+        ObjectType: 3
+      Path: Default Work Unit\Moz\MozLarme
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: MozTuto
       guid: 2ac032d77f21d34fab011ed43d4225ae
       id: 1861470019
@@ -353,6 +367,20 @@ MonoBehaviour:
       - ElementName: MozTuto
         ObjectType: 3
       Path: Default Work Unit\MozTuto
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: NewScreamUnlocked
+      guid: aa1c9cd020d41b48bb0d33cda4d147bd
+      id: 1671407757
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Objects
+        ObjectType: 4
+      - ElementName: NewScreamUnlocked
+        ObjectType: 3
+      Path: Default Work Unit\Objects\NewScreamUnlocked
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -393,6 +421,20 @@ MonoBehaviour:
       - ElementName: Objects
         ObjectType: 4
       Path: Default Work Unit\Objects
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: OpenGate
+      guid: 6dd0791f0411894dbbbfb073e0569945
+      id: 604601532
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Objects
+        ObjectType: 4
+      - ElementName: OpenGate
+        ObjectType: 3
+      Path: Default Work Unit\Objects\OpenGate
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -569,20 +611,6 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: Screams
-      guid: ea00767fc2e36347a651d5a72f1c5943
-      id: 2812860249
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Oz
-        ObjectType: 4
-      - ElementName: Screams
-        ObjectType: 4
-      Path: Default Work Unit\Oz\Screams
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Screams
       guid: ee93749b125cbf42b72d7e87ded24031
       id: 2812860249
       PathAndIcons:
@@ -593,6 +621,20 @@ MonoBehaviour:
       - ElementName: Screams
         ObjectType: 4
       Path: Default Work Unit\Moz\Screams
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Screams
+      guid: ea00767fc2e36347a651d5a72f1c5943
+      id: 2812860249
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Oz
+        ObjectType: 4
+      - ElementName: Screams
+        ObjectType: 4
+      Path: Default Work Unit\Oz\Screams
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -650,7 +692,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: c69f70ce3ee3f443b8d3fc03c4bc2167
     GuidInternal: 
-    m_lastTime: -8585889131777117108
+    m_lastTime: -8585888137355762373
     List:
     - name: PlayerMoving
       guid: e91745d28ac7ca4a9749463bf551bf6e
@@ -678,7 +720,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 7b76c7a5a23e3e499aa16bf43b47532b
     GuidInternal: 
-    m_lastTime: -8585889757588173236
+    m_lastTime: -8585888137351790672
     List:
     - name: CrateMoving
       guid: 9e07556062f2f7429cf246c1e7588b9b
