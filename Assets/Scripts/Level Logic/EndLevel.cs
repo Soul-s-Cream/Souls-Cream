@@ -6,6 +6,13 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class EndLevel : MonoBehaviour
 {
+    [Tooltip("Radius of the portal")]
+    public float radius;
+    [Tooltip("Layer of players")]
+    public LayerMask layer;
+    [Tooltip("Optionnal tag(s) of player(s)")]
+    public List<string> playerTags;
+
     private bool isPlayerReachEnd = false;
     private Animator animator;
 
@@ -52,20 +59,39 @@ public class EndLevel : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Update()
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            isPlayerReachEnd = true;
-            GameEvents.Instance.TriggerPlayerReachEnd(this.gameObject);
-        }
-    }
+        Collider2D collider = Physics2D.OverlapCircle(transform.position, radius, layer);
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collider)
+        {
+            if (playerTags.Count > 0)
+            {
+                foreach (string tag in playerTags)
+                {
+                    if (collider.gameObject.CompareTag(tag))
+                    {
+                        isPlayerReachEnd = true;
+                        GameEvents.Instance.TriggerPlayerReachEnd(this.gameObject);
+                        return;
+                    }
+                }
+            }
+            else
+            {
+                isPlayerReachEnd = true;
+                GameEvents.Instance.TriggerPlayerReachEnd(this.gameObject);
+                return;
+            }
+        }
+        else
         {
             isPlayerReachEnd = false;
         }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(transform.position, radius);
     }
 }

@@ -18,8 +18,8 @@ public class Player : Photon.PunBehaviour
     public float lowJumpMultiplier = 2f;
     public float velocityYMax = 50f;
 
-    public Transform groundCheckLeft;
-    public Transform groundCheckRight;
+    public Vector2 groundCheckingCenter;
+    public float groundCheckingRadius;
 
     [Header("Screams")]
     public LayerMask sadnessScreamLayer;
@@ -86,7 +86,7 @@ public class Player : Photon.PunBehaviour
     void FixedUpdate()
     {
         transform.eulerAngles = scale;
-        isGrounded = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckLeft.position);
+        isGrounded = Physics2D.OverlapCircle((Vector2) transform.position + groundCheckingCenter, groundCheckingRadius);
         horizontalMovement = control.Deplacement.Deplacement.ReadValue<float>() * moveSpeed;
         PlayerMove(horizontalMovement);
 
@@ -327,4 +327,9 @@ public class Player : Photon.PunBehaviour
         control.Cri.Disable();
     }
     #endregion
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(transform.position + (Vector3) groundCheckingCenter, groundCheckingRadius);
+    }
 }
