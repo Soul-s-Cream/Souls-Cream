@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player : Photon.PunBehaviour
 {
@@ -62,6 +63,7 @@ public class Player : Photon.PunBehaviour
     private Rigidbody2D rb;
     private Vector3 scale;
     private bool isScreaming;
+    private SpriteRenderer spriteRender;
 
     private Vector3 velocity = Vector3.zero;
     // d�placement
@@ -73,6 +75,7 @@ public class Player : Photon.PunBehaviour
     private void Awake()
     {
         control = new Controls();
+        spriteRender = GetComponent<SpriteRenderer>();
     }
 
     private void Start()
@@ -85,6 +88,11 @@ public class Player : Photon.PunBehaviour
 
     void FixedUpdate()
     {
+        if (!photonView.isMine)
+        {
+            return;
+        }
+
         transform.eulerAngles = scale;
         isGrounded = Physics2D.OverlapCircle((Vector2) transform.position + groundCheckingCenter, groundCheckingRadius);
         horizontalMovement = control.Deplacement.Deplacement.ReadValue<float>() * moveSpeed;
@@ -93,7 +101,7 @@ public class Player : Photon.PunBehaviour
         anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         if (control.Deplacement.Deplacement.ReadValue<float>() == 1)
         {
-            GetComponent<SpriteRenderer>().flipX = true;
+            photonView.RPC("FlipToggleSprite", PhotonTargets.All, true);
             if (isGrounded)
             {
                 AkSoundEngine.PostEvent("MozFootsteps", gameObject);
@@ -101,7 +109,7 @@ public class Player : Photon.PunBehaviour
         }
         if (control.Deplacement.Deplacement.ReadValue<float>() == -1)
         {
-            GetComponent<SpriteRenderer>().flipX = false;
+            photonView.RPC("FlipToggleSprite", PhotonTargets.All, false);
             if (isGrounded)
             {
                 AkSoundEngine.PostEvent("MozFootsteps", gameObject);
@@ -114,6 +122,11 @@ public class Player : Photon.PunBehaviour
     }
     private void Update()
     {
+        if (!photonView.isMine)
+        {
+            return;
+        }
+
         if (velocity.y > velocityYMax)
         {
             velocity.y = velocityYMax;
@@ -170,6 +183,12 @@ public class Player : Photon.PunBehaviour
             }
             isJuming = false;
         }
+    }
+
+    [PunRPC]
+    public void FlipToggleSprite(bool flipState)
+    {
+        GetComponent<SpriteRenderer>().flipX = flipState;
     }
 
     #region Scream
@@ -238,11 +257,13 @@ public class Player : Photon.PunBehaviour
     #endregion
 
     #region screamsRPC
+    [PunRPC]
     public void CompassionScream()
     {
         // endgame
     }
 
+    [PunRPC]
     public void CorneredScream()
     {
         Player whitePlayer = GameObject.FindGameObjectWithTag(whitePlayerTag).GetComponent<Player>();
@@ -251,6 +272,7 @@ public class Player : Photon.PunBehaviour
         blackPlayer.transform.localScale.Set(0.45f, 0.45f, 0.45f);
     }
 
+    [PunRPC]
     public void CuriosityScream()
     {
         foreach (Collider2D collider in Physics2D.OverlapCircleAll(transform.position, curiosityScreamRadius, curiosityScreamLayer))
@@ -271,16 +293,19 @@ public class Player : Photon.PunBehaviour
         }
     }
 
+    [PunRPC]
     public void EnvyScream()
     {
         // endgame
     }
 
+    [PunRPC]
     public void JoyScream()
     {
         jumpAmount = 2;
     }
 
+    [PunRPC]
     public void PrideScream()
     {
         Player whitePlayer = GameObject.FindGameObjectWithTag(whitePlayerTag).GetComponent<Player>();
@@ -289,11 +314,13 @@ public class Player : Photon.PunBehaviour
         blackPlayer.transform.localScale -= new Vector3(0.5f, 0.5f, 0.5f);
     }
 
+    [PunRPC]
     public void SadnessScream()
     {
         // instantiate water areas that can hit boxes
     }
 
+    [PunRPC]
     public void SolitudeScream()
     {
         foreach(GameObject platform in GameObject.FindGameObjectsWithTag(solitudeScreamReceiversTag))
