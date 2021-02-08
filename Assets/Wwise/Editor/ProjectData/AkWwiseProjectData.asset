@@ -868,5 +868,7 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Souls-Cream_WwiseProject
+  - /Souls-Cream_WwiseProject/SoundBanks
+  - /Souls-Cream_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
