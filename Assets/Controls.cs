@@ -151,7 +151,7 @@ public class @Controls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""Cri"",
                     ""type"": ""Button"",
-                    ""id"": ""81257850-969f-4c59-a415-bf9010c53253"",
+                    ""id"": ""8d4a3d8b-489a-4eaf-829e-fb471938a6f6"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -182,7 +182,7 @@ public class @Controls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""489dee20-827c-407a-9ee1-aa43fb51b41a"",
+                    ""id"": ""53bfa8f7-eb22-4bd1-ab9b-a071653dd5c1"",
                     ""path"": ""<Keyboard>/r"",
                     ""interactions"": """",
                     ""processors"": """",

@@ -11,6 +11,7 @@ TagManager:
   - BlackPlayer
   - Humidity
   - Wall
+  - Shootable
   layers:
   - Default
   - TransparentFX
@@ -22,6 +23,9 @@ TagManager:
   - Curiosity
   - 
   - 
+  - Lighting
+  - Ground
+  - Postprocessing
   - 
   - 
   - 
@@ -45,6 +49,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Fire
+    uniqueID: 3804908061
+    locked: 0
   - name: Background
     uniqueID: 3438782485
     locked: 0

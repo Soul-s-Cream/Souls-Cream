@@ -23,65 +23,57 @@ public class Door : Mecanism
     #endregion
 
     #region Private Fields
-    private bool DoorOpen = false;
-    public SpriteRenderer spriteRender;
+    private bool opening = false;
+    private SpriteRenderer spriteRender;
+    private Vector3 startPosition;
+    private Tween tweenRunning;
     #endregion
 
     private void Awake()
     {
         spriteRender = GetComponent<SpriteRenderer>();
+        startPosition = this.transform.position;
     }
 
     protected override void SwitchOn()
     {
-        if (!DoorOpen)
+        if (!opening)
         {
-            DoorOpen = true;
-            switch(openingDirection)
+            opening = true;
+            if (tweenRunning != null)
+                tweenRunning.Kill();
+
+            Vector3 destination = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            switch (openingDirection)
             {
                 case Direction.HAUT:
-                    transform.DOMoveY(transform.position.y + spriteRender.bounds.size.y, openingTime);
+                    destination.y += spriteRender.bounds.size.y;
                     break;
                 case Direction.BAS:
-                    transform.DOMoveY(transform.position.y - spriteRender.bounds.size.y, openingTime);
+                    destination.y -= spriteRender.bounds.size.y;
                     break;
                 case Direction.GAUCHE:
-                    transform.DOMoveX(transform.position.x - spriteRender.bounds.size.x, openingTime);
+                    destination.x -= spriteRender.bounds.size.x;
                     break;
                 case Direction.DROITE:
-                    transform.DOMoveX(transform.position.x + spriteRender.bounds.size.x, openingTime);
+                    destination.x += spriteRender.bounds.size.x;
                     break;
             }
+
+            tweenRunning = transform.DOMove(destination, openingTime);
         }
     }
 
     protected override void SwitchOff()
     {
-        if (DoorOpen)
+        if (opening)
         {
-            DoorOpen = false;
+            if (tweenRunning != null)
+                tweenRunning.Kill();
+            opening = false;
 
-            switch (openingDirection)
-            {
-                case Direction.HAUT:
-                    transform.DOMoveY(transform.position.y - spriteRender.bounds.size.y, openingTime);
-                    break;
-                case Direction.BAS:
-                    transform.DOMoveY(transform.position.y + spriteRender.bounds.size.y, openingTime);
-                    break;
-                case Direction.GAUCHE:
-                    transform.DOMoveX(transform.position.x + spriteRender.bounds.size.x, openingTime);
-                    break;
-                case Direction.DROITE:
-                    transform.DOMoveX(transform.position.x - spriteRender.bounds.size.x, openingTime);
-                    break;
-            }
+            tweenRunning = transform.DOMove(startPosition, openingTime);
         }
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        
     }
 }
 
