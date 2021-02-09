@@ -239,9 +239,9 @@ public class NetworkMenu : Photon.PunBehaviour
 
         if (!PhotonNetwork.player.IsMasterClient)
         {
-            //On désactive l'affichage pour Play si pas Master
-            launchButton.gameObject.SetActive(false);
-            switchButton.gameObject.SetActive(false);
+            //On désactive l'affichage pour Play & Swap si pas Master
+            launchButton.GetComponent<Image>().enabled = false;
+            switchButton.GetComponent<Image>().enabled = false;
         }
 
         UpdateAll();

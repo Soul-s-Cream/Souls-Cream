@@ -54,4 +54,9 @@ MonoBehaviour:
   - PrideScream
   - SadnessScream
   - SolitudeScream
+  - TriggerOnClick
+  - TriggerOnPointerEnter
+  - TriggerOnToggleOff
+  - TriggerOnToggleOn
+  - BehaviorResolutionRPC
   DisableAutoOpenWizard: 1
