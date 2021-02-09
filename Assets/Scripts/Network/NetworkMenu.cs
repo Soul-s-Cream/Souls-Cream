@@ -209,7 +209,11 @@ public class NetworkMenu : Photon.PunBehaviour
 
     void UpdatePlayButton()
     {
-        if (PhotonNetwork.room.PlayerCount == 2 && player1ReadyToggle.isOn && player2ReadyToggle.isOn)
+        if(PhotonNetwork.offlineMode == true)
+        {
+            launchButton.interactable = true;
+        }
+        else if (PhotonNetwork.room.PlayerCount == 2 && player1ReadyToggle.isOn && player2ReadyToggle.isOn)
             launchButton.interactable = true;
     }
 

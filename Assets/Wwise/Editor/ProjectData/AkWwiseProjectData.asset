@@ -20,7 +20,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 6ddfd5d04cfa8942bf4fd4d8ac93123f
     GuidInternal: 
-    m_lastTime: -8585895842250852815
+    m_lastTime: -8585890719551774450
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -30,7 +30,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: decf5895b2d13846b0aa0701cd5fbb4e
     GuidInternal: 
-    m_lastTime: -8585895842251631033
+    m_lastTime: -8585890719555305017
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -49,7 +49,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 338a40dff62d0c4b8fe84e8994defc20
     GuidInternal: 
-    m_lastTime: -8585893181680510114
+    m_lastTime: -8585889753205681215
     List:
     - name: Main
       guid: 3085d8906006fc43b479a58e3dc0504e
@@ -68,7 +68,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: a3e106a80bc5484598947af11861b916
     GuidInternal: 
-    m_lastTime: -8585887345301418178
+    m_lastTime: -8585887394398380527
     List:
     - name: Acculation
       guid: 8d5a9d35caa05d4ba2fd12e71d93e2e3
@@ -220,17 +220,31 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Interruptor
-      guid: f7c20885b91072478159c654a5586ebc
-      id: 132381101
+    - name: InterruptorHeavy
+      guid: ee2f7f0da3fb044eb32800cd4da802bb
+      id: 10711758
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: Objects
         ObjectType: 4
-      - ElementName: Interruptor
+      - ElementName: InterruptorHeavy
         ObjectType: 3
-      Path: Default Work Unit\Objects\Interruptor
+      Path: Default Work Unit\Objects\InterruptorHeavy
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: InterruptorHigh
+      guid: f7c20885b91072478159c654a5586ebc
+      id: 2112482585
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Objects
+        ObjectType: 4
+      - ElementName: InterruptorHigh
+        ObjectType: 3
+      Path: Default Work Unit\Objects\InterruptorHigh
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -330,6 +344,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: MozLarme
+      guid: 66775b991ba1d447bb156d1cf7ee53b1
+      id: 3574164184
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Moz
+        ObjectType: 4
+      - ElementName: MozLarme
+        ObjectType: 3
+      Path: Default Work Unit\Moz\MozLarme
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: MozTuto
       guid: 2ac032d77f21d34fab011ed43d4225ae
       id: 1861470019
@@ -339,6 +367,20 @@ MonoBehaviour:
       - ElementName: MozTuto
         ObjectType: 3
       Path: Default Work Unit\MozTuto
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: NewScreamUnlocked
+      guid: aa1c9cd020d41b48bb0d33cda4d147bd
+      id: 1671407757
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Objects
+        ObjectType: 4
+      - ElementName: NewScreamUnlocked
+        ObjectType: 3
+      Path: Default Work Unit\Objects\NewScreamUnlocked
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -379,6 +421,20 @@ MonoBehaviour:
       - ElementName: Objects
         ObjectType: 4
       Path: Default Work Unit\Objects
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: OpenGate
+      guid: 6dd0791f0411894dbbbfb073e0569945
+      id: 604601532
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Objects
+        ObjectType: 4
+      - ElementName: OpenGate
+        ObjectType: 3
+      Path: Default Work Unit\Objects\OpenGate
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -555,20 +611,6 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: Screams
-      guid: ea00767fc2e36347a651d5a72f1c5943
-      id: 2812860249
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Oz
-        ObjectType: 4
-      - ElementName: Screams
-        ObjectType: 4
-      Path: Default Work Unit\Oz\Screams
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Screams
       guid: ee93749b125cbf42b72d7e87ded24031
       id: 2812860249
       PathAndIcons:
@@ -579,6 +621,20 @@ MonoBehaviour:
       - ElementName: Screams
         ObjectType: 4
       Path: Default Work Unit\Moz\Screams
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Screams
+      guid: ea00767fc2e36347a651d5a72f1c5943
+      id: 2812860249
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Oz
+        ObjectType: 4
+      - ElementName: Screams
+        ObjectType: 4
+      Path: Default Work Unit\Oz\Screams
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -636,8 +692,26 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: c69f70ce3ee3f443b8d3fc03c4bc2167
     GuidInternal: 
-    m_lastTime: -8585887345301458162
-    List: []
+    m_lastTime: -8585887394398360529
+    List:
+    - name: PlayerMoving
+      guid: e91745d28ac7ca4a9749463bf551bf6e
+      id: 545959236
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PlayerMoving
+        ObjectType: 13
+      Path: Default Work Unit\PlayerMoving
+    - name: WetFloor
+      guid: 694ba601374a404ea27a189f056bb60f
+      id: 34521763
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: WetFloor
+        ObjectType: 13
+      Path: Default Work Unit\WetFloor
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -646,7 +720,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 7b76c7a5a23e3e499aa16bf43b47532b
     GuidInternal: 
-    m_lastTime: -8585887345301248283
+    m_lastTime: -8585887394389768362
     List:
     - name: CrateMoving
       guid: 9e07556062f2f7429cf246c1e7588b9b
@@ -741,6 +815,37 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
+    - name: PlayerMoving
+      guid: b2ef35c98edd3340925ed11f1d2f6049
+      id: 545959236
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PlayerMoving
+        ObjectType: 9
+      Path: Default Work Unit\PlayerMoving
+      values:
+      - name: Moving
+        guid: 2a706635e5dbf14c8aeddb04c413c899
+        id: 2649703675
+        PathAndIcons:
+        - ElementName: Moving
+          ObjectType: 8
+      - name: None
+        guid: 3ebe4c1b1efeb24ea41d86e0dc796964
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      - name: Stop
+        guid: 954fff508a520246b9f78edd190a81c9
+        id: 788884573
+        PathAndIcons:
+        - ElementName: Stop
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -749,7 +854,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 75d3efbb85bcd1458ff98f71dfe140ae
     GuidInternal: 
-    m_lastTime: -8585894891448621663
+    m_lastTime: -8585890719551784425
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -759,13 +864,15 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 9c00831b33eb1a4ab6ea268706b8fad4
     GuidInternal: 
-    m_lastTime: -8585895842250852815
+    m_lastTime: -8585890719551774450
     List: []
   ExpandedItems:
   - /Souls-Cream_WwiseProject
+  - /Souls-Cream_WwiseProject/Auxiliary Busses
+  - /Souls-Cream_WwiseProject/Auxiliary Busses/Default Work Unit
   - /Souls-Cream_WwiseProject/Events
   - /Souls-Cream_WwiseProject/Events/Default Work Unit
-  - /Souls-Cream_WwiseProject/States
-  - /Souls-Cream_WwiseProject/States/Default Work Unit
+  - /Souls-Cream_WwiseProject/SoundBanks
+  - /Souls-Cream_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

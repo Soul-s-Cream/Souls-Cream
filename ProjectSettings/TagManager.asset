@@ -7,17 +7,25 @@ TagManager:
   - Beam
   - Spawn
   - Crate
+  - WhitePlayer
+  - BlackPlayer
+  - Humidity
+  - Wall
+  - Shootable
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
+  - Humidity
+  - Curiosity
   - 
   - 
-  - 
-  - 
+  - Lighting
+  - Ground
+  - Postprocessing
   - 
   - 
   - 
@@ -41,6 +49,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Fire
+    uniqueID: 3804908061
+    locked: 0
+  - name: Background
+    uniqueID: 3438782485
+    locked: 0
+  - name: Middleground
+    uniqueID: 4103324027
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 4134324865
+    locked: 0
+  - name: Closeground
+    uniqueID: 1078146561
     locked: 0

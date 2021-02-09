@@ -3,13 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(Animator))]
 public class EndLevel : MonoBehaviour
 {
+    [Tooltip("Radius of the portal")]
+    public float radius;
+    [Tooltip("Layer of players")]
+    public LayerMask layer;
+    [Tooltip("Optionnal tag(s) of player(s)")]
+    public List<string> playerTags;
+
     private bool isPlayerReachEnd = false;
+    private Animator animator;
 
     public bool IsPlayerReachEnd
     {
         get { return isPlayerReachEnd;  }
+    }
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -19,12 +33,12 @@ public class EndLevel : MonoBehaviour
 
     void AddListener()
     {
-        GameEvents.Instance.PlayerReachEnd += OnPlayerReachEnd;
+        GameEvents.Instance.playerReachEnd += OnPlayerReachEnd;
     }
 
     void RemoveListener()
     {
-        GameEvents.Instance.PlayerReachEnd -= OnPlayerReachEnd;
+        GameEvents.Instance.playerReachEnd -= OnPlayerReachEnd;
     }
 
     private void OnDestroy()
@@ -34,25 +48,50 @@ public class EndLevel : MonoBehaviour
 
     void OnPlayerReachEnd(GameObject gameObject)
     {
+        EndLevel endPoint = gameObject.GetComponent<EndLevel>();
+
         if (gameObject != this.gameObject && this.isPlayerReachEnd)
-            GameManager.Instance.EndLevel();
-
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
         {
-            isPlayerReachEnd = true;
-            GameEvents.Instance.LaunchPlayerReachEnd(this.gameObject);
+            animator.SetBool("EndLevel", true);
+            endPoint.GetComponent<Animator>().SetBool("EndLevel", true);
+            GameManager.Instance.EndLevel();
         }
+
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void Update()
     {
-        if (collision.gameObject.CompareTag("Player"))
+        Collider2D collider = Physics2D.OverlapCircle(transform.position, radius, layer);
+
+        if (collider)
+        {
+            if (playerTags.Count > 0)
+            {
+                foreach (string tag in playerTags)
+                {
+                    if (collider.gameObject.CompareTag(tag))
+                    {
+                        isPlayerReachEnd = true;
+                        GameEvents.Instance.TriggerPlayerReachEnd(this.gameObject);
+                        return;
+                    }
+                }
+            }
+            else
+            {
+                isPlayerReachEnd = true;
+                GameEvents.Instance.TriggerPlayerReachEnd(this.gameObject);
+                return;
+            }
+        }
+        else
         {
             isPlayerReachEnd = false;
         }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(transform.position, radius);
     }
 }
