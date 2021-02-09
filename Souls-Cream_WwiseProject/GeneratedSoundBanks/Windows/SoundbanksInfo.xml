@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="135">
 	<RootPaths>
-		<ProjectRoot>D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="2062365955">
+		<SoundBank Id="3161908922" Language="SFX" Hash="857732750">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -77,7 +77,7 @@
 						</File>
 						<File Id="557949847" Language="SFX">
 							<ShortName>CrateFrictionWet.wav</ShortName>
-							<Path>SFX\CrateFrictionWet_230D2EB5.wem</Path>
+							<Path>SFX\CrateFrictionWet_53510D5E.wem</Path>
 						</File>
 						<File Id="694567900" Language="SFX">
 							<ShortName>CrateFriction.wav</ShortName>
@@ -85,7 +85,7 @@
 						</File>
 						<File Id="1001770249" Language="SFX">
 							<ShortName>CrateFrictionWet.wav</ShortName>
-							<Path>SFX\CrateFrictionWet_A3E6A7D4.wem</Path>
+							<Path>SFX\CrateFrictionWet_DA7C3B83.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -385,15 +385,15 @@
 					<IncludedMemoryFiles>
 						<File Id="329682438" Language="SFX">
 							<ShortName>PorteOuverture.wav</ShortName>
-							<Path>SFX\PorteOuverture_AEDE31E7.wem</Path>
+							<Path>SFX\PorteOuverture_7AFDB337.wem</Path>
 						</File>
 						<File Id="816920437" Language="SFX">
 							<ShortName>PorteOuverture.wav</ShortName>
-							<Path>SFX\PorteOuverture_F97A1E9E.wem</Path>
+							<Path>SFX\PorteOuverture_1AA44B1F.wem</Path>
 						</File>
 						<File Id="943190417" Language="SFX">
 							<ShortName>PorteOuverture.wav</ShortName>
-							<Path>SFX\PorteOuverture_90D46854.wem</Path>
+							<Path>SFX\PorteOuverture_045A1E92.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -709,7 +709,7 @@
 				</File>
 				<File Id="329682438" Language="SFX">
 					<ShortName>PorteOuverture.wav</ShortName>
-					<Path>SFX\PorteOuverture_AEDE31E7.wem</Path>
+					<Path>SFX\PorteOuverture_7AFDB337.wem</Path>
 				</File>
 				<File Id="333600656" Language="SFX">
 					<ShortName>Envie.wav</ShortName>
@@ -797,7 +797,7 @@
 				</File>
 				<File Id="557949847" Language="SFX">
 					<ShortName>CrateFrictionWet.wav</ShortName>
-					<Path>SFX\CrateFrictionWet_230D2EB5.wem</Path>
+					<Path>SFX\CrateFrictionWet_53510D5E.wem</Path>
 				</File>
 				<File Id="561214518" Language="SFX">
 					<ShortName>MozFootstepsWet.wav</ShortName>
@@ -861,7 +861,7 @@
 				</File>
 				<File Id="816920437" Language="SFX">
 					<ShortName>PorteOuverture.wav</ShortName>
-					<Path>SFX\PorteOuverture_F97A1E9E.wem</Path>
+					<Path>SFX\PorteOuverture_1AA44B1F.wem</Path>
 				</File>
 				<File Id="821152830" Language="SFX">
 					<ShortName>Curiosité.wav</ShortName>
@@ -925,7 +925,7 @@
 				</File>
 				<File Id="943190417" Language="SFX">
 					<ShortName>PorteOuverture.wav</ShortName>
-					<Path>SFX\PorteOuverture_90D46854.wem</Path>
+					<Path>SFX\PorteOuverture_045A1E92.wem</Path>
 				</File>
 				<File Id="962922270" Language="SFX">
 					<ShortName>LarmesMoz.wav</ShortName>
@@ -945,7 +945,7 @@
 				</File>
 				<File Id="1001770249" Language="SFX">
 					<ShortName>CrateFrictionWet.wav</ShortName>
-					<Path>SFX\CrateFrictionWet_A3E6A7D4.wem</Path>
+					<Path>SFX\CrateFrictionWet_DA7C3B83.wem</Path>
 				</File>
 				<File Id="1011164212" Language="SFX">
 					<ShortName>LarmesMoz.wav</ShortName>
