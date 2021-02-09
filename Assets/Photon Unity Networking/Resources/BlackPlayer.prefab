@@ -669,9 +669,9 @@ GameObject:
   - component: {fileID: 290643585306977310}
   - component: {fileID: 290643585306977311}
   - component: {fileID: 290643585306977304}
-  - component: {fileID: 290643585306977306}
   - component: {fileID: 2043408424}
   - component: {fileID: 2043408419}
+  - component: {fileID: -226554001625161624}
   - component: {fileID: -8156019241142287066}
   - component: {fileID: 1960533513886640120}
   - component: {fileID: 8144837878969267871}
@@ -773,46 +773,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &290643585306977306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 290643585306977307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e612601b0beb6544cbd14be10b7af3cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  moveSmooth: 0.1
-  jumpForce: 500
-  maxSpeed: 0
-  fallMultiplier: 2.5
-  lowJumpMultiplier: 2
-  velocityYMax: 50
-  groundCheckingCenter: {x: -0.02, y: -0.44}
-  groundCheckingRadius: 0.27
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 1
-  humidityLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  curiosityScreamRadius: 5
-  curiosityScreamLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  humidityPrefab: {fileID: 3750231749875519398, guid: 1397a3b22983ac64981c4b3f63e728dc,
-    type: 3}
-  sadnessScreamMinGroundDistance: 1
-  sadnessGroundCheckingCenter: {x: 0, y: 0}
-  selectedScream: 3
-  whitePlayerTag: WhitePlayer
-  blackPlayerTag: BlackPlayer
-  solitudeScreamReceiversTag: Wall
-  role: 1
 --- !u!95 &2043408424
 Animator:
   serializedVersion: 3
@@ -823,7 +783,7 @@ Animator:
   m_GameObject: {fileID: 290643585306977307}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cd7b149e029253747b78371426434d7f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5062d6e2c88a42d4aa3c4b334f8fd514, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -848,6 +808,47 @@ CapsuleCollider2D:
   m_Offset: {x: -0.06, y: -0.15}
   m_Size: {x: 1.83, y: 3.98}
   m_Direction: 0
+--- !u!114 &-226554001625161624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290643585306977307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8965c9b4e8e3a7340b8a0f1b07cdf000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  moveSmooth: 0.1
+  jumpForce: 500
+  maxSpeed: 0
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 2
+  velocityYMax: 50
+  groundCheckingCenter: {x: -0.02, y: -0.44}
+  groundCheckingRadius: 0.27
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  humidityLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  curiosityScreamRadius: 5
+  curiosityScreamLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  humidityPrefab: {fileID: 0}
+  sadnessScreamMinGroundDistance: 1
+  sadnessGroundCheckingCenter: {x: 0, y: 0}
+  selectedScream: 0
+  whitePlayerTag: WhitePlayer
+  blackPlayerTag: BlackPlayer
+  solitudeScreamReceiversTag: SolitudeScream
+  role: 1
+  chuteLibre: 0
+  freezeMove: 0
 --- !u!114 &-8156019241142287066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -975,30 +976,9 @@ MonoBehaviour:
   - Type: 4
     SynchronizeType: 2
     Name: Jump
-  - Type: 9
-    SynchronizeType: 2
-    Name: Cornered
-  - Type: 9
-    SynchronizeType: 2
-    Name: Envy
-  - Type: 9
-    SynchronizeType: 2
-    Name: Solitude
-  - Type: 9
-    SynchronizeType: 2
-    Name: Sadness
-  - Type: 9
-    SynchronizeType: 2
-    Name: Compassion
-  - Type: 9
-    SynchronizeType: 2
-    Name: Curiosity
-  - Type: 9
-    SynchronizeType: 2
-    Name: Pride
-  - Type: 9
-    SynchronizeType: 2
-    Name: Joy
+  - Type: 4
+    SynchronizeType: 0
+    Name: positionFinalBool
   m_SynchronizeLayers:
   - SynchronizeType: 2
     LayerIndex: 0

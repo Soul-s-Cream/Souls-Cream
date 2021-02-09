@@ -12,6 +12,7 @@ TagManager:
   - Humidity
   - Wall
   - Shootable
+  - SolitudeScream
   layers:
   - Default
   - TransparentFX
@@ -21,14 +22,11 @@ TagManager:
   - UI
   - Humidity
   - Curiosity
-  - 
-  - 
+  - Sadness Scream
+  - Curiosity Scream
   - Lighting
   - Ground
   - Postprocessing
-  - 
-  - 
-  - 
   - 
   - 
   - 

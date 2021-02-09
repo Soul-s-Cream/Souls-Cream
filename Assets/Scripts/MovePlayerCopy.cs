@@ -6,7 +6,7 @@ using UnityEngine;
 public class MovePlayerCopy : MonoBehaviour             //Script attache au joueur noir
 {
     #region Public Field
-    public List<BoxController> boxes;
+    public List<MoveableBox> boxes;
 
     public bool criN1Joie = false;
     public bool criN2Fierte = false;
@@ -187,12 +187,12 @@ public class MovePlayerCopy : MonoBehaviour             //Script attache au joue
             if (CriSelected == 1)                                                               // Cri de déplacement de bloc
             {
                 criN1Joie = true;
-                foreach (BoxController box in boxes)
+                foreach (MoveableBox box in boxes)
                 {
                     dist = Vector2.Distance(box.transform.position, transform.position);
                     if (dist <= distMax)
                     {
-                        GameEvents.Instance.SwitchBoxOn(box);
+                        GameEvents.Instance.TriggerSwitchBoxOn(box);
                     }
                 }
                 AkSoundEngine.PostEvent("Acculation", gameObject);
