@@ -65,16 +65,6 @@ public class NetworkMenu : Photon.PunBehaviour
         DisplayView(titleMenuPanel);
     }
 
-    public void DisplayNetworkMenu()
-    {
-        DisplayView(connectionPanel);
-    }
-
-    public void DisplayCredits()
-    {
-        throw new System.NotImplementedException();
-    }
-
     public void QuitGame()
     {
         Application.Quit();
