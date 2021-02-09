@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 139864397}
   - component: {fileID: 139864399}
   - component: {fileID: 139864398}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: icone5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 165316739}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ScreamCenter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 234609667}
   - component: {fileID: 234609669}
   - component: {fileID: 234609668}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: icone4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 734501568}
   - component: {fileID: 734501569}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CriSelectionWhite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 767548614}
   - component: {fileID: 767548616}
   - component: {fileID: 767548615}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: icone2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 825855999}
   - component: {fileID: 825856001}
   - component: {fileID: 825856000}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SelectionIconeBlanc (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -479,7 +479,7 @@ GameObject:
   - component: {fileID: 1054528038}
   - component: {fileID: 1054528040}
   - component: {fileID: 1054528039}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: icone1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -574,7 +574,7 @@ GameObject:
   - component: {fileID: 1109448691}
   - component: {fileID: 1109448693}
   - component: {fileID: 1109448692}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: icone3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -675,7 +675,7 @@ GameObject:
   - component: {fileID: -8156019241142287066}
   - component: {fileID: 1960533513886640120}
   - component: {fileID: 8144837878969267871}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BlackPlayer
   m_TagString: BlackPlayer
   m_Icon: {fileID: 0}
@@ -793,17 +793,23 @@ MonoBehaviour:
   velocityYMax: 50
   groundCheckingCenter: {x: -0.02, y: -0.44}
   groundCheckingRadius: 0.27
-  sadnessScreamLayer:
+  groundLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1
+  humidityLayer:
+    serializedVersion: 2
+    m_Bits: 64
   curiosityScreamRadius: 5
   curiosityScreamLayer:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 128
+  humidityPrefab: {fileID: 3750231749875519398, guid: 1397a3b22983ac64981c4b3f63e728dc, type: 3}
+  sadnessScreamMinGroundDistance: 1
+  sadnessGroundCheckingCenter: {x: 0, y: 0}
+  selectedScream: 3
   whitePlayerTag: WhitePlayer
   blackPlayerTag: BlackPlayer
-  solitudeScreamReceiversTag: SolitudeScream
-  selectedScream: 0
+  solitudeScreamReceiversTag: Wall
   role: 1
 --- !u!95 &2043408424
 Animator:
@@ -1003,7 +1009,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 290643585317130451}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GroundCheckLeft
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -1033,7 +1039,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 290643587093099140}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GroundCheckRight
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}

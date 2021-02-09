@@ -21,13 +21,20 @@ public class Player : Photon.PunBehaviour
 
     public Vector2 groundCheckingCenter;
     public float groundCheckingRadius;
+    public LayerMask groundLayer;
 
     [Header("Screams")]
-    public LayerMask sadnessScreamLayer;
+    public LayerMask humidityLayer;
     [Tooltip("Radius of the curiosity scream revealling effect")]
     public float curiosityScreamRadius;
     [Tooltip("Layer of objects to reveal by using the curiosity scream")]
     public LayerMask curiosityScreamLayer;
+    [Tooltip("Instantiate when the player use the sadness scream")]
+    public GameObject humidityPrefab;
+    public float sadnessScreamMinGroundDistance = 1f;
+    public Vector2 sadnessGroundCheckingCenter;
+
+    public ScreamType selectedScream;
 
     [Header("Tags (used to get few specifics objects)")]
     [Tooltip("")]
@@ -51,7 +58,6 @@ public class Player : Photon.PunBehaviour
         Joy
     }
 
-    public ScreamType selectedScream;
     public Role role;
     #endregion  //Controls
 
@@ -94,7 +100,7 @@ public class Player : Photon.PunBehaviour
         }
 
         transform.eulerAngles = scale;
-        isGrounded = Physics2D.OverlapCircle((Vector2) transform.position + groundCheckingCenter, groundCheckingRadius);
+        isGrounded = Physics2D.OverlapCircle((Vector2) transform.position + groundCheckingCenter, groundCheckingRadius, groundLayer);
         horizontalMovement = control.Deplacement.Deplacement.ReadValue<float>() * moveSpeed;
         PlayerMove(horizontalMovement);
 
@@ -218,7 +224,7 @@ public class Player : Photon.PunBehaviour
                     case ScreamType.Curiosity: photonView.RPC("CuriosityScream", PhotonTargets.AllBufferedViaServer); break;
                     case ScreamType.Envy: photonView.RPC("EnvyScream", PhotonTargets.AllBufferedViaServer); break;
                     case ScreamType.Joy: photonView.RPC("JoyScream", PhotonTargets.AllBufferedViaServer); break;
-                    case ScreamType.Sadness: break;
+                    case ScreamType.Sadness: photonView.RPC("SadnessScream", PhotonTargets.AllBufferedViaServer); break;
                     case ScreamType.Pride: photonView.RPC("PrideScream", PhotonTargets.AllBufferedViaServer); break;
                     case ScreamType.Solitude: photonView.RPC("SolitudeScream", PhotonTargets.AllBufferedViaServer); break;
                 }
@@ -232,7 +238,7 @@ public class Player : Photon.PunBehaviour
                     case ScreamType.Curiosity: CuriosityScream(); break;
                     case ScreamType.Envy: EnvyScream(); break;
                     case ScreamType.Joy: JoyScream(); break;
-                    case ScreamType.Sadness: break;
+                    case ScreamType.Sadness: SadnessScream(); break;
                     case ScreamType.Pride: PrideScream(); break;
                     case ScreamType.Solitude: SolitudeScream(); break;
                 }
@@ -244,8 +250,6 @@ public class Player : Photon.PunBehaviour
         {
             anim.SetInteger("Scream", 0);
         }
-
-        photonView.RPC("SadnessScream", PhotonTargets.AllBufferedViaServer);
     }
 
     IEnumerator WaitDuringScreaming()
@@ -268,7 +272,7 @@ public class Player : Photon.PunBehaviour
     {
         Player whitePlayer = GameObject.FindGameObjectWithTag(whitePlayerTag).GetComponent<Player>();
         Player blackPlayer = GameObject.FindGameObjectWithTag(blackPlayerTag).GetComponent<Player>();
-        //whitePlayer.transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
+        whitePlayer.transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
         blackPlayer.transform.localScale.Set(0.45f, 0.45f, 0.45f);
     }
 
@@ -278,18 +282,6 @@ public class Player : Photon.PunBehaviour
         foreach (Collider2D collider in Physics2D.OverlapCircleAll(transform.position, curiosityScreamRadius, curiosityScreamLayer))
         {
             collider.GetComponent<CuriosityObject>().Reveal();
-        }
-
-        StartCoroutine(WaitForCuriosityScream());
-    }
-
-    private IEnumerator WaitForCuriosityScream()
-    {
-        yield return new WaitForSeconds(5);
-
-        foreach (Collider2D collider in Physics2D.OverlapCircleAll(transform.position, curiosityScreamRadius, curiosityScreamLayer))
-        {
-            collider.GetComponent<CuriosityObject>().Mask();
         }
     }
 
@@ -310,14 +302,34 @@ public class Player : Photon.PunBehaviour
     {
         Player whitePlayer = GameObject.FindGameObjectWithTag(whitePlayerTag).GetComponent<Player>();
         Player blackPlayer = GameObject.FindGameObjectWithTag(blackPlayerTag).GetComponent<Player>();
-        whitePlayer.transform.localScale += new Vector3(0.5f, 0.5f, 0.5f);
-        blackPlayer.transform.localScale -= new Vector3(0.5f, 0.5f, 0.5f);
+        if (blackPlayer)
+        {
+            blackPlayer.transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
+        }
+        if (whitePlayer)
+        {
+            whitePlayer.transform.localScale.Set(0.45f, 0.45f, 0.45f);
+        }
     }
 
     [PunRPC]
     public void SadnessScream()
     {
-        // instantiate water areas that can hit boxes
+        if (PhotonNetwork.connected)
+        {
+            RaycastHit2D hit2D = Physics2D.Raycast((Vector2) transform.position + sadnessGroundCheckingCenter, Vector2.down, sadnessScreamMinGroundDistance, groundLayer);
+            if (hit2D.collider != null)
+            {
+                if (PhotonNetwork.connected)
+                {
+                    PhotonNetwork.Instantiate(humidityPrefab.name, hit2D.point, Quaternion.identity, 0);
+                }
+                else
+                {
+                    Instantiate(humidityPrefab, hit2D.point, Quaternion.identity);
+                }
+            }
+        }
     }
 
     [PunRPC]
@@ -358,5 +370,6 @@ public class Player : Photon.PunBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(transform.position + (Vector3) groundCheckingCenter, groundCheckingRadius);
+        Gizmos.DrawLine(transform.position + (Vector3)sadnessGroundCheckingCenter, transform.position + Vector3.down * sadnessScreamMinGroundDistance);
     }
 }
