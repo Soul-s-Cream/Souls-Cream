@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovePlayer : MonoBehaviour             //Script attache au joueur noir
+public class MovePlayerCopy : MonoBehaviour             //Script attache au joueur noir
 {
     #region Public Field
     public List<BoxController> boxes;
