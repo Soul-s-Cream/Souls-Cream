@@ -68,7 +68,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: a3e106a80bc5484598947af11861b916
     GuidInternal: 
-    m_lastTime: -8585887394398380527
+    m_lastTime: -8585887320945396714
     List:
     - name: Acculation
       guid: 8d5a9d35caa05d4ba2fd12e71d93e2e3
@@ -692,7 +692,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: c69f70ce3ee3f443b8d3fc03c4bc2167
     GuidInternal: 
-    m_lastTime: -8585887394398360529
+    m_lastTime: -8585887320945396714
     List:
     - name: PlayerMoving
       guid: e91745d28ac7ca4a9749463bf551bf6e
@@ -720,7 +720,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 7b76c7a5a23e3e499aa16bf43b47532b
     GuidInternal: 
-    m_lastTime: -8585887394389768362
+    m_lastTime: -8585887320938092557
     List:
     - name: CrateMoving
       guid: 9e07556062f2f7429cf246c1e7588b9b
@@ -868,11 +868,14 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Souls-Cream_WwiseProject
-  - /Souls-Cream_WwiseProject/Auxiliary Busses
-  - /Souls-Cream_WwiseProject/Auxiliary Busses/Default Work Unit
   - /Souls-Cream_WwiseProject/Events
   - /Souls-Cream_WwiseProject/Events/Default Work Unit
+  - /Souls-Cream_WwiseProject/Events/Default Work Unit/Moz
+  - /Souls-Cream_WwiseProject/Events/Default Work Unit/Moz/Screams
   - /Souls-Cream_WwiseProject/SoundBanks
   - /Souls-Cream_WwiseProject/SoundBanks/Default Work Unit
+  - /Souls-Cream_WwiseProject/States
+  - /Souls-Cream_WwiseProject/States/Default Work Unit
+  - /Souls-Cream_WwiseProject/States/Default Work Unit/MusicPlayStop
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

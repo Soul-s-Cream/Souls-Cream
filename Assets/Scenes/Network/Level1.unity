@@ -363,7 +363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3330871eecbf77d49a6dfd25ad61869b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  role: 1
+  filter: 2
   music:
     idInternal: 0
     valueGuidInternal: 
@@ -2952,7 +2952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3330871eecbf77d49a6dfd25ad61869b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  role: 0
+  filter: 1
   music:
     idInternal: 0
     valueGuidInternal: 
