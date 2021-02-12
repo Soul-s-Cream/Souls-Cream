@@ -101,7 +101,12 @@ MonoBehaviour:
   triggers:
   - {fileID: 0}
   - {fileID: 0}
-  tagFilter: Player
+  tagFilter: BlackPlayer
+  switchSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 825b2d4346220fc4295f880d02ea89eb,
+      type: 2}
 --- !u!61 &8255430181578753933
 BoxCollider2D:
   m_ObjectHideFlags: 0

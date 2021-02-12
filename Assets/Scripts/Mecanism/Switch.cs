@@ -11,6 +11,7 @@ public class Switch : Photon.PunBehaviour
     [Tooltip("Le tag de l'objet accepté pour activer l'interrupteur")]
     [TagSelector]
     public string tagFilter = "";
+    public AK.Wwise.Event switchSound;
     #endregion
 
     #region Private Fields
@@ -59,6 +60,7 @@ public class Switch : Photon.PunBehaviour
         GameEvents.Instance.TriggerSwitchOn(triggers);
         BoutonOn = true;
         animator.SetBool("BoutonON", true);
+        PlaySound();
     }
 
     [PunRPC]
@@ -67,5 +69,12 @@ public class Switch : Photon.PunBehaviour
         GameEvents.Instance.TriggerSwitchOff(triggers);
         BoutonOn = false;
         animator.SetBool("BoutonON", false);
+        PlaySound();
+    }
+
+    private void PlaySound()
+    {
+        switchSound.Stop(gameObject);
+        switchSound.Post(gameObject);
     }
 }
