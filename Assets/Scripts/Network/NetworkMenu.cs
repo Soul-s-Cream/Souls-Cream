@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// S'occupe de gérer la logique du menu du jeu
@@ -34,6 +35,8 @@ public class NetworkMenu : Photon.PunBehaviour
     [Header("Buttons")]
     public Button launchButton;
     public Button switchButton;
+    [Header("Scenes")]
+    public SceneLoader creditsSceneLoader;
 
     //La vue de menu actuellement affichée
     RectTransform viewDisplayed;
@@ -72,7 +75,7 @@ public class NetworkMenu : Photon.PunBehaviour
 
     public void DisplayCredits()
     {
-        throw new System.NotImplementedException();
+        creditsSceneLoader.Load();
     }
 
     public void QuitGame()
