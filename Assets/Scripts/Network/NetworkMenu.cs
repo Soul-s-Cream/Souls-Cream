@@ -35,8 +35,6 @@ public class NetworkMenu : Photon.PunBehaviour
     [Header("Buttons")]
     public Button launchButton;
     public Button switchButton;
-    [Header("Scenes")]
-    public SceneLoader creditsSceneLoader;
 
     //La vue de menu actuellement affich�e
     RectTransform viewDisplayed;

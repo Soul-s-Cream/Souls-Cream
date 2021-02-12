@@ -87,6 +87,7 @@ public class MusicScene : MonoBehaviour
     /// </summary>
     void StopMusic()
     {
+        Debug.Log("Stop Music " + music.Name);
         isPlaying = false;
         music.Stop(gameObject, fadeOutTime);
         RemoveListeners();
@@ -116,10 +117,11 @@ public class MusicScene : MonoBehaviour
     }
 
     /// <summary>
-    /// If the object must stop its music on destroy, it stops it. Always call remove all listeners.
+    /// If the object must stop its music on destroy, it does. Always call remove all listeners.
     /// </summary>
     private void OnDestroy()
     {
+        Debug.Log("On Destroy");
         if (stopOnDestroy)
             StopMusic();
         else
