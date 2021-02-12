@@ -35,6 +35,9 @@ public class GameEvents : MonoBehaviour
     public event AnimIconesCrisEvent iconAnimSelected;
     public event AnimIconesCrisEvent iconAnimUnselected;
 
+    public delegate void BrisDeEcranEvent(GameObject[] cassur);
+    public event BrisDeEcranEvent BrisDeEcranVoid; 
+
 
     #endregion
 
@@ -107,6 +110,13 @@ public class GameEvents : MonoBehaviour
         if (Icone != null)
         {
             iconAnimUnselected(Icone);
+        }
+    }
+    public void BDR(GameObject[] brokenWindow)
+    {
+        if (brokenWindow != null)
+        {
+            BrisDeEcranVoid(brokenWindow);
         }
     }
     #endregion

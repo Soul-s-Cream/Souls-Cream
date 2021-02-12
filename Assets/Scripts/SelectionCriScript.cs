@@ -7,10 +7,10 @@ public class SelectionCriScript : MonoBehaviour
 {
     public List<GameObject> Cris;
     public int criSelected = 0;
-    private Vector3 Rot;
     public bool roueActive = false;
-    private Coroutine timeToDie;
 
+    private Coroutine timeToDie;
+    private Vector3 Rot;
 
     #region
     private Controls control;
@@ -100,7 +100,7 @@ public class SelectionCriScript : MonoBehaviour
             }
         }
     }
-    IEnumerator TimeToDie()
+    private IEnumerator TimeToDie()
     {
         yield return new WaitForSeconds(2f);
         roueActive = false;

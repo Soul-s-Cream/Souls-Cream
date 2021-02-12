@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
+using UnityEngine.SceneManagement;
 
 /// <summary>
-/// S'occupe de gérer la logique du menu du jeu
+/// S'occupe de gï¿½rer la logique du menu du jeu
 /// </summary>
 public class NetworkMenu : Photon.PunBehaviour
 {
@@ -34,15 +35,17 @@ public class NetworkMenu : Photon.PunBehaviour
     [Header("Buttons")]
     public Button launchButton;
     public Button switchButton;
+    [Header("Scenes")]
+    public SceneLoader creditsSceneLoader;
 
-    //La vue de menu actuellement affichée
+    //La vue de menu actuellement affichï¿½e
     RectTransform viewDisplayed;
 
     #region Menu View Logic
     /// <summary>
-    /// Permet d'afficher la vue en paramètre en masquant l'actuelle affichée
+    /// Permet d'afficher la vue en paramï¿½tre en masquant l'actuelle affichï¿½e
     /// </summary>
-    /// <param name="viewToDisplay">La vue de menu à afficher</param>
+    /// <param name="viewToDisplay">La vue de menu ï¿½ afficher</param>
     public void DisplayView(RectTransform viewToDisplay)
     {
         try
@@ -239,7 +242,7 @@ public class NetworkMenu : Photon.PunBehaviour
 
         if (!PhotonNetwork.player.IsMasterClient)
         {
-            //On désactive l'affichage pour Play & Swap si pas Master
+            //On dï¿½sactive l'affichage pour Play & Swap si pas Master
             launchButton.GetComponent<Image>().enabled = false;
             switchButton.GetComponent<Image>().enabled = false;
         }
@@ -268,7 +271,7 @@ public class NetworkMenu : Photon.PunBehaviour
         PhotonPlayer playerChanged = playerAndUpdatedProps[0] as PhotonPlayer;
         Hashtable properties = playerAndUpdatedProps[1] as Hashtable;
 
-        //Si le joueur affecté n'est pas le joueur local
+        //Si le joueur affectï¿½ n'est pas le joueur local
         if (playerChanged != PhotonNetwork.player)
         {
             if (properties.ContainsKey("ready"))

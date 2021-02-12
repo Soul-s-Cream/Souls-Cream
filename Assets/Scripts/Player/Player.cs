@@ -44,7 +44,7 @@ public class Player : Photon.PunBehaviour
     [Tooltip("The tag of the wall impacted by the solitude scream")]
     public string solitudeScreamReceiversTag;
 
-    private float currentSadnessScreamRadius;
+    
 
     public enum ScreamType
     {
@@ -59,7 +59,11 @@ public class Player : Photon.PunBehaviour
     }
 
     public Role role;
-    #endregion  //Controls
+
+    [Header("Cinématique")]
+    public bool chuteLibre = false;
+    public bool freezeMove = false;
+    #endregion
 
     #region Private Fields
     private int jumpAmount = 0;
@@ -76,6 +80,10 @@ public class Player : Photon.PunBehaviour
     private float horizontalMovement = 0f;
 
     private Controls control;
+
+    private float currentSadnessScreamRadius;
+
+    private bool dernierCriActive = false;
     #endregion
 
     private void Awake()
@@ -89,7 +97,7 @@ public class Player : Photon.PunBehaviour
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         scale = transform.eulerAngles;
-//        AkSoundEngine.PostEvent("MozTuto", gameObject);
+        //AkSoundEngine.PostEvent("MozTuto", gameObject);
     }
 
     void FixedUpdate()
@@ -365,6 +373,39 @@ public class Player : Photon.PunBehaviour
         control.Deplacement.Disable();
         control.Cri.Disable();
     }
+    #endregion
+
+    #region Cinématique
+    /// <summary>
+    /// s'active au cour de la dernière cinematique
+    /// </summary>
+    public void DernierCri()
+    {
+        dernierCriActive = true;
+    }
+
+    public void ChuteLibre()
+    {
+        freezeMove = true;
+        chuteLibre = !chuteLibre;
+        if (chuteLibre)
+        {
+            rb.gravityScale = 0;
+            rb.velocity -= rb.velocity;
+        }
+        else
+        {
+            rb.gravityScale = 1;
+            StartCoroutine(PosFin());
+        }
+    }
+    private IEnumerator PosFin()
+    {
+        yield return new WaitForSeconds(0.4f);
+        anim.SetBool("positionFinalBool", true);
+
+    }
+
     #endregion
 
     private void OnDrawGizmosSelected()
