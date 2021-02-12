@@ -831,7 +831,7 @@ MonoBehaviour:
   groundCheckingRadius: 0.27
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
   humidityLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -839,7 +839,8 @@ MonoBehaviour:
   curiosityScreamLayer:
     serializedVersion: 2
     m_Bits: 512
-  humidityPrefab: {fileID: 0}
+  humidityPrefab: {fileID: 3750231749875519398, guid: 1397a3b22983ac64981c4b3f63e728dc,
+    type: 3}
   sadnessScreamMinGroundDistance: 1
   sadnessGroundCheckingCenter: {x: 0, y: 0}
   selectedScream: 0
@@ -976,9 +977,30 @@ MonoBehaviour:
   - Type: 4
     SynchronizeType: 2
     Name: Jump
-  - Type: 4
+  - Type: 9
     SynchronizeType: 0
-    Name: positionFinalBool
+    Name: Cornered
+  - Type: 9
+    SynchronizeType: 0
+    Name: Envy
+  - Type: 9
+    SynchronizeType: 0
+    Name: Solitude
+  - Type: 9
+    SynchronizeType: 0
+    Name: Sadness
+  - Type: 9
+    SynchronizeType: 0
+    Name: Compassion
+  - Type: 9
+    SynchronizeType: 0
+    Name: Curiosity
+  - Type: 9
+    SynchronizeType: 0
+    Name: Pride
+  - Type: 9
+    SynchronizeType: 0
+    Name: Joy
   m_SynchronizeLayers:
   - SynchronizeType: 2
     LayerIndex: 0

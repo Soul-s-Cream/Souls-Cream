@@ -5647,10 +5647,10 @@ MonoBehaviour:
   lowJumpMultiplier: 2
   velocityYMax: 50
   groundCheckingCenter: {x: -0.02, y: -0.44}
-  groundCheckingRadius: 0
+  groundCheckingRadius: 0.27
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
   humidityLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -5658,7 +5658,8 @@ MonoBehaviour:
   curiosityScreamLayer:
     serializedVersion: 2
     m_Bits: 512
-  humidityPrefab: {fileID: 0}
+  humidityPrefab: {fileID: 3750231749875519398, guid: 1397a3b22983ac64981c4b3f63e728dc,
+    type: 3}
   sadnessScreamMinGroundDistance: 1
   sadnessGroundCheckingCenter: {x: 0, y: 0}
   selectedScream: 0

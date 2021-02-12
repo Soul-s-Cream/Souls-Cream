@@ -37,14 +37,15 @@ public class Player : Photon.PunBehaviour
     public ScreamType selectedScream;
 
     [Header("Tags (used to get few specifics objects)")]
-    [Tooltip("")]
+    [Tooltip("Tag of white player")]
+    [TagSelector]
     public string whitePlayerTag;
-    [Tooltip("")]
+    [Tooltip("Tag of black player")]
+    [TagSelector]
     public string blackPlayerTag;
     [Tooltip("The tag of the wall impacted by the solitude scream")]
+    [TagSelector]
     public string solitudeScreamReceiversTag;
-
-    
 
     public enum ScreamType
     {
@@ -118,7 +119,7 @@ public class Player : Photon.PunBehaviour
             photonView.RPC("FlipToggleSprite", PhotonTargets.All, true);
             if (isGrounded)
             {
-                AkSoundEngine.PostEvent("MozFootsteps", gameObject);
+                //AkSoundEngine.PostEvent("MozFootsteps", gameObject);
             }
         }
         if (control.Deplacement.Deplacement.ReadValue<float>() == -1)
@@ -126,7 +127,7 @@ public class Player : Photon.PunBehaviour
             photonView.RPC("FlipToggleSprite", PhotonTargets.All, false);
             if (isGrounded)
             {
-                AkSoundEngine.PostEvent("MozFootsteps", gameObject);
+                //AkSoundEngine.PostEvent("MozFootsteps", gameObject);
             }
         }
         if (isGrounded && control.Deplacement.Deplacement.ReadValue<float>() == 0)

@@ -8,6 +8,11 @@ public class FlipCamera : MonoBehaviour
 {
     public Camera m_camera;
 
+    private void Awake()
+    {
+        m_camera = GetComponent<Camera>();
+    }
+
     void OnPreCull()
     {
         m_camera.ResetWorldToCameraMatrix();

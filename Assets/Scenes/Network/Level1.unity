@@ -295,6 +295,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8129701081878228666, guid: b05e64cbfdf801b46b21c544147f32b1,
+        type: 3}
+      propertyPath: viewIdField
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129701081878228666, guid: b05e64cbfdf801b46b21c544147f32b1,
+        type: 3}
+      propertyPath: instantiationId
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b05e64cbfdf801b46b21c544147f32b1, type: 3}
 --- !u!114 &61233113 stripped
@@ -324,7 +334,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 83146738}
-  - component: {fileID: 83146739}
   m_Layer: 0
   m_Name: B Level
   m_TagString: Untagged
@@ -351,24 +360,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!114 &83146739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 83146737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3330871eecbf77d49a6dfd25ad61869b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  filter: 2
-  music:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 66486f3116a06134e8175e6887fb0a97,
-      type: 2}
 --- !u!1001 &171093085
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2114,7 +2105,7 @@ GameObject:
   - component: {fileID: 1396582307}
   - component: {fileID: 1396582309}
   - component: {fileID: 1396582308}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: N plateforme arriere L1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2952,12 +2943,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3330871eecbf77d49a6dfd25ad61869b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filter: 1
+  filter: 0
   music:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: cb51b7b9c3199dd408883ceac289d861,
+    WwiseObjectReference: {fileID: 11400000, guid: bfc16d30d37b2ea4d909b1e756111fa5,
       type: 2}
+  fadeOutTime: 2000
+  stopOnDestroy: 1
 --- !u!1 &1830066672
 GameObject:
   m_ObjectHideFlags: 0
@@ -2968,7 +2961,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1830066673}
   - component: {fileID: 1830066674}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Walls
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -3231,7 +3224,7 @@ GameObject:
   - component: {fileID: 1945257832}
   - component: {fileID: 1945257831}
   - component: {fileID: 1945257830}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: B plateforme arriere L1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3410,6 +3403,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1962452755}
     m_Modifications:
+    - target: {fileID: 2342949522303190331, guid: 843ea6be9d43e804d9fac62312bd1d20,
+        type: 3}
+      propertyPath: viewIdField
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342949522303190331, guid: 843ea6be9d43e804d9fac62312bd1d20,
+        type: 3}
+      propertyPath: instantiationId
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 9147337399559473490, guid: 843ea6be9d43e804d9fac62312bd1d20,
         type: 3}
       propertyPath: sister
