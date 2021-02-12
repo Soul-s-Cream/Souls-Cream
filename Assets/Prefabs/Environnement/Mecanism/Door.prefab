@@ -100,7 +100,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingDirection: 1
   openingTime: 1
-  spriteRender: {fileID: 0}
+  openSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5b51e6f65e4e974428690cdab7cc4fce,
+      type: 2}
 --- !u!61 &3711093793212205131
 BoxCollider2D:
   m_ObjectHideFlags: 0

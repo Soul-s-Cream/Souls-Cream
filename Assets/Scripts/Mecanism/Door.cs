@@ -20,6 +20,7 @@ public class Door : Mecanism
     [Range(0f, 5f)]
     [Tooltip("Durée de l'animation d'ouverture")]
     public float openingTime = 1f;
+    public AK.Wwise.Event openSound;
     #endregion
 
     #region Private Fields
@@ -60,7 +61,11 @@ public class Door : Mecanism
                     break;
             }
 
-            tweenRunning = transform.DOMove(destination, openingTime);
+            tweenRunning = transform.DOMove(destination, openingTime)
+                .OnComplete(StopSoundActivation)
+                .OnKill(StopSoundActivation);
+
+            openSound.Post(gameObject);
         }
     }
 
@@ -68,12 +73,22 @@ public class Door : Mecanism
     {
         if (opening)
         {
+            
             if (tweenRunning != null)
                 tweenRunning.Kill();
             opening = false;
 
-            tweenRunning = transform.DOMove(startPosition, openingTime);
+            tweenRunning = transform.DOMove(startPosition, openingTime)
+                .OnComplete(StopSoundActivation)
+                .OnKill(StopSoundActivation);
+
+            openSound.Post(gameObject);
         }
+    }
+
+    private void StopSoundActivation()
+    {
+        openSound.Stop(gameObject, 200);
     }
 }
 
