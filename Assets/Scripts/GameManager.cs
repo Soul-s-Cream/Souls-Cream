@@ -11,43 +11,49 @@ public enum Role
 
 public class GameManager : Photon.PunBehaviour
 {
-
-    Controls controls;
-
+    #region Private Fields
     private static GameManager _instance;
+    Controls controls;
+    #endregion
 
-    [Tooltip("Le r�le de joueur du Client")]
-    public Role role;
-
+    #region Public Fields
+    [Tooltip("Prefabs à instancier pour le multijoueur")]
     public List<GameObject> PlayerPrefabs;
-    public Queue<Role> RoleToDeal;
-    public List<Transform> SpawnPointsList;
+    public List<SpawnPoint> SpawnPointsList;
+    public GameObject localPlayerInstance;
+    #endregion
 
     /// <summary>
     /// Return the actual instance of the GameManager
     /// </summary>
     public static  GameManager Instance
     {
-        get
-        {
-            return _instance;
-        }
+        get { return _instance; }
     }
+
+    
 
     private void Awake()
     {
-        //Singleton Patter
+        #region Singleton
         if (_instance == null)
             _instance = this;
         else if (_instance != this)
             Destroy(this.gameObject);
 
         DontDestroyOnLoad(this.gameObject);
+        #endregion
 
         controls = new Controls();
-        AddListener();
     }
 
+    private void Start()
+    {
+        AddListener();
+        InstantiatePlayer();
+    }
+
+    #region Ajout des Listeners
     void AddListener()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -57,58 +63,95 @@ public class GameManager : Photon.PunBehaviour
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
+    #endregion
+
+    public void GetSpawnPoints()
+    {
+        SpawnPointsList.Clear();
+        GameObject[] spawns = GameObject.FindGameObjectsWithTag("Spawn");
+        foreach (GameObject spawn in spawns)
+        {
+            SpawnPointsList.Add(spawn.GetComponent<SpawnPoint>());
+        }
+    }
+
+    public void InstantiatePlayer()
+    {
+        GetSpawnPoints();
+        if (PlayerPrefabs == null || PlayerPrefabs.Count == 0)
+        {
+            Debug.LogError("<Color=Red><a>Missing</a></Color> playerPrefab Reference. Please set it up in GameObject 'Game Manager'", this);
+        }
+        else if (SpawnPointsList == null)
+        {
+            Debug.LogWarning("<Color=Red><a>Missing</a></Color> SpawnPoint Reference. No spawning", this);
+        }
+        else if(localPlayerInstance == null)
+        {
+            Debug.Log("We are Instantiating LocalPlayer from " + SceneManager.GetActiveScene().name);
+            string prefabName = "";
+            SpawnPoint spawnPoint = SpawnPointsList[0];
+            Role role = (Role)PhotonNetwork.player.CustomProperties["role"];
+            string roleName = role == Role.BLANC ? "BLANC" : "NOIR";
+            Debug.Log("Local player is " + roleName);
+
+            LoadCameraRole(role);
+
+            //On cherche l'avatar approprié pour le rôle du joueur
+            foreach (GameObject prefab in PlayerPrefabs)
+            {
+                if(prefab.GetComponent<Player>().role == role)
+                {
+                    prefabName = prefab.name;
+                    break;
+                }
+            }
+            //On cherche le point de Spawn appropri� pour l'avatar du joueur
+            foreach(SpawnPoint spawn in SpawnPointsList)
+            {
+                if(spawn.role == role)
+                {
+                    spawnPoint = spawn;
+                    break;
+                }
+            }
+
+            // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.
+            Debug.Log("Instantiating prefab " + prefabName + " for Player " + PhotonNetwork.player.ID);
+            localPlayerInstance = PhotonNetwork.Instantiate(prefabName, spawnPoint.transform.position , Quaternion.identity, 0);
+        }
+    }
+
+    public void LoadCameraRole(Role role)
+    {
+        Debug.Log("No camera set found");
+        if(CameraSets._instance != null)
+        {
+            string roleName = role == Role.BLANC ? "BLANC" : "NOIR";
+            Debug.Log("Loading camera for " + roleName);
+            CameraSets._instance.DisplayCameraRole(role);
+        }
+    }
+
+    public void EndLevel()
+    {
+        Debug.Log("Niveau terminé");
+        NetworkManagerPUN.Instance.LoadScene(2);
+    }
+
+    #region Unity Callbacks
 
     private void OnDestroy()
     {
         RemoveListener();
     }
 
-    private void Update()
-    {
-        if (controls.NetTest.ChangeScene.triggered)
-            ChangeScene();
-    }
-
-    public void ChangeScene()
-    {
-        Debug.Log("Changing scene...");
-        //CustomNetworkManager.singleton.ServerChangeScene("SampleNetworkScene2");
-    }
-
-    public void InstantiatePlayer()
-    {
-        if(PlayerPrefabs == null)
-{
-            Debug.LogError("<Color=Red><a>Missing</a></Color> playerPrefab Reference. Please set it up in GameObject 'Game Manager'", this);
-        }
-        else
-        {
-            Debug.Log("We are Instantiating LocalPlayer from " + SceneManager.GetActiveScene().name);
-            // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.
-            PhotonNetwork.Instantiate(this.PlayerPrefabs[PhotonNetwork.player.ID-1].name, SpawnPointsList[PhotonNetwork.player.ID-1].position, Quaternion.identity, 0);
-        }
-    }
-
     private void OnSceneLoaded(Scene scene, LoadSceneMode loadMode)
     {
-        SpawnPointsList.Clear();
-        GameObject[] spawns = GameObject.FindGameObjectsWithTag("Spawn");
-        if (spawns[0].GetComponent<SpawnPoint>().role == Role.BLANC)
-        {
-            SpawnPointsList.Add(spawns[0].transform);
-            SpawnPointsList.Add(spawns[1].transform);
-        }
-        else
-        {
-            SpawnPointsList.Add(spawns[1].transform);
-            SpawnPointsList.Add(spawns[0].transform);
-        }
-
+        Debug.Log("On Scene Loaded");
+        
         InstantiatePlayer();
     }
- 
-    public void EndLevel()
-    {
-        Debug.Log("Niveau termin�");
-    }
+
+    #endregion
 }

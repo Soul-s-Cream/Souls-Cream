@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3758f8f58fdef43803eb9be1df0608, type: 3}
   m_Name: PhotonServerSettings
   m_EditorClassIdentifier: 
-  AppID: 
+  AppID: 086ce474-c102-4bf0-b0d5-8a750c24000b
   VoiceAppID: 
   ChatAppID: 
-  HostType: 0
+  HostType: 1
   PreferredRegion: 0
   EnabledRegions: -1
   Protocol: 0
@@ -33,6 +33,7 @@ MonoBehaviour:
   - DestroyRpc
   - DoJump
   - Flash
+  - FlipToggleSprite
   - InstantiateRpc
   - Marco
   - PickupItemInit
@@ -42,5 +43,15 @@ MonoBehaviour:
   - PunRespawn
   - RequestForPickupItems
   - RequestForPickupTimes
+  - SwitchOn
+  - SwitchOff
   - TaggedPlayer
+  - CompassionScream
+  - CorneredScream
+  - CuriosityScream
+  - EnvyScream
+  - JoyScream
+  - PrideScream
+  - SadnessScream
+  - SolitudeScream
   DisableAutoOpenWizard: 1

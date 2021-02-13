@@ -20,7 +20,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 6ddfd5d04cfa8942bf4fd4d8ac93123f
     GuidInternal: 
-    m_lastTime: -8585895842250852815
+    m_lastTime: -8585890719551774450
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -30,7 +30,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: decf5895b2d13846b0aa0701cd5fbb4e
     GuidInternal: 
-    m_lastTime: -8585895842251631033
+    m_lastTime: -8585890719555305017
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -49,7 +49,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 338a40dff62d0c4b8fe84e8994defc20
     GuidInternal: 
-    m_lastTime: -8585893888657381337
+    m_lastTime: -8585889753205681215
     List:
     - name: Main
       guid: 3085d8906006fc43b479a58e3dc0504e
@@ -68,7 +68,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: a3e106a80bc5484598947af11861b916
     GuidInternal: 
-    m_lastTime: -8585893451359898163
+    m_lastTime: -8585888137355772369
     List:
     - name: Acculation
       guid: 8d5a9d35caa05d4ba2fd12e71d93e2e3
@@ -83,6 +83,20 @@ MonoBehaviour:
       - ElementName: Acculation
         ObjectType: 3
       Path: Default Work Unit\Moz\Screams\Acculation
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Back
+      guid: a9ed11fa6fd712439f9ff24fef762373
+      id: 1559875400
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MenuVoices
+        ObjectType: 4
+      - ElementName: Back
+        ObjectType: 3
+      Path: Default Work Unit\MenuVoices\Back
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -116,6 +130,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Credits
+      guid: aed7c71f9ed132439d30ae26ff122545
+      id: 2201105581
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MenuVoices
+        ObjectType: 4
+      - ElementName: Credits
+        ObjectType: 3
+      Path: Default Work Unit\MenuVoices\Credits
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Curiosite
       guid: 1766a51301d8f94882fbbaee28c59314
       id: 396009128
@@ -129,6 +157,20 @@ MonoBehaviour:
       - ElementName: Curiosite
         ObjectType: 3
       Path: Default Work Unit\Oz\Screams\Curiosite
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Disconnect
+      guid: 4f270ec1baaccb4eade2f4d10ac12005
+      id: 480594535
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MenuVoices
+        ObjectType: 4
+      - ElementName: Disconnect
+        ObjectType: 3
+      Path: Default Work Unit\MenuVoices\Disconnect
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -164,17 +206,45 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Interruptor
-      guid: f7c20885b91072478159c654a5586ebc
-      id: 132381101
+    - name: Host
+      guid: 2774585263983441991f3fd8e43919b0
+      id: 3617624947
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MenuVoices
+        ObjectType: 4
+      - ElementName: Host
+        ObjectType: 3
+      Path: Default Work Unit\MenuVoices\Host
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: InterruptorHeavy
+      guid: ee2f7f0da3fb044eb32800cd4da802bb
+      id: 10711758
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: Objects
         ObjectType: 4
-      - ElementName: Interruptor
+      - ElementName: InterruptorHeavy
         ObjectType: 3
-      Path: Default Work Unit\Objects\Interruptor
+      Path: Default Work Unit\Objects\InterruptorHeavy
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: InterruptorHigh
+      guid: f7c20885b91072478159c654a5586ebc
+      id: 2112482585
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Objects
+        ObjectType: 4
+      - ElementName: InterruptorHigh
+        ObjectType: 3
+      Path: Default Work Unit\Objects\InterruptorHigh
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -191,6 +261,32 @@ MonoBehaviour:
       - ElementName: Joie
         ObjectType: 3
       Path: Default Work Unit\Oz\Screams\Joie
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Join
+      guid: 192000b14e855948a2edfd25e74b0cf5
+      id: 3695193445
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MenuVoices
+        ObjectType: 4
+      - ElementName: Join
+        ObjectType: 3
+      Path: Default Work Unit\MenuVoices\Join
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: MenuVoices
+      guid: bab4b89071bf674a8cd5c219b9d39b78
+      id: 3196512249
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MenuVoices
+        ObjectType: 4
+      Path: Default Work Unit\MenuVoices
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -248,6 +344,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: MozLarme
+      guid: 66775b991ba1d447bb156d1cf7ee53b1
+      id: 3574164184
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Moz
+        ObjectType: 4
+      - ElementName: MozLarme
+        ObjectType: 3
+      Path: Default Work Unit\Moz\MozLarme
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: MozTuto
       guid: 2ac032d77f21d34fab011ed43d4225ae
       id: 1861470019
@@ -260,6 +370,48 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: NewScreamUnlocked
+      guid: aa1c9cd020d41b48bb0d33cda4d147bd
+      id: 1671407757
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Objects
+        ObjectType: 4
+      - ElementName: NewScreamUnlocked
+        ObjectType: 3
+      Path: Default Work Unit\Objects\NewScreamUnlocked
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Next
+      guid: 8b6b21ea95293d49a706ef4962c6802f
+      id: 982796106
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MenuVoices
+        ObjectType: 4
+      - ElementName: Next
+        ObjectType: 3
+      Path: Default Work Unit\MenuVoices\Next
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: NotReady
+      guid: 6c14f471f84f1e439fc691bba7d57892
+      id: 3176198653
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MenuVoices
+        ObjectType: 4
+      - ElementName: NotReady
+        ObjectType: 3
+      Path: Default Work Unit\MenuVoices\NotReady
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Objects
       guid: 4d2a1ba9c5c4694ea18901b0f9c70390
       id: 1695690031
@@ -269,6 +421,20 @@ MonoBehaviour:
       - ElementName: Objects
         ObjectType: 4
       Path: Default Work Unit\Objects
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: OpenGate
+      guid: 6dd0791f0411894dbbbfb073e0569945
+      id: 604601532
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Objects
+        ObjectType: 4
+      - ElementName: OpenGate
+        ObjectType: 3
+      Path: Default Work Unit\Objects\OpenGate
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -340,6 +506,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: OzMozEndSong
+      guid: 7846d45dcbf8e443a5a1b760d2115aea
+      id: 1579895492
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: OzMozEndSong
+        ObjectType: 3
+      Path: Default Work Unit\OzMozEndSong
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: OzMozMenuTheme
       guid: c07ec3b9b4a6fc49884750b455193ba5
       id: 3278785808
@@ -376,17 +554,59 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Screams
-      guid: ea00767fc2e36347a651d5a72f1c5943
-      id: 2812860249
+    - name: PLAY
+      guid: 53b98520b6aa904bbaaccd607f272dad
+      id: 1256202815
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Oz
+      - ElementName: MenuVoices
         ObjectType: 4
-      - ElementName: Screams
+      - ElementName: PLAY
+        ObjectType: 3
+      Path: Default Work Unit\MenuVoices\PLAY
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play2
+      guid: 0a7d615550043f4080003b74fa0929e7
+      id: 500558111
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MenuVoices
         ObjectType: 4
-      Path: Default Work Unit\Oz\Screams
+      - ElementName: Play2
+        ObjectType: 3
+      Path: Default Work Unit\MenuVoices\Play2
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Quit
+      guid: 4bbc6504817a004fa532c8bf9b48736a
+      id: 3930794392
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MenuVoices
+        ObjectType: 4
+      - ElementName: Quit
+        ObjectType: 3
+      Path: Default Work Unit\MenuVoices\Quit
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Ready
+      guid: 2e6f6b444c906040b7583fc1827ad8d1
+      id: 3701637754
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MenuVoices
+        ObjectType: 4
+      - ElementName: Ready
+        ObjectType: 3
+      Path: Default Work Unit\MenuVoices\Ready
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -404,6 +624,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Screams
+      guid: ea00767fc2e36347a651d5a72f1c5943
+      id: 2812860249
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Oz
+        ObjectType: 4
+      - ElementName: Screams
+        ObjectType: 4
+      Path: Default Work Unit\Oz\Screams
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Solitude
       guid: 1743b4e0f3cc3346b46c908721b0f0b2
       id: 2952898430
@@ -417,6 +651,20 @@ MonoBehaviour:
       - ElementName: Solitude
         ObjectType: 3
       Path: Default Work Unit\Moz\Screams\Solitude
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Swap
+      guid: be97f5cca37c464ab1752f533d043c3d
+      id: 286100424
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MenuVoices
+        ObjectType: 4
+      - ElementName: Swap
+        ObjectType: 3
+      Path: Default Work Unit\MenuVoices\Swap
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -444,8 +692,26 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: c69f70ce3ee3f443b8d3fc03c4bc2167
     GuidInternal: 
-    m_lastTime: -8585895842251641013
-    List: []
+    m_lastTime: -8585888137355762373
+    List:
+    - name: PlayerMoving
+      guid: e91745d28ac7ca4a9749463bf551bf6e
+      id: 545959236
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PlayerMoving
+        ObjectType: 13
+      Path: Default Work Unit\PlayerMoving
+    - name: WetFloor
+      guid: 694ba601374a404ea27a189f056bb60f
+      id: 34521763
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: WetFloor
+        ObjectType: 13
+      Path: Default Work Unit\WetFloor
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -454,7 +720,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 7b76c7a5a23e3e499aa16bf43b47532b
     GuidInternal: 
-    m_lastTime: -8585893451336333266
+    m_lastTime: -8585888137351790672
     List:
     - name: CrateMoving
       guid: 9e07556062f2f7429cf246c1e7588b9b
@@ -480,6 +746,37 @@ MonoBehaviour:
           ObjectType: 8
       - name: Stop
         guid: f723521aaa0f004ba4cd8358057953ef
+        id: 788884573
+        PathAndIcons:
+        - ElementName: Stop
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: MusicPlayStop
+      guid: b56c656459d02f44ac97dafb51a01bd4
+      id: 2648525292
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicPlayStop
+        ObjectType: 9
+      Path: Default Work Unit\MusicPlayStop
+      values:
+      - name: None
+        guid: 9ced705031706a43aa99317a7fb416eb
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      - name: Play
+        guid: d543aae88b838548a76b09ff38a29218
+        id: 1256202815
+        PathAndIcons:
+        - ElementName: Play
+          ObjectType: 8
+      - name: Stop
+        guid: e1509483dcbfe84da058eb146d972fac
         id: 788884573
         PathAndIcons:
         - ElementName: Stop
@@ -518,6 +815,37 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
+    - name: PlayerMoving
+      guid: b2ef35c98edd3340925ed11f1d2f6049
+      id: 545959236
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PlayerMoving
+        ObjectType: 9
+      Path: Default Work Unit\PlayerMoving
+      values:
+      - name: Moving
+        guid: 2a706635e5dbf14c8aeddb04c413c899
+        id: 2649703675
+        PathAndIcons:
+        - ElementName: Moving
+          ObjectType: 8
+      - name: None
+        guid: 3ebe4c1b1efeb24ea41d86e0dc796964
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      - name: Stop
+        guid: 954fff508a520246b9f78edd190a81c9
+        id: 788884573
+        PathAndIcons:
+        - ElementName: Stop
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -526,7 +854,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 75d3efbb85bcd1458ff98f71dfe140ae
     GuidInternal: 
-    m_lastTime: -8585894891448621663
+    m_lastTime: -8585890719551784425
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -536,8 +864,11 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 9c00831b33eb1a4ab6ea268706b8fad4
     GuidInternal: 
-    m_lastTime: -8585895842250852815
+    m_lastTime: -8585890719551774450
     List: []
-  ExpandedItems: []
+  ExpandedItems:
+  - /Souls-Cream_WwiseProject
+  - /Souls-Cream_WwiseProject/SoundBanks
+  - /Souls-Cream_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

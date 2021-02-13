@@ -20,6 +20,23 @@
 						<State Name="Stop" ID="{1A5223F7-0FAA-4B00-A4CD-8358057953EF}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="MusicPlayStop" ID="{64656CB5-D059-442F-AC97-DAFB51A01BD4}">
+					<ChildrenList>
+						<State Name="None" ID="{5070ED9C-7031-436A-AA99-317A7FB416EB}"/>
+						<State Name="Play" ID="{E8AA43D5-838B-4885-A76B-09FF38A29218}"/>
+						<State Name="Stop" ID="{839450E1-BFDC-4DE8-A058-EB146D972FAC}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="PlayerMoving" ID="{C935EFB2-DD8E-4033-925E-D11F1D2F6049}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{1B4CBE3E-FE1E-4EB2-A41D-86E0DC796964}"/>
+						<State Name="Moving" ID="{3566702A-DBE5-4CF1-8AED-DB04C413C899}"/>
+						<State Name="Stop" ID="{50FF4F95-528A-4602-B9F7-8EDD190A81C9}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

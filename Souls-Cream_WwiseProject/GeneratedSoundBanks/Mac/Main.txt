@@ -1,53 +1,100 @@
 Event	ID	Name			Wwise Object Path	Notes
-	132381101	Interruptor			\Default Work Unit\Objects\Interruptor	
+	10711758	InterruptorHeavy			\Default Work Unit\Objects\InterruptorHeavy	
+	286100424	Swap			\Default Work Unit\MenuVoices\Swap	
 	313744885	MozJump			\Default Work Unit\Moz\MozJump	
 	396009128	Curiosite			\Default Work Unit\Oz\Screams\Curiosite	
+	480594535	Disconnect			\Default Work Unit\MenuVoices\Disconnect	
+	500558111	Play2			\Default Work Unit\MenuVoices\Play2	
 	567465712	OzTuto			\Default Work Unit\OzTuto	
+	604601532	OpenGate			\Default Work Unit\Objects\OpenGate	
 	773707930	MozFootsteps			\Default Work Unit\Moz\MozFootsteps	
 	783075190	MozLanding			\Default Work Unit\Moz\MozLanding	
+	982796106	Next			\Default Work Unit\MenuVoices\Next	
 	1035518595	OzLanding			\Default Work Unit\Oz\OzLanding	
+	1256202815	PLAY			\Default Work Unit\MenuVoices\PLAY	
+	1559875400	Back			\Default Work Unit\MenuVoices\Back	
+	1579895492	OzMozEndSong			\Default Work Unit\OzMozEndSong	
 	1595060770	OzJump			\Default Work Unit\Oz\OzJump	
+	1671407757	NewScreamUnlocked			\Default Work Unit\Objects\NewScreamUnlocked	
 	1698034228	Envie			\Default Work Unit\Moz\Screams\Envie	
 	1861470019	MozTuto			\Default Work Unit\MozTuto	
 	1891947077	OzDoubleJump			\Default Work Unit\Oz\OzDoubleJump	
 	2054371306	Fierte			\Default Work Unit\Oz\Screams\Fierte	
+	2112482585	InterruptorHigh			\Default Work Unit\Objects\InterruptorHigh	
+	2201105581	Credits			\Default Work Unit\MenuVoices\Credits	
 	2316268318	Acculation			\Default Work Unit\Moz\Screams\Acculation	
 	2411999260	CrateFriction			\Default Work Unit\Objects\CrateFriction	
 	2515146559	OzFootsteps			\Default Work Unit\Oz\OzFootsteps	
 	2952898430	Solitude			\Default Work Unit\Moz\Screams\Solitude	
 	3147785334	OzMozThemeAmbiences			\Default Work Unit\OzMozThemeAmbiences	
+	3176198653	NotReady			\Default Work Unit\MenuVoices\NotReady	
 	3278785808	OzMozMenuTheme			\Default Work Unit\OzMozMenuTheme	
 	3375131777	Tristesse			\Default Work Unit\Moz\Screams\Tristesse	
+	3574164184	MozLarme			\Default Work Unit\Moz\MozLarme	
+	3617624947	Host			\Default Work Unit\MenuVoices\Host	
+	3695193445	Join			\Default Work Unit\MenuVoices\Join	
 	3695193454	Joie			\Default Work Unit\Oz\Screams\Joie	
+	3701637754	Ready			\Default Work Unit\MenuVoices\Ready	
+	3930794392	Quit			\Default Work Unit\MenuVoices\Quit	
 	4224289095	Compassion			\Default Work Unit\Oz\Screams\Compassion	
 
 State Group	ID	Name			Wwise Object Path	Notes
+	545959236	PlayerMoving			\Default Work Unit\PlayerMoving	
+	2648525292	MusicPlayStop			\Default Work Unit\MusicPlayStop	
 	3302081756	CrateMoving			\Default Work Unit\CrateMoving	
 
 State	ID	Name	State Group			Notes
+	748895195	None	PlayerMoving			
+	788884573	Stop	PlayerMoving			
+	2649703675	Moving	PlayerMoving			
+	748895195	None	MusicPlayStop			
+	788884573	Stop	MusicPlayStop			
+	1256202815	Play	MusicPlayStop			
 	748895195	None	CrateMoving			
 	788884573	Stop	CrateMoving			
 	2649703675	Moving	CrateMoving			
 
 Custom State	ID	Name	State Group	Owner		Notes
+	34385856	Stop	MusicPlayStop	\Interactive Music Hierarchy\Default Work Unit\OzMozThemeAmbience		
+	525180304	Stop	MusicPlayStop	\Interactive Music Hierarchy\Default Work Unit\OzTuto		
+	535870939	Stop	PlayerMoving	\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozFootstepsWet		
+	568312194	Stop	PlayerMoving	\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozFootsteps		
+	636462510	Stop	CrateMoving	\Actor-Mixer Hierarchy\Default Work Unit\Objects\CrateFrictionWet		
 	694063259	Stop	CrateMoving	\Actor-Mixer Hierarchy\Default Work Unit\Objects\CrateFriction		
+	722079427	Stop	MusicPlayStop	\Interactive Music Hierarchy\Default Work Unit\OzMozMenuTheme		
+	891359592	Stop	MusicPlayStop	\Interactive Music Hierarchy\Default Work Unit\MozTuto		
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	34521763	WetFloor			\Default Work Unit\WetFloor	
+	545959236	PlayerMoving			\Default Work Unit\PlayerMoving	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	20390223	LarmesMoz_03	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\LarmesMoz_D7A3976B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozLarme\LarmesMoz_03		59108
+	21678370	OzMozAmbienceTheme	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\OzMozAmbienceTheme_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\OzMozThemeAmbience\ambiences plateaux\OzMozAmbienceTheme		6912224
 	30785870	Envie	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Envie_EC6248D1.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamMoz\Envie\Envie		299236
 	31055670	MozFootsteps_03	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\PlayerMozFootsteps_C44C71A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozFootsteps\MozFootsteps_03		25896
 	53780424	Fierte_02	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Fierté2_EF3E6159.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamOz\Fierte\Fierte_02		254328
 	57836437	Solitude	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Solitude_9337C1D4.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamMoz\Solitude\Solitude		162408
 	60450093	Acculation_02	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Acculation_1F096FC2.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamMoz\Acculation\Acculation_02		272040
+	70583681	Disconnect	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Menu Voices_DCF95EDD.wem		\Actor-Mixer Hierarchy\Default Work Unit\MenuVoices\Disconnect		244000
+	72853813	MozFootstepsWet2	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\MozFootstepsWet_E4E559D3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozFootstepsWet\MozFootstepsWet2		48944
 	80023791	MozTutoV2	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\MozTutoV2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MozTuto\MozTutoV2		12288272
+	101099822	MozFootstepsWet1	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\MozFootstepsWet_07D64CBA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozFootstepsWet\MozFootstepsWet1		47112
+	104434262	Play2	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Menu Voices_8302121D.wem		\Actor-Mixer Hierarchy\Default Work Unit\MenuVoices\Play2		269020
+	132019384	Join	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Menu Voices_A485F43A.wem		\Actor-Mixer Hierarchy\Default Work Unit\MenuVoices\Join		168944
 	136186369	OzLanding	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\PlayerOzJump_552D154C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Oz\OzLanding		21480
+	149137566	NewScreamUnlocked	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\NewScreamUnlocked_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\NewScreamUnlocked		1344144
 	150424399	Fierte	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Fierté2_AECC02D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamOz\Fierte\Fierte		204996
-	167913592	Interruptor1	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Interruptor_5E9C9814.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\Interruptor\Interruptor1		40828
-	190532320	Interruptor2	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Interruptor_9B63C4FD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\Interruptor\Interruptor2		38788
+	161831740	MozFootstepsWet3	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\MozFootstepsWet_7C902752.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozFootstepsWet\MozFootstepsWet3		48484
+	167913592	Interruptor1	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Interruptor_5E9C9814.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\InterruptorHigh\Interruptor1		40828
+	190532320	Interruptor2	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Interruptor_9B63C4FD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\InterruptorHigh\Interruptor2		38788
 	206612315	Solitude_02	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Solitude_2CD05248.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamMoz\Solitude\Solitude_02		213008
 	210463932	Curiosité_02	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Curiosité_F80FB928.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamOz\Curiosite\Curiosité_02		96204
+	213501784	OzAmbienceTheme	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\OzAmbienceTheme_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\OzMozThemeAmbience\ambiences plateaux\OzAmbienceTheme		6912224
 	225508645	Joie	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Joie_5E3213C9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Oz\OzDoubleJump\ScreamDoubleJump\Joie		81024
 	240533999	Joie_01	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Joie_C52B9684.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamOz\Joie\Joie_01		119256
 	241080445	MozJump3	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\PlayerMozJump_57DEBAAB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozJump\MozJump3		54460
+	268320748	Next	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Menu Voices_B0A865E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\MenuVoices\Next		138928
 	269640153	MozLanding2	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\PlayerMozJump_EB29DED1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozLanding\MozLanding2		48416
 	284632716	Joie_02	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Joie_9DA89B45.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamOz\Joie\Joie_02		101264
 	285008469	Acculation_01	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Acculation_C6233727.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamMoz\Acculation\Acculation_01		262972
@@ -55,6 +102,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	299611119	Compassion_02	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Compassion_F067829C.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamOz\Compassion\Compassion_02		333288
 	305168362	Tristesse	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Tristesse_66BC4A00.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamMoz\Tristesse\Tristesse		294248
 	323730778	OzMozMenuTheme	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\OzMozMenuTheme_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\OzMozMenuTheme\OzMozMenuTheme\OzMozMenuTheme		12160192
+	329682438	OpenGate_02	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\PorteOuverture_AEDE31E7.wem		\Actor-Mixer Hierarchy\Default Work Unit\OpenGate\OpenGate_02		459120
 	333600656	Envie_01	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Envie_16892D2B.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamMoz\Envie\Envie_01		288804
 	340180847	OzFootsteps1	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\PlayerOzFootsteps_5B7EF906.wem		\Actor-Mixer Hierarchy\Default Work Unit\Oz\OzFootsteps\OzFootsteps1		7196
 	349596643	Compassion_01	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Compassion_03EDAA98.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamOz\Compassion\Compassion_01		421384
@@ -63,37 +111,59 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	373510585	Envie_03	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Envie_2DD37689.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamMoz\Envie\Envie_03		337504
 	383526885	OzFootsteps4	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\PlayerOzFootsteps_E70003E7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Oz\OzFootsteps\OzFootsteps4		6624
 	396106840	Compassion	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Compassion_4E0C5D31.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamOz\Compassion\Compassion		386912
+	431094485	NotReady	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Menu Voices_51FD4A9D.wem		\Actor-Mixer Hierarchy\Default Work Unit\MenuVoices\NotReady		256508
 	454457796	Joie_02	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Joie_F526A7D6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Oz\OzDoubleJump\ScreamDoubleJump\Joie_02		76528
+	455910488	Back	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Menu Voices_19AE7245.wem		\Actor-Mixer Hierarchy\Default Work Unit\MenuVoices\Back		131416
 	461476743	Tristesse_01	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Tristesse_621426D8.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamMoz\Tristesse\Tristesse_01		297448
 	465776081	CrateFriction1	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\CrateFriction_B1DD9702.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\CrateFriction\CrateFriction1		809028
 	482076826	Joie	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Joie_1068D6CD.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamOz\Joie\Joie		94596
 	488237281	Joie_03	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Joie_6F6C18AC.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamOz\Joie\Joie_03		137248
-	497282913	OzThemeAmbience	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\ambiences plateaux\OzThemeAmbience_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\OzMozThemeAmbience\ambiences plateaux\OzThemeAmbience		6912192
-	526442740	OzMozThemAmbience	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\ambiences plateaux\OzMozThemAmbience_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\OzMozThemeAmbience\ambiences plateaux\OzMozThemAmbience		6912192
 	526605256	MozJump1	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\PlayerMozJump_6E55FBA6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozJump\MozJump1		72592
+	531807002	LarmesMoz_02	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\LarmesMoz_C5960E0D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozLarme\LarmesMoz_02		49448
 	534699211	MozFootsteps_04	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\PlayerMozFootsteps_03957B3B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozFootsteps\MozFootsteps_04		29720
 	538573252	Acculation	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Acculation_A6783D39.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamMoz\Acculation\Acculation		232756
 	538901042	Acculation_03	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Acculation_F030CF85.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamMoz\Acculation\Acculation_03		311324
 	550278455	OzFootsteps3	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\PlayerOzFootsteps_EDC6B6D9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Oz\OzFootsteps\OzFootsteps3		6052
+	557949847	CrateFrictionWet_01	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\CrateFrictionWet_230D2EB5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\CrateFrictionWet\CrateFrictionWet_01		968708
+	561214518	MozFootstepsWet5	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\MozFootstepsWet_E711CD2E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozFootstepsWet\MozFootstepsWet5		52140
+	568339149	MozAmbienceTheme	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\MozAmbienceTheme_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\OzMozThemeAmbience\ambiences plateaux\MozAmbienceTheme		6912224
 	579854240	Joie_03	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Joie_70F3D677.wem		\Actor-Mixer Hierarchy\Default Work Unit\Oz\OzDoubleJump\ScreamDoubleJump\Joie_03		83272
-	585976924	Interruptor3	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Interruptor_EF5ADE14.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\Interruptor\Interruptor3		43884
+	585976924	Interruptor3	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Interruptor_EF5ADE14.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\InterruptorHigh\Interruptor3		43884
+	621290499	LarmesMoz_01	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\LarmesMoz_3478A238.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozLarme\LarmesMoz_01		45152
 	626046583	MozFootsteps_02	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\PlayerMozFootsteps_11AFD5D9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozFootsteps\MozFootsteps_02		29720
 	629518556	MozLanding1	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\PlayerMozJump_F3B320D9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozLanding\MozLanding1		39348
+	629603167	LarmesMoz_07	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\LarmesMoz_38CF81DE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozLarme\LarmesMoz_07		61252
 	651849547	Solitude_01	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Solitude_B74686AF.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamMoz\Solitude\Solitude_01		194032
 	691460036	MozFootsteps_05	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\PlayerMozFootsteps_234E2D56.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozFootsteps\MozFootsteps_05		35940
 	694567900	CrateFriction2	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\CrateFriction_B3F2D557.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\CrateFriction\CrateFriction2		969192
 	713776206	Fierte_01	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Fierté2_28E9D432.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamOz\Fierte\Fierte_01		168944
+	725877669	LarmesMoz_04	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\LarmesMoz_9EE7E6CD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozLarme\LarmesMoz_04		40856
 	732767810	MozJump2	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\PlayerMozJump_33CEA9B4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozJump\MozJump2		51440
-	777475882	MozThemeAmbience	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\ambiences plateaux\MozThemeAmbience_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\OzMozThemeAmbience\ambiences plateaux\MozThemeAmbience		6912192
+	743192087	OzMozEndTheme	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\OzMozEndTheme_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\OzMozEndSong\OzMozEndTheme		12288320
+	816920437	OpenGate	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\PorteOuverture_F97A1E9E.wem		\Actor-Mixer Hierarchy\Default Work Unit\OpenGate\OpenGate		484984
 	821152830	Curiosité	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Curiosité_EDB17340.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamOz\Curiosite\Curiosité		108012
+	827214385	Swap	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Menu Voices_C7111403.wem		\Actor-Mixer Hierarchy\Default Work Unit\MenuVoices\Swap		125160
 	843786119	OzJump	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\PlayerOzJump_36B4C025.wem		\Actor-Mixer Hierarchy\Default Work Unit\Oz\OzJump		30260
+	848601756	LarmesMoz_08	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\LarmesMoz_C2152A00.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozLarme\LarmesMoz_08		48368
 	849442749	MozFootsteps	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\PlayerMozFootsteps_2E6E780A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozFootsteps\MozFootsteps		28764
+	853797293	Credits	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Menu Voices_0DC284A7.wem		\Actor-Mixer Hierarchy\Default Work Unit\MenuVoices\Credits		181452
 	858844633	Tristesse_02	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Tristesse_272E7115.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamMoz\Tristesse\Tristesse_02		294248
 	867340386	Curiosité_01	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Curiosité_6BAAE1C4.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamOz\Curiosite\Curiosité_01		60784
 	869900004	Compassion_03	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Compassion_F482DB1D.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamOz\Compassion\Compassion_03		402228
+	886444032	MozFootstepsWet4	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\MozFootstepsWet_CD2ED21F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozFootstepsWet\MozFootstepsWet4		45744
 	894112917	MozFootsteps_01	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\PlayerMozFootsteps_8D8F08A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozFootsteps\MozFootsteps_01		19676
+	906615684	Quit	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Menu Voices_4168ACC8.wem		\Actor-Mixer Hierarchy\Default Work Unit\MenuVoices\Quit		125160
+	908551886	PLAY	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Menu Voices_7A292EBE.wem		\Actor-Mixer Hierarchy\Default Work Unit\MenuVoices\PLAY		168940
+	910675003	Host	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Menu Voices_9FD5F238.wem		\Actor-Mixer Hierarchy\Default Work Unit\MenuVoices\Host		118904
 	941325618	Envie_02	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Envie_14A6C608.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamMoz\Envie\Envie_02		288804
+	943190417	OpenGate_01	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\PorteOuverture_90D46854.wem		\Actor-Mixer Hierarchy\Default Work Unit\OpenGate\OpenGate_01		533476
+	962922270	LarmesMoz	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\LarmesMoz_92A41F69.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozLarme\LarmesMoz		31196
+	965584582	LarmesMoz_05	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\LarmesMoz_DAEE5D02.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozLarme\LarmesMoz_05		59108
+	975142216	MozFootstepsWet6	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\MozFootstepsWet_C9AAA242.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozFootstepsWet\MozFootstepsWet6		68132
 	987408608	Tristesse_03	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Tristesse_F4D41E07.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamMoz\Tristesse\Tristesse_03		275064
+	1001770249	CrateFrictionWet	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\CrateFrictionWet_A3E6A7D4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\CrateFrictionWet\CrateFrictionWet		828092
+	1011164212	LarmesMoz_06	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\LarmesMoz_A16D1396.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozLarme\LarmesMoz_06		50516
 	1017059933	OzFootsteps2	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\PlayerOzFootsteps_FDC90899.wem		\Actor-Mixer Hierarchy\Default Work Unit\Oz\OzFootsteps\OzFootsteps2		5772
+	1043257698	Ready	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\Menu Voices_DD8FE6CD.wem		\Actor-Mixer Hierarchy\Default Work Unit\MenuVoices\Ready		200216
 	1070454862	OzDoubleJump	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\SFX\PlayerOzJump_062C1249.wem		\Actor-Mixer Hierarchy\Default Work Unit\Oz\OzDoubleJump\OzDoubleJump		31520
 

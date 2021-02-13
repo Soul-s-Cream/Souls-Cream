@@ -1,8 +1,16 @@
 State Group	ID	Name			Wwise Object Path	Notes
+	545959236	PlayerMoving			\Default Work Unit\PlayerMoving	
+	2648525292	MusicPlayStop			\Default Work Unit\MusicPlayStop	
 	3302081756	CrateMoving			\Default Work Unit\CrateMoving	
 	3961447175	OzMozThemeAmbience			\Default Work Unit\OzMozThemeAmbience	
 
 State	ID	Name	State Group			Notes
+	748895195	None	PlayerMoving			
+	788884573	Stop	PlayerMoving			
+	2649703675	Moving	PlayerMoving			
+	748895195	None	MusicPlayStop			
+	788884573	Stop	MusicPlayStop			
+	1256202815	Play	MusicPlayStop			
 	748895195	None	CrateMoving			
 	788884573	Stop	CrateMoving			
 	2649703675	Moving	CrateMoving			

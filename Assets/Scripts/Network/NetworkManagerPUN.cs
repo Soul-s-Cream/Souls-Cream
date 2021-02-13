@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 public class NetworkManagerPUN : Photon.PunBehaviour
 {
@@ -13,6 +14,17 @@ public class NetworkManagerPUN : Photon.PunBehaviour
     public static NetworkManagerPUN Instance
     {
         get { return _instance; }
+    }
+
+    public bool offlineMode;
+
+    public bool OfflineMode
+    {
+        set
+        {
+            offlineMode = value;
+            PhotonNetwork.offlineMode = offlineMode;
+        }
     }
     #endregion
 
@@ -30,6 +42,8 @@ public class NetworkManagerPUN : Photon.PunBehaviour
 
     private void Start()
     {
+        PhotonNetwork.offlineMode = offlineMode;
+
         if (!PhotonNetwork.connected)
         {
             PhotonNetwork.ConnectUsingSettings(gameVersion);
@@ -56,6 +70,23 @@ public class NetworkManagerPUN : Photon.PunBehaviour
         return false;
     }
 
+    public void LoadScene(int levelId)
+    {
+        PhotonNetwork.LoadLevel(levelId);
+    }
+
+    public void SwitchRole()
+    {
+        Debug.Log("Switching Roles");
+        Role role = (Role)PhotonNetwork.player.CustomProperties["role"];
+        Hashtable paramCustom = new Hashtable
+        {
+            { "role", role == Role.BLANC ? Role.NOIR : Role.BLANC } 
+        };
+
+        PhotonNetwork.player.SetCustomProperties(paramCustom);
+    }
+
     #region Photon.PunBehaviour Callbacks
 
     public override void OnConnectedToMaster()
@@ -77,15 +108,69 @@ public class NetworkManagerPUN : Photon.PunBehaviour
     public override void OnJoinedRoom()
     {
         Debug.Log("Photon : Joined a room as Player " + PhotonNetwork.player.ID);
-        // GameManager.Instance.InstantiatePlayer();
+
+        Hashtable paramPlayer = new Hashtable
+        {
+            { "role", "0" }
+        };
+
+        if (PhotonNetwork.player.IsMasterClient)
+        {
+            paramPlayer["role"] = Role.BLANC;
+        }
+        else
+        {
+            Role roleMaster = (Role)PhotonNetwork.masterClient.CustomProperties["role"];
+            paramPlayer["role"] = roleMaster == Role.BLANC ? Role.NOIR : Role.BLANC;
+        }
+
+        string roleNameDebug = "";
+        switch (paramPlayer["role"])
+        {
+            case Role.BLANC:
+                roleNameDebug = "BLANC";
+                break;
+            case Role.NOIR:
+                roleNameDebug = "NOIR";
+                break;
+        }
+        Debug.Log("Change role of Player " + PhotonNetwork.player.ID + " to " + roleNameDebug);
+
+        PhotonNetwork.player.SetCustomProperties(paramPlayer);
     }
 
     public override void OnPhotonPlayerConnected(PhotonPlayer newPlayer)
     {
-        Debug.Log("Photon : player "+ newPlayer.ID +" joined the room");
+        Debug.Log("Photon : player " + newPlayer.ID + " joined the room");
     }
 
-    
+    public override void OnPhotonPlayerPropertiesChanged(object[] playerAndUpdatedProps)
+    {
+        PhotonPlayer playerChanged = playerAndUpdatedProps[0] as PhotonPlayer;
+        Hashtable properties = playerAndUpdatedProps[1] as Hashtable;
+
+        //Si le joueur affecté n'est pas le joueur local
+        if (playerChanged != PhotonNetwork.player)
+        {
+            if (properties.ContainsKey("role") && properties["role"] == PhotonNetwork.player.CustomProperties["role"])
+            {
+                Hashtable newProperties = new Hashtable();
+                newProperties.Add("role", (Role)properties["role"] == Role.BLANC ? Role.NOIR : Role.BLANC);
+                string roleNameDebug = "";
+                switch (newProperties["role"])
+                {
+                    case Role.BLANC:
+                        roleNameDebug = "BLANC";
+                        break;
+                    case Role.NOIR:
+                        roleNameDebug = "NOIR";
+                        break;
+                }
+                Debug.Log("Change role of Player " + PhotonNetwork.player.ID + " to " + roleNameDebug);
+                PhotonNetwork.player.SetCustomProperties(newProperties);
+            }
+        }
+    }
 
     #endregion
 
