@@ -59,4 +59,6 @@ MonoBehaviour:
   - TriggerOnToggleOff
   - TriggerOnToggleOn
   - BehaviorResolutionRPC
+  - PlayMovingSound
+  - StopMovingSound
   DisableAutoOpenWizard: 1

@@ -47,7 +47,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -5669,6 +5669,47 @@ MonoBehaviour:
   role: 0
   chuteLibre: 0
   freezeMove: 0
+  PlayerMovingSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a1e43a1db2aa88349a70dcacb442dbc5,
+      type: 2}
+  screamCornered:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  screamEnvy:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  screamSolitude:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  screamSadness:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  screamCompassion:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 37e489809cc90f94d8f933096c567551,
+      type: 2}
+  screamCuriosity:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6e2544a2e5e37c543b13f850312ecdfc,
+      type: 2}
+  screamPride:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0020f46759cb0d849a513b1dc50facc2,
+      type: 2}
+  screamJoy:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 476910fcaa0f4dc43a3cca44e63929d2,
+      type: 2}
 --- !u!70 &4671330440962889436
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

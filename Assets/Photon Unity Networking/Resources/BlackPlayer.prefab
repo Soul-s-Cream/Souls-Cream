@@ -850,6 +850,47 @@ MonoBehaviour:
   role: 1
   chuteLibre: 0
   freezeMove: 0
+  PlayerMovingSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a1e43a1db2aa88349a70dcacb442dbc5,
+      type: 2}
+  screamCornered:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: cee379a630b580e46bf4b9eb32a3dd63,
+      type: 2}
+  screamEnvy:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 63e032ec7f4be074d98676ad94614923,
+      type: 2}
+  screamSolitude:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 627ef41c6f5f1db499b4695c16f77115,
+      type: 2}
+  screamSadness:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d3abc310c65ae2140bef5c4624543aa8,
+      type: 2}
+  screamCompassion:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  screamCuriosity:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  screamPride:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  screamJoy:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!114 &-8156019241142287066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1111,7 +1152,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
