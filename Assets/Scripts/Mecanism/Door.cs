@@ -20,6 +20,10 @@ public class Door : Mecanism
     [Range(0f, 5f)]
     [Tooltip("Durée de l'animation d'ouverture")]
     public float openingTime = 1f;
+    [Range(0.1f, 1.0f)]
+    [Tooltip("Délai avant l'animation d'ouverture")]
+    public float delayBeforeOpening = 0.2f;
+    public AK.Wwise.Event openSound;
     #endregion
 
     #region Private Fields
@@ -39,41 +43,67 @@ public class Door : Mecanism
     {
         if (!opening)
         {
-            opening = true;
-            if (tweenRunning != null)
-                tweenRunning.Kill();
-
-            Vector3 destination = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-            switch (openingDirection)
-            {
-                case Direction.HAUT:
-                    destination.y += spriteRender.bounds.size.y;
-                    break;
-                case Direction.BAS:
-                    destination.y -= spriteRender.bounds.size.y;
-                    break;
-                case Direction.GAUCHE:
-                    destination.x -= spriteRender.bounds.size.x;
-                    break;
-                case Direction.DROITE:
-                    destination.x += spriteRender.bounds.size.x;
-                    break;
-            }
-
-            tweenRunning = transform.DOMove(destination, openingTime);
+            StartCoroutine("SwitchingOn");
         }
+    }
+
+    IEnumerator SwitchingOn()
+    {
+        yield return new WaitForSeconds(delayBeforeOpening);
+        opening = true;
+        if (tweenRunning != null)
+            tweenRunning.Kill();
+
+        Vector3 destination = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        switch (openingDirection)
+        {
+            case Direction.HAUT:
+                destination.y += spriteRender.bounds.size.y;
+                break;
+            case Direction.BAS:
+                destination.y -= spriteRender.bounds.size.y;
+                break;
+            case Direction.GAUCHE:
+                destination.x -= spriteRender.bounds.size.x;
+                break;
+            case Direction.DROITE:
+                destination.x += spriteRender.bounds.size.x;
+                break;
+        }
+
+        tweenRunning = transform.DOMove(destination, openingTime)
+            .OnComplete(StopSoundActivation)
+            .OnKill(StopSoundActivation);
+
+        openSound.Post(gameObject);
     }
 
     protected override void SwitchOff()
     {
         if (opening)
         {
-            if (tweenRunning != null)
-                tweenRunning.Kill();
-            opening = false;
-
-            tweenRunning = transform.DOMove(startPosition, openingTime);
+            StartCoroutine("SwitchtingOff");           
         }
+    }
+    
+    IEnumerator SwitchtingOff()
+    {
+        yield return new WaitForSeconds(delayBeforeOpening);
+
+        if (tweenRunning != null)
+            tweenRunning.Kill();
+        opening = false;
+
+        tweenRunning = transform.DOMove(startPosition, openingTime)
+            .OnComplete(StopSoundActivation)
+            .OnKill(StopSoundActivation);
+
+        openSound.Post(gameObject);
+    }
+
+    private void StopSoundActivation()
+    {
+        openSound.Stop(gameObject, 200);
     }
 }
 

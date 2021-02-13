@@ -870,5 +870,11 @@ MonoBehaviour:
   - /Souls-Cream_WwiseProject
   - /Souls-Cream_WwiseProject/Events
   - /Souls-Cream_WwiseProject/Events/Default Work Unit
+  - /Souls-Cream_WwiseProject/Events/Default Work Unit/MenuVoices
+  - /Souls-Cream_WwiseProject/Events/Default Work Unit/Moz
+  - /Souls-Cream_WwiseProject/States
+  - /Souls-Cream_WwiseProject/States/Default Work Unit
+  - /Souls-Cream_WwiseProject/States/Default Work Unit/CrateMoving
+  - /Souls-Cream_WwiseProject/States/Default Work Unit/PlayerMoving
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

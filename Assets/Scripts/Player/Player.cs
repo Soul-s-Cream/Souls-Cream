@@ -64,6 +64,17 @@ public class Player : Photon.PunBehaviour
     [Header("Cinématique")]
     public bool chuteLibre = false;
     public bool freezeMove = false;
+
+    [Header("Sound")]
+    public AK.Wwise.RTPC PlayerMovingSound;
+    public AK.Wwise.Event screamCornered;
+    public AK.Wwise.Event screamEnvy;
+    public AK.Wwise.Event screamSolitude;
+    public AK.Wwise.Event screamSadness;
+    public AK.Wwise.Event screamCompassion;
+    public AK.Wwise.Event screamCuriosity;
+    public AK.Wwise.Event screamPride;
+    public AK.Wwise.Event screamJoy;
     #endregion
 
     #region Private Fields
@@ -103,6 +114,7 @@ public class Player : Photon.PunBehaviour
 
     void FixedUpdate()
     {
+        //Si le Player n'est pas contrôlé par le client local, alors on ignore les instructions dans FixedUpdate
         if (!photonView.isMine)
         {
             return;
@@ -114,29 +126,30 @@ public class Player : Photon.PunBehaviour
         PlayerMove(horizontalMovement);
 
         anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
-        if (control.Deplacement.Deplacement.ReadValue<float>() == 1)
+        if (control.Deplacement.Deplacement.ReadValue<float>() > 0)
         {
             photonView.RPC("FlipToggleSprite", PhotonTargets.All, true);
             if (isGrounded)
             {
-                //AkSoundEngine.PostEvent("MozFootsteps", gameObject);
+                PlayerMovingSound.SetGlobalValue(Mathf.Abs(rb.velocity.x));
             }
         }
-        if (control.Deplacement.Deplacement.ReadValue<float>() == -1)
+        else if (control.Deplacement.Deplacement.ReadValue<float>() < 0)
         {
             photonView.RPC("FlipToggleSprite", PhotonTargets.All, false);
             if (isGrounded)
             {
-                //AkSoundEngine.PostEvent("MozFootsteps", gameObject);
+                AkSoundEngine.SetState("PlayerMoving", "Moving");
             }
         }
-        if (isGrounded && control.Deplacement.Deplacement.ReadValue<float>() == 0)
+        else if (isGrounded && control.Deplacement.Deplacement.ReadValue<float>() == 0)
         {
-            //AkSoundEngine.PostEvent("MozLanding", gameObject);
+            AkSoundEngine.SetState("PlayerMoving", "Stop");
         }
     }
     private void Update()
     {
+        //Si le Player n'est pas contrôlé par le client local, alors on ignore les instructions dans Update
         if (!photonView.isMine)
         {
             return;
@@ -188,7 +201,6 @@ public class Player : Photon.PunBehaviour
             if (jumpAmount == 0)
             {
                 AkSoundEngine.PostEvent("MozJump", gameObject);
-                //AkSoundEngine.SetState("OzMozThemeAmbience", "MozBig");
                 rb.AddForce(new Vector2(0f, jumpForce));
             }
             if (jumpAmount == 1)
@@ -279,6 +291,7 @@ public class Player : Photon.PunBehaviour
     [PunRPC]
     public void CorneredScream()
     {
+        screamCornered.Post(gameObject);
         Player whitePlayer = GameObject.FindGameObjectWithTag(whitePlayerTag).GetComponent<Player>();
         Player blackPlayer = GameObject.FindGameObjectWithTag(blackPlayerTag).GetComponent<Player>();
         whitePlayer.transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
@@ -288,6 +301,7 @@ public class Player : Photon.PunBehaviour
     [PunRPC]
     public void CuriosityScream()
     {
+        screamCuriosity.Post(gameObject);
         foreach (Collider2D collider in Physics2D.OverlapCircleAll(transform.position, curiosityScreamRadius, curiosityScreamLayer))
         {
             collider.GetComponent<CuriosityObject>().Reveal();
@@ -303,12 +317,14 @@ public class Player : Photon.PunBehaviour
     [PunRPC]
     public void JoyScream()
     {
+        screamJoy.Post(gameObject);
         jumpAmount = 2;
     }
 
     [PunRPC]
     public void PrideScream()
     {
+        screamPride.Post(gameObject);
         Player whitePlayer = GameObject.FindGameObjectWithTag(whitePlayerTag).GetComponent<Player>();
         Player blackPlayer = GameObject.FindGameObjectWithTag(blackPlayerTag).GetComponent<Player>();
         if (blackPlayer)
@@ -324,6 +340,7 @@ public class Player : Photon.PunBehaviour
     [PunRPC]
     public void SadnessScream()
     {
+        screamSadness.Post(gameObject);
         if (PhotonNetwork.connected)
         {
             RaycastHit2D hit2D = Physics2D.Raycast((Vector2) transform.position + sadnessGroundCheckingCenter, Vector2.down, sadnessScreamMinGroundDistance, groundLayer);
@@ -344,7 +361,8 @@ public class Player : Photon.PunBehaviour
     [PunRPC]
     public void SolitudeScream()
     {
-        foreach(GameObject platform in GameObject.FindGameObjectsWithTag(solitudeScreamReceiversTag))
+        screamSolitude.Post(gameObject);
+        foreach (GameObject platform in GameObject.FindGameObjectsWithTag(solitudeScreamReceiversTag))
         {
             platform.SetActive(false);
         }
