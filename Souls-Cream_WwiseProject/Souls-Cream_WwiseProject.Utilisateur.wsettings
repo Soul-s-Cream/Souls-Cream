@@ -3,7 +3,7 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{903F1C27-14F7-4ECD-AF40-5AADFEA9AFA0}">
 			<PropertyList>
-				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\Utilisateur\Desktop\Global Game Jam 2021\Global Game Jam 2021\Musique\Mastered\"/>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\Utilisateur\Desktop\Global Game Jam 2021\Global Game Jam 2021\Musique\ambiences plateaux\"/>
 				<Property Name="Event Action List\{0465BC4B-7A81-4F00-A532-C8BF9B48736A}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{0D7F2FEE-FBA3-4E04-B328-00CD4DA802BB}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{13A56617-D801-48F9-82FB-BAEE28C59314}\x64_Expand States" Type="string" Value=""/>
@@ -109,6 +109,7 @@
 				<Property Name="Music Transition List\{8A6323E6-F653-4749-8561-BEA04EE6B80C}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{8E786EDB-380C-47CC-9D42-BA1B0DB072D4}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{D056C493-70BB-468B-88B7-4256A9BAAA0F}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="PluginUserAcknowledge\iZotope Hybrid Reverb" Type="bool" Value="True"/>
 				<Property Name="ProjectExplorer\FirstVisible_10_1" Type="string" Value="{4C96B38B-3DB4-40C7-91C9-665510E38993}"/>
 				<Property Name="ProjectExplorer\FirstVisible_11_1" Type="string" Value="{23EC2DE3-3ED8-4B82-AC99-92E25F2E4C6B}"/>
 				<Property Name="ProjectExplorer\FirstVisible_1_1" Type="string" Value="{2388DAEA-9775-46C6-A2ED-C5222A397756}"/>

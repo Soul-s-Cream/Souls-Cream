@@ -111,7 +111,10 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID MUSICSVOLUME = 924921327U;
         static const AkUniqueID PLAYERMOVING = 545959236U;
+        static const AkUniqueID PLAYERSPEED = 1493153371U;
+        static const AkUniqueID SOUNDEFFECTSVOLUME = 3402092638U;
         static const AkUniqueID WETFLOOR = 34521763U;
     } // namespace GAME_PARAMETERS
 
@@ -124,6 +127,8 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MUSICS = 1730564753U;
+        static const AkUniqueID SOUNDEFFECTS = 3898083304U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

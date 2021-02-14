@@ -11,12 +11,16 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3908819817">
+		<SoundBank Id="1355168291" Language="SFX" Hash="4054837302">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<GameParameters>
+				<GameParameter Id="924921327" Name="MusicsVolume" ObjectPath="\Game Parameters\Default Work Unit\MusicsVolume"/>
+				<GameParameter Id="3402092638" Name="SoundEffectsVolume" ObjectPath="\Game Parameters\Default Work Unit\SoundEffectsVolume"/>
+			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="930932576">
+		<SoundBank Id="3161908922" Language="SFX" Hash="1719328831">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -265,7 +269,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="773707930" Name="MozFootsteps" ObjectPath="\Events\Default Work Unit\Moz\MozFootsteps" DurationType="Infinite">
+				<Event Id="773707930" Name="MozFootsteps" ObjectPath="\Events\Default Work Unit\Moz\MozFootsteps" DurationType="OneShot" DurationMin="0.211963" DurationMax="0.375582">
 					<IncludedMemoryFiles>
 						<File Id="31055670" Language="SFX">
 							<ShortName>PlayerMozFootsteps.wav</ShortName>
@@ -515,9 +519,9 @@
 				</Event>
 				<Event Id="3147785334" Name="OzMozThemeAmbiences" ObjectPath="\Events\Default Work Unit\OzMozThemeAmbiences" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="21678370" Language="SFX">
-							<ShortName>OzMozAmbienceTheme.wav</ShortName>
-							<Path>SFX\OzMozAmbienceTheme_D79FB2B7.wem</Path>
+						<File Id="177371341" Language="SFX">
+							<ShortName>OzMozThemeAmbience.wav</ShortName>
+							<Path>SFX\OzMozThemeAmbience_D79FB2B7.wem</Path>
 						</File>
 						<File Id="213501784" Language="SFX">
 							<ShortName>OzAmbienceTheme.wav</ShortName>
@@ -619,10 +623,6 @@
 					<ShortName>LarmesMoz.wav</ShortName>
 					<Path>SFX\LarmesMoz_D7A3976B.wem</Path>
 				</File>
-				<File Id="21678370" Language="SFX">
-					<ShortName>OzMozAmbienceTheme.wav</ShortName>
-					<Path>SFX\OzMozAmbienceTheme_D79FB2B7.wem</Path>
-				</File>
 				<File Id="30785870" Language="SFX">
 					<ShortName>Envie.wav</ShortName>
 					<Path>SFX\Envie_EC6248D1.wem</Path>
@@ -686,6 +686,10 @@
 				<File Id="167913592" Language="SFX">
 					<ShortName>Interruptor.wav</ShortName>
 					<Path>SFX\Interruptor_5E9C9814.wem</Path>
+				</File>
+				<File Id="177371341" Language="SFX">
+					<ShortName>OzMozThemeAmbience.wav</ShortName>
+					<Path>SFX\OzMozThemeAmbience_D79FB2B7.wem</Path>
 				</File>
 				<File Id="190532320" Language="SFX">
 					<ShortName>Interruptor.wav</ShortName>

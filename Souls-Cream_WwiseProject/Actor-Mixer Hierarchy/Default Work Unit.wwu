@@ -28,7 +28,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -141,7 +141,6 @@
 								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
 								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.4"/>
-								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="Volume" Type="Real64">
 									<RTPCList>
 										<RTPC Name="" ID="{5A93FDD2-63F9-4772-ADE7-616E4C0B2F56}" ShortID="23137426">
@@ -176,7 +175,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -399,7 +398,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -512,7 +511,6 @@
 								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
 								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.4"/>
-								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-3</Value>
@@ -555,7 +553,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -782,7 +780,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1072,7 +1070,13 @@
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
-								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.2"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.3">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{A0F63EE9-1537-44E1-85B8-8F922DAC2269}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="Volume" Type="Real64">
 									<RTPCList>
@@ -1108,7 +1112,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1251,7 +1255,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1295,7 +1299,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1329,7 +1333,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1530,6 +1534,206 @@
 								<ItemRef Name="ScreamDoubleJump" ID="{D7787087-CE1E-4B7F-9A36-AD090D77C287}"/>
 							</Playlist>
 						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="OzFootsteps2" ID="{AA94316F-1D32-4953-B10F-EAA61D46E23E}" ShortID="213170819">
+							<PropertyList>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.25"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="OzFootsteps2" ID="{1C766A13-D5CB-401A-85D3-715F07410189}" ShortID="912734695">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{401B2C4D-D011-4CA2-BE1F-7BE88A1DC1D7}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="400"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
+											<RTPCList>
+												<RTPC Name="" ID="{B792F58E-2311-45DA-A99B-9028A610B5B3}" ShortID="988625200">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="PlayerMoving" ID="{D24517E9-C78A-4ACA-9749-463BF551BF6E}" WorkUnitID="{CE709FC6-E33E-43F4-B8D3-FC03C4BC2167}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{697BAC5B-6470-45F1-951F-ADAED18E0470}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>1</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="OzFootsteps2" ID="{0177AC27-AEA2-43A8-8091-3FD205EBA09F}" ShortID="484875453">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="PlayerOzFootsteps" ID="{BEDE4DD9-C635-4CE0-AB98-30EEF7628DA2}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00594192288921426"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.00445644216691068"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.384739507076623"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.414449121522694"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>PlayerOzFootsteps.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1017059933"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="PlayerOzFootsteps" ID="{BEDE4DD9-C635-4CE0-AB98-30EEF7628DA2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="OzFootsteps3" ID="{CA68F61B-2EB4-4B77-85D5-BFD348DD0D49}" ShortID="105865260">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="PlayerOzFootsteps" ID="{90CF6CE5-C79D-4348-A3B0-34E761AB60DD}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00594192288921426"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.00445644216691068"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.635785749145925"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.6669808443143"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>PlayerOzFootsteps.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="550278455"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="PlayerOzFootsteps" ID="{90CF6CE5-C79D-4348-A3B0-34E761AB60DD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="OzFootsteps4" ID="{C2FEC1B8-6155-4947-B4BD-B9ED023AE0D3}" ShortID="1064786870">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="PlayerOzFootsteps" ID="{F49EE686-4E66-40A8-BDF5-AC9808C4A680}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00594192288921426"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.00445644216691068"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.885346510492924"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.919512567105906"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>PlayerOzFootsteps.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="383526885"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="PlayerOzFootsteps" ID="{F49EE686-4E66-40A8-BDF5-AC9808C4A680}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<Sound Name="OzFootsteps1" ID="{9B53E0C3-6323-436A-8593-556BADF13D22}" ShortID="506585384">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PlayerOzFootsteps" ID="{884BD14E-ECEF-443F-AF96-2F30F8AC3B6D}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00594192288921426"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.00445644216691068"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.133693265007321"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.17083028306491"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PlayerOzFootsteps.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="340180847"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PlayerOzFootsteps" ID="{884BD14E-ECEF-443F-AF96-2F30F8AC3B6D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<Playlist>
+								<ItemRef Name="OzFootsteps1" ID="{9B53E0C3-6323-436A-8593-556BADF13D22}"/>
+								<ItemRef Name="OzFootsteps2" ID="{1C766A13-D5CB-401A-85D3-715F07410189}"/>
+							</Playlist>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Objects" ID="{3EBE6FD7-D5C3-4A16-970F-3317E5412D92}" ShortID="609797213">
@@ -1556,7 +1760,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1702,7 +1906,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1840,7 +2044,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1989,7 +2193,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -2081,7 +2285,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+											<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -2110,7 +2314,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+											<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -2139,7 +2343,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+											<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -2520,7 +2724,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -2635,7 +2839,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -2753,7 +2957,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+											<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -2894,7 +3098,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+											<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -3006,7 +3210,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+											<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -3146,7 +3350,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+											<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -3257,7 +3461,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+											<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -3393,7 +3597,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+											<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -3529,7 +3733,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+											<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -3636,7 +3840,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+											<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -3770,7 +3974,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -3799,7 +4003,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -3828,7 +4032,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -3857,7 +4061,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -3886,7 +4090,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -3915,7 +4119,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -3944,7 +4148,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -3973,7 +4177,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -4002,7 +4206,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -4031,7 +4235,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -4060,7 +4264,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -4089,7 +4293,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -4135,7 +4339,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+							<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
