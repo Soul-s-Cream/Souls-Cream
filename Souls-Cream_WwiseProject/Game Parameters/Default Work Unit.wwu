@@ -10,6 +10,20 @@
 					</PropertyList>
 				</GameParameter>
 				<GameParameter Name="WetFloor" ID="{01A64B69-4A37-4E40-A27A-189F056BB60F}"/>
+				<GameParameter Name="MusicsVolume" ID="{F6A0183D-7F7F-4BE6-A59A-A4BE9B9E21A4}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="SoundEffectsVolume" ID="{7E8D32EC-3C6B-4E2B-B4B2-D835820BDE31}"/>
+				<GameParameter Name="PlayerSpeed" ID="{F8F5B7E8-81AE-4ECE-8906-3619B7378B8B}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="45"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="33"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

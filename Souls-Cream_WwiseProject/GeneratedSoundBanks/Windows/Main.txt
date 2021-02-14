@@ -75,7 +75,6 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	20390223	LarmesMoz_03	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\LarmesMoz_D7A3976B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozLarme\LarmesMoz_03		59108
-	21678370	OzMozAmbienceTheme	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\OzMozAmbienceTheme_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\OzMozThemeAmbience\ambiences plateaux\OzMozAmbienceTheme		6912224
 	30785870	Envie	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\Envie_EC6248D1.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamMoz\Envie\Envie		299236
 	31055670	MozFootsteps_03	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\PlayerMozFootsteps_C44C71A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozFootsteps\MozFootsteps_03		25896
 	53780424	Fierte_02	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\Fierté2_EF3E6159.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamOz\Fierte\Fierte_02		254328
@@ -92,6 +91,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	150424399	Fierte	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\Fierté2_AECC02D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamOz\Fierte\Fierte		204996
 	161831740	MozFootstepsWet3	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\MozFootstepsWet_7C902752.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozFootstepsWet\MozFootstepsWet3		48484
 	167913592	Interruptor1	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\Interruptor_5E9C9814.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\InterruptorHigh\Interruptor1		40828
+	177371341	OzMozAmbienceTheme	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\OzMozThemeAmbience_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\OzMozThemeAmbience\ambiences plateaux\OzMozAmbienceTheme		6912224
 	190532320	Interruptor2	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\Interruptor_9B63C4FD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\InterruptorHigh\Interruptor2		38788
 	206612315	Solitude_02	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\Solitude_2CD05248.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamMoz\Solitude\Solitude_02		213008
 	210463932	Curiosité_02	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\Curiosité_F80FB928.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamOz\Curiosite\Curiosité_02		96204
