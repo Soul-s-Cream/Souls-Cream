@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="135">
 	<RootPaths>
-		<ProjectRoot>C:\Users\Le Tristan\Documents\GitHub\CreamSouls\Souls-Cream\Souls-Cream_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\Le Tristan\Documents\GitHub\CreamSouls\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\Le Tristan\Documents\GitHub\CreamSouls\Souls-Cream\Souls-Cream_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\Le Tristan\Documents\GitHub\CreamSouls\Souls-Cream\Souls-Cream_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="2917013825">
+		<SoundBank Id="3161908922" Language="SFX" Hash="930932576">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -121,6 +121,22 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3705378287" Name="Elevator" ObjectPath="\Events\Default Work Unit\Objects\Elevator" DurationType="OneShot" DurationMin="0.701520" DurationMax="1.096779">
+					<IncludedMemoryFiles>
+						<File Id="353982083" Language="SFX">
+							<ShortName>Elevator.wav</ShortName>
+							<Path>SFX\Elevator_7685AEB3.wem</Path>
+						</File>
+						<File Id="645656700" Language="SFX">
+							<ShortName>Elevator.wav</ShortName>
+							<Path>SFX\Elevator_FD13E1A7.wem</Path>
+						</File>
+						<File Id="1059227406" Language="SFX">
+							<ShortName>Elevator.wav</ShortName>
+							<Path>SFX\Elevator_3765B811.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1698034228" Name="Envie" ObjectPath="\Events\Default Work Unit\Moz\Screams\Envie" DurationType="OneShot" DurationMin="1.503843" DurationMax="1.757504">
 					<IncludedMemoryFiles>
 						<File Id="30785870" Language="SFX">
@@ -154,6 +170,30 @@
 						<File Id="713776206" Language="SFX">
 							<ShortName>Fierté2.wav</ShortName>
 							<Path>SFX\Fierté2_28E9D432.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2528856761" Name="GlassBreaking1" ObjectPath="\Events\Default Work Unit\Objects\GlassBreaking1" DurationType="OneShot" DurationMin="0.515117" DurationMax="0.515117">
+					<IncludedMemoryFiles>
+						<File Id="339017551" Language="SFX">
+							<ShortName>GlassBreaking.wav</ShortName>
+							<Path>SFX\GlassBreaking_B09A3533.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2528856762" Name="GlassBreaking2" ObjectPath="\Events\Default Work Unit\Objects\GlassBreaking2" DurationType="OneShot" DurationMin="0.533530" DurationMax="0.533530">
+					<IncludedMemoryFiles>
+						<File Id="1026695419" Language="SFX">
+							<ShortName>GlassBreaking.wav</ShortName>
+							<Path>SFX\GlassBreaking_0F120CED.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2528856763" Name="GlassBreaking3" ObjectPath="\Events\Default Work Unit\Objects\GlassBreaking3" DurationType="OneShot" DurationMin="0.533530" DurationMax="0.533530">
+					<IncludedMemoryFiles>
+						<File Id="697572665" Language="SFX">
+							<ShortName>GlassBreaking.wav</ShortName>
+							<Path>SFX\GlassBreaking_766A8A08.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -457,11 +497,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1579895492" Name="OzMozEndSong" ObjectPath="\Events\Default Work Unit\OzMozEndSong" DurationType="OneShot" DurationMin="62.000000" DurationMax="62.000000">
+				<Event Id="1579895492" Name="OzMozEndSong" ObjectPath="\Events\Default Work Unit\OzMozEndSong" DurationType="OneShot" DurationMin="62.500000" DurationMax="62.500000">
 					<IncludedMemoryFiles>
-						<File Id="743192087" Language="SFX">
-							<ShortName>OzMozEndTheme.wav</ShortName>
-							<Path>SFX\OzMozEndTheme_D79FB2B7.wem</Path>
+						<File Id="533754305" Language="SFX">
+							<ShortName>OzMozEndSong.wav</ShortName>
+							<Path>SFX\OzMozEndSong_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -715,6 +755,10 @@
 					<ShortName>Envie.wav</ShortName>
 					<Path>SFX\Envie_16892D2B.wem</Path>
 				</File>
+				<File Id="339017551" Language="SFX">
+					<ShortName>GlassBreaking.wav</ShortName>
+					<Path>SFX\GlassBreaking_B09A3533.wem</Path>
+				</File>
 				<File Id="340180847" Language="SFX">
 					<ShortName>PlayerOzFootsteps.wav</ShortName>
 					<Path>SFX\PlayerOzFootsteps_5B7EF906.wem</Path>
@@ -726,6 +770,10 @@
 				<File Id="350871938" Language="SFX">
 					<ShortName>PlayerMozJump.wav</ShortName>
 					<Path>SFX\PlayerMozJump_EA4E7EEC.wem</Path>
+				</File>
+				<File Id="353982083" Language="SFX">
+					<ShortName>Elevator.wav</ShortName>
+					<Path>SFX\Elevator_7685AEB3.wem</Path>
 				</File>
 				<File Id="366671501" Language="SFX">
 					<ShortName>OzTuto.wav</ShortName>
@@ -779,6 +827,10 @@
 					<ShortName>LarmesMoz.wav</ShortName>
 					<Path>SFX\LarmesMoz_C5960E0D.wem</Path>
 				</File>
+				<File Id="533754305" Language="SFX">
+					<ShortName>OzMozEndSong.wav</ShortName>
+					<Path>SFX\OzMozEndSong_D79FB2B7.wem</Path>
+				</File>
 				<File Id="534699211" Language="SFX">
 					<ShortName>PlayerMozFootsteps.wav</ShortName>
 					<Path>SFX\PlayerMozFootsteps_03957B3B.wem</Path>
@@ -831,6 +883,10 @@
 					<ShortName>LarmesMoz.wav</ShortName>
 					<Path>SFX\LarmesMoz_38CF81DE.wem</Path>
 				</File>
+				<File Id="645656700" Language="SFX">
+					<ShortName>Elevator.wav</ShortName>
+					<Path>SFX\Elevator_FD13E1A7.wem</Path>
+				</File>
 				<File Id="651849547" Language="SFX">
 					<ShortName>Solitude.wav</ShortName>
 					<Path>SFX\Solitude_B74686AF.wem</Path>
@@ -843,6 +899,10 @@
 					<ShortName>CrateFriction.wav</ShortName>
 					<Path>SFX\CrateFriction_B3F2D557.wem</Path>
 				</File>
+				<File Id="697572665" Language="SFX">
+					<ShortName>GlassBreaking.wav</ShortName>
+					<Path>SFX\GlassBreaking_766A8A08.wem</Path>
+				</File>
 				<File Id="713776206" Language="SFX">
 					<ShortName>Fierté2.wav</ShortName>
 					<Path>SFX\Fierté2_28E9D432.wem</Path>
@@ -854,10 +914,6 @@
 				<File Id="732767810" Language="SFX">
 					<ShortName>PlayerMozJump.wav</ShortName>
 					<Path>SFX\PlayerMozJump_33CEA9B4.wem</Path>
-				</File>
-				<File Id="743192087" Language="SFX">
-					<ShortName>OzMozEndTheme.wav</ShortName>
-					<Path>SFX\OzMozEndTheme_D79FB2B7.wem</Path>
 				</File>
 				<File Id="816920437" Language="SFX">
 					<ShortName>PorteOuverture.wav</ShortName>
@@ -955,9 +1011,17 @@
 					<ShortName>PlayerOzFootsteps.wav</ShortName>
 					<Path>SFX\PlayerOzFootsteps_FDC90899.wem</Path>
 				</File>
+				<File Id="1026695419" Language="SFX">
+					<ShortName>GlassBreaking.wav</ShortName>
+					<Path>SFX\GlassBreaking_0F120CED.wem</Path>
+				</File>
 				<File Id="1043257698" Language="SFX">
 					<ShortName>Menu Voices.wav</ShortName>
 					<Path>SFX\Menu Voices_DD8FE6CD.wem</Path>
+				</File>
+				<File Id="1059227406" Language="SFX">
+					<ShortName>Elevator.wav</ShortName>
+					<Path>SFX\Elevator_3765B811.wem</Path>
 				</File>
 				<File Id="1070454862" Language="SFX">
 					<ShortName>PlayerOzJump.wav</ShortName>

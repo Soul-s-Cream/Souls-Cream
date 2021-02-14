@@ -713,23 +713,23 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<MusicTrack Name="OzMozEndTheme" ID="{76DF27E6-A82A-4313-BFE4-1409CB059BB6}" ShortID="516627365">
+						<MusicTrack Name="OzMozEndSong" ID="{7474A47D-A6A1-410F-8F63-20761D484133}" ShortID="173202841">
 							<ReferenceList>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="OzMozEndTheme" ID="{69FC5461-3831-40E8-A1C4-D1EE36FDDA60}">
+								<AudioFileSource Name="OzMozEndSong" ID="{CA1C0EC3-F78E-44FC-AD0E-5B369E1C8C83}">
 									<Language>SFX</Language>
-									<AudioFile>OzMozEndTheme.wav</AudioFile>
+									<AudioFile>OzMozEndSong.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="743192087"/>
+										<MediaID ID="533754305"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<TransitionList>
-								<MusicTransition Name="Root" ID="{66D36ECF-B27F-476B-ADBD-FE0DD622573D}">
+								<MusicTransition Name="Root" ID="{F87A8BC9-BED6-41E8-B400-3A661D2F80AA}">
 									<PropertyList>
 										<Property Name="IsFolder" Type="bool" Value="True"/>
 									</PropertyList>
@@ -737,83 +737,43 @@
 								</MusicTransition>
 							</TransitionList>
 							<SequenceList>
-								<MusicTrackSequence Name="" ID="{A9C01D5D-1FE4-47B2-8C01-2887E98ED100}">
+								<MusicTrackSequence Name="" ID="{3D2D7B08-1315-41C2-BBD3-369B3DC0BAC4}">
 									<ClipList>
-										<MusicClip Name="OzMozEndTheme" ID="{D59883F2-B620-4BAF-8395-BF824B8DE8A7}">
+										<MusicClip Name="OzMozEndSong" ID="{66E89344-0560-4544-B668-2BC03EA7A420}">
 											<PropertyList>
-												<Property Name="BeginTrimOffset" Type="Real64" Value="1190.37199124727"/>
-												<Property Name="EndTrimOffset" Type="Real64" Value="63190.3719912473"/>
+												<Property Name="EndTrimOffset" Type="Real64" Value="62500"/>
 												<Property Name="FadeInMode" Type="int16" Value="0"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="3921.22538293216"/>
-												<Property Name="FadeOutShape" Type="int16" Value="1"/>
-												<Property Name="PlayAt" Type="Real64" Value="-1190.37199124727"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="72.210065645515"/>
+												<Property Name="FadeOutShape" Type="int16" Value="2"/>
 											</PropertyList>
-											<AudioSourceRef Name="OzMozEndTheme" ID="{69FC5461-3831-40E8-A1C4-D1EE36FDDA60}"/>
-											<PropertyCurveList>
-												<PropertyCurve PropertyName="Highpass">
-													<Curve Name="" ID="{69A1A2C8-E16F-4662-8EA1-E38952724B15}">
-														<PropertyList>
-															<Property Name="Flags" Type="int32" Value="1"/>
-														</PropertyList>
-														<PointList>
-															<Point>
-																<XPos>1.19037</XPos>
-																<YPos>0</YPos>
-																<Flags>5</Flags>
-															</Point>
-															<Point>
-																<XPos>63.19037</XPos>
-																<YPos>0</YPos>
-																<Flags>37</Flags>
-															</Point>
-														</PointList>
-													</Curve>
-												</PropertyCurve>
-												<PropertyCurve PropertyName="Lowpass">
-													<Curve Name="" ID="{E177B8E8-9E5E-456A-909A-AF8DD6401197}">
-														<PropertyList>
-															<Property Name="Flags" Type="int32" Value="1"/>
-														</PropertyList>
-														<PointList>
-															<Point>
-																<XPos>1.19037</XPos>
-																<YPos>0</YPos>
-																<Flags>5</Flags>
-															</Point>
-															<Point>
-																<XPos>63.19037</XPos>
-																<YPos>0</YPos>
-																<Flags>37</Flags>
-															</Point>
-														</PointList>
-													</Curve>
-												</PropertyCurve>
-												<PropertyCurve PropertyName="Volume">
-													<Curve Name="" ID="{2E8BEAA8-E81A-438E-AFFC-FED4B2C707F4}">
-														<PropertyList>
-															<Property Name="Flags" Type="int32" Value="3"/>
-														</PropertyList>
-														<PointList>
-															<Point>
-																<XPos>1.19037</XPos>
-																<YPos>0</YPos>
-																<Flags>5</Flags>
-															</Point>
-															<Point>
-																<XPos>63.19037</XPos>
-																<YPos>0</YPos>
-																<Flags>37</Flags>
-															</Point>
-														</PointList>
-													</Curve>
-												</PropertyCurve>
-											</PropertyCurveList>
+											<AudioSourceRef Name="OzMozEndSong" ID="{CA1C0EC3-F78E-44FC-AD0E-5B369E1C8C83}"/>
 										</MusicClip>
 									</ClipList>
 								</MusicTrackSequence>
 							</SequenceList>
 						</MusicTrack>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="MusicPlayStop" ID="{64656CB5-D059-442F-AC97-DAFB51A01BD4}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Play" ID="{E8AA43D5-838B-4885-A76B-09FF38A29218}"/>
+								<CustomState Name="" ID="{0E7B2453-00E1-4D51-8CF5-8708ED17E2C7}" ShortID="630858421"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Stop" ID="{839450E1-BFDC-4DE8-A058-EB146D972FAC}"/>
+								<CustomState Name="" ID="{F9DD53DF-3FC5-4BF0-AEF2-5519306D51F4}" ShortID="538041964">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-96"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<CueList>
 						<MusicCue Name="Entry Cue" ID="{64A253F5-9624-4D21-ADEA-B8D13BF64ADA}"/>
 						<MusicCue Name="Exit Cue" ID="{978095BD-C05F-4BE8-B068-EE2539165524}">
