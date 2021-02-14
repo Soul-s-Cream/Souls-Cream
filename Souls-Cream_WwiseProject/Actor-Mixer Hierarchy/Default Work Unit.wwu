@@ -2073,6 +2073,661 @@
 								</CustomStateList>
 							</StateInfo>
 						</RandomSequenceContainer>
+						<Folder Name="GlassBreaking" ID="{E5E48C75-9904-4AE7-A561-710FE647F659}" ShortID="167441234">
+							<ChildrenList>
+								<Sound Name="GlassBreaking1" ID="{C9780D78-5708-43E7-A8B7-F561D30CE2A0}" ShortID="731944326">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="GlassBreaking" ID="{8A8F827F-D668-4D40-8133-0E75F3700D98}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0349856027330405"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0349856027330405"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.393818203095272"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.908935154013354"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>GlassBreaking.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="339017551"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="GlassBreaking" ID="{8A8F827F-D668-4D40-8133-0E75F3700D98}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="GlassBreaking2" ID="{5388B378-1508-42BD-AB37-E637C89D72D7}" ShortID="333870443">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="GlassBreaking" ID="{293BCE02-AAD1-4259-B911-911A6EDAF55A}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0349856027330405"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0349856027330405"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="2.91255142752562"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.44608186920449"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>GlassBreaking.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1026695419"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="GlassBreaking" ID="{293BCE02-AAD1-4259-B911-911A6EDAF55A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="GlassBreaking3" ID="{DDC1A758-E0D6-42CB-A81E-4BF0277D77DA}" ShortID="537919402">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="GlassBreaking" ID="{324380CE-6BCA-413D-BED0-912B9C06C771}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0349856027330405"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0349856027330405"/>
+												<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.4081859443631"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.94171638604197"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>GlassBreaking.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="697572665"/>
+											</MediaIDList>
+											<PluginInnerObjectList>
+												<List Name="Markers">
+													<PluginInnerObject Name="" ID="{3242CB11-7E10-4660-9CDA-0B89E9B941AA}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 107.2387"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{4A6E9E40-6BA8-4618-869E-F7CA6E75A931}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 107.099"/>
+															<Property Name="Time" Type="Real64" Value="0.0699166666666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{3BF1007F-B673-4D77-A1A3-501B4A2F7C4F}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 106.9593"/>
+															<Property Name="Time" Type="Real64" Value="0.1399375"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{C82847C6-7361-48B2-A49F-B623E6CA30B8}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 106.8195"/>
+															<Property Name="Time" Type="Real64" Value="0.210041666666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{7AF856C7-4ECC-4DF3-A798-A4C61D57C1CB}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 106.6799"/>
+															<Property Name="Time" Type="Real64" Value="0.28025"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{5BA4B7DD-BCDF-4149-80F8-1DB55438CDAE}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 106.5403"/>
+															<Property Name="Time" Type="Real64" Value="0.350541666666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{22CBDE52-2449-43E4-B665-8F6E9DBFF25D}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 106.0503"/>
+															<Property Name="Time" Type="Real64" Value="0.4209375"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{7DEB513F-25A6-41B1-B200-E9CE81AA4373}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 105.3501"/>
+															<Property Name="Time" Type="Real64" Value="0.491645833333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{4FED688B-0E54-44FC-B440-F75FC16233ED}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 104.6501"/>
+															<Property Name="Time" Type="Real64" Value="0.562833333333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{C31B9649-2C57-49E9-831D-56E8077178C7}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 103.9501"/>
+															<Property Name="Time" Type="Real64" Value="0.6345"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{96815E08-FCD9-4F56-A55D-7A07C5579DD0}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 103.2501"/>
+															<Property Name="Time" Type="Real64" Value="0.706645833333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{2E21AEAA-DA58-4755-9EF3-61407FD58B86}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 102.5501"/>
+															<Property Name="Time" Type="Real64" Value="0.779270833333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{A3EEB7E3-D5FD-48FF-B7D8-A287CA3C1582}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 101.85"/>
+															<Property Name="Time" Type="Real64" Value="0.852395833333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{B2B23E41-59D0-4248-8C64-A812AC25AF6D}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 101.1501"/>
+															<Property Name="Time" Type="Real64" Value="0.926020833333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{DFC91187-CDD3-4B43-BBD8-E1CD6728FBDE}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 100.4501"/>
+															<Property Name="Time" Type="Real64" Value="1.00016666666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{E13DFD85-625F-4F0E-B2D6-809C4AB15ACA}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 99.75"/>
+															<Property Name="Time" Type="Real64" Value="1.0748125"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{BBA781F9-FAB4-494D-9CB5-BFE2D3BCC7C8}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 99.05"/>
+															<Property Name="Time" Type="Real64" Value="1.15"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{A710A321-2C9A-42AE-B807-5AB27D7EB64F}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 98.35"/>
+															<Property Name="Time" Type="Real64" Value="1.22570833333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{DA725B97-594F-4389-BD01-168286758618}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 97.65"/>
+															<Property Name="Time" Type="Real64" Value="1.30195833333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{EEA21268-D97B-4BFF-8B2D-0A277F4922D1}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 96.95"/>
+															<Property Name="Time" Type="Real64" Value="1.37875"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{4CE9BAF7-48D9-4FE1-A0CA-D84853E6959F}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 96.25"/>
+															<Property Name="Time" Type="Real64" Value="1.45610416666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{4175B281-5F2C-463C-9D19-9907DDA70A0C}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 95.5501"/>
+															<Property Name="Time" Type="Real64" Value="1.53402083333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{8C475D4D-EF33-411A-AE7F-43E3C899913D}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 94.85"/>
+															<Property Name="Time" Type="Real64" Value="1.6125"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{3A9D8E41-ACC7-40A7-A0C7-C8A020C7EBD3}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 94.15"/>
+															<Property Name="Time" Type="Real64" Value="1.6915625"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{C5436713-9238-44D8-84DC-A2DE68830750}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 93.45"/>
+															<Property Name="Time" Type="Real64" Value="1.77120833333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{93D91913-A13C-4C3C-94DD-16B5CDB8E906}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 92.75"/>
+															<Property Name="Time" Type="Real64" Value="1.85145833333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{6A6FD1AE-7062-4EB0-A896-4B23BD35B1A0}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 92.05"/>
+															<Property Name="Time" Type="Real64" Value="1.9323125"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{5F18BC8E-1698-4C91-8B8F-7B722485EEF5}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 91.35"/>
+															<Property Name="Time" Type="Real64" Value="2.01377083333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{5D929629-D010-4CC5-9136-AF2B90C17AD3}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 90.65"/>
+															<Property Name="Time" Type="Real64" Value="2.09585416666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{2DA9C6BD-8627-4B0A-A8AA-BB04446DF25A}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 89.95"/>
+															<Property Name="Time" Type="Real64" Value="2.17858333333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{AF754A56-974D-446F-A3E5-80C6C9891D8D}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 89.25"/>
+															<Property Name="Time" Type="Real64" Value="2.26195833333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{09D58105-243C-48A1-B147-43FE5BA7B8B6}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 88.55"/>
+															<Property Name="Time" Type="Real64" Value="2.34597916666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{1A79EA33-2021-451C-802D-49A0662D1121}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 87.85"/>
+															<Property Name="Time" Type="Real64" Value="2.43066666666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{BE2F17C6-54F2-4E88-8752-4003043C3093}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 87.15"/>
+															<Property Name="Time" Type="Real64" Value="2.51602083333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{799EB040-8A78-448B-9966-BF58F8E57676}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 86.45"/>
+															<Property Name="Time" Type="Real64" Value="2.6020625"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{C73A2519-FA3A-4003-B132-D851EBEA37B7}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 85.75"/>
+															<Property Name="Time" Type="Real64" Value="2.6888125"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{1AA341C8-4EAE-4AC6-A9EB-99F3AC5C30CB}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 85.05"/>
+															<Property Name="Time" Type="Real64" Value="2.77627083333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{357420CB-75B1-4A39-9417-BD89FBBB62CB}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 84.35"/>
+															<Property Name="Time" Type="Real64" Value="2.8644375"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{D03B7A81-C19E-4F8A-B1C6-FF4185E8F05E}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 83.8124"/>
+															<Property Name="Time" Type="Real64" Value="2.95333333333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{5E7553F0-28B0-4314-91DA-14A210E5ADE2}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 83.4374"/>
+															<Property Name="Time" Type="Real64" Value="3.0428125"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{5E48DDF4-B354-4F86-8F32-84E3F778A2CA}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 83.0624"/>
+															<Property Name="Time" Type="Real64" Value="3.1326875"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{808A3513-ECF8-4398-8790-349E932C6D44}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 82.6874"/>
+															<Property Name="Time" Type="Real64" Value="3.22297916666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{C79E9EBA-F603-4234-809A-D86B45A5B172}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 82.3124"/>
+															<Property Name="Time" Type="Real64" Value="3.31366666666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{3F77DB77-F029-4F5C-B9D2-D3915386B94C}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 81.9374"/>
+															<Property Name="Time" Type="Real64" Value="3.40477083333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{AFA3426E-727E-40CD-A93E-37E4CAACC2DD}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 81.5624"/>
+															<Property Name="Time" Type="Real64" Value="3.49629166666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{00385CAA-BA31-436E-A2FE-78339A7B0C52}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 81.1874"/>
+															<Property Name="Time" Type="Real64" Value="3.58822916666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{674DD191-D308-47EE-A114-0A22F1AC8FC8}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 80.8124"/>
+															<Property Name="Time" Type="Real64" Value="3.68060416666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{5B6574D6-0CF3-4E6C-856E-BE8598C2B8EB}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 80.4374"/>
+															<Property Name="Time" Type="Real64" Value="3.77339583333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{CD4F8016-941A-4A1C-94F5-9EA9EC0981B2}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 80.0624"/>
+															<Property Name="Time" Type="Real64" Value="3.866625"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{8D8D0DA8-3451-4841-9DCF-282BC4B2CC45}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 79.6874"/>
+															<Property Name="Time" Type="Real64" Value="3.96029166666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{681DF6D8-0985-4198-B402-41DB53271237}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 79.3124"/>
+															<Property Name="Time" Type="Real64" Value="4.05439583333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{81CD07A2-3370-4CD4-A003-43CBA8A53EFC}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 78.9374"/>
+															<Property Name="Time" Type="Real64" Value="4.14895833333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{73D5D9A9-ECA7-4C67-BCA5-9477EEE3B4D1}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 78.5624"/>
+															<Property Name="Time" Type="Real64" Value="4.24395833333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{DD62EAE1-D5ED-461C-9FC3-D8A494A7F2CB}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 78.1874"/>
+															<Property Name="Time" Type="Real64" Value="4.33941666666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{2DBF3E91-1B8D-4C09-88F7-576E90CAC1B8}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 78.0"/>
+															<Property Name="Time" Type="Real64" Value="4.43533333333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+												</List>
+											</PluginInnerObjectList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="GlassBreaking" ID="{324380CE-6BCA-413D-BED0-912B9C06C771}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+						<RandomSequenceContainer Name="OpenGate" ID="{B9D01AB7-E01B-4025-9000-18F4E2067CB7}" ShortID="824682479">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{0E67483A-644F-47D5-999E-378D0D5BFE05}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-200"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="OpenGate" ID="{A8FAF6E0-2315-414C-8806-53F631FFEBE7}" ShortID="970313863">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PorteOuverture" ID="{80C2893D-8CD1-4DA1-A516-932777B4BD90}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.202049780380673"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.185212298682284"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.606149341142021"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.13177159590044"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PorteOuverture.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="816920437"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PorteOuverture" ID="{80C2893D-8CD1-4DA1-A516-932777B4BD90}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="OpenGate_01" ID="{5DA04859-ED45-4FAD-8C7E-4D37956F5470}" ShortID="260056932">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PorteOuverture" ID="{C831164B-C92A-4354-BA19-F86A3F872BBC}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.202049780380673"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.185212298682284"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.29355783308931"/>
+												<Property Name="TrimEnd" Type="Real64" Value="7.07174231332357"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PorteOuverture.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="943190417"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PorteOuverture" ID="{C831164B-C92A-4354-BA19-F86A3F872BBC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="OpenGate_02" ID="{A3BD43F6-C68D-45E6-8BFF-36DD6F8AC2D9}" ShortID="672329879">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PorteOuverture" ID="{429464DD-7910-42DF-96A4-3ABCEDAEFB11}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.168374816983895"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.185212298682284"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="8.60395314787701"/>
+												<Property Name="TrimEnd" Type="Real64" Value="10.9948755490483"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PorteOuverture.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="329682438"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PorteOuverture" ID="{429464DD-7910-42DF-96A4-3ABCEDAEFB11}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Elevator" ID="{E6435BAD-645D-491D-8E9A-9A01A33C2267}" ShortID="399201025">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{415A153A-963E-463D-980A-7F1A11195CEB}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Elevator1" ID="{A54888AE-3714-4890-9573-39BE5D99CA3B}" ShortID="206904828">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Elevator" ID="{754E05B1-F0FF-431E-BCFD-D687D7ED45AE}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0495584736456808"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.07158446193265"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.319376830161054"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.35459827964861"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Elevator.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="645656700"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Elevator" ID="{754E05B1-F0FF-431E-BCFD-D687D7ED45AE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Elevator2" ID="{0884B1AA-D4D8-45FE-A697-1746DEAC3397}" ShortID="993585679">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Elevator" ID="{96364822-EB0A-4D42-88C8-8A74FF8CF69F}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0495584736456808"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.07158446193265"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.64644262445095"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.63761209736457"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Elevator.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="353982083"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Elevator" ID="{96364822-EB0A-4D42-88C8-8A74FF8CF69F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Elevator3" ID="{D7B4F5A5-5299-498D-B1BB-1BC9894BC2BA}" ShortID="403327148">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Elevator" ID="{A24C8169-CD65-4DF5-AF4D-606D0B8627EF}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0495584736456808"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.07158446193265"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="2.82483299780381"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.61226207906296"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Elevator.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1059227406"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Elevator" ID="{A24C8169-CD65-4DF5-AF4D-606D0B8627EF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="ScreamOzMoz" ID="{C95A55EB-86C1-4561-AC80-248EE4BEFBA5}" ShortID="524744423">
@@ -3496,121 +4151,6 @@
 						<ActiveSource Name="NewScreamUnlocked" ID="{CF1DF697-F2E1-4B33-8115-3703FFB0047D}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<RandomSequenceContainer Name="OpenGate" ID="{B9D01AB7-E01B-4025-9000-18F4E2067CB7}" ShortID="824682479">
-					<PropertyList>
-						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
-						<Property Name="Pitch" Type="int32">
-							<ModifierList>
-								<ModifierInfo>
-									<Modifier Name="" ID="{0E67483A-644F-47D5-999E-378D0D5BFE05}">
-										<PropertyList>
-											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="200"/>
-											<Property Name="Min" Type="Real64" Value="-200"/>
-										</PropertyList>
-									</Modifier>
-								</ModifierInfo>
-							</ModifierList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<Sound Name="OpenGate" ID="{A8FAF6E0-2315-414C-8806-53F631FFEBE7}" ShortID="970313863">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="PorteOuverture" ID="{80C2893D-8CD1-4DA1-A516-932777B4BD90}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.202049780380673"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.185212298682284"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.606149341142021"/>
-										<Property Name="TrimEnd" Type="Real64" Value="3.13177159590044"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>PorteOuverture.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="816920437"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="PorteOuverture" ID="{80C2893D-8CD1-4DA1-A516-932777B4BD90}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="OpenGate_01" ID="{5DA04859-ED45-4FAD-8C7E-4D37956F5470}" ShortID="260056932">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="PorteOuverture" ID="{C831164B-C92A-4354-BA19-F86A3F872BBC}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.202049780380673"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.185212298682284"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="4.29355783308931"/>
-										<Property Name="TrimEnd" Type="Real64" Value="7.07174231332357"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>PorteOuverture.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="943190417"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="PorteOuverture" ID="{C831164B-C92A-4354-BA19-F86A3F872BBC}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="OpenGate_02" ID="{A3BD43F6-C68D-45E6-8BFF-36DD6F8AC2D9}" ShortID="672329879">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="PorteOuverture" ID="{429464DD-7910-42DF-96A4-3ABCEDAEFB11}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.168374816983895"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.185212298682284"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="8.60395314787701"/>
-										<Property Name="TrimEnd" Type="Real64" Value="10.9948755490483"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>PorteOuverture.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="329682438"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="PorteOuverture" ID="{429464DD-7910-42DF-96A4-3ABCEDAEFB11}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

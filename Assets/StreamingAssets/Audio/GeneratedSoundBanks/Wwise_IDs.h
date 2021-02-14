@@ -20,8 +20,12 @@ namespace AK
         static const AkUniqueID CREDITS = 2201105581U;
         static const AkUniqueID CURIOSITE = 396009128U;
         static const AkUniqueID DISCONNECT = 480594535U;
+        static const AkUniqueID ELEVATOR = 3705378287U;
         static const AkUniqueID ENVIE = 1698034228U;
         static const AkUniqueID FIERTE = 2054371306U;
+        static const AkUniqueID GLASSBREAKING1 = 2528856761U;
+        static const AkUniqueID GLASSBREAKING2 = 2528856762U;
+        static const AkUniqueID GLASSBREAKING3 = 2528856763U;
         static const AkUniqueID HOST = 3617624947U;
         static const AkUniqueID INTERRUPTORHEAVY = 10711758U;
         static const AkUniqueID INTERRUPTORHIGH = 2112482585U;

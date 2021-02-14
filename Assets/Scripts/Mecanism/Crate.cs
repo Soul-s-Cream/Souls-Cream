@@ -4,19 +4,19 @@ using UnityEngine;
 using DG.Tweening;
 
 public class Crate : Photon.PunBehaviour
-{
-    #region Public Fields
+{
+    #region Public Fields
     [Tooltip("The other side crate")]
     public Crate sisterCrate;
     [Tooltip("Optionnal tag to detect humidity collisions")]
-    [TagSelector]
-    public string humidityTag;
-    [Tooltip("Sound when moving")]
-    public AK.Wwise.State stateMovingSound;
-    [Tooltip("Sound when stopped moving")]
-    public AK.Wwise.State stateStopSound;
-    #endregion
-
+    [TagSelector]
+    public string humidityTag;
+    [Tooltip("Sound when moving")]
+    public AK.Wwise.State stateMovingSound;
+    [Tooltip("Sound when stopped moving")]
+    public AK.Wwise.State stateStopSound;
+    #endregion
+
     #region Private Fields
     private Vector2 distSisterCrate;
     private Vector2 posSisterCrate;
@@ -29,7 +29,7 @@ public class Crate : Photon.PunBehaviour
 
     private List<Collider2D> humidityColliders = new List<Collider2D>();
     #endregion
-
+
     void Start()
     {
         position = transform.position;
@@ -50,13 +50,13 @@ public class Crate : Photon.PunBehaviour
 
     private void Update()
     {
-        if(Mathf.Abs(rigidbody.velocity.x) > 0.001f)
-        {
-            photonView.RPC("PlayMovingSound", PhotonTargets.All);
+        if(Mathf.Abs(rigidbody.velocity.x) > 0.001f)
+        {
+            photonView.RPC("PlayMovingSound", PhotonTargets.All);
         }
         else
-        {
-            photonView.RPC("StopMovingSound", PhotonTargets.All);
+        {
+            photonView.RPC("StopMovingSound", PhotonTargets.All);
         }
 
         if (sisterCrate != null)
@@ -86,15 +86,15 @@ public class Crate : Photon.PunBehaviour
     }
 
     [PunRPC]
-    public void PlayMovingSound()
-    {
-        stateMovingSound.SetValue();
+    public void PlayMovingSound()
+    {
+        stateMovingSound.SetValue();
     }
 
     [PunRPC]
-    public void StopMovingSound()
-    {
-        stateStopSound.SetValue();
+    public void StopMovingSound()
+    {
+        stateStopSound.SetValue();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
