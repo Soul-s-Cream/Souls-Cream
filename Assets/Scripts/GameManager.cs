@@ -133,10 +133,10 @@ public class GameManager : Photon.PunBehaviour
         }
     }
 
-    public void EndLevel()
+    public void EndLevel(int scene)
     {
         Debug.Log("Niveau terminé");
-        NetworkManagerPUN.Instance.LoadScene(3);
+        NetworkManagerPUN.Instance.LoadScene(scene);
     }
 
     #region Unity Callbacks
