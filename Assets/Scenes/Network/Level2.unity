@@ -172,7 +172,7 @@ PrefabInstance:
     - target: {fileID: 3711093793212205130, guid: dada0e463d7ceaa4cb07dcb4482282e3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 3711093793212205130, guid: dada0e463d7ceaa4cb07dcb4482282e3,
         type: 3}
@@ -2047,8 +2047,10 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -5.542095, y: 1.5764327}
-  - {x: -5.5410233, y: 1.3920567}
+  - {x: -6.7202053, y: 1.4538546}
+  - {x: -6.8853555, y: 0.46077776}
+  - {x: -6.631563, y: 0.45552802}
+  - {x: -6.6263843, y: 1.290138}
   - {x: 5.312504, y: 1.3954029}
   - {x: 5.3122635, y: 0.01833129}
   - {x: 7.0432014, y: 0.022125721}
@@ -3014,7 +3016,7 @@ PrefabInstance:
     - target: {fileID: 3711093793212205130, guid: dada0e463d7ceaa4cb07dcb4482282e3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3711093793212205130, guid: dada0e463d7ceaa4cb07dcb4482282e3,
         type: 3}
@@ -4510,7 +4512,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7ec665909308ce2469009d4915a286de, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c3be6a59a0fcf354db79fda95b758c4b, type: 3}
   m_Color: {r: 0.9, g: 0.9, b: 0.9, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5148,7 +5150,7 @@ PrefabInstance:
     - target: {fileID: 3711093793212205130, guid: dada0e463d7ceaa4cb07dcb4482282e3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.43
+      value: -2.63
       objectReference: {fileID: 0}
     - target: {fileID: 3711093793212205130, guid: dada0e463d7ceaa4cb07dcb4482282e3,
         type: 3}
@@ -6515,7 +6517,10 @@ EdgeCollider2D:
   m_EdgeRadius: 0
   m_Points:
   - {x: -5.542095, y: 1.5764327}
-  - {x: -5.5410233, y: 1.3920567}
+  - {x: -6.8435116, y: 1.5737991}
+  - {x: -6.9973946, y: 0.5343418}
+  - {x: -6.7983437, y: 0.5287068}
+  - {x: -6.745308, y: 1.399538}
   - {x: 5.312504, y: 1.3954029}
   - {x: 5.3122635, y: 0.01833129}
   - {x: 7.0432014, y: 0.022125721}
@@ -7021,7 +7026,7 @@ SpriteRenderer:
   m_SortingLayerID: -191643269
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 90c9cdb839e34b44ea9b0234cbda7ac9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c68fbe89749f16046a14f82ba1b3af0c, type: 3}
   m_Color: {r: 0.9, g: 0.9, b: 0.9, a: 1}
   m_FlipX: 0
   m_FlipY: 0
