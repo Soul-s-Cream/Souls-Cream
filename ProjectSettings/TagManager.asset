@@ -13,6 +13,7 @@ TagManager:
   - Wall
   - Shootable
   - SolitudeScream
+  - screenFade
   layers:
   - Default
   - TransparentFX

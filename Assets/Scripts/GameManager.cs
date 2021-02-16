@@ -136,6 +136,12 @@ public class GameManager : Photon.PunBehaviour
     public void EndLevel(int scene)
     {
         Debug.Log("Niveau terminé");
+        StartCoroutine(waitForNextLevel(scene));
+    }
+
+    IEnumerator waitForNextLevel(int scene)
+    {
+        yield return GameObject.FindGameObjectWithTag("screenFade").GetComponent<ScreenFade>().IFadeOut();
         NetworkManagerPUN.Instance.LoadScene(scene);
     }
 
