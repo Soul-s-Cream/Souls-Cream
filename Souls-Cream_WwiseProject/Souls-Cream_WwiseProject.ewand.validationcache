@@ -29,7 +29,7 @@
 	<ValidationCacheItem File="D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\Virtual Acoustics\Default Work Unit.wwu" DateLow="1611965585" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="1611965585" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\Switches\Default Work Unit.wwu" DateLow="1612117740" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\States\Default Work Unit.wwu" DateLow="1612867446" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\States\Default Work Unit.wwu" DateLow="1612874791" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1611965585" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1612190151" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\Souls-Cream_WwiseProject.wproj" DateLow="1611966048" DateHigh="0"/>
@@ -40,9 +40,9 @@
 	<ValidationCacheItem File="D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\Modulators\Default Work Unit.wwu" DateLow="1611965585" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\Mixing Sessions\Default Work Unit.wwu" DateLow="1611965585" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1611965585" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1612867445" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="1612867445" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\Events\Default Work Unit.wwu" DateLow="1612867445" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1613324200" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="1612874790" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\Events\Default Work Unit.wwu" DateLow="1613324200" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\Effects\Factory Effects.wwu" DateLow="1611964361" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\Effects\Default Work Unit.wwu" DateLow="1611965585" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1611965585" DateHigh="0"/>
@@ -51,5 +51,5 @@
 	<ValidationCacheItem File="D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="1612190149" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="1611965585" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="1611965585" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1612867445" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Users\Ewan\Documents\Projets\Souls-Cream\Souls-Cream_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1613324200" DateHigh="0"/>
 </ValidationCache>

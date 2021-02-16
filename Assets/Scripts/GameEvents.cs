@@ -23,6 +23,11 @@ public class GameEvents : MonoBehaviour
     public delegate void GameEvent(GameObject gameObject);
     public event GameEvent playerReachEnd;
 
+    public delegate void AbilityEvent(Player player, ScreamType scream);
+    public event AbilityEvent newScreamAbility;
+    public event AbilityEvent loseScreamAbility;
+    public event AbilityEvent changeScreamAbilitySelected;
+
     public event Action BasicEventExemple;
     public delegate void SwitchEvent(Mecanism[] mecanism);
     public event SwitchEvent switchOn;
@@ -31,14 +36,8 @@ public class GameEvents : MonoBehaviour
     public delegate void SwitchEventBox(Crate box);
     public event SwitchEventBox switchBox;
 
-    public delegate void AnimIconesCrisEvent(GameObject icone);
-    public event AnimIconesCrisEvent iconAnimSelected;
-    public event AnimIconesCrisEvent iconAnimUnselected;
-
     public delegate void BrisDeEcranEvent(GameObject[] cassur);
     public event BrisDeEcranEvent BrisDeEcranVoid; 
-
-
     #endregion
 
     private void Awake()
@@ -83,41 +82,52 @@ public class GameEvents : MonoBehaviour
     /// <summary>
     /// Appelle l'événement 'switchBox'
     /// </summary>
-    /// <param name="box">BoxController qui doit être activé</param>
+    /// <param name="box">Objet Crate qui doit être activé</param>
     public void TriggerSwitchBoxOn(Crate box)
     {
         switchBox?.Invoke(box);
     }
 
     /// <summary>
-    /// Appelle l'événement 'iconAnimSelected'
+    /// ???
     /// </summary>
-    /// <param name="icon">L'icone qui doit être selectionnée ???</param>
-    public void TriggerSwitchIconeUp(GameObject icon)
-    {
-        if (icon != null)
-        {
-            iconAnimSelected(icon);
-        }
-    }
-
-    /// <summary>
-    /// Appelle l'événement 'iconAnimUnselected'
-    /// </summary>
-    /// <param name="icon">L'icone qui doit être déselectionnée ???</param>
-    public void TriggerSwitchIconeDown(GameObject Icone)
-    {
-        if (Icone != null)
-        {
-            iconAnimUnselected(Icone);
-        }
-    }
+    /// <param name="brokenWindow"></param>
     public void BDR(GameObject[] brokenWindow)
     {
         if (brokenWindow != null)
         {
             BrisDeEcranVoid(brokenWindow);
         }
+    }
+
+    /// <summary>
+    /// Appelle l'événement 'changeScreamAbilitySelected'
+    /// </summary>
+    /// <param name="player">Le joueur qui change de cri</param>
+    /// <param name="scream">Le nouveau cri selectionné</param>
+    public void TriggerChangeSelectedScreamEvent(Player player, ScreamType scream)
+    {
+        changeScreamAbilitySelected?.Invoke(player, scream);
+    }
+
+    /// <summary>
+    /// Appelle l'événement 'newScreamAbility'
+    /// </summary>
+    /// <param name="player">Le joueur qui a appris le cri</param>
+    /// <param name="newScream">Le nouveau cri appris</param>
+    public void TriggerNewScreamEvent(Player player, ScreamType newScream)
+    {
+        newScreamAbility?.Invoke(player, newScream);
+    }
+
+    /// <summary>
+    /// Appelle l'événement 'loseScreamAbility'
+    /// </summary>
+    /// <param name="player">Le joueur qui a désappris le cri</param>
+    /// <param name="loseScream">Le cri qui a été désappris</param>
+    public void TriggerLoseScreamEvent(Player player, ScreamType loseScream)
+    {
+        loseScreamAbility?.Invoke(player, loseScream);
     }
     #endregion
 }
