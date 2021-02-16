@@ -60,7 +60,7 @@ MonoBehaviour:
       valueGuidInternal: 
       WwiseObjectReference: {fileID: 11400000, guid: 6e2544a2e5e37c543b13f850312ecdfc,
         type: 2}
-    iconUI: {fileID: 21300000, guid: a6ec7d59b4344644990c5c3ff6092b89, type: 3}
+    iconUI: {fileID: 21300000, guid: b8d7eaaa8299d3a4e8fcbe8b7a081591, type: 3}
   - scream: 6
     unlockableBy: 0
     sound:

@@ -47,9 +47,11 @@ public class Player : Photon.PunBehaviour
     public GameObject humidityPrefab;
     public float sadnessScreamMinGroundDistance = 1f;
     public Vector2 sadnessGroundCheckingCenter;
-
+    [Tooltip("Index du cri selectionné dans la liste des cris appris")]
     public int screamUnlockedIndex = 0;
+    [Tooltip("Cri selectionné")]
     public ScreamType selectedScream;
+    [Tooltip("Informations concernant les cris")]
     public ScreamsData screamsData;
     [Tooltip("Public à l'intention du Debug uniquement")]
     public List<ScreamType> unlockedScreams;
@@ -112,6 +114,7 @@ public class Player : Photon.PunBehaviour
         }
         #endregion
 
+        //On lie les contrôles pour sélectionner le cri
         control.Cri.CriUp.performed += ctx =>  ScreamSelection(true);
         control.Cri.CriDown.performed += ctx =>  ScreamSelection(false);
     }
@@ -258,6 +261,10 @@ public class Player : Photon.PunBehaviour
         return false;
     }
 
+    /// <summary>
+    /// Monte ou descend dans les index des cris appris pour selectionner un cri.
+    /// </summary>
+    /// <param name="isUp">Si l'index doit monter ou descendre dans la liste des cris appris</param>
     public void ScreamSelection(bool isUp)
     {
         if(unlockedScreams.Count != 0)
@@ -334,6 +341,8 @@ public class Player : Photon.PunBehaviour
     public void CorneredScream()
     {
         screamsDataParsed[ScreamType.Cornered].sound.Post(gameObject);
+
+        if(GameObject.FindGameObjectWithTag(whitePlayerTag))
         {
             Player whitePlayer = GameObject.FindGameObjectWithTag(whitePlayerTag).GetComponent<Player>();
             anim.SetLayerWeight(1, 1f);
@@ -352,7 +361,6 @@ public class Player : Photon.PunBehaviour
         }
 
         StartCoroutine(CorneredWait());
-        if (GameObject.FindGameObjectWithTag(whitePlayerTag))
     }
 
     IEnumerator CorneredWait()

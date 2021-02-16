@@ -100,16 +100,31 @@ public class GameEvents : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Appelle l'événement 'changeScreamAbilitySelected'
+    /// </summary>
+    /// <param name="player">Le joueur qui change de cri</param>
+    /// <param name="scream">Le nouveau cri selectionné</param>
     public void TriggerChangeSelectedScreamEvent(Player player, ScreamType scream)
     {
         changeScreamAbilitySelected?.Invoke(player, scream);
     }
 
+    /// <summary>
+    /// Appelle l'événement 'newScreamAbility'
+    /// </summary>
+    /// <param name="player">Le joueur qui a appris le cri</param>
+    /// <param name="newScream">Le nouveau cri appris</param>
     public void TriggerNewScreamEvent(Player player, ScreamType newScream)
     {
         newScreamAbility?.Invoke(player, newScream);
     }
 
+    /// <summary>
+    /// Appelle l'événement 'loseScreamAbility'
+    /// </summary>
+    /// <param name="player">Le joueur qui a désappris le cri</param>
+    /// <param name="loseScream">Le cri qui a été désappris</param>
     public void TriggerLoseScreamEvent(Player player, ScreamType loseScream)
     {
         loseScreamAbility?.Invoke(player, loseScream);
