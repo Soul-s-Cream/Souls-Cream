@@ -81,11 +81,18 @@ public class Player : Photon.PunBehaviour
     private int jumpAmount = 0;
     private bool isJuming;
     private bool isGrounded;
-    private Animator anim;
+    [HideInInspector]
+    public Animator anim;
     private Rigidbody2D rb;
     private Vector3 scale;
     private bool isScreaming;
     private SpriteRenderer spriteRender;
+    [HideInInspector]
+    public CapsuleCollider2D capsuleCollider;
+    [HideInInspector]
+    public Vector2 defaultCapsuleColliderSize;
+    private Vector2 defaultGroundCenter;
+    private float defaultGroundRadius;
 
     private Vector3 velocity = Vector3.zero;
     // d�placement
@@ -108,6 +115,10 @@ public class Player : Photon.PunBehaviour
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        capsuleCollider = GetComponent<CapsuleCollider2D>();
+        defaultCapsuleColliderSize = capsuleCollider.size;
+        defaultGroundCenter = groundCheckingCenter;
+        defaultGroundRadius = groundCheckingRadius;
         scale = transform.eulerAngles;
         //AkSoundEngine.PostEvent("MozTuto", gameObject);
     }
@@ -292,10 +303,49 @@ public class Player : Photon.PunBehaviour
     public void CorneredScream()
     {
         screamCornered.Post(gameObject);
-        Player whitePlayer = GameObject.FindGameObjectWithTag(whitePlayerTag).GetComponent<Player>();
-        Player blackPlayer = GameObject.FindGameObjectWithTag(blackPlayerTag).GetComponent<Player>();
-        whitePlayer.transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
-        blackPlayer.transform.localScale.Set(0.45f, 0.45f, 0.45f);
+
+        if (GameObject.FindGameObjectWithTag(whitePlayerTag))
+        {
+            Player whitePlayer = GameObject.FindGameObjectWithTag(whitePlayerTag).GetComponent<Player>();
+            anim.SetLayerWeight(1, 1f);
+            capsuleCollider.size = defaultCapsuleColliderSize * 0.5f;
+            whitePlayer.groundCheckingCenter.y = defaultGroundCenter.y + 0.15f;
+            whitePlayer.groundCheckingRadius = defaultGroundRadius * 0.5f;
+        }
+
+        if (GameObject.FindGameObjectWithTag(blackPlayerTag))
+        {
+            Player blackPlayer = GameObject.FindGameObjectWithTag(blackPlayerTag).GetComponent<Player>();
+            blackPlayer.anim.SetLayerWeight(2, 1f);
+            blackPlayer.capsuleCollider.size = blackPlayer.defaultCapsuleColliderSize * 1.75f;
+            blackPlayer.groundCheckingCenter.y = defaultGroundCenter.y - 0.25f;
+            blackPlayer.groundCheckingRadius = defaultGroundRadius * 1.75f;
+        }
+
+        StartCoroutine(CorneredWait());
+    }
+
+    IEnumerator CorneredWait()
+    {
+        yield return new WaitForSeconds(5);
+
+        if (GameObject.FindGameObjectWithTag(whitePlayerTag))
+        {
+            Player whitePlayer = GameObject.FindGameObjectWithTag(whitePlayerTag).GetComponent<Player>();
+            anim.SetLayerWeight(1, 0f);
+            capsuleCollider.size = defaultCapsuleColliderSize;
+            whitePlayer.groundCheckingCenter.y = defaultGroundCenter.y;
+            whitePlayer.groundCheckingRadius = defaultGroundRadius;
+        }
+
+        if (GameObject.FindGameObjectWithTag(blackPlayerTag))
+        {
+            Player blackPlayer = GameObject.FindGameObjectWithTag(blackPlayerTag).GetComponent<Player>();
+            blackPlayer.anim.SetLayerWeight(2, 0f);
+            blackPlayer.capsuleCollider.size = blackPlayer.defaultCapsuleColliderSize;
+            blackPlayer.groundCheckingCenter.y = defaultGroundCenter.y;
+            blackPlayer.groundCheckingRadius = defaultGroundRadius;
+        }
     }
 
     [PunRPC]
@@ -324,16 +374,47 @@ public class Player : Photon.PunBehaviour
     [PunRPC]
     public void PrideScream()
     {
-        screamPride.Post(gameObject);
-        Player whitePlayer = GameObject.FindGameObjectWithTag(whitePlayerTag).GetComponent<Player>();
-        Player blackPlayer = GameObject.FindGameObjectWithTag(blackPlayerTag).GetComponent<Player>();
-        if (blackPlayer)
+        if (GameObject.FindGameObjectWithTag(whitePlayerTag))
         {
-            blackPlayer.transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
+            Player whitePlayer = GameObject.FindGameObjectWithTag(whitePlayerTag).GetComponent<Player>();
+            anim.SetLayerWeight(2, 1f);
+            capsuleCollider.size = defaultCapsuleColliderSize * 1.75f;
+            whitePlayer.groundCheckingCenter.y = defaultGroundCenter.y - 0.25f;
+            whitePlayer.groundCheckingRadius = defaultGroundRadius * 1.75f;
         }
-        if (whitePlayer)
+
+        if (GameObject.FindGameObjectWithTag(blackPlayerTag))
         {
-            whitePlayer.transform.localScale.Set(0.45f, 0.45f, 0.45f);
+            Player blackPlayer = GameObject.FindGameObjectWithTag(blackPlayerTag).GetComponent<Player>();
+            blackPlayer.anim.SetLayerWeight(1, 1f);
+            blackPlayer.capsuleCollider.size = blackPlayer.defaultCapsuleColliderSize * 0.5f;
+            blackPlayer.groundCheckingCenter.y = defaultGroundCenter.y + 0.15f ;
+            blackPlayer.groundCheckingRadius = defaultGroundRadius * 0.5f;
+        }
+
+        StartCoroutine(PrideWait());
+    }
+
+    IEnumerator PrideWait()
+    {
+        yield return new WaitForSeconds(5);
+
+        if (GameObject.FindGameObjectWithTag(whitePlayerTag))
+        {
+            Player whitePlayer = GameObject.FindGameObjectWithTag(whitePlayerTag).GetComponent<Player>();
+            anim.SetLayerWeight(2, 0f);
+            capsuleCollider.size = defaultCapsuleColliderSize;
+            whitePlayer.groundCheckingCenter.y = defaultGroundCenter.y;
+            whitePlayer.groundCheckingRadius = defaultGroundRadius;
+        }
+
+        if (GameObject.FindGameObjectWithTag(blackPlayerTag))
+        {
+            Player blackPlayer = GameObject.FindGameObjectWithTag(blackPlayerTag).GetComponent<Player>();
+            blackPlayer.anim.SetLayerWeight(1, 0f);
+            blackPlayer.capsuleCollider.size = blackPlayer.defaultCapsuleColliderSize;
+            blackPlayer.groundCheckingCenter.y = defaultGroundCenter.y;
+            blackPlayer.groundCheckingRadius = defaultGroundRadius;
         }
     }
 
