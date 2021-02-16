@@ -403,7 +403,22 @@ AnimatorController:
     m_Name: Big
     m_StateMachine: {fileID: 4342811650538228401}
     m_Mask: {fileID: 0}
-    m_Motions: []
+    m_Motions:
+    - serializedVersion: 2
+      m_State: {fileID: -7218815566398882732}
+      m_Motion: {fileID: 7400000, guid: 9aca657457f8709428b1db86d6ce6a35, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: -1438446450339326443}
+      m_Motion: {fileID: 7400000, guid: c36c448d70814d143a85afb1d9330896, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: -857910495784958963}
+      m_Motion: {fileID: 7400000, guid: 94da7ab69076e224db0091e522bd5111, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: -1886708434443755337}
+      m_Motion: {fileID: 7400000, guid: febdf1cdb583b004a9ab8a355e3a5149, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: 5673381048984262954}
+      m_Motion: {fileID: 7400000, guid: 96a0cab1bea55b94b886d5f5db09c08f, type: 2}
     m_Behaviours: []
     m_BlendingMode: 0
     m_SyncedLayerIndex: 0
