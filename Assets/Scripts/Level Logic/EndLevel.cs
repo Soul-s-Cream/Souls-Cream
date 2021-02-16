@@ -12,6 +12,8 @@ public class EndLevel : MonoBehaviour
     public LayerMask layer;
     [Tooltip("Optionnal tag(s) of player(s)")]
     public List<string> playerTags;
+    [Tooltip("Scene to load")]
+    public int scene;
 
     private bool isPlayerReachEnd = false;
     private Animator animator;
@@ -54,7 +56,7 @@ public class EndLevel : MonoBehaviour
         {
             animator.SetBool("EndLevel", true);
             endPoint.GetComponent<Animator>().SetBool("EndLevel", true);
-            GameManager.Instance.EndLevel();
+            GameManager.Instance.EndLevel(scene);
         }
 
     }

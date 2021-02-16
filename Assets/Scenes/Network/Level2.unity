@@ -2924,6 +2924,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1304620136879581165, guid: a92951469cc650d419b921b0d2c43c7b,
+        type: 3}
+      propertyPath: nextScene
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1304620136879581166, guid: a92951469cc650d419b921b0d2c43c7b,
         type: 3}
       propertyPath: m_RootOrder
@@ -4349,6 +4354,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EndLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316135520353494042, guid: d7d357dd6fff0334594e3a16273af3fa,
+        type: 3}
+      propertyPath: scene
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316135520353494042, guid: d7d357dd6fff0334594e3a16273af3fa,
+        type: 3}
+      propertyPath: radius
+      value: 0.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316135520353494042, guid: d7d357dd6fff0334594e3a16273af3fa,
+        type: 3}
+      propertyPath: layer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316135520353494042, guid: d7d357dd6fff0334594e3a16273af3fa,
+        type: 3}
+      propertyPath: playerTags.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316135520353494042, guid: d7d357dd6fff0334594e3a16273af3fa,
+        type: 3}
+      propertyPath: playerTags.Array.data[0]
+      value: WhitePlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316135520353494042, guid: d7d357dd6fff0334594e3a16273af3fa,
+        type: 3}
+      propertyPath: playerTags.Array.data[1]
+      value: BlackPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7d357dd6fff0334594e3a16273af3fa, type: 3}
@@ -7459,8 +7494,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3316135520353494042, guid: d7d357dd6fff0334594e3a16273af3fa,
         type: 3}
+      propertyPath: scene
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316135520353494042, guid: d7d357dd6fff0334594e3a16273af3fa,
+        type: 3}
+      propertyPath: radius
+      value: 0.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316135520353494042, guid: d7d357dd6fff0334594e3a16273af3fa,
+        type: 3}
+      propertyPath: layer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316135520353494042, guid: d7d357dd6fff0334594e3a16273af3fa,
+        type: 3}
       propertyPath: playerTags.Array.size
-      value: 0
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316135520353494042, guid: d7d357dd6fff0334594e3a16273af3fa,
+        type: 3}
+      propertyPath: playerTags.Array.data[0]
+      value: WhitePlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316135520353494042, guid: d7d357dd6fff0334594e3a16273af3fa,
+        type: 3}
+      propertyPath: playerTags.Array.data[1]
+      value: BlackPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7d357dd6fff0334594e3a16273af3fa, type: 3}
