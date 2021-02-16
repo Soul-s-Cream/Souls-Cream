@@ -12,7 +12,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+							<ObjectRef Name="Musics" ID="{166C9DC3-D8B9-4D27-AAF0-72F0AC6DF911}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -61,6 +61,46 @@
 											</PropertyList>
 											<AudioSourceRef Name="OzTuto" ID="{6ECF7256-F184-484B-99A7-3A7610095343}"/>
 										</MusicClip>
+										<MusicEventCue Name="" ID="{8C9B3344-2CA1-40D9-A108-CD6B2C6782FA}" ShortID="237997329">
+											<PropertyList>
+												<Property Name="PlayAt" Type="Real64" Value="18000"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="PostEventTarget">
+													<ObjectRef Name="SILENCE" ID="{82E6F659-52C3-4B8D-8870-E0EC9D1467DD}" WorkUnitID="{A806E1A3-C50B-4548-9894-7AF11861B916}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicEventCue>
+										<MusicEventCue Name="" ID="{A46F09B7-3589-4708-98E8-F75E4FABF8F7}" ShortID="934120341">
+											<PropertyList>
+												<Property Name="PlayAt" Type="Real64" Value="24000"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="PostEventTarget">
+													<ObjectRef Name="SILENCE" ID="{82E6F659-52C3-4B8D-8870-E0EC9D1467DD}" WorkUnitID="{A806E1A3-C50B-4548-9894-7AF11861B916}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicEventCue>
+										<MusicEventCue Name="" ID="{A6361919-EC5F-4A25-9C99-BEB9181F3B08}" ShortID="769647546">
+											<PropertyList>
+												<Property Name="PlayAt" Type="Real64" Value="30000"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="PostEventTarget">
+													<ObjectRef Name="SILENCE" ID="{82E6F659-52C3-4B8D-8870-E0EC9D1467DD}" WorkUnitID="{A806E1A3-C50B-4548-9894-7AF11861B916}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicEventCue>
+										<MusicEventCue Name="" ID="{1F407480-E2A6-443E-A3AC-8F14EA7395C5}" ShortID="585358004">
+											<PropertyList>
+												<Property Name="PlayAt" Type="Real64" Value="36000"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="PostEventTarget">
+													<ObjectRef Name="SILENCE" ID="{82E6F659-52C3-4B8D-8870-E0EC9D1467DD}" WorkUnitID="{A806E1A3-C50B-4548-9894-7AF11861B916}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicEventCue>
 									</ClipList>
 								</MusicTrackSequence>
 							</SequenceList>
@@ -98,19 +138,12 @@
 					</CueList>
 				</MusicSegment>
 				<MusicPlaylistContainer Name="OzMozThemeAmbience" ID="{59801BE3-23FA-41AE-AFB2-A85C7C8AC46B}" ShortID="348339966">
-					<PropertyList>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-6</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+							<ObjectRef Name="Musics" ID="{166C9DC3-D8B9-4D27-AAF0-72F0AC6DF911}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -161,14 +194,14 @@
 													<PropertyList>
 														<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 														<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
-														<Property Name="ExitSourceAt" Type="int16" Value="3"/>
+														<Property Name="ExitSourceAt" Type="int16" Value="0"/>
 													</PropertyList>
 													<TransitionInfo>
 														<SourceFadeOut>
 															<MusicFade Name="Source Fade-out" ID="{4BCFAD71-3A33-4A62-9D90-FE6BBDE29616}">
 																<PropertyList>
-																	<Property Name="FadeOffset" Type="Real64" Value="1"/>
-																	<Property Name="FadeTime" Type="Real64" Value="2"/>
+																	<Property Name="FadeOffset" Type="Real64" Value="1.5"/>
+																	<Property Name="FadeTime" Type="Real64" Value="1.5"/>
 																	<Property Name="FadeType" Type="int16" Value="1"/>
 																</PropertyList>
 															</MusicFade>
@@ -176,8 +209,8 @@
 														<DestinationFadeIn>
 															<MusicFade Name="Destination Fade-in" ID="{4CEFCC03-9DAA-49D1-8CEB-84DD65A8FBC1}">
 																<PropertyList>
-																	<Property Name="FadeOffset" Type="Real64" Value="-2"/>
-																	<Property Name="FadeTime" Type="Real64" Value="2"/>
+																	<Property Name="FadeOffset" Type="Real64" Value="-1.5"/>
+																	<Property Name="FadeTime" Type="Real64" Value="1.5"/>
 																</PropertyList>
 															</MusicFade>
 														</DestinationFadeIn>
@@ -249,14 +282,14 @@
 													<PropertyList>
 														<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 														<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
-														<Property Name="ExitSourceAt" Type="int16" Value="3"/>
+														<Property Name="ExitSourceAt" Type="int16" Value="0"/>
 													</PropertyList>
 													<TransitionInfo>
 														<SourceFadeOut>
 															<MusicFade Name="Source Fade-out" ID="{6DB6335F-C203-47AB-8D24-05F9E9482372}">
 																<PropertyList>
-																	<Property Name="FadeOffset" Type="Real64" Value="2"/>
-																	<Property Name="FadeTime" Type="Real64" Value="2"/>
+																	<Property Name="FadeOffset" Type="Real64" Value="1.5"/>
+																	<Property Name="FadeTime" Type="Real64" Value="1.5"/>
 																	<Property Name="FadeType" Type="int16" Value="1"/>
 																</PropertyList>
 															</MusicFade>
@@ -264,8 +297,8 @@
 														<DestinationFadeIn>
 															<MusicFade Name="Destination Fade-in" ID="{53A20C20-ADE4-4029-ACE6-5D282DAD1F55}">
 																<PropertyList>
-																	<Property Name="FadeOffset" Type="Real64" Value="-2"/>
-																	<Property Name="FadeTime" Type="Real64" Value="2"/>
+																	<Property Name="FadeOffset" Type="Real64" Value="-1.5"/>
+																	<Property Name="FadeTime" Type="Real64" Value="1.5"/>
 																</PropertyList>
 															</MusicFade>
 														</DestinationFadeIn>
@@ -304,17 +337,24 @@
 									</SequenceList>
 								</MusicTrack>
 								<MusicTrack Name="OzMozAmbienceTheme" ID="{147DA1C6-8789-4F6A-8709-5C2CD5C7C1CC}" ShortID="567358408">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-9</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="OzMozAmbienceTheme" ID="{024E147C-7D7E-48FE-9EEC-E821E59B339C}">
+										<AudioFileSource Name="OzMozThemeAmbience" ID="{5D35B129-F566-4F3F-9ECB-73625DDA2E65}">
 											<Language>SFX</Language>
-											<AudioFile>OzMozAmbienceTheme.wav</AudioFile>
+											<AudioFile>OzMozThemeAmbience.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="21678370"/>
+												<MediaID ID="177371341"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -329,14 +369,13 @@
 									<SequenceList>
 										<MusicTrackSequence Name="" ID="{918819C6-BB90-4023-882D-0EB7800E33F3}">
 											<ClipList>
-												<MusicClip Name="OzMozAmbienceTheme" ID="{2FE7DA7C-AAB2-4D19-B683-D5625D90003F}">
+												<MusicClip Name="OzMozThemeAmbience" ID="{46E9F2FE-BBAE-4EB8-BCF8-AA61335E49BD}">
 													<PropertyList>
 														<Property Name="EndTrimOffset" Type="Real64" Value="36000"/>
-														<Property Name="FadeInDuration" Type="Real64" Value="2048.14004376368"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="2008.75273522975"/>
-														<Property Name="FadeOutShape" Type="int16" Value="2"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
 													</PropertyList>
-													<AudioSourceRef Name="OzMozAmbienceTheme" ID="{024E147C-7D7E-48FE-9EEC-E821E59B339C}"/>
+													<AudioSourceRef Name="OzMozThemeAmbience" ID="{5D35B129-F566-4F3F-9ECB-73625DDA2E65}"/>
 												</MusicClip>
 											</ClipList>
 										</MusicTrackSequence>
@@ -431,12 +470,19 @@
 					</Playlist>
 				</MusicPlaylistContainer>
 				<MusicPlaylistContainer Name="OzMozMenuTheme" ID="{5B94B4E0-3D54-4CD2-AEBB-52362430432A}" ShortID="343665914">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+							<ObjectRef Name="Musics" ID="{166C9DC3-D8B9-4D27-AAF0-72F0AC6DF911}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -621,13 +667,18 @@
 				<MusicSegment Name="MozTuto" ID="{CE129AE6-947E-4BA9-88A4-0B9D57CFD84F}" ShortID="789539555">
 					<PropertyList>
 						<Property Name="EndPosition" Type="Real64" Value="64000"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>6</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+							<ObjectRef Name="Musics" ID="{166C9DC3-D8B9-4D27-AAF0-72F0AC6DF911}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -664,6 +715,46 @@
 											</PropertyList>
 											<AudioSourceRef Name="MozTutoV2" ID="{8BE8522E-42EE-45B4-88B7-48631F2E85E9}"/>
 										</MusicClip>
+										<MusicEventCue Name="" ID="{DAF065CC-51D0-4209-9578-2E3CF020D2BB}" ShortID="67748647">
+											<PropertyList>
+												<Property Name="PlayAt" Type="Real64" Value="18000"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="PostEventTarget">
+													<ObjectRef Name="SILENCE" ID="{82E6F659-52C3-4B8D-8870-E0EC9D1467DD}" WorkUnitID="{A806E1A3-C50B-4548-9894-7AF11861B916}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicEventCue>
+										<MusicEventCue Name="" ID="{AAA92E8E-4EBF-4FBC-9809-4FFEBFEC770D}" ShortID="55918304">
+											<PropertyList>
+												<Property Name="PlayAt" Type="Real64" Value="24000"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="PostEventTarget">
+													<ObjectRef Name="SILENCE" ID="{82E6F659-52C3-4B8D-8870-E0EC9D1467DD}" WorkUnitID="{A806E1A3-C50B-4548-9894-7AF11861B916}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicEventCue>
+										<MusicEventCue Name="" ID="{C815669D-9725-4BCA-926B-0CEB56086F60}" ShortID="790292367">
+											<PropertyList>
+												<Property Name="PlayAt" Type="Real64" Value="30000"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="PostEventTarget">
+													<ObjectRef Name="SILENCE" ID="{82E6F659-52C3-4B8D-8870-E0EC9D1467DD}" WorkUnitID="{A806E1A3-C50B-4548-9894-7AF11861B916}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicEventCue>
+										<MusicEventCue Name="" ID="{3BADD907-50D3-43C3-BD40-A766A8425FA0}" ShortID="306113414">
+											<PropertyList>
+												<Property Name="PlayAt" Type="Real64" Value="36000"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="PostEventTarget">
+													<ObjectRef Name="SILENCE" ID="{82E6F659-52C3-4B8D-8870-E0EC9D1467DD}" WorkUnitID="{A806E1A3-C50B-4548-9894-7AF11861B916}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicEventCue>
 									</ClipList>
 								</MusicTrackSequence>
 							</SequenceList>
@@ -703,33 +794,38 @@
 				<MusicSegment Name="OzMozEndSong" ID="{AF13FDDB-BDA8-4C6C-BC07-DEDAF68C0011}" ShortID="846362636">
 					<PropertyList>
 						<Property Name="EndPosition" Type="Real64" Value="66000"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-2</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+							<ObjectRef Name="Musics" ID="{166C9DC3-D8B9-4D27-AAF0-72F0AC6DF911}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<MusicTrack Name="OzMozEndTheme" ID="{76DF27E6-A82A-4313-BFE4-1409CB059BB6}" ShortID="516627365">
+						<MusicTrack Name="OzMozEndSong" ID="{7474A47D-A6A1-410F-8F63-20761D484133}" ShortID="173202841">
 							<ReferenceList>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="OzMozEndTheme" ID="{69FC5461-3831-40E8-A1C4-D1EE36FDDA60}">
+								<AudioFileSource Name="OzMozEndSong" ID="{CA1C0EC3-F78E-44FC-AD0E-5B369E1C8C83}">
 									<Language>SFX</Language>
-									<AudioFile>OzMozEndTheme.wav</AudioFile>
+									<AudioFile>OzMozEndSong.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="743192087"/>
+										<MediaID ID="533754305"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<TransitionList>
-								<MusicTransition Name="Root" ID="{66D36ECF-B27F-476B-ADBD-FE0DD622573D}">
+								<MusicTransition Name="Root" ID="{F87A8BC9-BED6-41E8-B400-3A661D2F80AA}">
 									<PropertyList>
 										<Property Name="IsFolder" Type="bool" Value="True"/>
 									</PropertyList>
@@ -737,83 +833,43 @@
 								</MusicTransition>
 							</TransitionList>
 							<SequenceList>
-								<MusicTrackSequence Name="" ID="{A9C01D5D-1FE4-47B2-8C01-2887E98ED100}">
+								<MusicTrackSequence Name="" ID="{3D2D7B08-1315-41C2-BBD3-369B3DC0BAC4}">
 									<ClipList>
-										<MusicClip Name="OzMozEndTheme" ID="{D59883F2-B620-4BAF-8395-BF824B8DE8A7}">
+										<MusicClip Name="OzMozEndSong" ID="{66E89344-0560-4544-B668-2BC03EA7A420}">
 											<PropertyList>
-												<Property Name="BeginTrimOffset" Type="Real64" Value="1190.37199124727"/>
-												<Property Name="EndTrimOffset" Type="Real64" Value="63190.3719912473"/>
+												<Property Name="EndTrimOffset" Type="Real64" Value="62500"/>
 												<Property Name="FadeInMode" Type="int16" Value="0"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="3921.22538293216"/>
-												<Property Name="FadeOutShape" Type="int16" Value="1"/>
-												<Property Name="PlayAt" Type="Real64" Value="-1190.37199124727"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="72.210065645515"/>
+												<Property Name="FadeOutShape" Type="int16" Value="2"/>
 											</PropertyList>
-											<AudioSourceRef Name="OzMozEndTheme" ID="{69FC5461-3831-40E8-A1C4-D1EE36FDDA60}"/>
-											<PropertyCurveList>
-												<PropertyCurve PropertyName="Highpass">
-													<Curve Name="" ID="{69A1A2C8-E16F-4662-8EA1-E38952724B15}">
-														<PropertyList>
-															<Property Name="Flags" Type="int32" Value="1"/>
-														</PropertyList>
-														<PointList>
-															<Point>
-																<XPos>1.19037</XPos>
-																<YPos>0</YPos>
-																<Flags>5</Flags>
-															</Point>
-															<Point>
-																<XPos>63.19037</XPos>
-																<YPos>0</YPos>
-																<Flags>37</Flags>
-															</Point>
-														</PointList>
-													</Curve>
-												</PropertyCurve>
-												<PropertyCurve PropertyName="Lowpass">
-													<Curve Name="" ID="{E177B8E8-9E5E-456A-909A-AF8DD6401197}">
-														<PropertyList>
-															<Property Name="Flags" Type="int32" Value="1"/>
-														</PropertyList>
-														<PointList>
-															<Point>
-																<XPos>1.19037</XPos>
-																<YPos>0</YPos>
-																<Flags>5</Flags>
-															</Point>
-															<Point>
-																<XPos>63.19037</XPos>
-																<YPos>0</YPos>
-																<Flags>37</Flags>
-															</Point>
-														</PointList>
-													</Curve>
-												</PropertyCurve>
-												<PropertyCurve PropertyName="Volume">
-													<Curve Name="" ID="{2E8BEAA8-E81A-438E-AFFC-FED4B2C707F4}">
-														<PropertyList>
-															<Property Name="Flags" Type="int32" Value="3"/>
-														</PropertyList>
-														<PointList>
-															<Point>
-																<XPos>1.19037</XPos>
-																<YPos>0</YPos>
-																<Flags>5</Flags>
-															</Point>
-															<Point>
-																<XPos>63.19037</XPos>
-																<YPos>0</YPos>
-																<Flags>37</Flags>
-															</Point>
-														</PointList>
-													</Curve>
-												</PropertyCurve>
-											</PropertyCurveList>
+											<AudioSourceRef Name="OzMozEndSong" ID="{CA1C0EC3-F78E-44FC-AD0E-5B369E1C8C83}"/>
 										</MusicClip>
 									</ClipList>
 								</MusicTrackSequence>
 							</SequenceList>
 						</MusicTrack>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="MusicPlayStop" ID="{64656CB5-D059-442F-AC97-DAFB51A01BD4}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Play" ID="{E8AA43D5-838B-4885-A76B-09FF38A29218}"/>
+								<CustomState Name="" ID="{0E7B2453-00E1-4D51-8CF5-8708ED17E2C7}" ShortID="630858421"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Stop" ID="{839450E1-BFDC-4DE8-A058-EB146D972FAC}"/>
+								<CustomState Name="" ID="{F9DD53DF-3FC5-4BF0-AEF2-5519306D51F4}" ShortID="538041964">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-96"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<CueList>
 						<MusicCue Name="Entry Cue" ID="{64A253F5-9624-4D21-ADEA-B8D13BF64ADA}"/>
 						<MusicCue Name="Exit Cue" ID="{978095BD-C05F-4BE8-B068-EE2539165524}">

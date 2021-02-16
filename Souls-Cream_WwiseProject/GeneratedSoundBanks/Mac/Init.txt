@@ -18,8 +18,16 @@ State	ID	Name	State Group			Notes
 	935025152	OzBig	OzMozThemeAmbience			
 	1634287737	MozBig	OzMozThemeAmbience			
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	924921327	MusicsVolume			\Default Work Unit\MusicsVolume	
+	3402092638	SoundEffectsVolume			\Default Work Unit\SoundEffectsVolume	
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	1730564753	Musics			\Default Work Unit\Master Audio Bus\Musics	
+	2812860249	Screams			\Default Work Unit\Master Audio Bus\Screams	
+	3196512249	MenuVoices			\Default Work Unit\Master Audio Bus\MenuVoices	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3898083304	SoundEffects			\Default Work Unit\Master Audio Bus\SoundEffects	
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			
