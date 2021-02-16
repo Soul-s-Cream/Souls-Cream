@@ -29,6 +29,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2528856762	GlassBreaking2			\Default Work Unit\Objects\GlassBreaking2	
 	2528856763	GlassBreaking3			\Default Work Unit\Objects\GlassBreaking3	
 	2952898430	Solitude			\Default Work Unit\Moz\Screams\Solitude	
+	3041563226	SILENCE			\Default Work Unit\SILENCE	
 	3147785334	OzMozThemeAmbiences			\Default Work Unit\OzMozThemeAmbiences	
 	3176198653	NotReady			\Default Work Unit\MenuVoices\NotReady	
 	3278785808	OzMozMenuTheme			\Default Work Unit\OzMozMenuTheme	
@@ -41,6 +42,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3705378287	Elevator			\Default Work Unit\Objects\Elevator	
 	3930794392	Quit			\Default Work Unit\MenuVoices\Quit	
 	4224289095	Compassion			\Default Work Unit\Oz\Screams\Compassion	
+	4232859593	Post_Event_OzDoubleJump			\Default Work Unit\Post_Event_OzDoubleJump	
 
 State Group	ID	Name			Wwise Object Path	Notes
 	545959236	PlayerMoving			\Default Work Unit\PlayerMoving	
@@ -68,6 +70,7 @@ Custom State	ID	Name	State Group	Owner		Notes
 	694063259	Stop	CrateMoving	\Actor-Mixer Hierarchy\Default Work Unit\Objects\CrateFriction		
 	722079427	Stop	MusicPlayStop	\Interactive Music Hierarchy\Default Work Unit\OzMozMenuTheme		
 	891359592	Stop	MusicPlayStop	\Interactive Music Hierarchy\Default Work Unit\MozTuto		
+	967756024	Stop	PlayerMoving	\Actor-Mixer Hierarchy\Default Work Unit\Oz\OzFootsteps2		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	34521763	WetFloor			\Default Work Unit\WetFloor	

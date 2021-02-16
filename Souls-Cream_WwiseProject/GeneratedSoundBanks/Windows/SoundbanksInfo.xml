@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="425163716">
+		<SoundBank Id="1355168291" Language="SFX" Hash="893424630">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -20,7 +20,7 @@
 				<GameParameter Id="3402092638" Name="SoundEffectsVolume" ObjectPath="\Game Parameters\Default Work Unit\SoundEffectsVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1719328831">
+		<SoundBank Id="3161908922" Language="SFX" Hash="3339193523">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -557,6 +557,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="4232859593" Name="Post_Event_OzDoubleJump" ObjectPath="\Events\Default Work Unit\Post_Event_OzDoubleJump" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1891947077" Name="OzDoubleJump" ObjectPath="\Events\Default Work Unit\Oz\OzDoubleJump"/>
+					</ActionPostEvent>
+				</Event>
 				<Event Id="3930794392" Name="Quit" ObjectPath="\Events\Default Work Unit\MenuVoices\Quit" DurationType="OneShot" DurationMin="0.651537" DurationMax="0.651537">
 					<IncludedMemoryFiles>
 						<File Id="906615684" Language="SFX">
@@ -573,6 +578,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3041563226" Name="SILENCE" ObjectPath="\Events\Default Work Unit\SILENCE" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2952898430" Name="Solitude" ObjectPath="\Events\Default Work Unit\Moz\Screams\Solitude" DurationType="OneShot" DurationMin="0.845534" DurationMax="1.109078">
 					<IncludedMemoryFiles>
 						<File Id="57836437" Language="SFX">

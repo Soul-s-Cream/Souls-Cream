@@ -24,6 +24,8 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	1730564753	Musics			\Default Work Unit\Master Audio Bus\Musics	
+	2812860249	Screams			\Default Work Unit\Master Audio Bus\Screams	
+	3196512249	MenuVoices			\Default Work Unit\Master Audio Bus\MenuVoices	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 	3898083304	SoundEffects			\Default Work Unit\Master Audio Bus\SoundEffects	
 
