@@ -30,7 +30,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: decf5895b2d13846b0aa0701cd5fbb4e
     GuidInternal: 
-    m_lastTime: -8585890719555305017
+    m_lastTime: -8585882796664730835
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -41,6 +41,28 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
       Path: Default Work Unit\Master Audio Bus
+    - name: Musics
+      guid: c39d6c16b9d8274daaf072f0ac6df911
+      id: 1730564753
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Musics
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus\Musics
+    - name: SoundEffects
+      guid: 19853847b8b75248ac12ba01e1d8a950
+      id: 3898083304
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: SoundEffects
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus\SoundEffects
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -68,7 +90,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: a3e106a80bc5484598947af11861b916
     GuidInternal: 
-    m_lastTime: -8585887320945396714
+    m_lastTime: -8585882796664780704
     List:
     - name: Acculation
       guid: 8d5a9d35caa05d4ba2fd12e71d93e2e3
@@ -174,6 +196,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Elevator
+      guid: b2cff4c8b46b0347b937044732e7f01d
+      id: 3705378287
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Objects
+        ObjectType: 4
+      - ElementName: Elevator
+        ObjectType: 3
+      Path: Default Work Unit\Objects\Elevator
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Envie
       guid: 877aa7a3fb01044082eb63d35a006158
       id: 1698034228
@@ -203,6 +239,48 @@ MonoBehaviour:
       - ElementName: Fierte
         ObjectType: 3
       Path: Default Work Unit\Oz\Screams\Fierte
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: GlassBreaking1
+      guid: fcd5389ecc06f049a9aa419be967bcd8
+      id: 2528856761
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Objects
+        ObjectType: 4
+      - ElementName: GlassBreaking1
+        ObjectType: 3
+      Path: Default Work Unit\Objects\GlassBreaking1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: GlassBreaking2
+      guid: 86c5d9f3b406fa49b8b5ebb633f3a087
+      id: 2528856762
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Objects
+        ObjectType: 4
+      - ElementName: GlassBreaking2
+        ObjectType: 3
+      Path: Default Work Unit\Objects\GlassBreaking2
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: GlassBreaking3
+      guid: 96e65e56bcd7284884f73333c5b37ad9
+      id: 2528856763
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Objects
+        ObjectType: 4
+      - ElementName: GlassBreaking3
+        ObjectType: 3
+      Path: Default Work Unit\Objects\GlassBreaking3
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -611,20 +689,6 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: Screams
-      guid: ee93749b125cbf42b72d7e87ded24031
-      id: 2812860249
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Moz
-        ObjectType: 4
-      - ElementName: Screams
-        ObjectType: 4
-      Path: Default Work Unit\Moz\Screams
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Screams
       guid: ea00767fc2e36347a651d5a72f1c5943
       id: 2812860249
       PathAndIcons:
@@ -635,6 +699,20 @@ MonoBehaviour:
       - ElementName: Screams
         ObjectType: 4
       Path: Default Work Unit\Oz\Screams
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Screams
+      guid: ee93749b125cbf42b72d7e87ded24031
+      id: 2812860249
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Moz
+        ObjectType: 4
+      - ElementName: Screams
+        ObjectType: 4
+      Path: Default Work Unit\Moz\Screams
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -692,8 +770,17 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: c69f70ce3ee3f443b8d3fc03c4bc2167
     GuidInternal: 
-    m_lastTime: -8585887320945396714
+    m_lastTime: -8585882796664780704
     List:
+    - name: MusicsVolume
+      guid: 3d18a0f67f7fe64ba59aa4be9b9e21a4
+      id: 924921327
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicsVolume
+        ObjectType: 13
+      Path: Default Work Unit\MusicsVolume
     - name: PlayerMoving
       guid: e91745d28ac7ca4a9749463bf551bf6e
       id: 545959236
@@ -703,6 +790,24 @@ MonoBehaviour:
       - ElementName: PlayerMoving
         ObjectType: 13
       Path: Default Work Unit\PlayerMoving
+    - name: PlayerSpeed
+      guid: e8b7f5f8ae81ce4e89063619b7378b8b
+      id: 1493153371
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PlayerSpeed
+        ObjectType: 13
+      Path: Default Work Unit\PlayerSpeed
+    - name: SoundEffectsVolume
+      guid: ec328d7e6b3c2b4eb4b2d835820bde31
+      id: 3402092638
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SoundEffectsVolume
+        ObjectType: 13
+      Path: Default Work Unit\SoundEffectsVolume
     - name: WetFloor
       guid: 694ba601374a404ea27a189f056bb60f
       id: 34521763

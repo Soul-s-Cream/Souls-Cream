@@ -24,6 +24,16 @@
 						<Property Name="SlewRateUp" Type="Real64" Value="33"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="ScreamsVolume" ID="{74BC5038-DE29-48B2-83CD-E87F35D30DB6}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="MenuVoicesVolume" ID="{52FC746A-19F5-4048-B1B8-B3763026F49F}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

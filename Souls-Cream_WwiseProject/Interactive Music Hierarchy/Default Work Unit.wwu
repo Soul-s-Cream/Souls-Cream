@@ -61,6 +61,46 @@
 											</PropertyList>
 											<AudioSourceRef Name="OzTuto" ID="{6ECF7256-F184-484B-99A7-3A7610095343}"/>
 										</MusicClip>
+										<MusicEventCue Name="" ID="{8C9B3344-2CA1-40D9-A108-CD6B2C6782FA}" ShortID="237997329">
+											<PropertyList>
+												<Property Name="PlayAt" Type="Real64" Value="18000"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="PostEventTarget">
+													<ObjectRef Name="SILENCE" ID="{82E6F659-52C3-4B8D-8870-E0EC9D1467DD}" WorkUnitID="{A806E1A3-C50B-4548-9894-7AF11861B916}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicEventCue>
+										<MusicEventCue Name="" ID="{A46F09B7-3589-4708-98E8-F75E4FABF8F7}" ShortID="934120341">
+											<PropertyList>
+												<Property Name="PlayAt" Type="Real64" Value="24000"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="PostEventTarget">
+													<ObjectRef Name="SILENCE" ID="{82E6F659-52C3-4B8D-8870-E0EC9D1467DD}" WorkUnitID="{A806E1A3-C50B-4548-9894-7AF11861B916}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicEventCue>
+										<MusicEventCue Name="" ID="{A6361919-EC5F-4A25-9C99-BEB9181F3B08}" ShortID="769647546">
+											<PropertyList>
+												<Property Name="PlayAt" Type="Real64" Value="30000"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="PostEventTarget">
+													<ObjectRef Name="SILENCE" ID="{82E6F659-52C3-4B8D-8870-E0EC9D1467DD}" WorkUnitID="{A806E1A3-C50B-4548-9894-7AF11861B916}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicEventCue>
+										<MusicEventCue Name="" ID="{1F407480-E2A6-443E-A3AC-8F14EA7395C5}" ShortID="585358004">
+											<PropertyList>
+												<Property Name="PlayAt" Type="Real64" Value="36000"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="PostEventTarget">
+													<ObjectRef Name="SILENCE" ID="{82E6F659-52C3-4B8D-8870-E0EC9D1467DD}" WorkUnitID="{A806E1A3-C50B-4548-9894-7AF11861B916}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicEventCue>
 									</ClipList>
 								</MusicTrackSequence>
 							</SequenceList>
@@ -98,13 +138,6 @@
 					</CueList>
 				</MusicSegment>
 				<MusicPlaylistContainer Name="OzMozThemeAmbience" ID="{59801BE3-23FA-41AE-AFB2-A85C7C8AC46B}" ShortID="348339966">
-					<PropertyList>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-6</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
@@ -437,6 +470,13 @@
 					</Playlist>
 				</MusicPlaylistContainer>
 				<MusicPlaylistContainer Name="OzMozMenuTheme" ID="{5B94B4E0-3D54-4CD2-AEBB-52362430432A}" ShortID="343665914">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
@@ -627,6 +667,11 @@
 				<MusicSegment Name="MozTuto" ID="{CE129AE6-947E-4BA9-88A4-0B9D57CFD84F}" ShortID="789539555">
 					<PropertyList>
 						<Property Name="EndPosition" Type="Real64" Value="64000"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>6</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -670,6 +715,46 @@
 											</PropertyList>
 											<AudioSourceRef Name="MozTutoV2" ID="{8BE8522E-42EE-45B4-88B7-48631F2E85E9}"/>
 										</MusicClip>
+										<MusicEventCue Name="" ID="{DAF065CC-51D0-4209-9578-2E3CF020D2BB}" ShortID="67748647">
+											<PropertyList>
+												<Property Name="PlayAt" Type="Real64" Value="18000"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="PostEventTarget">
+													<ObjectRef Name="SILENCE" ID="{82E6F659-52C3-4B8D-8870-E0EC9D1467DD}" WorkUnitID="{A806E1A3-C50B-4548-9894-7AF11861B916}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicEventCue>
+										<MusicEventCue Name="" ID="{AAA92E8E-4EBF-4FBC-9809-4FFEBFEC770D}" ShortID="55918304">
+											<PropertyList>
+												<Property Name="PlayAt" Type="Real64" Value="24000"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="PostEventTarget">
+													<ObjectRef Name="SILENCE" ID="{82E6F659-52C3-4B8D-8870-E0EC9D1467DD}" WorkUnitID="{A806E1A3-C50B-4548-9894-7AF11861B916}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicEventCue>
+										<MusicEventCue Name="" ID="{C815669D-9725-4BCA-926B-0CEB56086F60}" ShortID="790292367">
+											<PropertyList>
+												<Property Name="PlayAt" Type="Real64" Value="30000"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="PostEventTarget">
+													<ObjectRef Name="SILENCE" ID="{82E6F659-52C3-4B8D-8870-E0EC9D1467DD}" WorkUnitID="{A806E1A3-C50B-4548-9894-7AF11861B916}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicEventCue>
+										<MusicEventCue Name="" ID="{3BADD907-50D3-43C3-BD40-A766A8425FA0}" ShortID="306113414">
+											<PropertyList>
+												<Property Name="PlayAt" Type="Real64" Value="36000"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="PostEventTarget">
+													<ObjectRef Name="SILENCE" ID="{82E6F659-52C3-4B8D-8870-E0EC9D1467DD}" WorkUnitID="{A806E1A3-C50B-4548-9894-7AF11861B916}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicEventCue>
 									</ClipList>
 								</MusicTrackSequence>
 							</SequenceList>
@@ -709,6 +794,11 @@
 				<MusicSegment Name="OzMozEndSong" ID="{AF13FDDB-BDA8-4C6C-BC07-DEDAF68C0011}" ShortID="846362636">
 					<PropertyList>
 						<Property Name="EndPosition" Type="Real64" Value="66000"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-2</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">

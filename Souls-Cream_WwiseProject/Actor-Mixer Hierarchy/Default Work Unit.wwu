@@ -142,6 +142,9 @@
 								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
 								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.4"/>
 								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>9</Value>
+									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{5A93FDD2-63F9-4772-ADE7-616E4C0B2F56}" ShortID="23137426">
 											<ReferenceList>
@@ -392,6 +395,11 @@
 									</ModifierList>
 								</Property>
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -513,7 +521,7 @@
 								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.4"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-3</Value>
+										<Value>3</Value>
 									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
@@ -1327,6 +1335,11 @@
 								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1541,13 +1554,41 @@
 								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.25"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{55B12F62-1076-4611-82A5-D2C64544A196}" ShortID="932430304">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="PlayerMoving" ID="{D24517E9-C78A-4ACA-9749-463BF551BF6E}" WorkUnitID="{CE709FC6-E33E-43F4-B8D3-FC03C4BC2167}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{A9E195FC-E5A1-402E-A33B-148AC6E5F907}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>1</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1729,6 +1770,27 @@
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="PlayerMoving" ID="{C935EFB2-DD8E-4033-925E-D11F1D2F6049}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Stop" ID="{50FF4F95-528A-4602-B9F7-8EDD190A81C9}"/>
+										<CustomState Name="" ID="{D28DDF22-8C88-4DA4-BE31-C74BB25CCFAF}" ShortID="967756024">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-96"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Moving" ID="{3566702A-DBE5-4CF1-8AED-DB04C413C899}"/>
+										<CustomState Name="" ID="{77C62BE5-4B6D-41F1-A14A-71942BE8D72F}" ShortID="520270010"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<Playlist>
 								<ItemRef Name="OzFootsteps1" ID="{9B53E0C3-6323-436A-8593-556BADF13D22}"/>
 								<ItemRef Name="OzFootsteps2" ID="{1C766A13-D5CB-401A-85D3-715F07410189}"/>
@@ -1873,6 +1935,9 @@
 								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2.5"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{B2CF5E9A-6B0B-42A5-9AE2-E129AD19ADAD}" ShortID="737881337">
 											<ReferenceList>
@@ -2157,9 +2222,6 @@
 								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2.5"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-2</Value>
-									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{16C3417B-E66C-49EA-AB31-95FC52425294}" ShortID="987638622">
 											<ReferenceList>
@@ -2718,6 +2780,11 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -2832,6 +2899,11 @@
 											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
@@ -2948,7 +3020,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>-2</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2957,7 +3029,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+											<ObjectRef Name="Screams" ID="{7A5A6365-AF21-4927-BE6D-5F0A0F291CF4}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -3089,7 +3161,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -3098,7 +3170,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+											<ObjectRef Name="Screams" ID="{7A5A6365-AF21-4927-BE6D-5F0A0F291CF4}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -3201,7 +3273,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -3210,7 +3282,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+											<ObjectRef Name="Screams" ID="{7A5A6365-AF21-4927-BE6D-5F0A0F291CF4}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -3341,7 +3413,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -3350,7 +3422,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+											<ObjectRef Name="Screams" ID="{7A5A6365-AF21-4927-BE6D-5F0A0F291CF4}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -3452,7 +3524,7 @@
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -3461,7 +3533,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+											<ObjectRef Name="Screams" ID="{7A5A6365-AF21-4927-BE6D-5F0A0F291CF4}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -3588,7 +3660,7 @@
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>-1</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -3597,7 +3669,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+											<ObjectRef Name="Screams" ID="{7A5A6365-AF21-4927-BE6D-5F0A0F291CF4}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -3724,7 +3796,7 @@
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -3733,7 +3805,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+											<ObjectRef Name="Screams" ID="{7A5A6365-AF21-4927-BE6D-5F0A0F291CF4}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -3829,18 +3901,13 @@
 								<RandomSequenceContainer Name="Tristesse" ID="{4D9EFEEE-7450-40A9-911B-4E4394AC3F12}" ShortID="853336097">
 									<PropertyList>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-8</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+											<ObjectRef Name="Screams" ID="{7A5A6365-AF21-4927-BE6D-5F0A0F291CF4}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -3969,12 +4036,19 @@
 				<Folder Name="MenuVoices" ID="{DD3605A6-CAEE-45AD-B50B-75A71C9E7A21}" ShortID="710665492">
 					<ChildrenList>
 						<Sound Name="PLAY" ID="{1C3B4D5C-4F83-4693-8EB0-481646A54F25}" ShortID="361958400">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="MenuVoices" ID="{A8399A64-913D-4E4E-9192-BB10F18DB142}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -3998,12 +4072,19 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Credits" ID="{39762222-AC13-4947-BCBC-81ECA799C46E}" ShortID="954143930">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="MenuVoices" ID="{A8399A64-913D-4E4E-9192-BB10F18DB142}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -4027,12 +4108,19 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Quit" ID="{18014386-C3EE-4894-9662-0688D57F4513}" ShortID="450646367">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="MenuVoices" ID="{A8399A64-913D-4E4E-9192-BB10F18DB142}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -4056,12 +4144,19 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Next" ID="{0F9DA2BA-F577-4B95-900C-D85B2CE339A3}" ShortID="302957005">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="MenuVoices" ID="{A8399A64-913D-4E4E-9192-BB10F18DB142}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -4085,12 +4180,19 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Back" ID="{42E5D739-918A-4F2F-8758-1DCC3483A7E5}" ShortID="160229821">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="MenuVoices" ID="{A8399A64-913D-4E4E-9192-BB10F18DB142}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -4114,12 +4216,19 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Host" ID="{C09EA216-E0F5-4752-BF2B-6F35034FB276}" ShortID="940987342">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="MenuVoices" ID="{A8399A64-913D-4E4E-9192-BB10F18DB142}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -4143,12 +4252,19 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Join" ID="{C6715BAA-2C09-4AD1-9BF6-6B8BAD10BBA8}" ShortID="870060532">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="MenuVoices" ID="{A8399A64-913D-4E4E-9192-BB10F18DB142}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -4172,12 +4288,19 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Swap" ID="{9CBB1446-E8C7-43DE-95A7-42C3A92569FE}" ShortID="291421357">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="MenuVoices" ID="{A8399A64-913D-4E4E-9192-BB10F18DB142}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -4201,12 +4324,19 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Play2" ID="{E5E49664-D5F2-4083-A826-43A6FA72D8D0}" ShortID="513377225">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="MenuVoices" ID="{A8399A64-913D-4E4E-9192-BB10F18DB142}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -4230,12 +4360,19 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Ready" ID="{4B9C0A67-1B2A-4E03-B316-8EBF427662FE}" ShortID="415207509">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="MenuVoices" ID="{A8399A64-913D-4E4E-9192-BB10F18DB142}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -4259,12 +4396,19 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="NotReady" ID="{29ECE116-A18A-4476-81E8-B2DC96795805}" ShortID="426374208">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="MenuVoices" ID="{A8399A64-913D-4E4E-9192-BB10F18DB142}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -4288,12 +4432,19 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Disconnect" ID="{8F1CB74D-3562-4416-B81F-7C4673B16FDE}" ShortID="976872030">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="MenuVoices" ID="{A8399A64-913D-4E4E-9192-BB10F18DB142}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -4332,6 +4483,11 @@
 									</Modifier>
 								</ModifierInfo>
 							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>6</Value>
+							</ValueList>
 						</Property>
 					</PropertyList>
 					<ReferenceList>

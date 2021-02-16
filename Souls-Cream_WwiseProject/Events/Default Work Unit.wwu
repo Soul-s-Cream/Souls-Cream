@@ -503,6 +503,21 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Post_Event_OzDoubleJump" ID="{4F525BC7-BDD0-4FA0-8C27-3D99929334BF}">
+					<ChildrenList>
+						<Action Name="" ID="{966CDA16-1752-4183-A160-F6D477E2E056}" ShortID="744193568">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="OzDoubleJump" ID="{934D77B6-2DE5-4D30-9A8A-F1E853CF5F47}" WorkUnitID="{A806E1A3-C50B-4548-9894-7AF11861B916}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SILENCE" ID="{82E6F659-52C3-4B8D-8870-E0EC9D1467DD}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

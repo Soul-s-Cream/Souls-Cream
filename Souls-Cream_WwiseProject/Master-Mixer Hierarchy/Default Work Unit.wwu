@@ -74,6 +74,8 @@
 								</Property>
 							</PropertyList>
 						</Bus>
+						<Bus Name="Screams" ID="{7A5A6365-AF21-4927-BE6D-5F0A0F291CF4}"/>
+						<Bus Name="MenuVoices" ID="{A8399A64-913D-4E4E-9192-BB10F18DB142}"/>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>

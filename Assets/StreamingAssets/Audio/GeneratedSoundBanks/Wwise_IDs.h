@@ -50,8 +50,10 @@ namespace AK
         static const AkUniqueID OZTUTO = 567465712U;
         static const AkUniqueID PLAY = 1256202815U;
         static const AkUniqueID PLAY2 = 500558111U;
+        static const AkUniqueID POST_EVENT_OZDOUBLEJUMP = 4232859593U;
         static const AkUniqueID QUIT = 3930794392U;
         static const AkUniqueID READY = 3701637754U;
+        static const AkUniqueID SILENCE = 3041563226U;
         static const AkUniqueID SOLITUDE = 2952898430U;
         static const AkUniqueID SWAP = 286100424U;
         static const AkUniqueID TRISTESSE = 3375131777U;
@@ -111,9 +113,11 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID MENUVOICESVOLUME = 2976415783U;
         static const AkUniqueID MUSICSVOLUME = 924921327U;
         static const AkUniqueID PLAYERMOVING = 545959236U;
         static const AkUniqueID PLAYERSPEED = 1493153371U;
+        static const AkUniqueID SCREAMSVOLUME = 3499704711U;
         static const AkUniqueID SOUNDEFFECTSVOLUME = 3402092638U;
         static const AkUniqueID WETFLOOR = 34521763U;
     } // namespace GAME_PARAMETERS
@@ -127,7 +131,9 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MENUVOICES = 3196512249U;
         static const AkUniqueID MUSICS = 1730564753U;
+        static const AkUniqueID SCREAMS = 2812860249U;
         static const AkUniqueID SOUNDEFFECTS = 3898083304U;
     } // namespace BUSSES
 
