@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9147337399559473488}
   - component: {fileID: 2342949522303190331}
   - component: {fileID: 899269815111411084}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: Black Box
   m_TagString: Crate
   m_Icon: {fileID: 0}

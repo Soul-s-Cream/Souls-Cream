@@ -68,7 +68,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: a3e106a80bc5484598947af11861b916
     GuidInternal: 
-    m_lastTime: -8585887320945396714
+    m_lastTime: -8585882826845512148
     List:
     - name: Acculation
       guid: 8d5a9d35caa05d4ba2fd12e71d93e2e3
@@ -870,11 +870,8 @@ MonoBehaviour:
   - /Souls-Cream_WwiseProject
   - /Souls-Cream_WwiseProject/Events
   - /Souls-Cream_WwiseProject/Events/Default Work Unit
-  - /Souls-Cream_WwiseProject/Events/Default Work Unit/MenuVoices
   - /Souls-Cream_WwiseProject/Events/Default Work Unit/Moz
-  - /Souls-Cream_WwiseProject/States
-  - /Souls-Cream_WwiseProject/States/Default Work Unit
-  - /Souls-Cream_WwiseProject/States/Default Work Unit/CrateMoving
-  - /Souls-Cream_WwiseProject/States/Default Work Unit/PlayerMoving
+  - /Souls-Cream_WwiseProject/Events/Default Work Unit/Moz/Screams
+  - /Souls-Cream_WwiseProject/Events/Default Work Unit/Objects
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

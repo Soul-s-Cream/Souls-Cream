@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9718ee5c974497443810d9df0fde89dd, type: 3}
+  m_Name: ScreamsData
+  m_EditorClassIdentifier: 
+  data:
+  - scream: 0
+    unlockableBy: 1
+    sound:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: cee379a630b580e46bf4b9eb32a3dd63,
+        type: 2}
+    iconUI: {fileID: 21300000, guid: b99addc4812474f4097fa854ac807a2b, type: 3}
+  - scream: 1
+    unlockableBy: 1
+    sound:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 63e032ec7f4be074d98676ad94614923,
+        type: 2}
+    iconUI: {fileID: 21300000, guid: b8d7eaaa8299d3a4e8fcbe8b7a081591, type: 3}
+  - scream: 2
+    unlockableBy: 1
+    sound:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 627ef41c6f5f1db499b4695c16f77115,
+        type: 2}
+    iconUI: {fileID: 21300000, guid: a6ec7d59b4344644990c5c3ff6092b89, type: 3}
+  - scream: 3
+    unlockableBy: 1
+    sound:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: d3abc310c65ae2140bef5c4624543aa8,
+        type: 2}
+    iconUI: {fileID: 21300000, guid: 7dddc775d44b28c4dab421b5a7890e8e, type: 3}
+  - scream: 4
+    unlockableBy: 0
+    sound:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 37e489809cc90f94d8f933096c567551,
+        type: 2}
+    iconUI: {fileID: 21300000, guid: b8d7eaaa8299d3a4e8fcbe8b7a081591, type: 3}
+  - scream: 5
+    unlockableBy: 0
+    sound:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 6e2544a2e5e37c543b13f850312ecdfc,
+        type: 2}
+    iconUI: {fileID: 21300000, guid: b8d7eaaa8299d3a4e8fcbe8b7a081591, type: 3}
+  - scream: 6
+    unlockableBy: 0
+    sound:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 0020f46759cb0d849a513b1dc50facc2,
+        type: 2}
+    iconUI: {fileID: 21300000, guid: 1cd91b8de99e5564c8ff116f013a6186, type: 3}
+  - scream: 7
+    unlockableBy: 0
+    sound:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 476910fcaa0f4dc43a3cca44e63929d2,
+        type: 2}
+    iconUI: {fileID: 21300000, guid: e430166265c997f46bbf470a6a97b43a, type: 3}

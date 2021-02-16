@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6138617455980709935}
   - component: {fileID: 8129701081878228666}
   - component: {fileID: -3666892966865180192}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: White Box
   m_TagString: Crate
   m_Icon: {fileID: 0}
@@ -99,8 +99,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2419851da8df1d0439ab09073f6f62cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sister: {fileID: 0}
+  sisterCrate: {fileID: 0}
   humidityTag: Humidity
+  stateMovingSound:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  stateStopSound:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!61 &6138617455980709920
 BoxCollider2D:
   m_ObjectHideFlags: 0
