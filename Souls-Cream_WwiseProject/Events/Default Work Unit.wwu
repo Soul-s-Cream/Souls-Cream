@@ -518,6 +518,17 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="SILENCE" ID="{82E6F659-52C3-4B8D-8870-E0EC9D1467DD}"/>
+				<Event Name="OzMozFinalCinematic" ID="{759C2958-3C82-431C-9B15-49CE93768E2E}">
+					<ChildrenList>
+						<Action Name="" ID="{331EC214-180B-47F2-8C73-3DA8FCA1F46A}" ShortID="1048821816">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="OzMozFinalCinematic" ID="{9E49941D-F5E0-482F-ABCA-26169F9D3C84}" WorkUnitID="{E81B4073-D7EF-43F2-ADD4-0375B4FA2B20}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

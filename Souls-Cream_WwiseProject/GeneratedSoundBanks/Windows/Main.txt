@@ -9,6 +9,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	604601532	OpenGate			\Default Work Unit\Objects\OpenGate	
 	773707930	MozFootsteps			\Default Work Unit\Moz\MozFootsteps	
 	783075190	MozLanding			\Default Work Unit\Moz\MozLanding	
+	793593447	OzMozFinalCinematic			\Default Work Unit\OzMozFinalCinematic	
 	982796106	Next			\Default Work Unit\MenuVoices\Next	
 	1035518595	OzLanding			\Default Work Unit\Oz\OzLanding	
 	1256202815	PLAY			\Default Work Unit\MenuVoices\PLAY	
@@ -80,6 +81,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	20390223	LarmesMoz_03	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\LarmesMoz_D7A3976B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozLarme\LarmesMoz_03		59108
 	30785870	Envie	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\Envie_EC6248D1.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamMoz\Envie\Envie		299236
 	31055670	MozFootsteps_03	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\PlayerMozFootsteps_C44C71A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moz\MozFootsteps\MozFootsteps_03		25896
+	41830622	OzMozFinalCinematic	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\OzMozFinalCinematic_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\OzMozFinalCinematic\OzMozFinalCinematic		4068724
 	53780424	Fierte_02	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\Fierté2_EF3E6159.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamOz\Fierte\Fierte_02		254328
 	57836437	Solitude	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\Solitude_9337C1D4.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamMoz\Solitude\Solitude		162408
 	60450093	Acculation_02	D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\SFX\Acculation_1F096FC2.wem		\Actor-Mixer Hierarchy\Default Work Unit\ScreamOzMoz\ScreamMoz\Acculation\Acculation_02		272040

@@ -880,6 +880,73 @@
 						</MusicCue>
 					</CueList>
 				</MusicSegment>
+				<MusicSegment Name="OzMozFinalCinematic" ID="{9E49941D-F5E0-482F-ABCA-26169F9D3C84}" ShortID="1041056358">
+					<PropertyList>
+						<Property Name="EndPosition" Type="Real64" Value="21151.7708333333"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicTrack Name="OzMozFinalCinematic" ID="{1DFDCF23-43A3-4F4B-8B24-D06455A7CA08}" ShortID="486724132">
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="OzMozFinalCinematic" ID="{C242341E-7475-4E23-9034-1F6D504C1230}">
+									<Language>SFX</Language>
+									<AudioFile>OzMozFinalCinematic.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="41830622"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{9D5C9AB0-7B0C-4EB7-9DA9-059ED4CCE8E6}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<SequenceList>
+								<MusicTrackSequence Name="" ID="{2BC51126-934F-4750-8129-FF1387A33DF2}">
+									<ClipList>
+										<MusicClip Name="OzMozFinalCinematic" ID="{B605F55F-A18E-424C-A14A-9C92ACECEE7A}">
+											<PropertyList>
+												<Property Name="EndTrimOffset" Type="Real64" Value="21151.7708333333"/>
+												<Property Name="FadeInMode" Type="int16" Value="0"/>
+												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+											</PropertyList>
+											<AudioSourceRef Name="OzMozFinalCinematic" ID="{C242341E-7475-4E23-9034-1F6D504C1230}"/>
+										</MusicClip>
+									</ClipList>
+								</MusicTrackSequence>
+							</SequenceList>
+						</MusicTrack>
+					</ChildrenList>
+					<CueList>
+						<MusicCue Name="Entry Cue" ID="{FDE23587-529B-40DC-974F-1BABAED1B104}"/>
+						<MusicCue Name="Exit Cue" ID="{FFD1A6D5-8340-47FD-9135-2B97640A67EE}">
+							<PropertyList>
+								<Property Name="CueType" Type="int16" Value="1"/>
+								<Property Name="TimeMs" Type="Real64" Value="21151.7708333333"/>
+							</PropertyList>
+						</MusicCue>
+					</CueList>
+				</MusicSegment>
 			</ChildrenList>
 		</WorkUnit>
 	</InteractiveMusic>

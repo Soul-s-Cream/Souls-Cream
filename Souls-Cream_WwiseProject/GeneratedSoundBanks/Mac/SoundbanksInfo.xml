@@ -20,7 +20,7 @@
 				<GameParameter Id="3402092638" Name="SoundEffectsVolume" ObjectPath="\Game Parameters\Default Work Unit\SoundEffectsVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="3339193523">
+		<SoundBank Id="3161908922" Language="SFX" Hash="1248353875">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -509,6 +509,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="793593447" Name="OzMozFinalCinematic" ObjectPath="\Events\Default Work Unit\OzMozFinalCinematic" DurationType="OneShot" DurationMin="21.151772" DurationMax="21.151772">
+					<IncludedMemoryFiles>
+						<File Id="41830622" Language="SFX">
+							<ShortName>OzMozFinalCinematic.wav</ShortName>
+							<Path>SFX\OzMozFinalCinematic_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3278785808" Name="OzMozMenuTheme" ObjectPath="\Events\Default Work Unit\OzMozMenuTheme" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="323730778" Language="SFX">
@@ -636,6 +644,10 @@
 				<File Id="31055670" Language="SFX">
 					<ShortName>PlayerMozFootsteps.wav</ShortName>
 					<Path>SFX\PlayerMozFootsteps_C44C71A6.wem</Path>
+				</File>
+				<File Id="41830622" Language="SFX">
+					<ShortName>OzMozFinalCinematic.wav</ShortName>
+					<Path>SFX\OzMozFinalCinematic_D79FB2B7.wem</Path>
 				</File>
 				<File Id="53780424" Language="SFX">
 					<ShortName>Fierté2.wav</ShortName>
