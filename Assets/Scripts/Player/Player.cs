@@ -3,11 +3,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum ScreamType
+{
+    Cornered,
+    Envy,
+    Solitude,
+    Sadness,
+    Compassion,
+    Curiosity,
+    Pride,
+    Joy
+}
+
 [RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player : Photon.PunBehaviour
 {
     #region Public Field
+    public Role role;
+
     [Header("Movements")]
 
     public float moveSpeed;
@@ -25,7 +39,7 @@ public class Player : Photon.PunBehaviour
 
     [Header("Screams")]
     public LayerMask humidityLayer;
-    [Tooltip("Radius of the curiosity scream revealling effect")]
+    [Tooltip("Radius of the curiosity scream revealing effect")]
     public float curiosityScreamRadius;
     [Tooltip("Layer of objects to reveal by using the curiosity scream")]
     public LayerMask curiosityScreamLayer;
@@ -34,7 +48,13 @@ public class Player : Photon.PunBehaviour
     public float sadnessScreamMinGroundDistance = 1f;
     public Vector2 sadnessGroundCheckingCenter;
 
+    public int screamUnlockedIndex = 0;
     public ScreamType selectedScream;
+    public ScreamsData screamsData;
+    [Tooltip("Public à l'intention du Debug uniquement")]
+    public List<ScreamType> unlockedScreams;
+    //Données depuis le ScriptableObject ScreamsData mises dans un Dictionary pour faciliter le traitement
+    public Dictionary<ScreamType, ScreamData> screamsDataParsed;
 
     [Header("Tags (used to get few specifics objects)")]
     [Tooltip("Tag of white player")]
@@ -46,35 +66,8 @@ public class Player : Photon.PunBehaviour
     [Tooltip("The tag of the wall impacted by the solitude scream")]
     [TagSelector]
     public string solitudeScreamReceiversTag;
-
-    public enum ScreamType
-    {
-        Cornered,
-        Envy,
-        Solitude,
-        Sadness,
-        Compassion,
-        Curiosity,
-        Pride,
-        Joy
-    }
-
-    public Role role;
-
-    [Header("Cinématique")]
-    public bool chuteLibre = false;
-    public bool freezeMove = false;
-
     [Header("Sound")]
-    public AK.Wwise.RTPC PlayerMovingSound;
-    public AK.Wwise.Event screamCornered;
-    public AK.Wwise.Event screamEnvy;
-    public AK.Wwise.Event screamSolitude;
-    public AK.Wwise.Event screamSadness;
-    public AK.Wwise.Event screamCompassion;
-    public AK.Wwise.Event screamCuriosity;
-    public AK.Wwise.Event screamPride;
-    public AK.Wwise.Event screamJoy;
+    public AK.Wwise.RTPC playerMovingSound;
     #endregion
 
     #region Private Fields
@@ -109,6 +102,18 @@ public class Player : Photon.PunBehaviour
     {
         control = new Controls();
         spriteRender = GetComponent<SpriteRenderer>();
+        //unlockedScreams = new List<ScreamType>();
+
+        #region Initialize Scream Data
+        screamsDataParsed = new Dictionary<ScreamType, ScreamData>();
+        foreach(ScreamData data in screamsData.data)
+        {
+            screamsDataParsed.Add(data.scream, data);
+        }
+        #endregion
+
+        control.Cri.CriUp.performed += ctx =>  ScreamSelection(true);
+        control.Cri.CriDown.performed += ctx =>  ScreamSelection(false);
     }
 
     private void Start()
@@ -121,6 +126,7 @@ public class Player : Photon.PunBehaviour
         defaultGroundRadius = groundCheckingRadius;
         scale = transform.eulerAngles;
         //AkSoundEngine.PostEvent("MozTuto", gameObject);
+        AkSoundEngine.PostEvent("MozFootsteps", gameObject);
     }
 
     void FixedUpdate()
@@ -142,7 +148,7 @@ public class Player : Photon.PunBehaviour
             photonView.RPC("FlipToggleSprite", PhotonTargets.All, true);
             if (isGrounded)
             {
-                PlayerMovingSound.SetGlobalValue(Mathf.Abs(rb.velocity.x));
+                //PlayerMovingSound.SetGlobalValue(Mathf.Abs(rb.velocity.x));
             }
         }
         else if (control.Deplacement.Deplacement.ReadValue<float>() < 0)
@@ -193,7 +199,6 @@ public class Player : Photon.PunBehaviour
         }
         else anim.SetBool("Jump", true);
 
-        ScreamSelection();
         Screaming();
     }
 
@@ -205,7 +210,10 @@ public class Player : Photon.PunBehaviour
         }
 
         Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
-        rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, moveSmooth);
+        if(isGrounded)
+        {
+            rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, moveSmooth);
+        }
 
         if (isJuming == true)
         {
@@ -230,17 +238,40 @@ public class Player : Photon.PunBehaviour
     }
 
     #region Scream
-    public void ScreamSelection()
+
+    /// <summary>
+    /// Demande au joueur de débloquer un cri spécifié. Ce dernier est débloqué seulement si autorisé
+    /// </summary>
+    /// <param name="scream">Le cri à débloquer</param>
+    /// <returns>'True' si le cri à été débloqué, 'false' autrement</returns>
+    public bool UnlockScream(ScreamType scream)
     {
-        if (control.Cri.CriUp.triggered)
+        //On vérifie dans la structure de donnée si le cri est autorisé pour ce rôle, et qu'il n'est pas débloqué...
+        if(screamsDataParsed[scream].unlockableBy.Equals(this.role) && !unlockedScreams.Contains(scream))
         {
-            selectedScream = (ScreamType) ((int) (selectedScream + 1) % Enum.GetValues(typeof(ScreamType)).Length);
+            //..si oui, on le débloque.
+            unlockedScreams.Add(scream);
+            GameEvents.Instance.TriggerNewScreamEvent(this, scream);
+            return true;
         }
-        if (control.Cri.CriDown.triggered)
+        //...sinon, on ne fait rien.
+        return false;
+    }
+
+    public void ScreamSelection(bool isUp)
+    {
+        if(unlockedScreams.Count != 0)
         {
-            selectedScream = (ScreamType)((int)(selectedScream - 1) % Enum.GetValues(typeof(ScreamType)).Length);
+            if (isUp)
+                screamUnlockedIndex = (screamUnlockedIndex + 1) % unlockedScreams.Count;
+            else
+                screamUnlockedIndex = ((screamUnlockedIndex - 1) % unlockedScreams.Count + unlockedScreams.Count) % unlockedScreams.Count;
+
+            selectedScream = unlockedScreams[screamUnlockedIndex];
+            GameEvents.Instance.TriggerChangeSelectedScreamEvent(this, selectedScream);
         }
     }
+
     public void Screaming()
     {
         if (control.Cri.Cri.triggered && !isScreaming)
@@ -292,7 +323,7 @@ public class Player : Photon.PunBehaviour
     }
     #endregion
 
-    #region screamsRPC
+    #region ScreamsRPC
     [PunRPC]
     public void CompassionScream()
     {
@@ -302,9 +333,7 @@ public class Player : Photon.PunBehaviour
     [PunRPC]
     public void CorneredScream()
     {
-        screamCornered.Post(gameObject);
-
-        if (GameObject.FindGameObjectWithTag(whitePlayerTag))
+        screamsDataParsed[ScreamType.Cornered].sound.Post(gameObject);
         {
             Player whitePlayer = GameObject.FindGameObjectWithTag(whitePlayerTag).GetComponent<Player>();
             anim.SetLayerWeight(1, 1f);
@@ -323,6 +352,7 @@ public class Player : Photon.PunBehaviour
         }
 
         StartCoroutine(CorneredWait());
+        if (GameObject.FindGameObjectWithTag(whitePlayerTag))
     }
 
     IEnumerator CorneredWait()
@@ -351,7 +381,7 @@ public class Player : Photon.PunBehaviour
     [PunRPC]
     public void CuriosityScream()
     {
-        screamCuriosity.Post(gameObject);
+        screamsDataParsed[ScreamType.Curiosity].sound.Post(gameObject);
         foreach (Collider2D collider in Physics2D.OverlapCircleAll(transform.position, curiosityScreamRadius, curiosityScreamLayer))
         {
             collider.GetComponent<CuriosityObject>().Reveal();
@@ -367,13 +397,14 @@ public class Player : Photon.PunBehaviour
     [PunRPC]
     public void JoyScream()
     {
-        screamJoy.Post(gameObject);
+        screamsDataParsed[ScreamType.Joy].sound.Post(gameObject);
         jumpAmount = 2;
     }
 
     [PunRPC]
     public void PrideScream()
     {
+        screamsDataParsed[ScreamType.Pride].sound.Post(gameObject);
         if (GameObject.FindGameObjectWithTag(whitePlayerTag))
         {
             Player whitePlayer = GameObject.FindGameObjectWithTag(whitePlayerTag).GetComponent<Player>();
@@ -421,7 +452,7 @@ public class Player : Photon.PunBehaviour
     [PunRPC]
     public void SadnessScream()
     {
-        screamSadness.Post(gameObject);
+        screamsDataParsed[ScreamType.Sadness].sound.Post(gameObject);
         if (PhotonNetwork.connected)
         {
             RaycastHit2D hit2D = Physics2D.Raycast((Vector2) transform.position + sadnessGroundCheckingCenter, Vector2.down, sadnessScreamMinGroundDistance, groundLayer);
@@ -442,7 +473,7 @@ public class Player : Photon.PunBehaviour
     [PunRPC]
     public void SolitudeScream()
     {
-        screamSolitude.Post(gameObject);
+        screamsDataParsed[ScreamType.Solitude].sound.Post(gameObject);
         foreach (GameObject platform in GameObject.FindGameObjectsWithTag(solitudeScreamReceiversTag))
         {
             platform.SetActive(false);
@@ -473,39 +504,6 @@ public class Player : Photon.PunBehaviour
         control.Deplacement.Disable();
         control.Cri.Disable();
     }
-    #endregion
-
-    #region Cinématique
-    /// <summary>
-    /// s'active au cour de la dernière cinematique
-    /// </summary>
-    public void DernierCri()
-    {
-        dernierCriActive = true;
-    }
-
-    public void ChuteLibre()
-    {
-        freezeMove = true;
-        chuteLibre = !chuteLibre;
-        if (chuteLibre)
-        {
-            rb.gravityScale = 0;
-            rb.velocity -= rb.velocity;
-        }
-        else
-        {
-            rb.gravityScale = 1;
-            StartCoroutine(PosFin());
-        }
-    }
-    private IEnumerator PosFin()
-    {
-        yield return new WaitForSeconds(0.4f);
-        anim.SetBool("positionFinalBool", true);
-
-    }
-
     #endregion
 
     private void OnDrawGizmosSelected()
