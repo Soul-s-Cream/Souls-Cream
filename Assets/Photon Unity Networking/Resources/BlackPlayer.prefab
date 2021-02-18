@@ -248,7 +248,7 @@ MonoBehaviour:
   role: 1
   moveSpeed: 5
   moveSmooth: 0.1
-  jumpForce: 500
+  jumpForce: 450
   maxSpeed: 0
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
@@ -270,7 +270,7 @@ MonoBehaviour:
   sadnessScreamMinGroundDistance: 1
   sadnessGroundCheckingCenter: {x: 0, y: 0}
   screamUnlockedIndex: 0
-  selectedScream: 0
+  selectedScream: 3
   screamsData: {fileID: 11400000, guid: dcfd202898f41884ead7ba9eb845f876, type: 2}
   unlockedScreams: 
   whitePlayerTag: WhitePlayer
@@ -281,6 +281,9 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: a1e43a1db2aa88349a70dcacb442dbc5,
       type: 2}
+  anim: {fileID: 0}
+  capsuleCollider: {fileID: 0}
+  defaultCapsuleColliderSize: {x: 0, y: 0}
 --- !u!114 &-8156019241142287066
 MonoBehaviour:
   m_ObjectHideFlags: 0
