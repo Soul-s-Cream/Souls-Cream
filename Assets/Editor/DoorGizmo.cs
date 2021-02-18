@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class DoorGizmo : MonoBehaviour
+public class DoorGizmo
 {
     [DrawGizmo(GizmoType.NonSelected | GizmoType.Selected)]
     static void OnDrawDoorGizmo(Door door, GizmoType gizmoType)
