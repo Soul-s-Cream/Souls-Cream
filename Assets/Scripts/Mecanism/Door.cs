@@ -39,15 +39,15 @@ public class Door : Mecanism
         startPosition = this.transform.position;
     }
 
-    protected override void SwitchOn()
+    protected override void SwitchingOn()
     {
         if (!opening)
         {
-            StartCoroutine("SwitchingOn");
+            StartCoroutine("SwitchingOnBehavior");
         }
     }
 
-    IEnumerator SwitchingOn()
+    IEnumerator SwitchingOnBehavior()
     {
         yield return new WaitForSeconds(delayBeforeOpening);
         opening = true;
@@ -78,15 +78,15 @@ public class Door : Mecanism
         openSound.Post(gameObject);
     }
 
-    protected override void SwitchOff()
+    protected override void SwitchingOff()
     {
         if (opening)
         {
-            StartCoroutine("SwitchtingOff");           
+            StartCoroutine("SwitchtingOffBehavior");           
         }
     }
     
-    IEnumerator SwitchtingOff()
+    IEnumerator SwitchtingOffBehavior()
     {
         yield return new WaitForSeconds(delayBeforeOpening);
 

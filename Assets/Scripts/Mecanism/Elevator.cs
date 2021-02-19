@@ -74,7 +74,7 @@ public class Elevator : Mecanism
     /// <summary>
     /// Appelé lorsque l'objet est activé. L'élévateur commence alors un déplacement vers sa prochaine destination
     /// </summary>
-    protected override void SwitchOn()
+    protected override void SwitchingOn()
     {
         tweenRunning?.Kill();
 
@@ -86,7 +86,7 @@ public class Elevator : Mecanism
     /// Appelé lorsque l'objet est désactivé. L'élévateur interrompt alors ses trajectoires, 
     /// et en commence une nouvelle en direction de sa position de départ
     /// </summary>
-    protected override void SwitchOff()
+    protected override void SwitchingOff()
     {
         tweenRunning?.Kill();
 

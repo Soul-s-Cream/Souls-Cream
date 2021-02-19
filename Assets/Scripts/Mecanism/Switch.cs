@@ -1,80 +1,100 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Animator))]
-public class Switch : Photon.PunBehaviour
+public abstract class Switch : Mecanism
 {
     #region Public Fields
     [Tooltip("Les différents Mecanism de la scène qui doivent être activé")]
     public Mecanism[] triggers;
-    [Tooltip("Le tag de l'objet accepté pour activer l'interrupteur")]
-    [TagSelector]
-    public string tagFilter = "";
-    public AK.Wwise.Event switchSound;
     #endregion
 
     #region Private Fields
-    private bool BoutonOn = false;
-    private Animator animator;
+    /// <summary>
+    /// État du switch
+    /// </summary>
+    protected bool isOn = false;
+    /// <summary>
+    /// Nombre de signaux d'entrée actifs
+    /// </summary>
+    protected int nbInputs = 0;
+    [HideInInspector]
+    [SerializeField]
+    [Tooltip("Le nombre d'entrées nécessaires pour que l'interrupteur émette un signal")]
+    [Range(2, 5)]
+    /// <summary>
+    /// Seuil requis de signaux actifs pour activer le switch
+    /// </summary>
+    public int nbInputsRequirement = 1;
     #endregion
 
-    private void Awake()
+    /// <summary>
+    /// Ajout un signal d'entrée au bouton. 
+    /// Si le nombre de signaux d'entrée atteint est égal au nombre requis, alors on envoit un signal d'activation.
+    /// Si le nombre de signaux d'entrée atteint devient un nombre inférieur au nombre requis après l'avoir égalé, envoit un signal de désactivation
+    /// </summary>
+    /// <param name="stateInput">L'état du signal d'entrée à considérer</param>
+    protected void AddInput(bool stateInput)
     {
-        animator = GetComponent<Animator>();
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag(tagFilter))
+        //Si on ajoute un signal actif...
+        if (stateInput)
         {
-            if(PhotonNetwork.connected)
+            //... et qu'en ajoutant ce signal, le nombre devient égal au nombre de signaux requis,
+            // alors on émet un signal d'activation dans le cas où le switch n'est pas actif
+            if (nbInputs + 1 == nbInputsRequirement && !isOn)
             {
-                this.photonView.RPC("SwitchOn", PhotonTargets.All); 
+                //Si on est connecté au serveur, on émet alors un RPC. Sinon, on lance un signal classique
+                if (PhotonNetwork.connected)
+                {
+                    this.photonView.RPC("SwitchOn", PhotonTargets.All);
+                }
+                else
+                {
+                    SwitchOn();
+                }
             }
-            else
+            //On ajoute le signal aux signaux actifs;
+            nbInputs++;
+        }
+        //Si on ajoute un signal inactif...
+        else
+        {
+            //... et que retirant ce signal, le nombre devient inférieur au nombre de signaux requis,
+            // alors on émet un signal de désactivation
+            if (nbInputs - 1 < nbInputsRequirement && isOn)
             {
-                SwitchOn();
+                //Si on est connecté au serveur, on émet alors un RPC. Sinon, on lance un signal classique
+                if (PhotonNetwork.connected)
+                {
+                    this.photonView.RPC("SwitchOff", PhotonTargets.All);
+                }
+                else
+                {
+                    SwitchOff();
+                }
             }
+            //On retire le signal des signaux actifs;
+            nbInputs--;
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag(tagFilter))
-        {
-            if (PhotonNetwork.connected)
-            {
-                this.photonView.RPC("SwitchOff", PhotonTargets.All);
-            }
-            else
-            {
-                SwitchOff();
-            }
-        }
-    }
-
+    /// <summary>
+    /// Le comportement lorsque le bouton émet une activation. Peut être appelé en RPC.
+    /// </summary>
     [PunRPC]
-    public void SwitchOn()
+    protected void SwitchOn()
     {
         GameEvents.Instance.TriggerSwitchOn(triggers);
-        BoutonOn = true;
-        animator.SetBool("BoutonON", true);
-        PlaySound();
+        isOn = true;
     }
 
+    /// <summary>
+    /// Le comportement lorsque le bouton émet une désactivation. Peut être appelé en RPC.
+    /// </summary>
     [PunRPC]
-    public void SwitchOff()
+    protected void SwitchOff()
     {
         GameEvents.Instance.TriggerSwitchOff(triggers);
-        BoutonOn = false;
-        animator.SetBool("BoutonON", false);
-        PlaySound();
+        isOn = false;
     }
 
-    private void PlaySound()
-    {
-        switchSound.Stop(gameObject);
-        switchSound.Post(gameObject);
-    }
+
 }
