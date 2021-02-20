@@ -11,6 +11,7 @@ public enum Direction
     DROITE
 }
 
+[System.Obsolete("Deprecated. Please use MovingPlateform")]
 [RequireComponent(typeof(SpriteRenderer))]
 public class Door : Mecanism
 {
@@ -24,10 +25,13 @@ public class Door : Mecanism
     [Tooltip("Délai avant l'animation d'ouverture")]
     public float delayBeforeOpening = 0.2f;
     public AK.Wwise.Event openSound;
+
+    public bool IsOpening { get { return isOpening;  } }
+    public Vector3 StartPosition { get { return startPosition;  } }
     #endregion
 
     #region Private Fields
-    private bool opening = false;
+    private bool isOpening = false;
     private SpriteRenderer spriteRender;
     private Vector3 startPosition;
     private Tween tweenRunning;
@@ -39,18 +43,23 @@ public class Door : Mecanism
         startPosition = this.transform.position;
     }
 
-    protected override void SwitchOn()
+    private void Reset()
     {
-        if (!opening)
+        startPosition = this.transform.position;
+    }
+
+    protected override void SwitchingOn()
+    {
+        if (!isOpening)
         {
-            StartCoroutine("SwitchingOn");
+            StartCoroutine("SwitchingOnBehavior");
         }
     }
 
-    IEnumerator SwitchingOn()
+    IEnumerator SwitchingOnBehavior()
     {
         yield return new WaitForSeconds(delayBeforeOpening);
-        opening = true;
+        isOpening = true;
         if (tweenRunning != null)
             tweenRunning.Kill();
 
@@ -78,21 +87,21 @@ public class Door : Mecanism
         openSound.Post(gameObject);
     }
 
-    protected override void SwitchOff()
+    protected override void SwitchingOff()
     {
-        if (opening)
+        if (isOpening)
         {
-            StartCoroutine("SwitchtingOff");           
+            StartCoroutine("SwitchtingOffBehavior");           
         }
     }
     
-    IEnumerator SwitchtingOff()
+    IEnumerator SwitchtingOffBehavior()
     {
         yield return new WaitForSeconds(delayBeforeOpening);
 
         if (tweenRunning != null)
             tweenRunning.Kill();
-        opening = false;
+        isOpening = false;
 
         tweenRunning = transform.DOMove(startPosition, openingTime)
             .OnComplete(StopSoundActivation)

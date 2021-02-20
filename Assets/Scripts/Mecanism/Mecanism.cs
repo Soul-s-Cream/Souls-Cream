@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mecanism : MonoBehaviour
+public class Mecanism : Photon.PunBehaviour
 {
     private void Start()
     {
@@ -25,14 +25,14 @@ public class Mecanism : MonoBehaviour
     /// <summary>
     /// Le comportement de l'objet lorsque activé
     /// </summary>
-    protected virtual void SwitchOn()
+    protected virtual void SwitchingOn()
     {
     }
 
     /// <summary>
     /// Le comportement de l'objet lorsque désactivé
     /// </summary>
-    protected virtual void SwitchOff()
+    protected virtual void SwitchingOff()
     {
     }
 
@@ -52,7 +52,7 @@ public class Mecanism : MonoBehaviour
         {
             if (mecanism == this)
             {
-                SwitchOn();
+                SwitchingOn();
             }
         }
     }
@@ -67,7 +67,7 @@ public class Mecanism : MonoBehaviour
         {
             if (mecanism == this)
             {
-                SwitchOff();
+                SwitchingOff();
             }
         }
     }
