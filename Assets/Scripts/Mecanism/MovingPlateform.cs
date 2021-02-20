@@ -6,11 +6,17 @@ using DG.Tweening;
 [RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(BoxCollider2D))]
 [ExecuteInEditMode]
-public class Elevator : Mecanism
+public class MovingPlateform : Mecanism
 {
     #region Public Fields
-    public Vector3 endPoint { get { return m_EndPosition; } set { m_EndPosition = value; } }
-    
+
+    /// <summary>
+    /// Point de fin de la trajectoire.
+    /// </summary>
+    [Tooltip("Coordonnées du point de fin")]
+    [SerializeField]
+    public Vector3 endPosition;
+
     [Header("Vitesses d'animation")]
     /// <summary>
     /// Vitesse de parcours d'une trajectoire. En nombre d'unité dans l'espace parcourue par seconde
@@ -31,6 +37,12 @@ public class Elevator : Mecanism
     /// </summary>
     [Tooltip("La courbe de vitesse de la trajectoire")]
     public Ease trajectoryEasing = Ease.Linear;
+
+    [Tooltip("Délai avant l'animation d'ouverture")]
+    public float delayBeforeActivation = 0.2f;
+    public AK.Wwise.Event openSound;
+
+    public bool looping = true;
     #endregion
 
     #region Private Fields
@@ -42,12 +54,6 @@ public class Elevator : Mecanism
     /// Point de départ de la trajectoire. Automatiquement définie comme étant la position d'origine.
     /// </summary>
     private Vector3 startPoint;
-    /// <summary>
-    /// Point de fin de la trajectoire.
-    /// </summary>
-    [HideInInspector]
-    [SerializeField]
-    private Vector3 m_EndPosition;
     /// <summary>
     /// Destination de la trajectoire actuelle
     /// </summary>
@@ -62,12 +68,12 @@ public class Elevator : Mecanism
     {
         //On définit le point de départ comme étant la position actuelle, et la prochaine destination comme étant le point de fin
         startPoint = this.transform.position;
-        destination = endPoint;
+        destination = endPosition;
     }
 
     private void Reset()
     {
-        m_EndPosition = this.transform.position + Vector3.up * 2;
+        endPosition = this.transform.position + Vector3.up * 2;
     }
 
     #region Mecanism Logic
@@ -76,6 +82,12 @@ public class Elevator : Mecanism
     /// </summary>
     protected override void SwitchingOn()
     {
+        StartCoroutine("SwitchingOnBehavior");
+    }
+
+    IEnumerator SwitchingOnBehavior()
+    {
+        yield return new WaitForSeconds(delayBeforeActivation);
         tweenRunning?.Kill();
 
         isOn = true;
@@ -88,24 +100,35 @@ public class Elevator : Mecanism
     /// </summary>
     protected override void SwitchingOff()
     {
+        StartCoroutine("SwitchingOffBehavior");
+    }
+
+    IEnumerator SwitchingOffBehavior()
+    {
+        yield return new WaitForSeconds(delayBeforeActivation);
         tweenRunning?.Kill();
 
+        openSound.Post(gameObject);
         isOn = false;
         tweenRunning = transform.DOMove(startPoint, TimeReachingPosition(startPoint))
-            .SetEase(trajectoryEasing);
+            .OnKill(() => { openSound.Stop(gameObject, 200); })
+            .SetEase(trajectoryEasing)
+            .OnComplete(() => { openSound.Stop(gameObject, 200); });
     }
     #endregion
 
-    #region Elevator Logic
+    #region Moving Plateform Logic
     /// <summary>
     /// Déplacer l'élévateur vers sa prochaine trajectoire. Une fois terminée, il effectue la trajectoire inverse si
     /// l'élévateur est encore actif.
     /// </summary>
     private void MoveToDestination()
     {
+        openSound.Post(gameObject);
         tweenRunning = transform.DOMove(destination, TimeReachingPosition(destination))
             .SetEase(trajectoryEasing)
-            .OnComplete(() => { StartCoroutine("DelayBeforeNewTrajectory"); });
+            .OnKill(() => { openSound.Stop(gameObject, 200); })
+            .OnComplete(() => { if(looping) StartCoroutine("DelayBeforeNewTrajectory"); openSound.Stop(gameObject, 200); });
     }
 
     /// <summary>
@@ -117,7 +140,7 @@ public class Elevator : Mecanism
         if (isOn)
         {
             yield return new WaitForSeconds(delayBeforeNewTrajectory);
-            destination = this.transform.position == startPoint ? endPoint : startPoint;
+            destination = this.transform.position == startPoint ? endPosition : startPoint;
             MoveToDestination();
         }
     }
@@ -127,7 +150,7 @@ public class Elevator : Mecanism
     /// </summary>
     /// <param name="position">Position de destination pour calculer le temps de trajectoire</param>
     /// <returns>Temps pour effectuer la trajectoire jusqu'au point spécifié</returns>
-    private float TimeReachingPosition(Vector3 position)
+    public float TimeReachingPosition(Vector3 position)
     {
         return Mathf.Abs((this.transform.position - position).magnitude) / speed;
     }

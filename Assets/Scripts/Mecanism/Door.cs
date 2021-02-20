@@ -11,6 +11,7 @@ public enum Direction
     DROITE
 }
 
+[System.Obsolete("Deprecated. Please use MovingPlateform")]
 [RequireComponent(typeof(SpriteRenderer))]
 public class Door : Mecanism
 {
@@ -24,10 +25,13 @@ public class Door : Mecanism
     [Tooltip("Délai avant l'animation d'ouverture")]
     public float delayBeforeOpening = 0.2f;
     public AK.Wwise.Event openSound;
+
+    public bool IsOpening { get { return isOpening;  } }
+    public Vector3 StartPosition { get { return startPosition;  } }
     #endregion
 
     #region Private Fields
-    private bool opening = false;
+    private bool isOpening = false;
     private SpriteRenderer spriteRender;
     private Vector3 startPosition;
     private Tween tweenRunning;
@@ -39,9 +43,14 @@ public class Door : Mecanism
         startPosition = this.transform.position;
     }
 
+    private void Reset()
+    {
+        startPosition = this.transform.position;
+    }
+
     protected override void SwitchingOn()
     {
-        if (!opening)
+        if (!isOpening)
         {
             StartCoroutine("SwitchingOnBehavior");
         }
@@ -50,7 +59,7 @@ public class Door : Mecanism
     IEnumerator SwitchingOnBehavior()
     {
         yield return new WaitForSeconds(delayBeforeOpening);
-        opening = true;
+        isOpening = true;
         if (tweenRunning != null)
             tweenRunning.Kill();
 
@@ -80,7 +89,7 @@ public class Door : Mecanism
 
     protected override void SwitchingOff()
     {
-        if (opening)
+        if (isOpening)
         {
             StartCoroutine("SwitchtingOffBehavior");           
         }
@@ -92,7 +101,7 @@ public class Door : Mecanism
 
         if (tweenRunning != null)
             tweenRunning.Kill();
-        opening = false;
+        isOpening = false;
 
         tweenRunning = transform.DOMove(startPosition, openingTime)
             .OnComplete(StopSoundActivation)
