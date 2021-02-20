@@ -72,7 +72,7 @@ public class MecanismRelationship
         #endregion
     }
 
-    public static Vector3 OffsetPoint(Vector3 startPosition, Vector3 direction, float distance = 0.6f)
+    public static Vector3 OffsetPoint(Vector3 startPosition, Vector3 direction, float distance = 0.3f)
     {
         return startPosition + (direction - startPosition).normalized * distance;
     }

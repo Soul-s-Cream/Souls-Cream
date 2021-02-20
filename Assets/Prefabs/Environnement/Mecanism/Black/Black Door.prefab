@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3711093793212205130}
   - component: {fileID: 8369266523076414568}
-  - component: {fileID: 3711093793212205133}
   - component: {fileID: 3711093793212205131}
+  - component: {fileID: 3615205953177918584}
   - component: {fileID: -5384620121775294754}
   - component: {fileID: -7623652141182897580}
   m_Layer: 0
-  m_Name: Door
+  m_Name: Black Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,25 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3711093793212205133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3711093793212205128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3447ce01433a73d48866b66e64feb4f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openingDirection: 1
-  openingTime: 1
-  openSound:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 5b51e6f65e4e974428690cdab7cc4fce,
-      type: 2}
 --- !u!61 &3711093793212205131
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -131,6 +112,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.22255838, y: 1.6565762}
   m_EdgeRadius: 0
+--- !u!114 &3615205953177918584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3711093793212205128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68af57a54b4dbd14b86c4531113e542f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPosition: {x: 0, y: 2, z: 0}
+  looping: 0
+  speed: 2
+  delayBeforeNewTrajectory: 0
+  trajectoryEasing: 7
+  delayBeforeActivation: 0.2
+  openSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5b51e6f65e4e974428690cdab7cc4fce,
+      type: 2}
 --- !u!114 &-5384620121775294754
 MonoBehaviour:
   m_ObjectHideFlags: 0

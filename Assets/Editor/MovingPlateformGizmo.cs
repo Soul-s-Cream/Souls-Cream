@@ -81,14 +81,26 @@ public class MovingPlateformGizmo : Editor
     /// </summary>
     protected virtual void OnSceneGUI()
     {
-        MovingPlateform elevator = (MovingPlateform)target;
+        MovingPlateform movingPlateform = (MovingPlateform)target;
 
         EditorGUI.BeginChangeCheck();
-        Vector3 newTargetPosition = Handles.PositionHandle(elevator.endPosition, Quaternion.identity);
+        Vector3 newTargetPosition = Handles.PositionHandle(movingPlateform.endPosition, Quaternion.identity);
         if (EditorGUI.EndChangeCheck())
         {
-            Undo.RecordObject(elevator, "Change Look At Target Position");
-            elevator.endPosition = newTargetPosition;
+            Undo.RecordObject(movingPlateform, "Change Look At Target Position");
+            movingPlateform.endPosition = newTargetPosition;
+        }
+    }
+
+    public override void OnInspectorGUI()
+    {
+        DrawDefaultInspector();
+        MovingPlateform movingPlateform = (MovingPlateform)target;
+
+        EditorGUILayout.LabelField("Trajectory Duration :", movingPlateform.TimeReachingPosition(movingPlateform.endPosition).ToString("0.00")+"s");
+        if (GUILayout.Button("Reset End Point Position"))
+        {
+            movingPlateform.DefaultEndPointPosition();
         }
     }
 }

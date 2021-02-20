@@ -122,7 +122,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68af57a54b4dbd14b86c4531113e542f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endPosition: {x: 1.357, y: 2.9877963, z: -7.325}
+  looping: 1
   speed: 0.5
-  delayBeforeNewTrajectory: 0
+  delayBeforeNewTrajectory: 2
   trajectoryEasing: 1
-  m_EndPosition: {x: 1.357, y: 2.9877963, z: -7.325}
+  delayBeforeActivation: 0.2
+  openSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}

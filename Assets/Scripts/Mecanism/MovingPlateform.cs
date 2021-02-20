@@ -77,7 +77,7 @@ public class MovingPlateform : Mecanism
 
     private void Reset()
     {
-        endPosition = this.transform.position + Vector3.up * 2;
+        DefaultEndPointPosition();
     }
 
     #region Mecanism Logic
@@ -122,6 +122,10 @@ public class MovingPlateform : Mecanism
     #endregion
 
     #region Moving Plateform Logic
+    public void DefaultEndPointPosition()
+    {
+        endPosition = this.transform.position + Vector3.up * 2;
+    }
     /// <summary>
     /// Déplacer l'élévateur vers sa prochaine trajectoire. Une fois terminée, il effectue la trajectoire inverse si
     /// l'élévateur est encore actif.
