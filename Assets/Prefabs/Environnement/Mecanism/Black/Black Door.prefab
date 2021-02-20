@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68af57a54b4dbd14b86c4531113e542f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endPosition: {x: 0, y: 2, z: 0}
+  endPositionRelative: {x: 0, y: 2, z: 0}
   looping: 0
   speed: 2
   delayBeforeNewTrajectory: 0

@@ -23,7 +23,7 @@ public class MovingPlateformGizmo : Editor
     static void OnDrawDoorGizmo(MovingPlateform movingPlateform, GizmoType gizmoType)
     {
         SpriteRenderer spriteRender = movingPlateform.GetComponent<SpriteRenderer>();
-        
+
         #region Cube Preview Display
         //On définit la forme du cube de prévisualisation, selon si le sprite est plus large que haut ou non
         Vector3 cubePreviewSize = new Vector3(0.4f * movingPlateform.transform.localScale.x, 1.71f * movingPlateform.transform.localScale.y, 0.5f);
@@ -36,7 +36,7 @@ public class MovingPlateformGizmo : Editor
         //Couleur du cube de prévisualisation
         Gizmos.color = Color.yellow * (Color.white - Color.black * cubePreviewOpacity);
         //On dessine le cube
-        Gizmos.DrawCube(movingPlateform.transform.InverseTransformPoint(movingPlateform.endPosition), cubePreviewSize);
+        Gizmos.DrawCube(movingPlateform.endPositionRelative, cubePreviewSize);
         Gizmos.matrix = oldGizmosMatrix;
         #endregion
 
@@ -44,21 +44,21 @@ public class MovingPlateformGizmo : Editor
         //Couleur des flèches
         Gizmos.color = Color.red;
         //On calcul la direction d'un vecteur orthogonal à la direction du point de fin, qu'on échellonne avec le décalage des flèches
-        Vector3 offsetDirection = Quaternion.Euler(0, 0, 90) * (movingPlateform.endPosition - movingPlateform.transform.position).normalized * offsetArrow;
+        Vector3 offsetDirection = Quaternion.Euler(0, 0, 90) * (movingPlateform.EndPosition - movingPlateform.transform.position).normalized * offsetArrow;
         //On dessine les flèches en direction du point de fin de trajectoire
         DrawArrow.ForGizmoTwoPoints(movingPlateform.transform.position + offsetDirection,
-            movingPlateform.endPosition + offsetDirection,
+            movingPlateform.EndPosition + offsetDirection,
             0.25f, 20, 1f);
-        DrawArrow.ForGizmoTwoPoints(movingPlateform.transform.position -offsetDirection,
-            movingPlateform.endPosition - offsetDirection,
+        DrawArrow.ForGizmoTwoPoints(movingPlateform.transform.position - offsetDirection,
+            movingPlateform.EndPosition - offsetDirection,
             0.25f, 20, 1f);
         //Si la plateforme fait des allées retours entre les deux points, alors on le signale en dessinant des flèches qui vont de la fin au point de départ
         if (movingPlateform.looping)
         {
-            DrawArrow.ForGizmoTwoPoints(movingPlateform.endPosition + offsetDirection,
+            DrawArrow.ForGizmoTwoPoints(movingPlateform.EndPosition + offsetDirection,
                 movingPlateform.transform.position + offsetDirection,
                 0.25f, 20, 1f);
-            DrawArrow.ForGizmoTwoPoints(movingPlateform.endPosition - offsetDirection,
+            DrawArrow.ForGizmoTwoPoints(movingPlateform.EndPosition - offsetDirection,
                 movingPlateform.transform.position - offsetDirection,
                 0.25f, 20, 1f);
         }
@@ -66,12 +66,12 @@ public class MovingPlateformGizmo : Editor
 
         #region Text Display
         //On affiche le texte "Destination"
-        Handles.Label(movingPlateform.endPosition + (Vector3.up + Vector3.right) * offsetDestinationText + Vector3.forward * -5f, "Destination");
+        Handles.Label(movingPlateform.EndPosition + (Vector3.up + Vector3.right) * offsetDestinationText + Vector3.forward * -5f, "Destination");
         //On affiche le texte de la durée total pour parcourir une trajectoire
-        Vector3 middlePointDirection = (movingPlateform.endPosition - movingPlateform.transform.position) / 2;
+        Vector3 middlePointDirection = (movingPlateform.EndPosition - movingPlateform.transform.position) / 2;
         Handles.Label(
             movingPlateform.transform.position + middlePointDirection + Vector3.right * 0.3f + Vector3.forward * -5f,
-            movingPlateform.TimeReachingPosition(movingPlateform.endPosition).ToString("0.00") + "s"
+            movingPlateform.TimeReachingPosition(movingPlateform.EndPosition).ToString("0.00") + "s"
             );
         #endregion
     }
@@ -84,11 +84,11 @@ public class MovingPlateformGizmo : Editor
         MovingPlateform movingPlateform = (MovingPlateform)target;
 
         EditorGUI.BeginChangeCheck();
-        Vector3 newTargetPosition = Handles.PositionHandle(movingPlateform.endPosition, Quaternion.identity);
+        Vector3 newTargetPosition = Handles.PositionHandle(movingPlateform.transform.TransformPoint(movingPlateform.endPositionRelative), Quaternion.identity);
         if (EditorGUI.EndChangeCheck())
         {
             Undo.RecordObject(movingPlateform, "Change Look At Target Position");
-            movingPlateform.endPosition = newTargetPosition;
+            movingPlateform.EndPosition = newTargetPosition;
         }
     }
 
@@ -97,7 +97,7 @@ public class MovingPlateformGizmo : Editor
         DrawDefaultInspector();
         MovingPlateform movingPlateform = (MovingPlateform)target;
 
-        EditorGUILayout.LabelField("Trajectory Duration :", movingPlateform.TimeReachingPosition(movingPlateform.endPosition).ToString("0.00")+"s");
+        EditorGUILayout.LabelField("Trajectory Duration :", movingPlateform.TimeReachingPosition(movingPlateform.EndPosition).ToString("0.00") + "s");
         if (GUILayout.Button("Reset End Point Position"))
         {
             movingPlateform.DefaultEndPointPosition();

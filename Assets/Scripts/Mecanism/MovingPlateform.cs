@@ -9,13 +9,19 @@ using DG.Tweening;
 public class MovingPlateform : Mecanism
 {
     #region Public Fields
+    public Vector3 EndPosition
+    {
+        get { return transform.TransformPoint(endPositionRelative); }
+        set { endPositionRelative = transform.InverseTransformPoint(value); }
+    }
+
     [Header("Behavior")]
     /// <summary>
     /// Point de fin de la trajectoire.
     /// </summary>
-    [Tooltip("Coordonnées du point de fin")]
+    [Tooltip("Coordonnées relatives du point de fin")]
     [SerializeField]
-    public Vector3 endPosition;
+    public Vector3 endPositionRelative;
     /// <summary>
     /// Si la plateforme fait des allées-retours entre le endPosition et le startPoint;
     /// </summary>
@@ -72,7 +78,7 @@ public class MovingPlateform : Mecanism
     {
         //On définit le point de départ comme étant la position actuelle, et la prochaine destination comme étant le point de fin
         startPoint = this.transform.position;
-        destination = endPosition;
+        destination = EndPosition;
     }
 
     private void Reset()
@@ -124,7 +130,7 @@ public class MovingPlateform : Mecanism
     #region Moving Plateform Logic
     public void DefaultEndPointPosition()
     {
-        endPosition = this.transform.position + Vector3.up * 2;
+        EndPosition = this.transform.position + Vector3.up * 2;
     }
     /// <summary>
     /// Déplacer l'élévateur vers sa prochaine trajectoire. Une fois terminée, il effectue la trajectoire inverse si
@@ -148,7 +154,7 @@ public class MovingPlateform : Mecanism
         if (isOn)
         {
             yield return new WaitForSeconds(delayBeforeNewTrajectory);
-            destination = this.transform.position == startPoint ? endPosition : startPoint;
+            destination = this.transform.position == startPoint ? EndPosition : startPoint;
             MoveToDestination();
         }
     }
