@@ -9,7 +9,7 @@ public class MovingPlateformGizmo : Editor
     /// <summary>
     /// Opacité du cube de prévisualisation
     /// </summary>
-    private static float cubePreviewOpacity = 0.2f;
+    private static float cubePreviewTransparency = 0.80f;
     /// <summary>
     /// Décalage des flèches de trajectoire vis à vis du centre de la trajectoire
     /// </summary>
@@ -23,20 +23,21 @@ public class MovingPlateformGizmo : Editor
     static void OnDrawDoorGizmo(MovingPlateform movingPlateform, GizmoType gizmoType)
     {
         SpriteRenderer spriteRender = movingPlateform.GetComponent<SpriteRenderer>();
-
+        BoxCollider2D collider2D = movingPlateform.GetComponent<BoxCollider2D>();
+        
         #region Cube Preview Display
         //On définit la forme du cube de prévisualisation, selon si le sprite est plus large que haut ou non
-        Vector3 cubePreviewSize = new Vector3(0.4f * movingPlateform.transform.localScale.x, 1.71f * movingPlateform.transform.localScale.y, 0.5f);
-        if (spriteRender.bounds.size.x > spriteRender.bounds.size.y)
-            cubePreviewSize = new Vector3(1.4f * movingPlateform.transform.localScale.x, 0.5f * movingPlateform.transform.localScale.y, 0.5f);
+        Vector3 cubePreviewSize = new Vector3(collider2D.size.x, collider2D.size.y, 0.5f);
         //On applique au cube la rotation de l'objet
         Matrix4x4 cubeTransform = movingPlateform.transform.localToWorldMatrix;
         Matrix4x4 oldGizmosMatrix = Gizmos.matrix;
         Gizmos.matrix *= cubeTransform;
         //Couleur du cube de prévisualisation
-        Gizmos.color = Color.yellow * (Color.white - Color.black * cubePreviewOpacity);
+        Gizmos.color = Color.yellow * (Color.white - Color.black * cubePreviewTransparency);
         //On dessine le cube
-        Gizmos.DrawCube(movingPlateform.endPositionRelative, cubePreviewSize);
+        Gizmos.DrawCube(
+            movingPlateform.endPositionRelative + Vector3.right * collider2D.offset.x + Vector3.up * collider2D.offset.y,
+            cubePreviewSize);
         Gizmos.matrix = oldGizmosMatrix;
         #endregion
 
@@ -65,8 +66,6 @@ public class MovingPlateformGizmo : Editor
         #endregion
 
         #region Text Display
-        //On affiche le texte "Destination"
-        Handles.Label(movingPlateform.EndPosition + (Vector3.up + Vector3.right) * offsetDestinationText + Vector3.forward * -5f, "Destination");
         //On affiche le texte de la durée total pour parcourir une trajectoire
         Vector3 middlePointDirection = (movingPlateform.EndPosition - movingPlateform.transform.position) / 2;
         Handles.Label(
