@@ -102,7 +102,9 @@ MonoBehaviour:
   triggers:
   - {fileID: 0}
   - {fileID: 0}
-  tagFilter: BlackPlayer
+  nbInputsRequirement: 1
+  tagFilter:
+  - BlackPlayer
   switchSound:
     idInternal: 0
     valueGuidInternal: 

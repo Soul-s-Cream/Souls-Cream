@@ -184,7 +184,9 @@ MonoBehaviour:
   triggers:
   - {fileID: 0}
   - {fileID: 0}
-  tagFilter: Crate
+  nbInputsRequirement: 1
+  tagFilter:
+  - Crate
   switchSound:
     idInternal: 0
     valueGuidInternal: 

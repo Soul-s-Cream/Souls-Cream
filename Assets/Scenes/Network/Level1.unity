@@ -828,12 +828,12 @@ PrefabInstance:
     - target: {fileID: 6660263091723751450, guid: 7383d4aa7286f3842b4d3227c1b9e883,
         type: 3}
       propertyPath: viewIdField
-      value: 9
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6660263091723751450, guid: 7383d4aa7286f3842b4d3227c1b9e883,
         type: 3}
       propertyPath: instantiationId
-      value: 9
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8985504311477872163, guid: 7383d4aa7286f3842b4d3227c1b9e883,
         type: 3}
@@ -1058,12 +1058,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68af57a54b4dbd14b86c4531113e542f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &423094948 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3711093793212205130, guid: dada0e463d7ceaa4cb07dcb4482282e3,
-    type: 3}
-  m_PrefabInstance: {fileID: 423094946}
-  m_PrefabAsset: {fileID: 0}
+  endPosition: {x: 37.489998, y: 6.342, z: 0}
+  looping: 0
+  speed: 2
+  delayBeforeNewTrajectory: 0
+  trajectoryEasing: 1
+  delayBeforeActivation: 0.2
+  openSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5b51e6f65e4e974428690cdab7cc4fce,
+      type: 2}
 --- !u!1001 &463669716
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1387,6 +1392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endPosition: {x: 30.183794, y: -0.975, z: 0}
+  looping: 0
   speed: 2
   delayBeforeNewTrajectory: 0
   trajectoryEasing: 1
@@ -1396,7 +1402,6 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 5b51e6f65e4e974428690cdab7cc4fce,
       type: 2}
-  looping: 1
 --- !u!4 &700664689 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1766456656450929113, guid: 256fb5c52d7b62d4e8a7d03c52cb5bfd,
@@ -1813,6 +1818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endPosition: {x: 0.61977404, y: 6.288, z: 0}
+  looping: 0
   speed: 2
   delayBeforeNewTrajectory: 0
   trajectoryEasing: 7
@@ -1822,7 +1828,6 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 5b51e6f65e4e974428690cdab7cc4fce,
       type: 2}
-  looping: 1
 --- !u!1 &1166246589
 GameObject:
   m_ObjectHideFlags: 0
@@ -4139,6 +4144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endPosition: {x: -7.4650536, y: -1.0544863, z: 0}
+  looping: 0
   speed: 2
   delayBeforeNewTrajectory: 0
   trajectoryEasing: 1
@@ -4148,7 +4154,6 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 5b51e6f65e4e974428690cdab7cc4fce,
       type: 2}
-  looping: 1
 --- !u!1001 &1766456656857828008
 PrefabInstance:
   m_ObjectHideFlags: 0

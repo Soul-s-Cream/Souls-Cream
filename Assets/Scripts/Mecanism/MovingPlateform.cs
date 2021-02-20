@@ -9,13 +9,18 @@ using DG.Tweening;
 public class MovingPlateform : Mecanism
 {
     #region Public Fields
-
+    [Header("Behavior")]
     /// <summary>
     /// Point de fin de la trajectoire.
     /// </summary>
     [Tooltip("Coordonnées du point de fin")]
     [SerializeField]
     public Vector3 endPosition;
+    /// <summary>
+    /// Si la plateforme fait des allées-retours entre le endPosition et le startPoint;
+    /// </summary>
+    [Tooltip("Est-ce que la plateforme fait des allées-retours entre le point de fin et le départ ?")]
+    public bool looping = true;
 
     [Header("Vitesses d'animation")]
     /// <summary>
@@ -40,9 +45,8 @@ public class MovingPlateform : Mecanism
 
     [Tooltip("Délai avant l'animation d'ouverture")]
     public float delayBeforeActivation = 0.2f;
+    [Header("Sound")]
     public AK.Wwise.Event openSound;
-
-    public bool looping = true;
     #endregion
 
     #region Private Fields

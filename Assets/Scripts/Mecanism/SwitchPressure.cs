@@ -9,7 +9,8 @@ public class SwitchPressure : Switch
     #region Public Fields
     [Tooltip("Le tag de l'objet accepté pour activer l'interrupteur")]
     [TagSelector]
-    public string tagFilter = "";
+    public string[] tagFilter;
+    [Header("Sound")]
     public AK.Wwise.Event switchSound;
     #endregion
 
@@ -28,11 +29,14 @@ public class SwitchPressure : Switch
     /// <param name="collision">L'objet en collision</param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag(tagFilter))
+        foreach(string tag in tagFilter)
         {
-            AddInput(true);
-            animator.SetBool("BoutonON", true);
-            PlaySound();
+            if (collision.CompareTag(tag))
+            {
+                AddInput(true);
+                animator.SetBool("BoutonON", true);
+                PlaySound();
+            }
         }
     }
 
@@ -42,11 +46,17 @@ public class SwitchPressure : Switch
     /// <param name="collision">L'objet en collision</param>
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag(tagFilter))
+        foreach (string tag in tagFilter)
         {
-            AddInput(false);
-            animator.SetBool("BoutonON", false);
-            PlaySound();
+            if (collision.CompareTag(tag))
+            {
+                AddInput(false);
+                if (!isOn)
+                {
+                    animator.SetBool("BoutonON", false);
+                    PlaySound();
+                }
+            } 
         }
     }
 
