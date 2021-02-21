@@ -372,13 +372,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81bd7d4d0bbe552418227c11f52027e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpSprite: {fileID: 661234670}
-  DeplacementRightSprite: {fileID: 506163197}
-  DeplacementLeftSprite: {fileID: 1020767714}
-  CriSprite: {fileID: 1272607917}
-  ChangeCriRightSprite: {fileID: 221457893}
-  ChangeCriLeftSprite: {fileID: 775221018}
-  spaceIsPress: 0
+  JumpSprite_01: {fileID: 661234670}
+  DeplacementLeftSprite_02: {fileID: 506163197}
+  DeplacementRightSprite_03: {fileID: 1020767714}
+  CriSprite_04: {fileID: 1272607917}
+  ChangeCriUpSprite_05: {fileID: 221457893}
+  ChangeCriDownSprite_06: {fileID: 775221018}
+  jumpControlIsPress_01: 0
+  moveLeftIsPress_02: 0
+  moveRightIsPress_03: 0
+  criControlIsPress_04: 0
+  switchCriUpIsPress_05: 0
+  switchCriDownIsPress_06: 0
+  actif: 0
 --- !u!4 &283106909
 Transform:
   m_ObjectHideFlags: 0
