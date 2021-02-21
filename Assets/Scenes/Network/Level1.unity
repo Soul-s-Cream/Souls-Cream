@@ -996,12 +996,12 @@ PrefabInstance:
     - target: {fileID: 3615205953177918584, guid: dada0e463d7ceaa4cb07dcb4482282e3,
         type: 3}
       propertyPath: endPositionRelative.x
-      value: -0.00000047683716
+      value: 0.00000047683716
       objectReference: {fileID: 0}
     - target: {fileID: 3615205953177918584, guid: dada0e463d7ceaa4cb07dcb4482282e3,
         type: 3}
       propertyPath: endPositionRelative.y
-      value: 1.9999998
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 3711093793212205128, guid: dada0e463d7ceaa4cb07dcb4482282e3,
         type: 3}
@@ -1216,7 +1216,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScreenFadeCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 6247368129681976330, guid: d7f42b94dd25ebc429e4925a939cc03b,
+    - target: {fileID: 6247368130568687441, guid: d7f42b94dd25ebc429e4925a939cc03b,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3310,18 +3310,15 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 0.13004494, y: 0.7648492}
+  - {x: 0.06976509, y: 0.89810276}
   - {x: 0.070863724, y: 1.0135982}
-  - {x: -2.2767143, y: 1.1389396}
-  - {x: -2.9539986, y: 1.3642077}
-  - {x: -3.539898, y: 1.111762}
   - {x: -4.8946514, y: 0.9719925}
-  - {x: -4.9564114, y: -0.30571532}
+  - {x: -4.8755207, y: -0.32593846}
   - {x: -7.6373425, y: -0.3328073}
-  - {x: -7.5944157, y: -0.64131844}
-  - {x: -4.829376, y: -0.46375275}
-  - {x: -3.938034, y: 0.7576122}
-  - {x: -0.023546219, y: 0.7842126}
+  - {x: -7.6522884, y: -0.7339133}
+  - {x: -4.629387, y: -0.7322006}
+  - {x: -4.5986404, y: 0.8318372}
+  - {x: 0.03009224, y: 0.9049046}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
