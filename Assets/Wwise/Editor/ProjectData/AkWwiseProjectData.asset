@@ -30,7 +30,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: decf5895b2d13846b0aa0701cd5fbb4e
     GuidInternal: 
-    m_lastTime: -8585882796664730835
+    m_lastTime: -8585881135451889448
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -41,6 +41,17 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
       Path: Default Work Unit\Master Audio Bus
+    - name: MenuVoices
+      guid: 649a39a83d914e4e9192bb10f18db142
+      id: 3196512249
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: MenuVoices
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus\MenuVoices
     - name: Musics
       guid: c39d6c16b9d8274daaf072f0ac6df911
       id: 1730564753
@@ -52,6 +63,17 @@ MonoBehaviour:
       - ElementName: Musics
         ObjectType: 2
       Path: Default Work Unit\Master Audio Bus\Musics
+    - name: Screams
+      guid: 65635a7a21af2749be6d5f0a0f291cf4
+      id: 2812860249
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Screams
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus\Screams
     - name: SoundEffects
       guid: 19853847b8b75248ac12ba01e1d8a950
       id: 3898083304
@@ -90,7 +112,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: a3e106a80bc5484598947af11861b916
     GuidInternal: 
-    m_lastTime: -8585882796664780704
+    m_lastTime: -8585876847584354300
     List:
     - name: Acculation
       guid: 8d5a9d35caa05d4ba2fd12e71d93e2e3
@@ -596,6 +618,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: OzMozFinalCinematic
+      guid: 58299c75823c1c439b1549ce93768e2e
+      id: 793593447
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: OzMozFinalCinematic
+        ObjectType: 3
+      Path: Default Work Unit\OzMozFinalCinematic
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: OzMozMenuTheme
       guid: c07ec3b9b4a6fc49884750b455193ba5
       id: 3278785808
@@ -660,6 +694,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Post_Event_OzDoubleJump
+      guid: c75b524fd0bda04f8c273d99929334bf
+      id: 4232859593
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Post_Event_OzDoubleJump
+        ObjectType: 3
+      Path: Default Work Unit\Post_Event_OzDoubleJump
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Quit
       guid: 4bbc6504817a004fa532c8bf9b48736a
       id: 3930794392
@@ -689,6 +735,20 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: Screams
+      guid: ee93749b125cbf42b72d7e87ded24031
+      id: 2812860249
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Moz
+        ObjectType: 4
+      - ElementName: Screams
+        ObjectType: 4
+      Path: Default Work Unit\Moz\Screams
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Screams
       guid: ea00767fc2e36347a651d5a72f1c5943
       id: 2812860249
       PathAndIcons:
@@ -702,17 +762,15 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Screams
-      guid: ee93749b125cbf42b72d7e87ded24031
-      id: 2812860249
+    - name: SILENCE
+      guid: 59f6e682c3528d4b8870e0ec9d1467dd
+      id: 3041563226
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Moz
-        ObjectType: 4
-      - ElementName: Screams
-        ObjectType: 4
-      Path: Default Work Unit\Moz\Screams
+      - ElementName: SILENCE
+        ObjectType: 3
+      Path: Default Work Unit\SILENCE
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -770,8 +828,17 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: c69f70ce3ee3f443b8d3fc03c4bc2167
     GuidInternal: 
-    m_lastTime: -8585882796664780704
+    m_lastTime: -8585881135452826935
     List:
+    - name: MenuVoicesVolume
+      guid: 6a74fc52f5194840b1b8b3763026f49f
+      id: 2976415783
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MenuVoicesVolume
+        ObjectType: 13
+      Path: Default Work Unit\MenuVoicesVolume
     - name: MusicsVolume
       guid: 3d18a0f67f7fe64ba59aa4be9b9e21a4
       id: 924921327
@@ -799,6 +866,15 @@ MonoBehaviour:
       - ElementName: PlayerSpeed
         ObjectType: 13
       Path: Default Work Unit\PlayerSpeed
+    - name: ScreamsVolume
+      guid: 3850bc7429deb24883cde87f35d30db6
+      id: 3499704711
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ScreamsVolume
+        ObjectType: 13
+      Path: Default Work Unit\ScreamsVolume
     - name: SoundEffectsVolume
       guid: ec328d7e6b3c2b4eb4b2d835820bde31
       id: 3402092638
@@ -825,7 +901,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 7b76c7a5a23e3e499aa16bf43b47532b
     GuidInternal: 
-    m_lastTime: -8585887320938092557
+    m_lastTime: -8585887249875353146
     List:
     - name: CrateMoving
       guid: 9e07556062f2f7429cf246c1e7588b9b
@@ -973,13 +1049,5 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Souls-Cream_WwiseProject
-  - /Souls-Cream_WwiseProject/Events
-  - /Souls-Cream_WwiseProject/Events/Default Work Unit
-  - /Souls-Cream_WwiseProject/Events/Default Work Unit/MenuVoices
-  - /Souls-Cream_WwiseProject/Events/Default Work Unit/Moz
-  - /Souls-Cream_WwiseProject/States
-  - /Souls-Cream_WwiseProject/States/Default Work Unit
-  - /Souls-Cream_WwiseProject/States/Default Work Unit/CrateMoving
-  - /Souls-Cream_WwiseProject/States/Default Work Unit/PlayerMoving
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

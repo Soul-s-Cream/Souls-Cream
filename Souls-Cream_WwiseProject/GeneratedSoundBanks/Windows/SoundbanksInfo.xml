@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="135">
 	<RootPaths>
-		<ProjectRoot>D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\Le Tristan\Documents\GitHub\CreamSouls\Souls-Cream\Souls-Cream_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Le Tristan\Documents\GitHub\CreamSouls\Souls-Cream\Souls-Cream_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Le Tristan\Documents\GitHub\CreamSouls\Souls-Cream\Souls-Cream_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\Le Tristan\Documents\GitHub\CreamSouls\Souls-Cream\Souls-Cream_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -20,7 +20,7 @@
 				<GameParameter Id="3402092638" Name="SoundEffectsVolume" ObjectPath="\Game Parameters\Default Work Unit\SoundEffectsVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1248353875">
+		<SoundBank Id="3161908922" Language="SFX" Hash="802744406">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>

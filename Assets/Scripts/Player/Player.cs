@@ -23,6 +23,8 @@ public class Player : Photon.PunBehaviour
     public float groundCheckingRadius;
     public LayerMask groundLayer;
 
+    public TagSelectorAttribute humidityTag;
+
     [Header("Screams")]
     public LayerMask humidityLayer;
     [Tooltip("Radius of the curiosity scream revealling effect")]
@@ -66,7 +68,9 @@ public class Player : Photon.PunBehaviour
     public bool freezeMove = false;
 
     [Header("Sound")]
-    public AK.Wwise.RTPC PlayerMovingSound;
+    public AK.Wwise.Event mozFootSteps;
+    public AK.Wwise.RTPC footStepsWetRTPC;
+    public AK.Wwise.Event ozFootSteps;
     public AK.Wwise.Event screamCornered;
     public AK.Wwise.Event screamEnvy;
     public AK.Wwise.Event screamSolitude;
@@ -131,7 +135,7 @@ public class Player : Photon.PunBehaviour
             photonView.RPC("FlipToggleSprite", PhotonTargets.All, true);
             if (isGrounded)
             {
-                PlayerMovingSound.SetGlobalValue(Mathf.Abs(rb.velocity.x));
+                footStepsWetRTPC.SetGlobalValue(Mathf.Abs(rb.velocity.x));
             }
         }
         else if (control.Deplacement.Deplacement.ReadValue<float>() < 0)
@@ -425,6 +429,32 @@ public class Player : Photon.PunBehaviour
 
     }
 
+    #endregion
+
+    #region animationEvents
+    public void PlayFootstep()
+    {
+        RaycastHit2D hit = Physics2D.Raycast((Vector2) transform.position + groundCheckingCenter, Vector2.down, groundCheckingRadius, humidityLayer);
+
+        if (role == Role.NOIR)
+        {
+            if (hit.collider)
+            {
+                footStepsWetRTPC.SetGlobalValue(100f);
+            }
+            else
+            {
+                footStepsWetRTPC.SetGlobalValue(0f);
+            }
+
+            footStepsWetRTPC.Validate();
+            mozFootSteps.Post(gameObject);
+        } 
+        else
+        {
+            ozFootSteps.Post(gameObject);
+        }
+    }
     #endregion
 
     private void OnDrawGizmosSelected()

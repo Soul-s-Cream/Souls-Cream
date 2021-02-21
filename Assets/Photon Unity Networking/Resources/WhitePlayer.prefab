@@ -5674,6 +5674,11 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: a1e43a1db2aa88349a70dcacb442dbc5,
       type: 2}
+  ozFootSteps:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 580b96b14ec10d74a9811f7fe00f3c81,
+      type: 2}
   screamCornered:
     idInternal: 0
     valueGuidInternal: 
