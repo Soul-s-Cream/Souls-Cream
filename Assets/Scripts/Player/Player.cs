@@ -24,14 +24,15 @@ public class Player : Photon.PunBehaviour
 
     [Header("Movements")]
 
-    public float moveSpeed;
-    public float moveSmooth = .05f;
-    public float jumpForce;
-    public float maxSpeed;
+    public float moveSpeed;                       // Défini le moveSpeed du joueur
+    public float moveSmooth = .05f;               // Mmmh
+    public float jumpForce = 500;                 // valeur de la poussée vertical du saut
+    public float DoubleJumpForce = 400;           // valeur de la force du double Jump
+    public float deplacementEnAir = 1.01f;        // vitesse de déplacement du joueur lorsqu'il ne touche pas le sol          
 
-    public float fallMultiplier = 2.5f;
-    public float lowJumpMultiplier = 2f;
-    public float velocityYMax = 50f;
+    public float fallMultiplier = 2.5f;           // gère la vitesse de la chute. Permet un saut plus réaliste
+    public float lowJumpMultiplier = 2f;          // gère la force ascendante lors du saut. Permet un saut plus réaliste
+    public float velocityYMax = 50f;              // Permet de limiter la force du saut, notament lors du double saut
 
     public Vector2 groundCheckingCenter;
     public float groundCheckingRadius;
@@ -73,9 +74,9 @@ public class Player : Photon.PunBehaviour
     #endregion
 
     #region Private Fields
-    private int jumpAmount = 0;
-    private bool isJuming;
-    private bool isGrounded;
+    private int jumpAmount = 0;                     // nombre de saut en cours
+    private bool isJuming;                          // si le joueur est en train de sauter
+    private bool isGrounded;                        // vérifie si le joueur est en contacte avec le sol
     [HideInInspector]
     public Animator anim;
     private Rigidbody2D rb;
@@ -175,34 +176,34 @@ public class Player : Photon.PunBehaviour
             return;
         }
 
-        if (velocity.y > velocityYMax)
+        /*if (velocity.y > velocityYMax) // Permet de limiter la force du saut, notament lors du double saut
         {
             velocity.y = velocityYMax;
-        }
-        if (control.Deplacement.Jump.triggered && jumpAmount < 1)
+        }*/
+        if (control.Deplacement.Jump.triggered && jumpAmount <= 1) //  si le joueur déclanche le saut
         {
             isJuming = true;
             jumpAmount += 1;
         }
-        if (isGrounded)
+
+        if (!isGrounded)  // gère la vitesse de la chute. Permet un saut plus réaliste
+        {
+            rb.velocity += Vector2.up * Physics2D.gravity.y * fallMultiplier * Time.deltaTime;
+        }
+        else if (rb.velocity.y > 0 && !control.Deplacement.Jump.triggered)  // gère la force ascendante lors du saut. Permet un saut plus réaliste
+        {
+            rb.velocity += Vector2.up * Physics2D.gravity.y * lowJumpMultiplier * Time.deltaTime;
+        }
+
+        if (isGrounded)                     // gère l'animation du saut
         {
             jumpAmount = 0;
-        }
-        if (rb.velocity.y < 0)
-        {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-        }
-        else if (rb.velocity.y > 0 && !control.Deplacement.Jump.triggered)
-        {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
-        }
-        if (isGrounded)
-        {
             anim.SetBool("Jump", false);
         }
         else anim.SetBool("Jump", true);
 
         Screaming();
+
     }
 
     void PlayerMove(float _horizontalMovement)
@@ -215,20 +216,31 @@ public class Player : Photon.PunBehaviour
         Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
         if(isGrounded)
         {
-            rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, moveSmooth);
+            rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, moveSmooth);        // gère le déplacement du joueur lorsqu'il touche le sol
+        }
+        else
+        {
+            rb.velocity = Vector3.SmoothDamp(rb.velocity * new Vector2(deplacementEnAir, 1f ), targetVelocity, ref velocity, moveSmooth); // gère le déplacement horizontale du joueur lorsqu'il ne touche pas le sol
         }
 
-        if (isJuming == true)
+        if (isJuming == true)   // premier saut
         {
             if (jumpAmount == 0)
             {
                 AkSoundEngine.PostEvent("MozJump", gameObject);
-                rb.AddForce(new Vector2(0f, jumpForce));
+                rb.AddForce(new Vector2(0f, jumpForce));            // ajoute la force du saut
             }
-            if (jumpAmount == 1)
+            if (jumpAmount == 1)                                    // double saut
             {
-
-                rb.AddForce(new Vector2(0f, jumpForce * 0f));
+                if (role == Role.BLANC)
+                {
+                    rb.velocity -= new Vector2(0, rb.velocity.y); 
+                    rb.AddForce(new Vector2(0f, DoubleJumpForce));       
+                }
+                if (role == Role.NOIR)                              // le player n'a pas accès au double saut, donc l'ajout de force est de 0
+                {
+                    rb.AddForce(new Vector2(0f, jumpForce * 0f));       
+                }
             }
             isJuming = false;
         }
@@ -502,7 +514,7 @@ public class Player : Photon.PunBehaviour
     #endregion
 
     #region Unity Callbacks
-    private void OnEnable()
+    private void OnEnable()             // permet au Controls de fonctionner
     {
         control.Deplacement.Enable();
         control.Cri.Enable();

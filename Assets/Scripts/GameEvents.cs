@@ -36,7 +36,7 @@ public class GameEvents : MonoBehaviour
     public delegate void SwitchEventBox(Crate box);
     public event SwitchEventBox switchBox;
 
-    public delegate void BrisDeEcranEvent(GameObject[] cassur);
+    public delegate void BrisDeEcranEvent(GameObject[] cassur); // permet d'afficher les sprites de vitre cassée à la fin du jeu
     public event BrisDeEcranEvent BrisDeEcranVoid; 
     #endregion
 

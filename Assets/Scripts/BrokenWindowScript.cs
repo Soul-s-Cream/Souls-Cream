@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BrokenWindowScript : MonoBehaviour
+public class BrokenWindowScript : MonoBehaviour             //a attacher aux sprites de vitre brisée dans la scène finale
 {
     private void Start()
     {
