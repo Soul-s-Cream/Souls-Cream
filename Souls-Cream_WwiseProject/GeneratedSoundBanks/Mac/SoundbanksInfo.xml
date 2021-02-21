@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="135">
 	<RootPaths>
-		<ProjectRoot>C:\Users\Le Tristan\Documents\GitHub\CreamSouls\Souls-Cream\Souls-Cream_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\Le Tristan\Documents\GitHub\CreamSouls\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\Le Tristan\Documents\GitHub\CreamSouls\Souls-Cream\Souls-Cream_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\Le Tristan\Documents\GitHub\CreamSouls\Souls-Cream\Souls-Cream_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\GitKraken\Souls-Cream\Souls-Cream_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -20,7 +20,7 @@
 				<GameParameter Id="3402092638" Name="SoundEffectsVolume" ObjectPath="\Game Parameters\Default Work Unit\SoundEffectsVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="802744406">
+		<SoundBank Id="3161908922" Language="SFX" Hash="191728493">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -465,7 +465,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2515146559" Name="OzFootsteps" ObjectPath="\Events\Default Work Unit\Oz\OzFootsteps" DurationType="Infinite">
+				<Event Id="2515146559" Name="OzFootsteps" ObjectPath="\Events\Default Work Unit\Oz\OzFootsteps" DurationType="OneShot" DurationMin="0.023581" DurationMax="0.039345">
 					<IncludedMemoryFiles>
 						<File Id="340180847" Language="SFX">
 							<ShortName>PlayerOzFootsteps.wav</ShortName>

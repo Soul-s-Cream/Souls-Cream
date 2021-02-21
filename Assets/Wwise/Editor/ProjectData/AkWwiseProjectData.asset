@@ -112,7 +112,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: a3e106a80bc5484598947af11861b916
     GuidInternal: 
-    m_lastTime: -8585876847584354300
+    m_lastTime: -8585876758104194144
     List:
     - name: Acculation
       guid: 8d5a9d35caa05d4ba2fd12e71d93e2e3
@@ -1049,5 +1049,8 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Souls-Cream_WwiseProject
+  - /Souls-Cream_WwiseProject/Events
+  - /Souls-Cream_WwiseProject/Events/Default Work Unit
+  - /Souls-Cream_WwiseProject/Events/Default Work Unit/Oz
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

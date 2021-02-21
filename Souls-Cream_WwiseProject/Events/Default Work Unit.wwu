@@ -231,10 +231,10 @@
 						</Event>
 						<Event Name="OzFootsteps" ID="{1C2A276B-7C39-4A4C-813B-129748A89399}">
 							<ChildrenList>
-								<Action Name="" ID="{ECE61C5F-345A-4FF2-9480-395172752505}" ShortID="339505597">
+								<Action Name="" ID="{AFB9554F-A627-4D9B-8811-36F771A33037}" ShortID="1031431647">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="OzFootsteps2" ID="{AA94316F-1D32-4953-B10F-EAA61D46E23E}" WorkUnitID="{1DDF2895-7EAD-4C1C-B399-D67DF281113E}"/>
+											<ObjectRef Name="OzFootsteps" ID="{8958D319-5C35-4DEF-999B-E0F775B89AC4}" WorkUnitID="{1DDF2895-7EAD-4C1C-B399-D67DF281113E}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

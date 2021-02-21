@@ -1085,35 +1085,6 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
-								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-								<Property Name="Volume" Type="Real64">
-									<RTPCList>
-										<RTPC Name="" ID="{813A5F2D-C3E8-4691-9309-B79D0C0A376B}" ShortID="356787452">
-											<ReferenceList>
-												<Reference Name="ControlInput">
-													<ObjectRef Name="PlayerMoving" ID="{D24517E9-C78A-4ACA-9749-463BF551BF6E}" WorkUnitID="{CE709FC6-E33E-43F4-B8D3-FC03C4BC2167}"/>
-												</Reference>
-											</ReferenceList>
-											<Curve Name="" ID="{34934A00-9C53-4324-8E54-9F2B46DF5054}">
-												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="3"/>
-												</PropertyList>
-												<PointList>
-													<Point>
-														<XPos>0</XPos>
-														<YPos>-200</YPos>
-														<Flags>5</Flags>
-													</Point>
-													<Point>
-														<XPos>1</XPos>
-														<YPos>0</YPos>
-														<Flags>37</Flags>
-													</Point>
-												</PointList>
-											</Curve>
-										</RTPC>
-									</RTPCList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">

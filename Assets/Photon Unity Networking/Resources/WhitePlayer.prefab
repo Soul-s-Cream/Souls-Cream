@@ -5669,11 +5669,14 @@ MonoBehaviour:
   role: 0
   chuteLibre: 0
   freezeMove: 0
-  PlayerMovingSound:
+  mozFootSteps:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a1e43a1db2aa88349a70dcacb442dbc5,
-      type: 2}
+    WwiseObjectReference: {fileID: 0}
+  footStepsWetRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   ozFootSteps:
     idInternal: 0
     valueGuidInternal: 
