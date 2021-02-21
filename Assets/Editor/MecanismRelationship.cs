@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class MecanismRelationship
+[CustomEditor(typeof(Mecanism)), CanEditMultipleObjects]
+public class MecanismRelationship : Editor
 {
     public static float sphereSelectionRadius = 0.15f;
 
@@ -70,6 +71,25 @@ public class MecanismRelationship
             }
         }
         #endregion
+    }
+
+    public override void OnInspectorGUI()
+    {
+        DrawDefaultInspector();
+        Mecanism mecanism = (Mecanism)target;
+        if (Application.isPlaying)
+        {
+            GUILayout.BeginHorizontal();
+            if (GUILayout.Button("Activate"))
+            {
+                GameEvents.Instance.TriggerSwitchOn(mecanism);
+            }
+            if (GUILayout.Button("Deactivate"))
+            {
+                GameEvents.Instance.TriggerSwitchOff(mecanism);
+            }
+            GUILayout.EndHorizontal();
+        }
     }
 
     public static Vector3 OffsetPoint(Vector3 startPosition, Vector3 direction, float distance = 0.3f)

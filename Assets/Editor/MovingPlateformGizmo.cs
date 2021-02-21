@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEditor;
 
 [CustomEditor(typeof(MovingPlateform)), CanEditMultipleObjects]
-public class MovingPlateformGizmo : Editor
+public class MovingPlateformGizmo : MecanismRelationship
 {
     /// <summary>
     /// Opacité du cube de prévisualisation
@@ -36,7 +36,7 @@ public class MovingPlateformGizmo : Editor
         Gizmos.color = Color.yellow * (Color.white - Color.black * cubePreviewTransparency);
         //On dessine le cube
         Gizmos.DrawCube(
-            movingPlateform.endPositionRelative + Vector3.right * collider2D.offset.x + Vector3.up * collider2D.offset.y,
+            movingPlateform.transform.InverseTransformPoint(movingPlateform.EndPosition) + Vector3.right * collider2D.offset.x + Vector3.up * collider2D.offset.y,
             cubePreviewSize);
         Gizmos.matrix = oldGizmosMatrix;
         #endregion
@@ -83,7 +83,7 @@ public class MovingPlateformGizmo : Editor
         MovingPlateform movingPlateform = (MovingPlateform)target;
 
         EditorGUI.BeginChangeCheck();
-        Vector3 newTargetPosition = Handles.PositionHandle(movingPlateform.transform.TransformPoint(movingPlateform.endPositionRelative), Quaternion.identity);
+        Vector3 newTargetPosition = Handles.PositionHandle(movingPlateform.EndPosition, Quaternion.identity);
         if (EditorGUI.EndChangeCheck())
         {
             Undo.RecordObject(movingPlateform, "Change Look At Target Position");
@@ -93,13 +93,18 @@ public class MovingPlateformGizmo : Editor
 
     public override void OnInspectorGUI()
     {
-        DrawDefaultInspector();
+        base.OnInspectorGUI();
+        serializedObject.Update();
         MovingPlateform movingPlateform = (MovingPlateform)target;
 
         EditorGUILayout.LabelField("Trajectory Duration :", movingPlateform.TimeReachingPosition(movingPlateform.EndPosition).ToString("0.00") + "s");
+
+
+        EditorGUI.BeginChangeCheck();
         if (GUILayout.Button("Reset End Point Position"))
         {
-            movingPlateform.DefaultEndPointPosition();
+            movingPlateform.endPositionRelative = movingPlateform.transform.InverseTransformPoint(movingPlateform.DefaultEndPointPosition());
         }
+        EditorUtility.SetDirty(movingPlateform);
     }
 }

@@ -5,13 +5,19 @@ using DG.Tweening;
 
 [RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(BoxCollider2D))]
-[ExecuteInEditMode]
 public class MovingPlateform : Mecanism
 {
     #region Public Fields
+    [SerializeField]
     public Vector3 EndPosition
     {
-        get { return transform.TransformPoint(endPositionRelative); }
+        get 
+        {
+            if (!Application.isPlaying)
+                return transform.TransformPoint(endPositionRelative);
+            else
+                return transform.TransformPoint(transform.InverseTransformPoint(startPoint) + endPositionRelative);
+        }
         set { endPositionRelative = transform.InverseTransformPoint(value); }
     }
 
@@ -27,7 +33,11 @@ public class MovingPlateform : Mecanism
     /// </summary>
     [Tooltip("Est-ce que la plateforme fait des allées-retours entre le point de fin et le départ ?")]
     public bool looping = true;
-
+    /// <summary>
+    /// Si la plateforme doit être masqué lorsqu'elle arrive au point de fin
+    /// </summary>
+    [Tooltip("Est-ce que la plateforme se masque arrivé au point final ?")]
+    public bool isMasked = false;
     [Header("Vitesses d'animation")]
     /// <summary>
     /// Vitesse de parcours d'une trajectoire. En nombre d'unité dans l'espace parcourue par seconde
@@ -72,6 +82,22 @@ public class MovingPlateform : Mecanism
     /// Le Tween actuel chargé de déplacer l'élévateur
     /// </summary>
     private Tween tweenRunning;
+    /// <summary>
+    /// SpriteRender from the GameObject
+    /// </summary>
+    private SpriteRenderer spriteRender;
+    /// <summary>
+    /// SpriteMask in case isMasked is true
+    /// </summary>
+    private SpriteMask mask;
+    /// <summary>
+    /// BoxCollider2D of the object
+    /// </summary>
+    private BoxCollider2D boxCollider2D;
+    /// <summary>
+    /// Original Bounds of the BoxCollider2D of the object
+    /// </summary>
+    private Bounds originalBC2D;
     #endregion
 
     private void Awake()
@@ -79,11 +105,46 @@ public class MovingPlateform : Mecanism
         //On définit le point de départ comme étant la position actuelle, et la prochaine destination comme étant le point de fin
         startPoint = this.transform.position;
         destination = EndPosition;
+        spriteRender = GetComponent<SpriteRenderer>();
+        boxCollider2D = GetComponent<BoxCollider2D>();
+        /*originalBC2D = new Bounds(boxCollider2D.bounds.center, boxCollider2D.bounds.size);
+
+        if(isMasked && Application.isPlaying)
+        {
+            spriteRender.maskInteraction = SpriteMaskInteraction.VisibleOutsideMask;
+            mask = Instantiate(new GameObject(this.name + " Mask"), this.EndPosition, Quaternion.identity)
+                .AddComponent<SpriteMask>();
+            mask.sprite = spriteRender.sprite;
+            mask.alphaCutoff = 0f;
+        }*/
     }
 
     private void Reset()
     {
-        DefaultEndPointPosition();
+        EndPosition = DefaultEndPointPosition();
+    }
+
+    private void FixedUpdate()
+    {
+        /*if (isMasked)
+        {
+            if(mask.bounds.Intersects(boxCollider2D.bounds))
+            {
+                Vector2 reduction = Vector3.zero;
+                Vector3 centerDistance = boxCollider2D.bounds.center - mask.bounds.center;
+                if(centerDistance.x >= centerDistance.y)
+                {
+                    reduction = transform.InverseTransformDirection(new Vector2(centerDistance.x - mask.bounds.extents.x, 0));
+                }
+                else
+                {
+                    reduction = transform.InverseTransformDirection(new Vector2(0, centerDistance.y - mask.bounds.extents.y));
+                }
+
+                boxCollider2D.size += reduction;
+                boxCollider2D.offset += reduction;
+            }
+        }*/
     }
 
     #region Mecanism Logic
@@ -128,9 +189,9 @@ public class MovingPlateform : Mecanism
     #endregion
 
     #region Moving Plateform Logic
-    public void DefaultEndPointPosition()
+    public Vector3 DefaultEndPointPosition()
     {
-        EndPosition = this.transform.position + Vector3.up * 2;
+        return transform.TransformPoint(Vector3.up * 2);
     }
     /// <summary>
     /// Déplacer l'élévateur vers sa prochaine trajectoire. Une fois terminée, il effectue la trajectoire inverse si
