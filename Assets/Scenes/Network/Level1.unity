@@ -252,6 +252,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 76092093981166040829f5d693622562,
         type: 2}
+    - target: {fileID: 6138617455980709922, guid: b05e64cbfdf801b46b21c544147f32b1,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138617455980709922, guid: b05e64cbfdf801b46b21c544147f32b1,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -160642431
+      objectReference: {fileID: 0}
     - target: {fileID: 6138617455980709933, guid: b05e64cbfdf801b46b21c544147f32b1,
         type: 3}
       propertyPath: m_Name
@@ -384,6 +394,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1962452755}
     m_Modifications:
+    - target: {fileID: 4550581643085419305, guid: a8a02b4147a31ab49a9ef698990a76ea,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 5655d3beb0cbd324682a07c9f6ab7a6b, type: 2}
     - target: {fileID: 5389239177424891148, guid: a8a02b4147a31ab49a9ef698990a76ea,
         type: 3}
       propertyPath: m_Name
@@ -765,6 +780,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1962452755}
     m_Modifications:
+    - target: {fileID: 5798931786471686568, guid: 7383d4aa7286f3842b4d3227c1b9e883,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 6660263091723751448, guid: 7383d4aa7286f3842b4d3227c1b9e883,
         type: 3}
       propertyPath: m_RootOrder
@@ -778,7 +798,7 @@ PrefabInstance:
     - target: {fileID: 6660263091723751448, guid: 7383d4aa7286f3842b4d3227c1b9e883,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.4
+      value: -0.28
       objectReference: {fileID: 0}
     - target: {fileID: 6660263091723751448, guid: 7383d4aa7286f3842b4d3227c1b9e883,
         type: 3}
@@ -1001,7 +1021,7 @@ PrefabInstance:
     - target: {fileID: 3615205953177918584, guid: dada0e463d7ceaa4cb07dcb4482282e3,
         type: 3}
       propertyPath: endPositionRelative.y
-      value: -2
+      value: 1.9979315
       objectReference: {fileID: 0}
     - target: {fileID: 3711093793212205128, guid: dada0e463d7ceaa4cb07dcb4482282e3,
         type: 3}
@@ -1016,12 +1036,12 @@ PrefabInstance:
     - target: {fileID: 3711093793212205130, guid: dada0e463d7ceaa4cb07dcb4482282e3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.52
+      value: 5.5200005
       objectReference: {fileID: 0}
     - target: {fileID: 3711093793212205130, guid: dada0e463d7ceaa4cb07dcb4482282e3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.832
+      value: -3.9
       objectReference: {fileID: 0}
     - target: {fileID: 3711093793212205130, guid: dada0e463d7ceaa4cb07dcb4482282e3,
         type: 3}
@@ -1421,6 +1441,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 231752908}
     m_Modifications:
+    - target: {fileID: 5017720326002912200, guid: b2304a5154f5e6f4eba60a87def58ee8,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5311281421390854776, guid: b2304a5154f5e6f4eba60a87def58ee8,
         type: 3}
       propertyPath: m_RootOrder
@@ -2563,10 +2588,6 @@ EdgeCollider2D:
   - {x: 8.094463, y: 0.5364542}
   - {x: 9.206589, y: 0.9710126}
   - {x: 9.203213, y: 2.7740374}
-  - {x: 8.384705, y: 4.5063157}
-  - {x: 6.3871536, y: 5.4413047}
-  - {x: -6.636017, y: 5.4669237}
-  - {x: -8.635525, y: 4.6264386}
   - {x: -9.729458, y: 2.7690058}
   - {x: -9.7632675, y: -1.9944172}
   m_AdjacentStartPoint: {x: 0, y: 0}
@@ -3310,10 +3331,10 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 0.06976509, y: 0.89810276}
-  - {x: 0.070863724, y: 1.0135982}
-  - {x: -4.8946514, y: 0.9719925}
-  - {x: -4.8755207, y: -0.32593846}
+  - {x: 0.05362892, y: 0.9208851}
+  - {x: 0.11306, y: 1.024445}
+  - {x: -4.840372, y: 1.12573}
+  - {x: -4.845476, y: -0.3710072}
   - {x: -7.6373425, y: -0.3328073}
   - {x: -7.6522884, y: -0.7339133}
   - {x: -4.629387, y: -0.7322006}
@@ -3447,9 +3468,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 10.083327, y: -2.0013933}
-  - {x: 9.69466, y: -2.3592033}
-  - {x: 9.623486, y: -0.21673489}
+  - {x: 9.514293, y: -2.3376408}
+  - {x: 9.520025, y: -0.19086957}
   - {x: 8.449258, y: 0.109419346}
   - {x: 6.9737444, y: 0.31843805}
   - {x: 3.5438673, y: 0.2682016}
@@ -3609,6 +3629,16 @@ PrefabInstance:
       propertyPath: sisterCrate
       value: 
       objectReference: {fileID: 61233113}
+    - target: {fileID: 9147337399559473500, guid: 843ea6be9d43e804d9fac62312bd1d20,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147337399559473500, guid: 843ea6be9d43e804d9fac62312bd1d20,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -160642431
+      objectReference: {fileID: 0}
     - target: {fileID: 9147337399559473501, guid: 843ea6be9d43e804d9fac62312bd1d20,
         type: 3}
       propertyPath: m_RootOrder
