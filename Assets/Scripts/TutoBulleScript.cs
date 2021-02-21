@@ -25,10 +25,18 @@ public class TutoBulleScript : MonoBehaviour        // scipte à attacher quelque
     public bool actif = false;
     private float waitTime = 1.5f;
 
+
+    public Image EcranOpaque;
+    public float ecranAlpha = .3f;
+    private bool lalaJattend;
+        private Color ecranTutoAlphaColor;
+    private bool ecranTutoActif = true;
+
     private void Awake()
     {
         control = new Controls();
         JumpSprite_01.GetComponent<Image>().DOColor(Color.white, 1f);
+        ecranTutoAlphaColor = new Color(1, 1, ecranAlpha);
     }
     private void Update()               // lorsqu'on actionne les différent contrôles, l'image du contrôle s'efface et celle du controle suivant s'affiche
     {
@@ -67,6 +75,11 @@ public class TutoBulleScript : MonoBehaviour        // scipte à attacher quelque
             {
                 TutoSwitchCriDown();
                 StartCoroutine(lalalala());
+            }
+
+            if (control.Cri.Cri.triggered)
+            {
+                EcranTutoVoid();
             }
         }
 
@@ -149,6 +162,29 @@ public class TutoBulleScript : MonoBehaviour        // scipte à attacher quelque
         actif = false; 
     }
 
+
+    private void EcranTutoVoid()
+    {
+
+        if (!lalaJattend && ecranTutoActif)
+        {
+            EcranOpaque.DOColor(ecranTutoAlphaColor, .9f);
+            StartCoroutine(WaitTime());
+        }
+        if (1 == 1 && ecranTutoActif)//si les deux personnages crient en même temps l'écran s'efface
+        {
+            ecranTutoActif = false;
+            EcranOpaque.DOColor(Color.clear, 3f);
+            lalaJattend = true;
+        }
+    }
+    IEnumerator WaitTime()
+    {
+        lalaJattend = true;
+        yield return new WaitForSeconds(1f);
+        lalaJattend = false;
+        EcranOpaque.DOColor(Color.white, 1f);
+    }
 
 
     #region Unity Call Back

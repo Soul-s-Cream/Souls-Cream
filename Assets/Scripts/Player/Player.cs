@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using DG.Tweening;
 
 public enum ScreamType
 {
@@ -93,6 +95,7 @@ public class Player : Photon.PunBehaviour
 
     private float currentSadnessScreamRadius;
 
+
     private bool dernierCriActive = false;
 
     #endregion
@@ -132,6 +135,7 @@ public class Player : Photon.PunBehaviour
         defaultGroundCenter = groundCheckingCenter;
         defaultGroundRadius = groundCheckingRadius;
         scale = transform.eulerAngles;
+
         //AkSoundEngine.PostEvent("MozTuto", gameObject);
         AkSoundEngine.PostEvent("MozFootsteps", gameObject);
     }
@@ -273,6 +277,9 @@ public class Player : Photon.PunBehaviour
         GetComponent<SpriteRenderer>().flipX = flipState;
     }
     #endregion
+
+
+
 
     #region Scream
 
