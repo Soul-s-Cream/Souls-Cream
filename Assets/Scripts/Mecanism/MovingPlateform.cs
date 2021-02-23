@@ -11,7 +11,7 @@ public class MovingPlateform : Mecanism
     [SerializeField]
     public Vector3 EndPosition
     {
-        get 
+        get
         {
             if (!Application.isPlaying)
                 return transform.TransformPoint(endPositionRelative);
@@ -75,13 +75,17 @@ public class MovingPlateform : Mecanism
     /// </summary>
     private Vector3 startPoint;
     /// <summary>
-    /// Destination de la trajectoire actuelle
-    /// </summary>
-    private Vector3 destination;
-    /// <summary>
     /// Le Tween actuel chargé de déplacer l'élévateur
     /// </summary>
-    private Tween tweenRunning;
+    private Sequence sequenceMoving;
+    /// <summary>
+    /// Le Tween chargé d'activer sequenceMoving après le délai d'activation;
+    /// </summary>
+    private Sequence sequenceDelayBeforeMove;
+    /// <summary>
+    /// If MovingPlateform is moving in direction of the EndPoint
+    /// </summary>
+    private bool toEndPoint;
     /// <summary>
     /// SpriteRender from the GameObject
     /// </summary>
@@ -97,54 +101,28 @@ public class MovingPlateform : Mecanism
     /// <summary>
     /// Original Bounds of the BoxCollider2D of the object
     /// </summary>
-    private Bounds originalBC2D;
     #endregion
 
     private void Awake()
     {
         //On définit le point de départ comme étant la position actuelle, et la prochaine destination comme étant le point de fin
         startPoint = this.transform.position;
-        destination = EndPosition;
         spriteRender = GetComponent<SpriteRenderer>();
         boxCollider2D = GetComponent<BoxCollider2D>();
-        /*originalBC2D = new Bounds(boxCollider2D.bounds.center, boxCollider2D.bounds.size);
 
-        if(isMasked && Application.isPlaying)
+        if (isMasked && Application.isPlaying)
         {
             spriteRender.maskInteraction = SpriteMaskInteraction.VisibleOutsideMask;
             mask = Instantiate(new GameObject(this.name + " Mask"), this.EndPosition, Quaternion.identity)
                 .AddComponent<SpriteMask>();
             mask.sprite = spriteRender.sprite;
             mask.alphaCutoff = 0f;
-        }*/
+        }
     }
 
     private void Reset()
     {
         EndPosition = DefaultEndPointPosition();
-    }
-
-    private void FixedUpdate()
-    {
-        /*if (isMasked)
-        {
-            if(mask.bounds.Intersects(boxCollider2D.bounds))
-            {
-                Vector2 reduction = Vector3.zero;
-                Vector3 centerDistance = boxCollider2D.bounds.center - mask.bounds.center;
-                if(centerDistance.x >= centerDistance.y)
-                {
-                    reduction = transform.InverseTransformDirection(new Vector2(centerDistance.x - mask.bounds.extents.x, 0));
-                }
-                else
-                {
-                    reduction = transform.InverseTransformDirection(new Vector2(0, centerDistance.y - mask.bounds.extents.y));
-                }
-
-                boxCollider2D.size += reduction;
-                boxCollider2D.offset += reduction;
-            }
-        }*/
     }
 
     #region Mecanism Logic
@@ -153,16 +131,41 @@ public class MovingPlateform : Mecanism
     /// </summary>
     protected override void SwitchingOn()
     {
-        StartCoroutine("SwitchingOnBehavior");
-    }
+        sequenceMoving.Kill(true);
+        sequenceDelayBeforeMove.Kill(true);
 
-    IEnumerator SwitchingOnBehavior()
-    {
-        yield return new WaitForSeconds(delayBeforeActivation);
-        tweenRunning?.Kill();
+        sequenceMoving = DOTween.Sequence();
+        sequenceMoving
+            .Append
+            (
+                transform.DOMove(EndPosition, TimeReachingPosition(EndPosition))
+                .SetEase(trajectoryEasing)
+                .SetDelay(delayBeforeNewTrajectory)
+                .OnComplete(() => { if (!looping) openSound.Stop(gameObject, 200); })
+            )
+            .InsertCallback(delayBeforeNewTrajectory, () => { openSound.Stop(gameObject, 200); openSound.Post(gameObject); toEndPoint = true; })
+            .OnKill(() => { openSound.Stop(gameObject, 200); });
+        if (looping)
+        {
+            sequenceMoving
+                .AppendInterval(delayBeforeNewTrajectory)
+                .Append
+                (
+                    transform.DOMove(startPoint, TimeReachingPosition(EndPosition))
+                    .SetEase(trajectoryEasing)
+                    .SetDelay(delayBeforeNewTrajectory)
+                 )
+                .SetLoops(-1)
+                .InsertCallback(TimeReachingPosition(EndPosition) + delayBeforeNewTrajectory, () => { openSound.Stop(gameObject, 200); openSound.Post(gameObject); toEndPoint = false; })
+                .Pause();
+        }
+
+        DOTween.Sequence()
+            .AppendInterval(delayBeforeActivation)
+            .OnComplete(() => { sequenceMoving.Play(); })
+            .SetAutoKill(true);
 
         isOn = true;
-        MoveToDestination();
     }
 
     /// <summary>
@@ -171,20 +174,21 @@ public class MovingPlateform : Mecanism
     /// </summary>
     protected override void SwitchingOff()
     {
-        StartCoroutine("SwitchingOffBehavior");
-    }
-
-    IEnumerator SwitchingOffBehavior()
-    {
-        yield return new WaitForSeconds(delayBeforeActivation);
-        tweenRunning?.Kill();
-
+        sequenceMoving.Kill(true);
+        sequenceDelayBeforeMove.Kill(true);
         openSound.Post(gameObject);
+
         isOn = false;
-        tweenRunning = transform.DOMove(startPoint, TimeReachingPosition(startPoint))
+        toEndPoint = false;
+
+        sequenceMoving = DOTween.Sequence();
+        sequenceMoving.Append(
+            transform.DOMove(startPoint, TimeReachingPosition(startPoint))
+            .SetDelay(delayBeforeActivation)
             .OnKill(() => { openSound.Stop(gameObject, 200); })
             .SetEase(trajectoryEasing)
-            .OnComplete(() => { openSound.Stop(gameObject, 200); });
+            .OnComplete(() => { openSound.Stop(gameObject, 200); })
+            );
     }
     #endregion
 
@@ -192,32 +196,6 @@ public class MovingPlateform : Mecanism
     public Vector3 DefaultEndPointPosition()
     {
         return transform.TransformPoint(Vector3.up * 2);
-    }
-    /// <summary>
-    /// Déplacer l'élévateur vers sa prochaine trajectoire. Une fois terminée, il effectue la trajectoire inverse si
-    /// l'élévateur est encore actif.
-    /// </summary>
-    private void MoveToDestination()
-    {
-        openSound.Post(gameObject);
-        tweenRunning = transform.DOMove(destination, TimeReachingPosition(destination))
-            .SetEase(trajectoryEasing)
-            .OnKill(() => { openSound.Stop(gameObject, 200); })
-            .OnComplete(() => { if(looping) StartCoroutine("DelayBeforeNewTrajectory"); openSound.Stop(gameObject, 200); });
-    }
-
-    /// <summary>
-    /// Coroutine lançant la nouvelle trajectoire en décidant de la nouvelle destination après que delayBeforeTrajectory se soit écoulé.
-    /// </summary>
-    /// <returns></returns>
-    IEnumerator DelayBeforeNewTrajectory()
-    {
-        if (isOn)
-        {
-            yield return new WaitForSeconds(delayBeforeNewTrajectory);
-            destination = this.transform.position == startPoint ? EndPosition : startPoint;
-            MoveToDestination();
-        }
     }
 
     /// <summary>
