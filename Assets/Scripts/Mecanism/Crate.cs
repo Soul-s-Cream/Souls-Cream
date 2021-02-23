@@ -81,7 +81,7 @@ public class Crate : Photon.PunBehaviour
         }
         else
         {
-            rigidbody.mass = 5;
+            rigidbody.mass = .5f;
         }
     }
 

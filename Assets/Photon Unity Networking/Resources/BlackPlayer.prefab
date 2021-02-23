@@ -246,10 +246,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   role: 1
-  moveSpeed: 5
+  moveSpeed: 3.25
   moveSmooth: 0.1
-  jumpForce: 450
-  maxSpeed: 0
+  jumpForce: 550
+  DoubleJumpForce: 350
+  deplacementEnAir: 1.01
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
   velocityYMax: 50
@@ -438,6 +439,10 @@ MonoBehaviour:
   m_SynchronizeLayers:
   - SynchronizeType: 2
     LayerIndex: 0
+  - SynchronizeType: 0
+    LayerIndex: 1
+  - SynchronizeType: 0
+    LayerIndex: 2
 --- !u!212 &521002265595457646
 SpriteRenderer:
   m_ObjectHideFlags: 0
