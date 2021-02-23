@@ -33,7 +33,10 @@ public class MovingPlateformGizmo : MecanismRelationship
         Matrix4x4 oldGizmosMatrix = Gizmos.matrix;
         Gizmos.matrix *= cubeTransform;
         //Couleur du cube de prévisualisation
-        Gizmos.color = Color.yellow * (Color.white - Color.black * cubePreviewTransparency);
+        if(movingPlateform.isMasked)
+            Gizmos.color = Color.blue * (Color.white - Color.black * cubePreviewTransparency);
+        else
+            Gizmos.color = Color.yellow * (Color.white - Color.black * cubePreviewTransparency);
         //On dessine le cube
         Gizmos.DrawCube(
             movingPlateform.transform.InverseTransformPoint(movingPlateform.EndPosition) + Vector3.right * collider2D.offset.x + Vector3.up * collider2D.offset.y,
