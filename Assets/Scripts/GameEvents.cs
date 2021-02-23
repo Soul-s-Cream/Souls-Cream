@@ -65,7 +65,7 @@ public class GameEvents : MonoBehaviour
     /// Appelle l'événement 'switchOn'
     /// </summary>
     /// <param name="gameObjects">Array des Mecanisms qui doivent être activés</param>
-    public void TriggerSwitchOn(Mecanism[] mecanisms)
+    public void TriggerSwitchOn(params Mecanism[] mecanisms)
     {
         switchOn?.Invoke(mecanisms);
     }
@@ -74,7 +74,7 @@ public class GameEvents : MonoBehaviour
     /// Appelle l'événement 'switchOff'
     /// </summary>
     /// <param name="gameObjects">Array des Mecanisms qui doivent être désactivés</param>
-    public void TriggerSwitchOff(Mecanism[] mecanisms)
+    public void TriggerSwitchOff(params Mecanism[] mecanisms)
     {
         switchOff?.Invoke(mecanisms);
     }
