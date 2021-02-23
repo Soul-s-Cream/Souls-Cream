@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using DG.Tweening;
+using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(BoxCollider2D))]
@@ -91,7 +89,7 @@ public class MovingPlateform : Mecanism
     /// </summary>
     private SpriteRenderer spriteRender;
     /// <summary>
-    /// SpriteMask in case isMasked is true
+    /// SpriteMask created in case isMasked is true
     /// </summary>
     private SpriteMask mask;
     /// <summary>
@@ -99,17 +97,23 @@ public class MovingPlateform : Mecanism
     /// </summary>
     private BoxCollider2D boxCollider2D;
     /// <summary>
-    /// Original Bounds of the BoxCollider2D of the object
+    /// Original Bounds of the BoxCollider2D of the object. "Theoric" BoxCollider.
     /// </summary>
+    private Bounds originalBC2D;
+    private Vector3 originalOffset;
     #endregion
 
     private void Awake()
     {
         //On définit le point de départ comme étant la position actuelle, et la prochaine destination comme étant le point de fin
         startPoint = this.transform.position;
+        //On récupère les composants importants pour la logique
         spriteRender = GetComponent<SpriteRenderer>();
         boxCollider2D = GetComponent<BoxCollider2D>();
+        originalBC2D = new Bounds(boxCollider2D.bounds.center, boxCollider2D.bounds.size);
+        originalOffset = boxCollider2D.offset;
 
+        //Si l'objet doit être masqué à destination, alors on créer un masque à la destination lorsqu'on est en jeu
         if (isMasked && Application.isPlaying)
         {
             spriteRender.maskInteraction = SpriteMaskInteraction.VisibleOutsideMask;
@@ -124,6 +128,140 @@ public class MovingPlateform : Mecanism
     {
         EndPosition = DefaultEndPointPosition();
     }
+
+    private void FixedUpdate()
+    {
+        ColliderMasking();
+    }
+
+    #region Collider Masking
+    /// <summary>
+    /// Détermine la nouvelle forme du BoxCollider de sorte à masquer les parties qui sont dans le SpriteMask
+    /// </summary>
+    private void ColliderMasking()
+    {
+        //J'ai énormément commenté pour que la logique soit aisément compréhensible pour pas que vous vous cassiez la tête comme moi :B Bon courage si vous voulez le changer
+
+        //Si l'objet doit être masqué et est en mouvement...
+        if (isMasked && sequenceMoving != null && sequenceMoving.active)
+        {
+            //...on replace la BoxCollider théorique comme elle devrait être... 
+            originalBC2D.center = transform.TransformPoint(-originalOffset);
+            Vector2 changes = Vector2.zero;
+
+            //...puis, si le BoxCollider est dans la zone du masque et que l'objet va vers le masque...
+            if (toEndPoint && mask.bounds.Intersects(boxCollider2D.bounds))
+            {
+                //... on calcule le vector Distance boxCollider2D -> mask ...
+                Vector3 centersDistance = mask.bounds.center - boxCollider2D.bounds.center;
+
+                //... puis on compare les coordonnées X et Y. Si X est le plus grand ou égal, 
+                // et que la taille du BoxCollider en X est supérieur au minimum,
+                // alors on ne prend que lui en considération...
+                if (Mathf.Abs(centersDistance.x) >= Mathf.Abs(centersDistance.y) && boxCollider2D.size.x > 0.0001f)
+                {
+                    //On détermine alors le vecteur du changement à effectuer : 
+                    //Si la distance en X est positive, alors on fait la distance entre le x de l'arête de gauche du mask 
+                    //et le x de l'arête de droite du BoxCollider.
+                    //Sinon, on fait la distance entre le x de l'arête de droite du mask et le x de l'arête gauche du BoxCollider
+                    //On applique InverseTransform pour convertir à la bonne échelle
+                    changes = transform.InverseTransformDirection
+                        (
+                            new Vector2(
+                            centersDistance.x > 0 ?
+                            mask.bounds.min.x - boxCollider2D.bounds.max.x :
+                            mask.bounds.max.x - boxCollider2D.bounds.min.x
+                            , 0)
+                        );
+                }
+                //... sinon se concentre sur l'axe de Y, mais uniquement si la taille en Y du Collide est supérieur au minimum.
+                else if (Mathf.Abs(centersDistance.x) < Mathf.Abs(centersDistance.y) && boxCollider2D.size.y > 0.0001f)
+                {
+                    //On détermine alors le vecteur du changement à effectuer : 
+                    //Si la distance en Y est positive, alors on fait la distance entre le y de l'arête bas du mask 
+                    //et le y de l'arête haut du BoxCollider.
+                    //Sinon, on fait la distance entre le y de l'arête de bas du mask et le y de l'arête haut du BoxCollider.
+                    //On applique InverseTransform pour convertir à la bonne échelle
+                    changes = transform.InverseTransformVector
+                        (
+                            new Vector2(0,
+                            centersDistance.y > 0 ?
+                            mask.bounds.min.y - boxCollider2D.bounds.max.y :
+                            mask.bounds.max.y - boxCollider2D.bounds.min.y
+                            )
+                        );
+                }
+
+                //On applique les modifications au BoxCollider.
+                //On réduit sa taille de la longueur du vecteur qui représente la zone dans le masque...
+                boxCollider2D.size += new Vector2(-Mathf.Abs(changes.x), -Mathf.Abs(changes.y));
+                //...et on décale l'offset de sorte à ce qu'il se retrouve centré dans ce qu'il reste du Collider
+                boxCollider2D.offset += changes / 2;
+
+                //Si jamais le centre du Collider n'est plus dans le BoxCollider théorique, alors on le place au point le plus proche de la périphérie du BoxCollider théorique
+                if (!originalBC2D.Contains((Vector2)transform.position - boxCollider2D.offset))
+                    boxCollider2D.offset = -transform.InverseTransformPoint(originalBC2D.ClosestPoint(transform.TransformPoint(-boxCollider2D.offset)));
+
+            }
+            //...sinon, si le l'objet s'éloigne du mask, mais que le BoxCollider théorique est dans le mask...
+            else if (!toEndPoint && mask.bounds.Intersects(originalBC2D))
+            {
+                //...on calcule la distance BoxCollider théorique -> mask
+                Vector3 centersDistance = mask.bounds.center - originalBC2D.center;
+
+                // Ensuite, on compare le X et le Y de cette distance. 
+                // Si X est plus grand ou égal, que la taille en X du BoxCollider est inférieur à celle du BoxCollider théorique et
+                // que BoxCollider théorique dépasse en X du mask...
+                if (Mathf.Abs(centersDistance.x) >= Mathf.Abs(centersDistance.y)
+                    && boxCollider2D.size.x < originalBC2D.size.x
+                    && ((originalBC2D.min.x - mask.bounds.min.x) < 0f || (originalBC2D.max.x - mask.bounds.max.x) > 0f))
+                {
+                    //...alors on calcul le changement à appliquer de la manière suivante :
+                    // Si X est positif, alors on fait la distance entre le X de l'arête gauche du mask et le X de l'arête gauche du BoxCollider théorique.
+                    // Sinon alors on fait la distance entre le X de l'arête droite du mask et le X de l'arête droite du BoxCollider théorique.
+                    // On applique InverseTransform pour convertir à la bonne échelle.
+                    changes = transform.InverseTransformDirection
+                        (
+                            new Vector2(
+                            centersDistance.x > 0 ?
+                            originalBC2D.min.x - mask.bounds.min.x :
+                            originalBC2D.max.x - mask.bounds.max.x
+                            , 0)
+                        );
+                }
+                //... sinon, si le Y est inférieur, que la taille en Y du BoxCollider est inférieur à celle du BoxCollider théorique,
+                // et que le BoxCollider théorique dépasse en Y du mask
+                else if (Mathf.Abs(centersDistance.x) < Mathf.Abs(centersDistance.y)
+                    && boxCollider2D.size.y < originalBC2D.size.y
+                    && ((originalBC2D.min.y - mask.bounds.min.y) < 0f || (originalBC2D.max.y - mask.bounds.max.y) > 0f))
+                {
+                    //...alors on calcul le changement à appliquer de la manière suivante :
+                    // Si Y est positif, alors on fait la distance entre le Y de l'arête gauche du mask et le Y de l'arête gauche du BoxCollider théorique.
+                    // Sinon alors on fait la distance entre le Y de l'arête droite du mask et le Y de l'arête droite du BoxCollider théorique.
+                    // On applique InverseTransform pour convertir à la bonne échelle.
+                    changes = transform.InverseTransformDirection
+                        (
+                            new Vector2(0,
+                            centersDistance.y > 0 ?
+                            originalBC2D.min.y - mask.bounds.min.y :
+                            originalBC2D.max.y - mask.bounds.max.y
+                            )
+                        );
+                }
+
+                //On applique les modifications au BoxCollider.
+                //On augmente sa taille de la longueur du vecteur qui représente la zone du BoxCollider théorique en dehors du mask...
+                boxCollider2D.size += new Vector2(Mathf.Abs(changes.x), Mathf.Abs(changes.y));
+                //...et on décale l'offset de sorte à ce qu'il se retrouve centré dans cette zone calculée
+                boxCollider2D.offset -= changes / 2;
+            }
+            // ...sinon si le BoxCollider théorique n'est pas dans le mask,
+            // alors on effectue une correction sur le centre du BoxCollider de sorte à ce qu'il soit centré comme il faut
+            else if (!mask.bounds.Intersects(originalBC2D))
+                boxCollider2D.offset = originalOffset;
+        }
+    }
+    #endregion
 
     #region Mecanism Logic
     /// <summary>
