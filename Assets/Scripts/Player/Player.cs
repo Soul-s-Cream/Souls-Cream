@@ -38,6 +38,8 @@ public class Player : Photon.PunBehaviour
     public float groundCheckingRadius;
     public LayerMask groundLayer;
 
+    public TagSelectorAttribute humidityTag;
+
     [Header("Screams")]
     public LayerMask humidityLayer;
     [Tooltip("Radius of the curiosity scream revealing effect")]
@@ -152,7 +154,7 @@ public class Player : Photon.PunBehaviour
             photonView.RPC("FlipToggleSprite", PhotonTargets.All, true);
             if (isGrounded)
             {
-                //PlayerMovingSound.SetGlobalValue(Mathf.Abs(rb.velocity.x));
+                footStepsWetRTPC.SetGlobalValue(Mathf.Abs(rb.velocity.x));
             }
         }
         else if (control.Deplacement.Deplacement.ReadValue<float>() < 0)

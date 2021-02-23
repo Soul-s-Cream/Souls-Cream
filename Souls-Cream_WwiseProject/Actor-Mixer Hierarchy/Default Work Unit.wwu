@@ -28,7 +28,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -141,8 +141,10 @@
 								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
 								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.4"/>
-								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>9</Value>
+									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{5A93FDD2-63F9-4772-ADE7-616E4C0B2F56}" ShortID="23137426">
 											<ReferenceList>
@@ -176,7 +178,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -393,13 +395,18 @@
 									</ModifierList>
 								</Property>
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -512,10 +519,9 @@
 								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
 								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.4"/>
-								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-3</Value>
+										<Value>3</Value>
 									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
@@ -555,7 +561,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -782,7 +788,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1072,35 +1078,12 @@
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
-								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.2"/>
-								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-								<Property Name="Volume" Type="Real64">
-									<RTPCList>
-										<RTPC Name="" ID="{813A5F2D-C3E8-4691-9309-B79D0C0A376B}" ShortID="356787452">
-											<ReferenceList>
-												<Reference Name="ControlInput">
-													<ObjectRef Name="PlayerMoving" ID="{D24517E9-C78A-4ACA-9749-463BF551BF6E}" WorkUnitID="{CE709FC6-E33E-43F4-B8D3-FC03C4BC2167}"/>
-												</Reference>
-											</ReferenceList>
-											<Curve Name="" ID="{34934A00-9C53-4324-8E54-9F2B46DF5054}">
-												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="3"/>
-												</PropertyList>
-												<PointList>
-													<Point>
-														<XPos>0</XPos>
-														<YPos>-200</YPos>
-														<Flags>5</Flags>
-													</Point>
-													<Point>
-														<XPos>1</XPos>
-														<YPos>0</YPos>
-														<Flags>37</Flags>
-													</Point>
-												</PointList>
-											</Curve>
-										</RTPC>
-									</RTPCList>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.3">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{A0F63EE9-1537-44E1-85B8-8F922DAC2269}"/>
+										</ModifierInfo>
+									</ModifierList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
@@ -1108,7 +1091,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1251,7 +1234,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1295,7 +1278,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1323,13 +1306,18 @@
 								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1530,6 +1518,255 @@
 								<ItemRef Name="ScreamDoubleJump" ID="{D7787087-CE1E-4B7F-9A36-AD090D77C287}"/>
 							</Playlist>
 						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="OzFootsteps2" ID="{AA94316F-1D32-4953-B10F-EAA61D46E23E}" ShortID="213170819">
+							<PropertyList>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.25"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{55B12F62-1076-4611-82A5-D2C64544A196}" ShortID="932430304">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="PlayerMoving" ID="{D24517E9-C78A-4ACA-9749-463BF551BF6E}" WorkUnitID="{CE709FC6-E33E-43F4-B8D3-FC03C4BC2167}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{A9E195FC-E5A1-402E-A33B-148AC6E5F907}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>1</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="OzFootsteps2" ID="{1C766A13-D5CB-401A-85D3-715F07410189}" ShortID="912734695">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{401B2C4D-D011-4CA2-BE1F-7BE88A1DC1D7}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="400"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
+											<RTPCList>
+												<RTPC Name="" ID="{B792F58E-2311-45DA-A99B-9028A610B5B3}" ShortID="988625200">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="PlayerMoving" ID="{D24517E9-C78A-4ACA-9749-463BF551BF6E}" WorkUnitID="{CE709FC6-E33E-43F4-B8D3-FC03C4BC2167}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{697BAC5B-6470-45F1-951F-ADAED18E0470}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>1</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="OzFootsteps2" ID="{0177AC27-AEA2-43A8-8091-3FD205EBA09F}" ShortID="484875453">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="PlayerOzFootsteps" ID="{BEDE4DD9-C635-4CE0-AB98-30EEF7628DA2}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00594192288921426"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.00445644216691068"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.384739507076623"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.414449121522694"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>PlayerOzFootsteps.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1017059933"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="PlayerOzFootsteps" ID="{BEDE4DD9-C635-4CE0-AB98-30EEF7628DA2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="OzFootsteps3" ID="{CA68F61B-2EB4-4B77-85D5-BFD348DD0D49}" ShortID="105865260">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="PlayerOzFootsteps" ID="{90CF6CE5-C79D-4348-A3B0-34E761AB60DD}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00594192288921426"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.00445644216691068"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.635785749145925"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.6669808443143"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>PlayerOzFootsteps.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="550278455"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="PlayerOzFootsteps" ID="{90CF6CE5-C79D-4348-A3B0-34E761AB60DD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="OzFootsteps4" ID="{C2FEC1B8-6155-4947-B4BD-B9ED023AE0D3}" ShortID="1064786870">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="PlayerOzFootsteps" ID="{F49EE686-4E66-40A8-BDF5-AC9808C4A680}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00594192288921426"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.00445644216691068"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.885346510492924"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.919512567105906"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>PlayerOzFootsteps.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="383526885"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="PlayerOzFootsteps" ID="{F49EE686-4E66-40A8-BDF5-AC9808C4A680}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<Sound Name="OzFootsteps1" ID="{9B53E0C3-6323-436A-8593-556BADF13D22}" ShortID="506585384">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PlayerOzFootsteps" ID="{884BD14E-ECEF-443F-AF96-2F30F8AC3B6D}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00594192288921426"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.00445644216691068"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.133693265007321"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.17083028306491"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PlayerOzFootsteps.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="340180847"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PlayerOzFootsteps" ID="{884BD14E-ECEF-443F-AF96-2F30F8AC3B6D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="PlayerMoving" ID="{C935EFB2-DD8E-4033-925E-D11F1D2F6049}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Stop" ID="{50FF4F95-528A-4602-B9F7-8EDD190A81C9}"/>
+										<CustomState Name="" ID="{D28DDF22-8C88-4DA4-BE31-C74BB25CCFAF}" ShortID="967756024">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-96"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Moving" ID="{3566702A-DBE5-4CF1-8AED-DB04C413C899}"/>
+										<CustomState Name="" ID="{77C62BE5-4B6D-41F1-A14A-71942BE8D72F}" ShortID="520270010"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<Playlist>
+								<ItemRef Name="OzFootsteps1" ID="{9B53E0C3-6323-436A-8593-556BADF13D22}"/>
+								<ItemRef Name="OzFootsteps2" ID="{1C766A13-D5CB-401A-85D3-715F07410189}"/>
+							</Playlist>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Objects" ID="{3EBE6FD7-D5C3-4A16-970F-3317E5412D92}" ShortID="609797213">
@@ -1556,7 +1793,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1669,6 +1906,9 @@
 								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2.5"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{B2CF5E9A-6B0B-42A5-9AE2-E129AD19ADAD}" ShortID="737881337">
 											<ReferenceList>
@@ -1702,7 +1942,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1840,7 +2080,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1953,9 +2193,6 @@
 								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2.5"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-2</Value>
-									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{16C3417B-E66C-49EA-AB31-95FC52425294}" ShortID="987638622">
 											<ReferenceList>
@@ -1989,7 +2226,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -2073,6 +2310,671 @@
 								</CustomStateList>
 							</StateInfo>
 						</RandomSequenceContainer>
+						<Folder Name="GlassBreaking" ID="{E5E48C75-9904-4AE7-A561-710FE647F659}" ShortID="167441234">
+							<ChildrenList>
+								<Sound Name="GlassBreaking1" ID="{C9780D78-5708-43E7-A8B7-F561D30CE2A0}" ShortID="731944326">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="GlassBreaking" ID="{8A8F827F-D668-4D40-8133-0E75F3700D98}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0349856027330405"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0349856027330405"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.393818203095272"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.908935154013354"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>GlassBreaking.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="339017551"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="GlassBreaking" ID="{8A8F827F-D668-4D40-8133-0E75F3700D98}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="GlassBreaking2" ID="{5388B378-1508-42BD-AB37-E637C89D72D7}" ShortID="333870443">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="GlassBreaking" ID="{293BCE02-AAD1-4259-B911-911A6EDAF55A}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0349856027330405"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0349856027330405"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="2.91255142752562"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.44608186920449"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>GlassBreaking.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1026695419"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="GlassBreaking" ID="{293BCE02-AAD1-4259-B911-911A6EDAF55A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="GlassBreaking3" ID="{DDC1A758-E0D6-42CB-A81E-4BF0277D77DA}" ShortID="537919402">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="GlassBreaking" ID="{324380CE-6BCA-413D-BED0-912B9C06C771}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0349856027330405"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0349856027330405"/>
+												<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.4081859443631"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.94171638604197"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>GlassBreaking.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="697572665"/>
+											</MediaIDList>
+											<PluginInnerObjectList>
+												<List Name="Markers">
+													<PluginInnerObject Name="" ID="{3242CB11-7E10-4660-9CDA-0B89E9B941AA}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 107.2387"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{4A6E9E40-6BA8-4618-869E-F7CA6E75A931}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 107.099"/>
+															<Property Name="Time" Type="Real64" Value="0.0699166666666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{3BF1007F-B673-4D77-A1A3-501B4A2F7C4F}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 106.9593"/>
+															<Property Name="Time" Type="Real64" Value="0.1399375"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{C82847C6-7361-48B2-A49F-B623E6CA30B8}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 106.8195"/>
+															<Property Name="Time" Type="Real64" Value="0.210041666666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{7AF856C7-4ECC-4DF3-A798-A4C61D57C1CB}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 106.6799"/>
+															<Property Name="Time" Type="Real64" Value="0.28025"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{5BA4B7DD-BCDF-4149-80F8-1DB55438CDAE}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 106.5403"/>
+															<Property Name="Time" Type="Real64" Value="0.350541666666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{22CBDE52-2449-43E4-B665-8F6E9DBFF25D}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 106.0503"/>
+															<Property Name="Time" Type="Real64" Value="0.4209375"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{7DEB513F-25A6-41B1-B200-E9CE81AA4373}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 105.3501"/>
+															<Property Name="Time" Type="Real64" Value="0.491645833333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{4FED688B-0E54-44FC-B440-F75FC16233ED}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 104.6501"/>
+															<Property Name="Time" Type="Real64" Value="0.562833333333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{C31B9649-2C57-49E9-831D-56E8077178C7}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 103.9501"/>
+															<Property Name="Time" Type="Real64" Value="0.6345"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{96815E08-FCD9-4F56-A55D-7A07C5579DD0}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 103.2501"/>
+															<Property Name="Time" Type="Real64" Value="0.706645833333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{2E21AEAA-DA58-4755-9EF3-61407FD58B86}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 102.5501"/>
+															<Property Name="Time" Type="Real64" Value="0.779270833333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{A3EEB7E3-D5FD-48FF-B7D8-A287CA3C1582}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 101.85"/>
+															<Property Name="Time" Type="Real64" Value="0.852395833333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{B2B23E41-59D0-4248-8C64-A812AC25AF6D}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 101.1501"/>
+															<Property Name="Time" Type="Real64" Value="0.926020833333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{DFC91187-CDD3-4B43-BBD8-E1CD6728FBDE}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 100.4501"/>
+															<Property Name="Time" Type="Real64" Value="1.00016666666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{E13DFD85-625F-4F0E-B2D6-809C4AB15ACA}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 99.75"/>
+															<Property Name="Time" Type="Real64" Value="1.0748125"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{BBA781F9-FAB4-494D-9CB5-BFE2D3BCC7C8}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 99.05"/>
+															<Property Name="Time" Type="Real64" Value="1.15"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{A710A321-2C9A-42AE-B807-5AB27D7EB64F}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 98.35"/>
+															<Property Name="Time" Type="Real64" Value="1.22570833333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{DA725B97-594F-4389-BD01-168286758618}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 97.65"/>
+															<Property Name="Time" Type="Real64" Value="1.30195833333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{EEA21268-D97B-4BFF-8B2D-0A277F4922D1}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 96.95"/>
+															<Property Name="Time" Type="Real64" Value="1.37875"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{4CE9BAF7-48D9-4FE1-A0CA-D84853E6959F}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 96.25"/>
+															<Property Name="Time" Type="Real64" Value="1.45610416666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{4175B281-5F2C-463C-9D19-9907DDA70A0C}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 95.5501"/>
+															<Property Name="Time" Type="Real64" Value="1.53402083333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{8C475D4D-EF33-411A-AE7F-43E3C899913D}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 94.85"/>
+															<Property Name="Time" Type="Real64" Value="1.6125"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{3A9D8E41-ACC7-40A7-A0C7-C8A020C7EBD3}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 94.15"/>
+															<Property Name="Time" Type="Real64" Value="1.6915625"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{C5436713-9238-44D8-84DC-A2DE68830750}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 93.45"/>
+															<Property Name="Time" Type="Real64" Value="1.77120833333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{93D91913-A13C-4C3C-94DD-16B5CDB8E906}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 92.75"/>
+															<Property Name="Time" Type="Real64" Value="1.85145833333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{6A6FD1AE-7062-4EB0-A896-4B23BD35B1A0}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 92.05"/>
+															<Property Name="Time" Type="Real64" Value="1.9323125"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{5F18BC8E-1698-4C91-8B8F-7B722485EEF5}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 91.35"/>
+															<Property Name="Time" Type="Real64" Value="2.01377083333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{5D929629-D010-4CC5-9136-AF2B90C17AD3}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 90.65"/>
+															<Property Name="Time" Type="Real64" Value="2.09585416666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{2DA9C6BD-8627-4B0A-A8AA-BB04446DF25A}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 89.95"/>
+															<Property Name="Time" Type="Real64" Value="2.17858333333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{AF754A56-974D-446F-A3E5-80C6C9891D8D}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 89.25"/>
+															<Property Name="Time" Type="Real64" Value="2.26195833333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{09D58105-243C-48A1-B147-43FE5BA7B8B6}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 88.55"/>
+															<Property Name="Time" Type="Real64" Value="2.34597916666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{1A79EA33-2021-451C-802D-49A0662D1121}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 87.85"/>
+															<Property Name="Time" Type="Real64" Value="2.43066666666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{BE2F17C6-54F2-4E88-8752-4003043C3093}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 87.15"/>
+															<Property Name="Time" Type="Real64" Value="2.51602083333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{799EB040-8A78-448B-9966-BF58F8E57676}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 86.45"/>
+															<Property Name="Time" Type="Real64" Value="2.6020625"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{C73A2519-FA3A-4003-B132-D851EBEA37B7}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 85.75"/>
+															<Property Name="Time" Type="Real64" Value="2.6888125"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{1AA341C8-4EAE-4AC6-A9EB-99F3AC5C30CB}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 85.05"/>
+															<Property Name="Time" Type="Real64" Value="2.77627083333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{357420CB-75B1-4A39-9417-BD89FBBB62CB}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 84.35"/>
+															<Property Name="Time" Type="Real64" Value="2.8644375"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{D03B7A81-C19E-4F8A-B1C6-FF4185E8F05E}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 83.8124"/>
+															<Property Name="Time" Type="Real64" Value="2.95333333333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{5E7553F0-28B0-4314-91DA-14A210E5ADE2}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 83.4374"/>
+															<Property Name="Time" Type="Real64" Value="3.0428125"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{5E48DDF4-B354-4F86-8F32-84E3F778A2CA}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 83.0624"/>
+															<Property Name="Time" Type="Real64" Value="3.1326875"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{808A3513-ECF8-4398-8790-349E932C6D44}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 82.6874"/>
+															<Property Name="Time" Type="Real64" Value="3.22297916666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{C79E9EBA-F603-4234-809A-D86B45A5B172}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 82.3124"/>
+															<Property Name="Time" Type="Real64" Value="3.31366666666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{3F77DB77-F029-4F5C-B9D2-D3915386B94C}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 81.9374"/>
+															<Property Name="Time" Type="Real64" Value="3.40477083333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{AFA3426E-727E-40CD-A93E-37E4CAACC2DD}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 81.5624"/>
+															<Property Name="Time" Type="Real64" Value="3.49629166666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{00385CAA-BA31-436E-A2FE-78339A7B0C52}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 81.1874"/>
+															<Property Name="Time" Type="Real64" Value="3.58822916666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{674DD191-D308-47EE-A114-0A22F1AC8FC8}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 80.8124"/>
+															<Property Name="Time" Type="Real64" Value="3.68060416666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{5B6574D6-0CF3-4E6C-856E-BE8598C2B8EB}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 80.4374"/>
+															<Property Name="Time" Type="Real64" Value="3.77339583333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{CD4F8016-941A-4A1C-94F5-9EA9EC0981B2}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 80.0624"/>
+															<Property Name="Time" Type="Real64" Value="3.866625"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{8D8D0DA8-3451-4841-9DCF-282BC4B2CC45}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 79.6874"/>
+															<Property Name="Time" Type="Real64" Value="3.96029166666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{681DF6D8-0985-4198-B402-41DB53271237}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 79.3124"/>
+															<Property Name="Time" Type="Real64" Value="4.05439583333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{81CD07A2-3370-4CD4-A003-43CBA8A53EFC}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 78.9374"/>
+															<Property Name="Time" Type="Real64" Value="4.14895833333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{73D5D9A9-ECA7-4C67-BCA5-9477EEE3B4D1}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 78.5624"/>
+															<Property Name="Time" Type="Real64" Value="4.24395833333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{DD62EAE1-D5ED-461C-9FC3-D8A494A7F2CB}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 78.1874"/>
+															<Property Name="Time" Type="Real64" Value="4.33941666666667"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{2DBF3E91-1B8D-4C09-88F7-576E90CAC1B8}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="Tempo: 78.0"/>
+															<Property Name="Time" Type="Real64" Value="4.43533333333333"/>
+														</PropertyList>
+													</PluginInnerObject>
+												</List>
+											</PluginInnerObjectList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="GlassBreaking" ID="{324380CE-6BCA-413D-BED0-912B9C06C771}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+						<RandomSequenceContainer Name="OpenGate" ID="{B9D01AB7-E01B-4025-9000-18F4E2067CB7}" ShortID="824682479">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{0E67483A-644F-47D5-999E-378D0D5BFE05}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-200"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="OpenGate" ID="{A8FAF6E0-2315-414C-8806-53F631FFEBE7}" ShortID="970313863">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PorteOuverture" ID="{80C2893D-8CD1-4DA1-A516-932777B4BD90}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.202049780380673"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.185212298682284"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.606149341142021"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.13177159590044"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PorteOuverture.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="816920437"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PorteOuverture" ID="{80C2893D-8CD1-4DA1-A516-932777B4BD90}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="OpenGate_01" ID="{5DA04859-ED45-4FAD-8C7E-4D37956F5470}" ShortID="260056932">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PorteOuverture" ID="{C831164B-C92A-4354-BA19-F86A3F872BBC}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.202049780380673"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.185212298682284"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.29355783308931"/>
+												<Property Name="TrimEnd" Type="Real64" Value="7.07174231332357"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PorteOuverture.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="943190417"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PorteOuverture" ID="{C831164B-C92A-4354-BA19-F86A3F872BBC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="OpenGate_02" ID="{A3BD43F6-C68D-45E6-8BFF-36DD6F8AC2D9}" ShortID="672329879">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PorteOuverture" ID="{429464DD-7910-42DF-96A4-3ABCEDAEFB11}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.168374816983895"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.185212298682284"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="8.60395314787701"/>
+												<Property Name="TrimEnd" Type="Real64" Value="10.9948755490483"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PorteOuverture.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="329682438"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PorteOuverture" ID="{429464DD-7910-42DF-96A4-3ABCEDAEFB11}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Elevator" ID="{E6435BAD-645D-491D-8E9A-9A01A33C2267}" ShortID="399201025">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{415A153A-963E-463D-980A-7F1A11195CEB}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Elevator1" ID="{A54888AE-3714-4890-9573-39BE5D99CA3B}" ShortID="206904828">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Elevator" ID="{754E05B1-F0FF-431E-BCFD-D687D7ED45AE}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0495584736456808"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.07158446193265"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.319376830161054"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.35459827964861"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Elevator.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="645656700"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Elevator" ID="{754E05B1-F0FF-431E-BCFD-D687D7ED45AE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Elevator2" ID="{0884B1AA-D4D8-45FE-A697-1746DEAC3397}" ShortID="993585679">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Elevator" ID="{96364822-EB0A-4D42-88C8-8A74FF8CF69F}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0495584736456808"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.07158446193265"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.64644262445095"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.63761209736457"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Elevator.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="353982083"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Elevator" ID="{96364822-EB0A-4D42-88C8-8A74FF8CF69F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Elevator3" ID="{D7B4F5A5-5299-498D-B1BB-1BC9894BC2BA}" ShortID="403327148">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Elevator" ID="{A24C8169-CD65-4DF5-AF4D-606D0B8627EF}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0495584736456808"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.07158446193265"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="2.82483299780381"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.61226207906296"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Elevator.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1059227406"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Elevator" ID="{A24C8169-CD65-4DF5-AF4D-606D0B8627EF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="ScreamOzMoz" ID="{C95A55EB-86C1-4561-AC80-248EE4BEFBA5}" ShortID="524744423">
@@ -2089,7 +2991,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>-2</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2098,7 +3000,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+											<ObjectRef Name="Screams" ID="{7A5A6365-AF21-4927-BE6D-5F0A0F291CF4}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -2230,7 +3132,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2239,7 +3141,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+											<ObjectRef Name="Screams" ID="{7A5A6365-AF21-4927-BE6D-5F0A0F291CF4}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -2342,7 +3244,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2351,7 +3253,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+											<ObjectRef Name="Screams" ID="{7A5A6365-AF21-4927-BE6D-5F0A0F291CF4}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -2482,7 +3384,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2491,7 +3393,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+											<ObjectRef Name="Screams" ID="{7A5A6365-AF21-4927-BE6D-5F0A0F291CF4}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -2593,7 +3495,7 @@
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2602,7 +3504,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+											<ObjectRef Name="Screams" ID="{7A5A6365-AF21-4927-BE6D-5F0A0F291CF4}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -2729,7 +3631,7 @@
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>-1</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2738,7 +3640,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+											<ObjectRef Name="Screams" ID="{7A5A6365-AF21-4927-BE6D-5F0A0F291CF4}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -2865,7 +3767,7 @@
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2874,7 +3776,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+											<ObjectRef Name="Screams" ID="{7A5A6365-AF21-4927-BE6D-5F0A0F291CF4}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -2970,18 +3872,13 @@
 								<RandomSequenceContainer Name="Tristesse" ID="{4D9EFEEE-7450-40A9-911B-4E4394AC3F12}" ShortID="853336097">
 									<PropertyList>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-8</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+											<ObjectRef Name="Screams" ID="{7A5A6365-AF21-4927-BE6D-5F0A0F291CF4}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -3110,12 +4007,19 @@
 				<Folder Name="MenuVoices" ID="{DD3605A6-CAEE-45AD-B50B-75A71C9E7A21}" ShortID="710665492">
 					<ChildrenList>
 						<Sound Name="PLAY" ID="{1C3B4D5C-4F83-4693-8EB0-481646A54F25}" ShortID="361958400">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="MenuVoices" ID="{A8399A64-913D-4E4E-9192-BB10F18DB142}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -3139,12 +4043,19 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Credits" ID="{39762222-AC13-4947-BCBC-81ECA799C46E}" ShortID="954143930">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="MenuVoices" ID="{A8399A64-913D-4E4E-9192-BB10F18DB142}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -3168,12 +4079,19 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Quit" ID="{18014386-C3EE-4894-9662-0688D57F4513}" ShortID="450646367">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="MenuVoices" ID="{A8399A64-913D-4E4E-9192-BB10F18DB142}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -3197,12 +4115,19 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Next" ID="{0F9DA2BA-F577-4B95-900C-D85B2CE339A3}" ShortID="302957005">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="MenuVoices" ID="{A8399A64-913D-4E4E-9192-BB10F18DB142}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -3226,12 +4151,19 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Back" ID="{42E5D739-918A-4F2F-8758-1DCC3483A7E5}" ShortID="160229821">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="MenuVoices" ID="{A8399A64-913D-4E4E-9192-BB10F18DB142}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -3255,12 +4187,19 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Host" ID="{C09EA216-E0F5-4752-BF2B-6F35034FB276}" ShortID="940987342">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="MenuVoices" ID="{A8399A64-913D-4E4E-9192-BB10F18DB142}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -3284,12 +4223,19 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Join" ID="{C6715BAA-2C09-4AD1-9BF6-6B8BAD10BBA8}" ShortID="870060532">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="MenuVoices" ID="{A8399A64-913D-4E4E-9192-BB10F18DB142}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -3313,12 +4259,19 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Swap" ID="{9CBB1446-E8C7-43DE-95A7-42C3A92569FE}" ShortID="291421357">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="MenuVoices" ID="{A8399A64-913D-4E4E-9192-BB10F18DB142}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -3342,12 +4295,19 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Play2" ID="{E5E49664-D5F2-4083-A826-43A6FA72D8D0}" ShortID="513377225">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="MenuVoices" ID="{A8399A64-913D-4E4E-9192-BB10F18DB142}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -3371,12 +4331,19 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Ready" ID="{4B9C0A67-1B2A-4E03-B316-8EBF427662FE}" ShortID="415207509">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="MenuVoices" ID="{A8399A64-913D-4E4E-9192-BB10F18DB142}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -3400,12 +4367,19 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="NotReady" ID="{29ECE116-A18A-4476-81E8-B2DC96795805}" ShortID="426374208">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="MenuVoices" ID="{A8399A64-913D-4E4E-9192-BB10F18DB142}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -3429,12 +4403,19 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Disconnect" ID="{8F1CB74D-3562-4416-B81F-7C4673B16FDE}" ShortID="976872030">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+									<ObjectRef Name="MenuVoices" ID="{A8399A64-913D-4E4E-9192-BB10F18DB142}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -3474,13 +4455,18 @@
 								</ModifierInfo>
 							</ModifierList>
 						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>6</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
+							<ObjectRef Name="SoundEffects" ID="{47388519-B7B8-4852-AC12-BA01E1D8A950}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -3496,121 +4482,6 @@
 						<ActiveSource Name="NewScreamUnlocked" ID="{CF1DF697-F2E1-4B33-8115-3703FFB0047D}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<RandomSequenceContainer Name="OpenGate" ID="{B9D01AB7-E01B-4025-9000-18F4E2067CB7}" ShortID="824682479">
-					<PropertyList>
-						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
-						<Property Name="Pitch" Type="int32">
-							<ModifierList>
-								<ModifierInfo>
-									<Modifier Name="" ID="{0E67483A-644F-47D5-999E-378D0D5BFE05}">
-										<PropertyList>
-											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="200"/>
-											<Property Name="Min" Type="Real64" Value="-200"/>
-										</PropertyList>
-									</Modifier>
-								</ModifierInfo>
-							</ModifierList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<Sound Name="OpenGate" ID="{A8FAF6E0-2315-414C-8806-53F631FFEBE7}" ShortID="970313863">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="PorteOuverture" ID="{80C2893D-8CD1-4DA1-A516-932777B4BD90}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.202049780380673"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.185212298682284"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.606149341142021"/>
-										<Property Name="TrimEnd" Type="Real64" Value="3.13177159590044"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>PorteOuverture.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="816920437"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="PorteOuverture" ID="{80C2893D-8CD1-4DA1-A516-932777B4BD90}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="OpenGate_01" ID="{5DA04859-ED45-4FAD-8C7E-4D37956F5470}" ShortID="260056932">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="PorteOuverture" ID="{C831164B-C92A-4354-BA19-F86A3F872BBC}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.202049780380673"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.185212298682284"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="4.29355783308931"/>
-										<Property Name="TrimEnd" Type="Real64" Value="7.07174231332357"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>PorteOuverture.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="943190417"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="PorteOuverture" ID="{C831164B-C92A-4354-BA19-F86A3F872BBC}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="OpenGate_02" ID="{A3BD43F6-C68D-45E6-8BFF-36DD6F8AC2D9}" ShortID="672329879">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BD89999-F4A9-4C22-985C-1D36DDD75D00}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9558CFDE-D1B2-4638-B0AA-0701CD5FBB4E}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="PorteOuverture" ID="{429464DD-7910-42DF-96A4-3ABCEDAEFB11}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.168374816983895"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.185212298682284"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="8.60395314787701"/>
-										<Property Name="TrimEnd" Type="Real64" Value="10.9948755490483"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>PorteOuverture.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="329682438"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="PorteOuverture" ID="{429464DD-7910-42DF-96A4-3ABCEDAEFB11}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

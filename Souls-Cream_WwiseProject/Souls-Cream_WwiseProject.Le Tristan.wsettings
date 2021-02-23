@@ -4,6 +4,7 @@
 		<UserProjectSettings Name="" ID="{B638E8ED-DABC-422C-9BE7-B805DA7D388E}">
 			<PropertyList>
 				<Property Name="Event Action List\{5DD44678-F8CB-43E4-A5A1-B760D2115AEA}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{9C1E7B47-812B-4E1C-9B7C-2402A9C57BF9}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{B95D668E-3059-48D0-8C94-EE85CCBBA633}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{D732C02A-217F-4FD3-AB01-1ED43D4225AE}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
@@ -57,14 +58,19 @@
 				<Property Name="ProjectExplorer\x64_Expanded_20_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_21_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_3_1" Type="string" Value="o+EGqAvFSEWYlHrxGGG5Fg=="/>
+				<Property Name="ProjectExplorer\x64_Expanded_3_1" Type="string" Value="o+EGqAvFSEWYlHrxGGG5FvLGDuLMQHFJgTqbjnesGCc="/>
 				<Property Name="ProjectExplorer\x64_Expanded_4_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_5_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_6_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_7_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_8_1" Type="string" Value=""/>
 				<Property Name="RTPC\GameParameterSimValue\{01A64B69-4A37-4E40-A27A-189F056BB60F}" Type="Real64" Value="50"/>
+				<Property Name="RTPC\GameParameterSimValue\{52FC746A-19F5-4048-B1B8-B3763026F49F}" Type="Real64" Value="100"/>
+				<Property Name="RTPC\GameParameterSimValue\{74BC5038-DE29-48B2-83CD-E87F35D30DB6}" Type="Real64" Value="100"/>
+				<Property Name="RTPC\GameParameterSimValue\{7E8D32EC-3C6B-4E2B-B4B2-D835820BDE31}" Type="Real64" Value="50"/>
 				<Property Name="RTPC\GameParameterSimValue\{D24517E9-C78A-4ACA-9749-463BF551BF6E}" Type="Real64" Value="0"/>
+				<Property Name="RTPC\GameParameterSimValue\{F6A0183D-7F7F-4BE6-A59A-A4BE9B9E21A4}" Type="Real64" Value="100"/>
+				<Property Name="RTPC\GameParameterSimValue\{F8F5B7E8-81AE-4ECE-8906-3619B7378B8B}" Type="Real64" Value="0"/>
 				<Property Name="SoundBank Manager\x64_Expand States" Type="string" Value=""/>
 				<Property Name="SoundBankHeaderFilePath" Type="string" Value="GeneratedSoundBanks\"/>
 				<Property Name="SoundBankPaths" Type="string">

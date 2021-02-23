@@ -20,8 +20,12 @@ namespace AK
         static const AkUniqueID CREDITS = 2201105581U;
         static const AkUniqueID CURIOSITE = 396009128U;
         static const AkUniqueID DISCONNECT = 480594535U;
+        static const AkUniqueID ELEVATOR = 3705378287U;
         static const AkUniqueID ENVIE = 1698034228U;
         static const AkUniqueID FIERTE = 2054371306U;
+        static const AkUniqueID GLASSBREAKING1 = 2528856761U;
+        static const AkUniqueID GLASSBREAKING2 = 2528856762U;
+        static const AkUniqueID GLASSBREAKING3 = 2528856763U;
         static const AkUniqueID HOST = 3617624947U;
         static const AkUniqueID INTERRUPTORHEAVY = 10711758U;
         static const AkUniqueID INTERRUPTORHIGH = 2112482585U;
@@ -41,13 +45,16 @@ namespace AK
         static const AkUniqueID OZJUMP = 1595060770U;
         static const AkUniqueID OZLANDING = 1035518595U;
         static const AkUniqueID OZMOZENDSONG = 1579895492U;
+        static const AkUniqueID OZMOZFINALCINEMATIC = 793593447U;
         static const AkUniqueID OZMOZMENUTHEME = 3278785808U;
         static const AkUniqueID OZMOZTHEMEAMBIENCES = 3147785334U;
         static const AkUniqueID OZTUTO = 567465712U;
         static const AkUniqueID PLAY = 1256202815U;
         static const AkUniqueID PLAY2 = 500558111U;
+        static const AkUniqueID POST_EVENT_OZDOUBLEJUMP = 4232859593U;
         static const AkUniqueID QUIT = 3930794392U;
         static const AkUniqueID READY = 3701637754U;
+        static const AkUniqueID SILENCE = 3041563226U;
         static const AkUniqueID SOLITUDE = 2952898430U;
         static const AkUniqueID SWAP = 286100424U;
         static const AkUniqueID TRISTESSE = 3375131777U;
@@ -107,7 +114,12 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID MENUVOICESVOLUME = 2976415783U;
+        static const AkUniqueID MUSICSVOLUME = 924921327U;
         static const AkUniqueID PLAYERMOVING = 545959236U;
+        static const AkUniqueID PLAYERSPEED = 1493153371U;
+        static const AkUniqueID SCREAMSVOLUME = 3499704711U;
+        static const AkUniqueID SOUNDEFFECTSVOLUME = 3402092638U;
         static const AkUniqueID WETFLOOR = 34521763U;
     } // namespace GAME_PARAMETERS
 
@@ -120,6 +132,10 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MENUVOICES = 3196512249U;
+        static const AkUniqueID MUSICS = 1730564753U;
+        static const AkUniqueID SCREAMS = 2812860249U;
+        static const AkUniqueID SOUNDEFFECTS = 3898083304U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

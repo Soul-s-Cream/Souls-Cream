@@ -280,7 +280,7 @@ MonoBehaviour:
   playerMovingSound:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a1e43a1db2aa88349a70dcacb442dbc5,
+    WwiseObjectReference: {fileID: 11400000, guid: af8cb7ec114a1394e93b9ac39cb56060,
       type: 2}
   anim: {fileID: 0}
   capsuleCollider: {fileID: 0}
