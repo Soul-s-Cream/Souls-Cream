@@ -54,26 +54,16 @@ public class Player : Photon.PunBehaviour
     public int screamUnlockedIndex = 0;
     [Tooltip("Cri selectionné")]
     public ScreamType selectedScream;
-    [Tooltip("Informations concernant les cris")]
-    public ScreamsData screamsData;
-    //Données depuis le ScriptableObject ScreamsData mises dans un Dictionary pour faciliter le traitement
-    public Dictionary<ScreamType, ScreamData> screamsDataParsed;
-
-    [Header("Tags (used to get few specifics objects)")]
-    [Tooltip("Tag of white player")]
-    [TagSelector]
-    public string whitePlayerTag;
-    [Tooltip("Tag of black player")]
-    [TagSelector]
-    public string blackPlayerTag;
-    [Tooltip("The tag of the wall impacted by the solitude scream")]
-    [TagSelector]
-    public string solitudeScreamReceiversTag;
-    [Header("Sound")]
     /// <summary>
     /// Liste des cris débloqués par le joueur
     /// </summary>
     public List<ScreamType> unlockedScreams;
+    [Tooltip("Informations concernant les cris")]
+    public ScreamsData screamsData;
+    //Données depuis le ScriptableObject ScreamsData mises dans un Dictionary pour faciliter le traitement
+    public Dictionary<ScreamType, ScreamData> screamsDataParsed;
+    
+    [Header("Sound")]
     public AK.Wwise.Event playerMoveSound;
     public AK.Wwise.RTPC footStepsWetRTPC;
     #endregion
@@ -181,6 +171,7 @@ public class Player : Photon.PunBehaviour
             AkSoundEngine.SetState("PlayerMoving", "Stop");
         }
     }
+
     private void Update()
     {
         //Si le Player n'est pas contrôlé par le client local, alors on ignore les instructions dans Update
@@ -526,6 +517,12 @@ public class Player : Photon.PunBehaviour
         screamsDataParsed[ScreamType.Sadness].sound.Post(gameObject);
         if (PhotonNetwork.connected)
         {
+            GameObject[] crates = GameObject.FindGameObjectsWithTag(GameManager.Instance.crateTag);
+            foreach(GameObject crate in crates)
+            {
+                crate.GetComponent<Crate>().GetOwnershipNetwork();
+            }
+
             RaycastHit2D hit2D = Physics2D.Raycast((Vector2) transform.position + sadnessGroundCheckingCenter, Vector2.down, sadnessScreamMinGroundDistance, groundLayer);
             if (hit2D.collider != null)
             {
@@ -545,7 +542,7 @@ public class Player : Photon.PunBehaviour
     public void SolitudeScream()
     {
         screamsDataParsed[ScreamType.Solitude].sound.Post(gameObject);
-        foreach (GameObject platform in GameObject.FindGameObjectsWithTag(solitudeScreamReceiversTag))
+        foreach (GameObject platform in GameObject.FindGameObjectsWithTag(GameManager.Instance.solitudeScreamReceiversTag))
         {
             platform.SetActive(false);
         }
@@ -557,7 +554,7 @@ public class Player : Photon.PunBehaviour
     {
         yield return new WaitForSeconds(5);
 
-        foreach (GameObject platform in GameObject.FindGameObjectsWithTag(solitudeScreamReceiversTag))
+        foreach (GameObject platform in GameObject.FindGameObjectsWithTag(GameManager.Instance.solitudeScreamReceiversTag))
         {
             platform.SetActive(true);
         }

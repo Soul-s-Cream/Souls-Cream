@@ -7,7 +7,7 @@ public class SceneLoader : Photon.PunBehaviour
 {
     [Header("Scenes")]
     public ScreenFade screenFade;
-    public int sceneId;
+    public SceneReference scene;
 
     public void Load()
     {
@@ -15,23 +15,25 @@ public class SceneLoader : Photon.PunBehaviour
         {
             StartCoroutine(WaitForFade());
         }
+        else
+            LoadScene(scene);
     }
 
     IEnumerator WaitForFade()
     {
         yield return StartCoroutine(screenFade.IFadeOut());
-        LoadScene(sceneId);
+        LoadScene(scene.ScenePath);
     }
 
-    public static void LoadScene(int id)
+    public static void LoadScene(string sceneName)
     {
         if (PhotonNetwork.connected)
         {
-            PhotonNetwork.LoadLevel(id);
+            NetworkManagerPUN.Instance.LoadScene(sceneName);
         }
         else
         {
-            SceneManager.LoadScene(id, LoadSceneMode.Single);
+            SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
         }
     }
 }

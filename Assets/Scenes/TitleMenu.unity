@@ -3894,7 +3894,8 @@ MonoBehaviour:
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 3
   instantiationId: 3
@@ -6897,9 +6898,9 @@ MonoBehaviour:
   player1ReadyToggle: {fileID: 211530299}
   player2ReadyToggle: {fileID: 1300337245}
   player1Connect: {fileID: 421966865}
-  player1Disonnect: {fileID: 1505967549}
+  player1Disconnect: {fileID: 1505967549}
   player2Connect: {fileID: 16159531}
-  player2Disonnect: {fileID: 1130846516}
+  player2Disconnect: {fileID: 1130846516}
   player1RoleW: {fileID: 214464183}
   player1RoleB: {fileID: 832535171}
   player2RoleW: {fileID: 870517652}

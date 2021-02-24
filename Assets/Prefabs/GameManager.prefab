@@ -49,6 +49,9 @@ MonoBehaviour:
   - {fileID: 4961687525731320548, guid: 7f47f505a8b4e75419deb0e0229f06be, type: 3}
   SpawnPointsList: []
   localPlayerInstance: {fileID: 0}
+  crateTag: Crate
+  solitudeScreamReceiversTag: SolitudeScream
+  humidityTag: Humidity
 --- !u!114 &5304115212609836957
 MonoBehaviour:
   m_ObjectHideFlags: 0

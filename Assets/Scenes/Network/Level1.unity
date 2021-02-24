@@ -2519,6 +2519,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3316135520353494042, guid: d7d357dd6fff0334594e3a16273af3fa,
         type: 3}
+      propertyPath: sceneToLoad.scenePath
+      value: Assets/Scenes/Network/Level2.unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316135520353494042, guid: d7d357dd6fff0334594e3a16273af3fa,
+        type: 3}
+      propertyPath: sceneToLoad.sceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 0fb756334de941546a461f6ee3fffa8a,
+        type: 3}
+    - target: {fileID: 3316135520353494042, guid: d7d357dd6fff0334594e3a16273af3fa,
+        type: 3}
       propertyPath: playerTags.Array.data[0]
       value: WhitePlayer
       objectReference: {fileID: 0}
@@ -3823,6 +3834,17 @@ PrefabInstance:
       propertyPath: playerTags.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3316135520353494042, guid: d7d357dd6fff0334594e3a16273af3fa,
+        type: 3}
+      propertyPath: sceneToLoad.scenePath
+      value: Assets/Scenes/Network/Level2.unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316135520353494042, guid: d7d357dd6fff0334594e3a16273af3fa,
+        type: 3}
+      propertyPath: sceneToLoad.sceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 0fb756334de941546a461f6ee3fffa8a,
+        type: 3}
     - target: {fileID: 3316135520353494042, guid: d7d357dd6fff0334594e3a16273af3fa,
         type: 3}
       propertyPath: playerTags.Array.data[0]

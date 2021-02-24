@@ -5907,6 +5907,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 3316135520353494042, guid: d7d357dd6fff0334594e3a16273af3fa,
+        type: 3}
+      propertyPath: sceneToLoad.scenePath
+      value: Assets/Scenes/CinematiqueFin.unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316135520353494042, guid: d7d357dd6fff0334594e3a16273af3fa,
+        type: 3}
+      propertyPath: sceneToLoad.sceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: ebdbc39a27245b742adcc615f8ef1fbe,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7d357dd6fff0334594e3a16273af3fa, type: 3}
 --- !u!4 &1395025811 stripped
@@ -8273,6 +8284,17 @@ PrefabInstance:
       propertyPath: playerTags.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3316135520353494042, guid: d7d357dd6fff0334594e3a16273af3fa,
+        type: 3}
+      propertyPath: sceneToLoad.scenePath
+      value: Assets/Scenes/CinematiqueFin.unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316135520353494042, guid: d7d357dd6fff0334594e3a16273af3fa,
+        type: 3}
+      propertyPath: sceneToLoad.sceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: ebdbc39a27245b742adcc615f8ef1fbe,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7d357dd6fff0334594e3a16273af3fa, type: 3}
 --- !u!4 &2012341252 stripped

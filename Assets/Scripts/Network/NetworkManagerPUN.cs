@@ -109,12 +109,37 @@ public class NetworkManagerPUN : Photon.PunBehaviour
     public override void OnDisconnectedFromPhoton()
     {
         Debug.LogWarning("Photon : Disconnected from Photon.");
+        StartCoroutine(MainReconnect());
     }
 
-    public override void OnPhotonRandomJoinFailed(object[] codeAndMsg)
+    private IEnumerator MainReconnect()
     {
-        Debug.Log("Photon : Failed to join a random room. Creating one...");
-        PhotonNetwork.CreateRoom(null, new RoomOptions() { MaxPlayers = 2 }, null);
+        
+        while (PhotonNetwork.networkingPeer.PeerState != ExitGames.Client.Photon.PeerStateValue.Disconnected)
+        {
+            Debug.Log("Waiting for client to be fully disconnected..", this);
+            
+            yield return new WaitForSeconds(0.2f);
+        }
+
+        Debug.Log("Client is disconnected!", this);
+
+        if (!PhotonNetwork.ReconnectAndRejoin())
+        {
+            if (PhotonNetwork.Reconnect())
+            {
+                Debug.Log("Successful reconnected!", this);
+            }
+        }
+        else
+        {
+            Debug.Log("Successful reconnected and joined!", this);
+        }
+    }
+
+    public override void OnFailedToConnectToPhoton(DisconnectCause cause)
+    {
+        Debug.LogError(System.Enum.GetName(typeof(DisconnectCause), cause));
     }
 
     public override void OnJoinedRoom()

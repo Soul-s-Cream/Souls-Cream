@@ -24,9 +24,9 @@ public class NetworkMenu : Photon.PunBehaviour
     public Toggle player2ReadyToggle;
     [Header("Flip Connect / Disconnect Display")]
     public Image player1Connect;
-    public Image player1Disonnect;
+    public Image player1Disconnect;
     public Image player2Connect;
-    public Image player2Disonnect;
+    public Image player2Disconnect;
     [Header("Role Display")]
     public Toggle player1RoleW;
     public Toggle player1RoleB;
@@ -128,9 +128,9 @@ public class NetworkMenu : Photon.PunBehaviour
         if (PhotonNetwork.isMasterClient)
         {
             Hashtable customProps = new Hashtable
-        {
-            { "ready", false}
-        };
+            {
+                { "ready", false}
+            };
 
             foreach (PhotonPlayer player in PhotonNetwork.playerList)
             {
@@ -165,9 +165,9 @@ public class NetworkMenu : Photon.PunBehaviour
         {
             Debug.Log("1 Player in Room");
             player1Connect.gameObject.SetActive(true);
-            player1Disonnect.gameObject.SetActive(false);
+            player1Disconnect.gameObject.SetActive(false);
             player2Connect.gameObject.SetActive(false);
-            player2Disonnect.gameObject.SetActive(true);
+            player2Disconnect.gameObject.SetActive(true);
             player1RoleB.isOn = true;
             player1RoleW.isOn = true;
         }
@@ -175,9 +175,9 @@ public class NetworkMenu : Photon.PunBehaviour
         {
             Debug.Log("2 Player in Room");
             player1Connect.gameObject.SetActive(true);
-            player1Disonnect.gameObject.SetActive(false);
-            player2Connect.gameObject.SetActive(false);
-            player2Disonnect.gameObject.SetActive(true);
+            player1Disconnect.gameObject.SetActive(false);
+            player2Connect.gameObject.SetActive(true);
+            player2Disconnect.gameObject.SetActive(true);
             player1RoleB.isOn = true;
             player1RoleW.isOn = true;
             player2RoleB.isOn = true;
@@ -187,9 +187,9 @@ public class NetworkMenu : Photon.PunBehaviour
         {
             Debug.Log("No player in Room");
             player1Connect.gameObject.SetActive(false);
-            player1Disonnect.gameObject.SetActive(true);
+            player1Disconnect.gameObject.SetActive(true);
             player2Connect.gameObject.SetActive(false);
-            player2Disonnect.gameObject.SetActive(true);
+            player2Disconnect.gameObject.SetActive(true);
             player1RoleB.isOn = false;
             player1RoleW.isOn = false;
             player2RoleB.isOn = false;
