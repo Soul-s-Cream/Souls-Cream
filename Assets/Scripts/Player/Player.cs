@@ -122,10 +122,13 @@ public class Player : Photon.PunBehaviour
         }
         #endregion
 
-        //On lie les contrôles
-        control.Cri.CriUp.performed += ctx => ScreamSelection(true);
-        control.Cri.CriDown.performed += ctx => ScreamSelection(false);
-        control.Cri.Cri.performed += ctx => Screaming();
+        if (photonView.isMine)
+        {
+            //On lie les contrôles
+            control.Cri.CriUp.performed += ctx => ScreamSelection(true);
+            control.Cri.CriDown.performed += ctx => ScreamSelection(false);
+            control.Cri.Cri.performed += ctx => Screaming();
+        }
 
         AddListeners();
     }
@@ -325,7 +328,7 @@ public class Player : Photon.PunBehaviour
     /// </summary>
     public void Screaming()
     {
-        if (!isScreaming && photonView.isMine)
+        if (!isScreaming)
         {
             anim.SetTrigger(Enum.GetName(typeof(ScreamType), selectedScream));
 

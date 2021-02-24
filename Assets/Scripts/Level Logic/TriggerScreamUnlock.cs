@@ -11,7 +11,7 @@ public class TriggerScreamUnlock : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Player player = collision.GetComponent<Player>();
-        if (player != null)
+        if (player != null && player.photonView.isMine)
         {
             player.UnlockScream(screamUnlocked);
             Destroy(this.gameObject);
