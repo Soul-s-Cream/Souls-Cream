@@ -39,7 +39,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 734501568}
-  - component: {fileID: 734501569}
   - component: {fileID: 562224313560523306}
   m_Layer: 3
   m_Name: CriSelectionWhite
@@ -62,27 +61,6 @@ Transform:
   m_Father: {fileID: 290643585306977310}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &734501569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 734501567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dfb7c8a5446d3d4ba5f5ce62dd8ae7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeOutDelay: 2
-  speedRotationWheel: 1
-  scaleIconActive: {x: 0.75, y: 0.75, z: 1}
-  scaleIconInactive: {x: 0.5, y: 0.5, z: 1}
-  newScreamSound:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 1f56dfa3df350ee4f9bb558b05f294c0,
-      type: 2}
 --- !u!212 &562224313560523306
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -277,10 +255,15 @@ MonoBehaviour:
   whitePlayerTag: WhitePlayer
   blackPlayerTag: BlackPlayer
   solitudeScreamReceiversTag: SolitudeScream
-  playerMovingSound:
+  playerMoveSound:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: af8cb7ec114a1394e93b9ac39cb56060,
+      type: 2}
+  footStepsWetRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4cac495e241c9694baf3162c0c4999e9,
       type: 2}
   anim: {fileID: 0}
   capsuleCollider: {fileID: 0}
