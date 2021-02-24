@@ -72,7 +72,8 @@ public class Player : Photon.PunBehaviour
     [TagSelector]
     public string solitudeScreamReceiversTag;
     [Header("Sound")]
-    public AK.Wwise.RTPC playerMovingSound;
+    public AK.Wwise.Event playerMoveSound;
+    public AK.Wwise.RTPC footStepsWetRTPC;
     #endregion
 
     #region Private Fields
@@ -525,6 +526,25 @@ public class Player : Photon.PunBehaviour
     {
         control.Deplacement.Disable();
         control.Cri.Disable();
+    }
+    #endregion
+
+    #region Animation Events 
+    public void PlayFootstep()
+    {
+        RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + groundCheckingCenter, Vector2.down, groundCheckingRadius, humidityLayer);
+
+        if (hit.collider)
+        {
+            footStepsWetRTPC.SetGlobalValue(100f);
+        }
+        else
+        {
+            footStepsWetRTPC.SetGlobalValue(0f);
+        }
+
+        footStepsWetRTPC.Validate();
+        playerMoveSound.Post(gameObject);
     }
     #endregion
 
