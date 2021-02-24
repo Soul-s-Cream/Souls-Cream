@@ -5239,6 +5239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3096306597595371635}
   - component: {fileID: 6852352936377492576}
+  - component: {fileID: 7279204748801784541}
   m_Layer: 3
   m_Name: ScreamWheelSelection
   m_TagString: Untagged
@@ -5311,3 +5312,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7279204748801784541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7436626058568699332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dfb7c8a5446d3d4ba5f5ce62dd8ae7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeOutDelay: 2
+  speedRotationWheel: 1
+  scaleIconActive: {x: 0.75, y: 0.75, z: 1}
+  scaleIconInactive: {x: 0.5, y: 0.5, z: 1}
+  newScreamSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1f56dfa3df350ee4f9bb558b05f294c0,
+      type: 2}
