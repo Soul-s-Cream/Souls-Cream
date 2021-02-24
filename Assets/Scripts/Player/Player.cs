@@ -56,8 +56,6 @@ public class Player : Photon.PunBehaviour
     public ScreamType selectedScream;
     [Tooltip("Informations concernant les cris")]
     public ScreamsData screamsData;
-    [Tooltip("Public à l'intention du Debug uniquement")]
-    public List<ScreamType> unlockedScreams;
     //Données depuis le ScriptableObject ScreamsData mises dans un Dictionary pour faciliter le traitement
     public Dictionary<ScreamType, ScreamData> screamsDataParsed;
 
@@ -72,6 +70,10 @@ public class Player : Photon.PunBehaviour
     [TagSelector]
     public string solitudeScreamReceiversTag;
     [Header("Sound")]
+    /// <summary>
+    /// Liste des cris débloqués par le joueur
+    /// </summary>
+    public List<ScreamType> unlockedScreams;
     public AK.Wwise.Event playerMoveSound;
     public AK.Wwise.RTPC footStepsWetRTPC;
     #endregion
@@ -102,13 +104,15 @@ public class Player : Photon.PunBehaviour
     private float currentSadnessScreamRadius;
 
     private bool dernierCriActive = false;
+
     #endregion
 
     private void Awake()
     {
+        //On initialise & récupère les différents composants nécessaires pour la logique de l'objet
         control = new Controls();
         spriteRender = GetComponent<SpriteRenderer>();
-        //unlockedScreams = new List<ScreamType>();
+        unlockedScreams = new List<ScreamType>();
 
         #region Initialize Scream Data
         screamsDataParsed = new Dictionary<ScreamType, ScreamData>();
@@ -118,9 +122,12 @@ public class Player : Photon.PunBehaviour
         }
         #endregion
 
-        //On lie les contrôles pour sélectionner le cri
-        control.Cri.CriUp.performed += ctx =>  ScreamSelection(true);
-        control.Cri.CriDown.performed += ctx =>  ScreamSelection(false);
+        //On lie les contrôles
+        control.Cri.CriUp.performed += ctx => ScreamSelection(true);
+        control.Cri.CriDown.performed += ctx => ScreamSelection(false);
+        control.Cri.Cri.performed += ctx => Screaming();
+
+        AddListeners();
     }
 
     private void Start()
@@ -155,7 +162,7 @@ public class Player : Photon.PunBehaviour
             photonView.RPC("FlipToggleSprite", PhotonTargets.All, true);
             if (isGrounded)
             {
-                footStepsWetRTPC.SetGlobalValue(Mathf.Abs(rb.velocity.x));
+                //footStepsWetRTPC.SetGlobalValue(Mathf.Abs(rb.velocity.x));
             }
         }
         else if (control.Deplacement.Deplacement.ReadValue<float>() < 0)
@@ -205,10 +212,27 @@ public class Player : Photon.PunBehaviour
         }
         else anim.SetBool("Jump", true);
 
-        Screaming();
-
     }
 
+    #region Listeners
+    /// <summary>
+    /// Subscribe to all events required for the object
+    /// </summary>
+    private void AddListeners()
+    {
+        GameEvents.Instance.fireScreamAbility+= OnFireScreamAbility;
+    }
+
+    /// <summary>
+    /// Unsubscribe to all events subscribed
+    /// </summary>
+    private void RemoveListeners()
+    {
+        GameEvents.Instance.fireScreamAbility -= OnFireScreamAbility;
+    }
+    #endregion
+
+    #region Movement Logic
     void PlayerMove(float _horizontalMovement)
     {
         if (isScreaming)
@@ -217,13 +241,13 @@ public class Player : Photon.PunBehaviour
         }
 
         Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
-        if(isGrounded)
+        if (isGrounded)
         {
             rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, moveSmooth);        // gère le déplacement du joueur lorsqu'il touche le sol
         }
         else
         {
-            rb.velocity = Vector3.SmoothDamp(rb.velocity * new Vector2(deplacementEnAir, 1f ), targetVelocity, ref velocity, moveSmooth); // gère le déplacement horizontale du joueur lorsqu'il ne touche pas le sol
+            rb.velocity = Vector3.SmoothDamp(rb.velocity * new Vector2(deplacementEnAir, 1f), targetVelocity, ref velocity, moveSmooth); // gère le déplacement horizontale du joueur lorsqu'il ne touche pas le sol
         }
 
         if (isJuming == true)   // premier saut
@@ -237,12 +261,12 @@ public class Player : Photon.PunBehaviour
             {
                 if (role == Role.BLANC)
                 {
-                    rb.velocity -= new Vector2(0, rb.velocity.y); 
-                    rb.AddForce(new Vector2(0f, DoubleJumpForce));       
+                    rb.velocity -= new Vector2(0, rb.velocity.y);
+                    rb.AddForce(new Vector2(0f, DoubleJumpForce));
                 }
                 if (role == Role.NOIR)                              // le player n'a pas accès au double saut, donc l'ajout de force est de 0
                 {
-                    rb.AddForce(new Vector2(0f, jumpForce * 0f));       
+                    rb.AddForce(new Vector2(0f, jumpForce * 0f));
                 }
             }
             isJuming = false;
@@ -254,6 +278,7 @@ public class Player : Photon.PunBehaviour
     {
         GetComponent<SpriteRenderer>().flipX = flipState;
     }
+    #endregion
 
     #region Scream
 
@@ -294,9 +319,13 @@ public class Player : Photon.PunBehaviour
         }
     }
 
+    /// <summary>
+    /// When the scream key is pressed, call the method associated with the selected scream. Call the RPC version if online.
+    /// Need some rework (No need to not call RPC).
+    /// </summary>
     public void Screaming()
     {
-        if (control.Cri.Cri.triggered && !isScreaming)
+        if (!isScreaming && photonView.isMine)
         {
             anim.SetTrigger(Enum.GetName(typeof(ScreamType), selectedScream));
 
@@ -337,6 +366,21 @@ public class Player : Photon.PunBehaviour
         }
     }
 
+    /// <summary>
+    /// Callbacks called when a fireScreamAbility is triggered. Call the right Callbacks depending on the ScreamType
+    /// </summary>
+    /// <param name="player">Player emitting the scream</param>
+    /// <param name="scream">The scream emitted</param>
+    void OnFireScreamAbility(Player player, ScreamType scream)
+    {
+        switch(scream)
+        {
+            case ScreamType.Cornered: OnCorneredScream(); break;
+            case ScreamType.Pride: OnPrideScream(); break;
+        }
+
+    }
+
     IEnumerator WaitDuringScreaming()
     {
         isScreaming = true;
@@ -357,47 +401,47 @@ public class Player : Photon.PunBehaviour
     {
         screamsDataParsed[ScreamType.Cornered].sound.Post(gameObject);
 
-        if(GameObject.FindGameObjectWithTag(whitePlayerTag))
+        if (this.role == Role.NOIR)
         {
-            Player whitePlayer = GameObject.FindGameObjectWithTag(whitePlayerTag).GetComponent<Player>();
+            GameEvents.Instance.TriggerFireScreamAbilityEvent(this, ScreamType.Cornered);
+            anim.SetLayerWeight(2, 1f);
+            capsuleCollider.size = defaultCapsuleColliderSize * 1.75f;
+            groundCheckingCenter.y = defaultGroundCenter.y - 0.25f;
+            groundCheckingRadius = defaultGroundRadius * 1.75f;
+            StartCoroutine(CorneredWait());
+        }        
+    }
+
+    private void OnCorneredScream()
+    {
+        if (this.role == Role.BLANC)
+        {
             anim.SetLayerWeight(1, 1f);
             capsuleCollider.size = defaultCapsuleColliderSize * 0.5f;
-            whitePlayer.groundCheckingCenter.y = defaultGroundCenter.y + 0.15f;
-            whitePlayer.groundCheckingRadius = defaultGroundRadius * 0.5f;
+            groundCheckingCenter.y = defaultGroundCenter.y + 0.15f;
+            groundCheckingRadius = defaultGroundRadius * 0.5f;
+            StartCoroutine(CorneredWait());
         }
-
-        if (GameObject.FindGameObjectWithTag(blackPlayerTag))
-        {
-            Player blackPlayer = GameObject.FindGameObjectWithTag(blackPlayerTag).GetComponent<Player>();
-            blackPlayer.anim.SetLayerWeight(2, 1f);
-            blackPlayer.capsuleCollider.size = blackPlayer.defaultCapsuleColliderSize * 1.75f;
-            blackPlayer.groundCheckingCenter.y = defaultGroundCenter.y - 0.25f;
-            blackPlayer.groundCheckingRadius = defaultGroundRadius * 1.75f;
-        }
-
-        StartCoroutine(CorneredWait());
     }
 
     IEnumerator CorneredWait()
     {
         yield return new WaitForSeconds(5);
 
-        if (GameObject.FindGameObjectWithTag(whitePlayerTag))
+        if (this.role == Role.BLANC)
         {
-            Player whitePlayer = GameObject.FindGameObjectWithTag(whitePlayerTag).GetComponent<Player>();
             anim.SetLayerWeight(1, 0f);
             capsuleCollider.size = defaultCapsuleColliderSize;
-            whitePlayer.groundCheckingCenter.y = defaultGroundCenter.y;
-            whitePlayer.groundCheckingRadius = defaultGroundRadius;
+            groundCheckingCenter.y = defaultGroundCenter.y;
+            groundCheckingRadius = defaultGroundRadius;
         }
 
-        if (GameObject.FindGameObjectWithTag(blackPlayerTag))
+        if (this.role == Role.NOIR)
         {
-            Player blackPlayer = GameObject.FindGameObjectWithTag(blackPlayerTag).GetComponent<Player>();
-            blackPlayer.anim.SetLayerWeight(2, 0f);
-            blackPlayer.capsuleCollider.size = blackPlayer.defaultCapsuleColliderSize;
-            blackPlayer.groundCheckingCenter.y = defaultGroundCenter.y;
-            blackPlayer.groundCheckingRadius = defaultGroundRadius;
+            anim.SetLayerWeight(2, 0f);
+            capsuleCollider.size = defaultCapsuleColliderSize;
+            groundCheckingCenter.y = defaultGroundCenter.y;
+            groundCheckingRadius = defaultGroundRadius;
         }
     }
 
@@ -428,47 +472,48 @@ public class Player : Photon.PunBehaviour
     public void PrideScream()
     {
         screamsDataParsed[ScreamType.Pride].sound.Post(gameObject);
-        if (GameObject.FindGameObjectWithTag(whitePlayerTag))
+
+        if (this.role == Role.BLANC)
         {
-            Player whitePlayer = GameObject.FindGameObjectWithTag(whitePlayerTag).GetComponent<Player>();
+            GameEvents.Instance.TriggerFireScreamAbilityEvent(this, ScreamType.Pride);
             anim.SetLayerWeight(2, 1f);
             capsuleCollider.size = defaultCapsuleColliderSize * 1.75f;
-            whitePlayer.groundCheckingCenter.y = defaultGroundCenter.y - 0.25f;
-            whitePlayer.groundCheckingRadius = defaultGroundRadius * 1.75f;
+            groundCheckingCenter.y = defaultGroundCenter.y - 0.25f;
+            groundCheckingRadius = defaultGroundRadius * 1.75f;
+            StartCoroutine(PrideWait());
         }
-
-        if (GameObject.FindGameObjectWithTag(blackPlayerTag))
-        {
-            Player blackPlayer = GameObject.FindGameObjectWithTag(blackPlayerTag).GetComponent<Player>();
-            blackPlayer.anim.SetLayerWeight(1, 1f);
-            blackPlayer.capsuleCollider.size = blackPlayer.defaultCapsuleColliderSize * 0.5f;
-            blackPlayer.groundCheckingCenter.y = defaultGroundCenter.y + 0.15f ;
-            blackPlayer.groundCheckingRadius = defaultGroundRadius * 0.5f;
-        }
-
-        StartCoroutine(PrideWait());
     }
 
     IEnumerator PrideWait()
     {
         yield return new WaitForSeconds(5);
 
-        if (GameObject.FindGameObjectWithTag(whitePlayerTag))
+        if (this.role == Role.BLANC)
         {
-            Player whitePlayer = GameObject.FindGameObjectWithTag(whitePlayerTag).GetComponent<Player>();
             anim.SetLayerWeight(2, 0f);
             capsuleCollider.size = defaultCapsuleColliderSize;
-            whitePlayer.groundCheckingCenter.y = defaultGroundCenter.y;
-            whitePlayer.groundCheckingRadius = defaultGroundRadius;
+            groundCheckingCenter.y = defaultGroundCenter.y;
+            groundCheckingRadius = defaultGroundRadius;
         }
 
-        if (GameObject.FindGameObjectWithTag(blackPlayerTag))
+        if (this.role == Role.NOIR)
         {
-            Player blackPlayer = GameObject.FindGameObjectWithTag(blackPlayerTag).GetComponent<Player>();
-            blackPlayer.anim.SetLayerWeight(1, 0f);
-            blackPlayer.capsuleCollider.size = blackPlayer.defaultCapsuleColliderSize;
-            blackPlayer.groundCheckingCenter.y = defaultGroundCenter.y;
-            blackPlayer.groundCheckingRadius = defaultGroundRadius;
+            anim.SetLayerWeight(1, 0f);
+            capsuleCollider.size = defaultCapsuleColliderSize;
+            groundCheckingCenter.y = defaultGroundCenter.y;
+            groundCheckingRadius = defaultGroundRadius;
+        }
+    }
+
+    private void OnPrideScream()
+    {
+        if (this.role == Role.NOIR)
+        {
+            anim.SetLayerWeight(1, 1f);
+            capsuleCollider.size = defaultCapsuleColliderSize * 0.5f;
+            groundCheckingCenter.y = defaultGroundCenter.y + 0.15f;
+            groundCheckingRadius = defaultGroundRadius * 0.5f;
+            StartCoroutine(PrideWait());
         }
     }
 
@@ -527,6 +572,11 @@ public class Player : Photon.PunBehaviour
         control.Deplacement.Disable();
         control.Cri.Disable();
     }
+
+    private void OnDestroy()
+    {
+        RemoveListeners();
+    }
     #endregion
 
     #region Animation Events 
@@ -548,9 +598,11 @@ public class Player : Photon.PunBehaviour
     }
     #endregion
 
+    #region Gizmos
     private void OnDrawGizmosSelected()
     {
-        Gizmos.DrawWireSphere(transform.position + (Vector3) groundCheckingCenter, groundCheckingRadius);
+        Gizmos.DrawWireSphere(transform.position + (Vector3)groundCheckingCenter, groundCheckingRadius);
         Gizmos.DrawLine(transform.position + (Vector3)sadnessGroundCheckingCenter, transform.position + Vector3.down * sadnessScreamMinGroundDistance);
     }
+    #endregion
 }

@@ -59,7 +59,6 @@ public class NetworkManagerPUN : Photon.PunBehaviour
 
         return false;
     }
-
     public bool CreateRoom(string roomName)
     {
         if (PhotonNetwork.CreateRoom(roomName))
@@ -70,9 +69,22 @@ public class NetworkManagerPUN : Photon.PunBehaviour
         return false;
     }
 
-    public void LoadScene(int levelId)
+    /// <summary>
+    /// Fait charger une scène à tous les clients
+    /// </summary>
+    /// <param name="sceneName">Index de build la scène à charger</param>
+    public void LoadScene(int sceneID)
     {
-        PhotonNetwork.LoadLevel(levelId);
+        PhotonNetwork.LoadLevel(sceneID);
+    }
+
+    /// <summary>
+    /// Fait charger une scène à tous les clients
+    /// </summary>
+    /// <param name="sceneName">Nom de la scène à charger</param>
+    public void LoadScene(string sceneName)
+    {
+        PhotonNetwork.LoadLevel(sceneName);
     }
 
     public void SwitchRole()
