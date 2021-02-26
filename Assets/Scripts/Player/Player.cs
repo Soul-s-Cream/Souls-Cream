@@ -383,11 +383,33 @@ public class Player : Photon.PunBehaviour
     }
     #endregion
 
-    #region ScreamsRPC
+    #region Black Screams
+
     [PunRPC]
-    public void CompassionScream()
+    public void SadnessScream()
     {
-        // endgame
+        screamsDataParsed[ScreamType.Sadness].sound.Post(gameObject);
+        if (PhotonNetwork.connected)
+        {
+            GameObject[] crates = GameObject.FindGameObjectsWithTag(GameManager.Instance.crateTag);
+            foreach (GameObject crate in crates)
+            {
+                crate.GetComponent<Crate>().GetOwnershipNetwork();
+            }
+
+            RaycastHit2D hit2D = Physics2D.Raycast((Vector2)transform.position + sadnessGroundCheckingCenter, Vector2.down, sadnessScreamMinGroundDistance, groundLayer);
+            if (hit2D.collider != null)
+            {
+                if (PhotonNetwork.connected)
+                {
+                    PhotonNetwork.Instantiate(humidityPrefab.name, hit2D.point, Quaternion.identity, 0);
+                }
+                else
+                {
+                    Instantiate(humidityPrefab, hit2D.point, Quaternion.identity);
+                }
+            }
+        }
     }
 
     [PunRPC]
@@ -402,18 +424,6 @@ public class Player : Photon.PunBehaviour
             capsuleCollider.size = defaultCapsuleColliderSize * 1.75f;
             groundCheckingCenter.y = defaultGroundCenter.y - 0.25f;
             groundCheckingRadius = defaultGroundRadius * 1.75f;
-            StartCoroutine(CorneredWait());
-        }        
-    }
-
-    private void OnCorneredScream()
-    {
-        if (this.role == Role.BLANC)
-        {
-            anim.SetLayerWeight(1, 1f);
-            capsuleCollider.size = defaultCapsuleColliderSize * 0.5f;
-            groundCheckingCenter.y = defaultGroundCenter.y + 0.15f;
-            groundCheckingRadius = defaultGroundRadius * 0.5f;
             StartCoroutine(CorneredWait());
         }
     }
@@ -438,14 +448,37 @@ public class Player : Photon.PunBehaviour
             groundCheckingRadius = defaultGroundRadius;
         }
     }
+    private void OnCorneredScream()
+    {
+        if (this.role == Role.BLANC)
+        {
+            anim.SetLayerWeight(1, 1f);
+            capsuleCollider.size = defaultCapsuleColliderSize * 0.5f;
+            groundCheckingCenter.y = defaultGroundCenter.y + 0.15f;
+            groundCheckingRadius = defaultGroundRadius * 0.5f;
+            StartCoroutine(CorneredWait());
+        }
+    }
 
     [PunRPC]
-    public void CuriosityScream()
+    public void SolitudeScream()
     {
-        screamsDataParsed[ScreamType.Curiosity].sound.Post(gameObject);
-        foreach (Collider2D collider in Physics2D.OverlapCircleAll(transform.position, curiosityScreamRadius, curiosityScreamLayer))
+        screamsDataParsed[ScreamType.Solitude].sound.Post(gameObject);
+        foreach (GameObject platform in GameObject.FindGameObjectsWithTag(GameManager.Instance.solitudeScreamReceiversTag))
         {
-            collider.GetComponent<CuriosityObject>().Reveal();
+            platform.SetActive(false);
+        }
+
+        StartCoroutine(WaitForSolitudeScream());
+    }
+
+    private IEnumerator WaitForSolitudeScream()
+    {
+        yield return new WaitForSeconds(5);
+
+        foreach (GameObject platform in GameObject.FindGameObjectsWithTag(GameManager.Instance.solitudeScreamReceiversTag))
+        {
+            platform.SetActive(true);
         }
     }
 
@@ -454,7 +487,9 @@ public class Player : Photon.PunBehaviour
     {
         // endgame
     }
+    #endregion
 
+    #region White Scream
     [PunRPC]
     public void JoyScream()
     {
@@ -512,52 +547,19 @@ public class Player : Photon.PunBehaviour
     }
 
     [PunRPC]
-    public void SadnessScream()
+    public void CuriosityScream()
     {
-        screamsDataParsed[ScreamType.Sadness].sound.Post(gameObject);
-        if (PhotonNetwork.connected)
+        screamsDataParsed[ScreamType.Curiosity].sound.Post(gameObject);
+        foreach (Collider2D collider in Physics2D.OverlapCircleAll(transform.position, curiosityScreamRadius, curiosityScreamLayer))
         {
-            GameObject[] crates = GameObject.FindGameObjectsWithTag(GameManager.Instance.crateTag);
-            foreach(GameObject crate in crates)
-            {
-                crate.GetComponent<Crate>().GetOwnershipNetwork();
-            }
-
-            RaycastHit2D hit2D = Physics2D.Raycast((Vector2) transform.position + sadnessGroundCheckingCenter, Vector2.down, sadnessScreamMinGroundDistance, groundLayer);
-            if (hit2D.collider != null)
-            {
-                if (PhotonNetwork.connected)
-                {
-                    PhotonNetwork.Instantiate(humidityPrefab.name, hit2D.point, Quaternion.identity, 0);
-                }
-                else
-                {
-                    Instantiate(humidityPrefab, hit2D.point, Quaternion.identity);
-                }
-            }
+            collider.GetComponent<CuriosityObject>().Reveal();
         }
     }
 
     [PunRPC]
-    public void SolitudeScream()
+    public void CompassionScream()
     {
-        screamsDataParsed[ScreamType.Solitude].sound.Post(gameObject);
-        foreach (GameObject platform in GameObject.FindGameObjectsWithTag(GameManager.Instance.solitudeScreamReceiversTag))
-        {
-            platform.SetActive(false);
-        }
-
-        StartCoroutine(WaitForSolitudeScream());
-    }
-
-    private IEnumerator WaitForSolitudeScream()
-    {
-        yield return new WaitForSeconds(5);
-
-        foreach (GameObject platform in GameObject.FindGameObjectsWithTag(GameManager.Instance.solitudeScreamReceiversTag))
-        {
-            platform.SetActive(true);
-        }
+        // endgame
     }
     #endregion
 
