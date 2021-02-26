@@ -11,16 +11,24 @@ public enum Role
 
 public class GameManager : Photon.PunBehaviour
 {
-    #region Private Fields
-    private static GameManager _instance;
-    Controls controls;
-    #endregion
-
     #region Public Fields
     [Tooltip("Prefabs à instancier pour le multijoueur")]
     public List<GameObject> PlayerPrefabs;
     public List<SpawnPoint> SpawnPointsList;
     public GameObject localPlayerInstance;
+    [Header("Tags (used to get few specifics objects)")]
+    [TagSelector]
+    public string crateTag;
+    [Tooltip("The tag of the wall impacted by the solitude scream")]
+    [TagSelector]
+    public string solitudeScreamReceiversTag;
+    [TagSelector]
+    public string humidityTag;
+    #endregion
+
+    #region Private Fields
+    private static GameManager _instance;
+    Controls controls;
     #endregion
 
     /// <summary>
@@ -124,16 +132,23 @@ public class GameManager : Photon.PunBehaviour
 
     public void LoadCameraRole(Role role)
     {
-        Debug.Log("No camera set found");
         if(CameraSets._instance != null)
         {
             string roleName = role == Role.BLANC ? "BLANC" : "NOIR";
             Debug.Log("Loading camera for " + roleName);
             CameraSets._instance.DisplayCameraRole(role);
+            return;
         }
+        Debug.Log("No camera set found");
     }
 
     public void EndLevel(int scene)
+    {
+        Debug.Log("Niveau terminé");
+        NetworkManagerPUN.Instance.LoadScene(scene);
+    }
+
+    public void EndLevel(string scene)
     {
         Debug.Log("Niveau terminé");
         NetworkManagerPUN.Instance.LoadScene(scene);

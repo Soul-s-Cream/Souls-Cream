@@ -27,6 +27,7 @@ public class GameEvents : MonoBehaviour
     public event AbilityEvent newScreamAbility;
     public event AbilityEvent loseScreamAbility;
     public event AbilityEvent changeScreamAbilitySelected;
+    public event AbilityEvent fireScreamAbility;
 
     public event Action BasicEventExemple;
     public delegate void SwitchEvent(Mecanism[] mecanism);
@@ -128,6 +129,11 @@ public class GameEvents : MonoBehaviour
     public void TriggerLoseScreamEvent(Player player, ScreamType loseScream)
     {
         loseScreamAbility?.Invoke(player, loseScream);
+    }
+
+    public void TriggerFireScreamAbilityEvent(Player player, ScreamType screamFired)
+    {
+        fireScreamAbility?.Invoke(player, screamFired);
     }
     #endregion
 }

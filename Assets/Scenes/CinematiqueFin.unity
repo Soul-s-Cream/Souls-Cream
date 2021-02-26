@@ -663,8 +663,12 @@ PlayableDirector:
     value: {fileID: 233878108}
   - key: {fileID: 7521784505798739012, guid: 885e794c792d4fc419f43034544dd982, type: 2}
     value: {fileID: 1318161167}
+  - key: {fileID: -6242775457170514915, guid: 885e794c792d4fc419f43034544dd982, type: 2}
+    value: {fileID: 1891722717}
   m_ExposedReferences:
-    m_References: []
+    m_References:
+    - 1c105d60b3dccde4783497e437acb8d4: {fileID: 1680308836}
+    - 30d72a04708e8534c90e7e4f435f9e25: {fileID: 1680308836}
 --- !u!4 &398079697
 Transform:
   m_ObjectHideFlags: 0
@@ -3107,6 +3111,8 @@ GameObject:
   - component: {fileID: 1891722716}
   - component: {fileID: 1891722715}
   - component: {fileID: 1891722714}
+  - component: {fileID: 1891722718}
+  - component: {fileID: 1891722717}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -3134,7 +3140,8 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 8242965cc671b4f43a52136e5dec1e64,
+      type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
@@ -3183,6 +3190,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1891722717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891722713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 069e0707e0c59ac46ae1de00b83d9a10, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1891722718}
+          m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+          m_MethodName: Load
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1891722718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891722713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c63af6e5846df4ba2767d5d7dd854d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenFade: {fileID: 0}
+  scene:
+    sceneAsset: {fileID: 102900000, guid: 3c1fe1bced6c15140acb7908b334c268, type: 3}
+    scenePath: Assets/Scenes/Credits.unity
 --- !u!1 &2053288099
 GameObject:
   m_ObjectHideFlags: 0
