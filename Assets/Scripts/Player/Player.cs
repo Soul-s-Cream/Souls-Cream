@@ -550,9 +550,11 @@ public class Player : Photon.PunBehaviour
     public void CuriosityScream()
     {
         screamsDataParsed[ScreamType.Curiosity].sound.Post(gameObject);
-        foreach (Collider2D collider in Physics2D.OverlapCircleAll(transform.position, curiosityScreamRadius, curiosityScreamLayer))
+        foreach (Collider2D collider in Physics2D.OverlapCircleAll(transform.position, curiosityScreamRadius))
         {
-            collider.GetComponent<CuriosityObject>().Reveal();
+            CuriosityObject curiosityObj = collider.GetComponent<CuriosityObject>();
+            if (curiosityObj != null)
+                curiosityObj.Reveal();
         }
     }
 
