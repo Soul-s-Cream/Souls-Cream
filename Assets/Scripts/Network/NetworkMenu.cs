@@ -13,7 +13,7 @@ public class NetworkMenu : Photon.PunBehaviour
     [Header("Panels Menus")]
     public RectTransform titleMenuPanel;
     public RectTransform errorMessagePanel;
-    public RectTransform successMessagePanel;
+    public RectTransform successMessagePanel;   
     public RectTransform connectionPanel;
     public RectTransform roomPanel;
     [Header("Texts")]
@@ -170,6 +170,8 @@ public class NetworkMenu : Photon.PunBehaviour
             player2Disconnect.gameObject.SetActive(true);
             player1RoleB.isOn = true;
             player1RoleW.isOn = true;
+            player2RoleB.isOn = false;
+            player2RoleW.isOn = false;
         }
         else if (PhotonNetwork.room.PlayerCount == 2)
         {
@@ -177,7 +179,7 @@ public class NetworkMenu : Photon.PunBehaviour
             player1Connect.gameObject.SetActive(true);
             player1Disconnect.gameObject.SetActive(false);
             player2Connect.gameObject.SetActive(true);
-            player2Disconnect.gameObject.SetActive(true);
+            player2Disconnect.gameObject.SetActive(false);
             player1RoleB.isOn = true;
             player1RoleW.isOn = true;
             player2RoleB.isOn = true;

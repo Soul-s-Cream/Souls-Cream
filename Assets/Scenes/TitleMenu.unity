@@ -410,7 +410,7 @@ PrefabInstance:
     - target: {fileID: 6247368129681976330, guid: d7f42b94dd25ebc429e4925a939cc03b,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7f42b94dd25ebc429e4925a939cc03b, type: 3}
@@ -6707,7 +6707,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screenFade: {fileID: 2000160831}
-  sceneId: 2
+  scene:
+    sceneAsset: {fileID: 0}
+    scenePath: 
 --- !u!1 &2042318765
 GameObject:
   m_ObjectHideFlags: 0
@@ -6894,7 +6896,7 @@ MonoBehaviour:
   connectionPanel: {fileID: 586805503}
   roomPanel: {fileID: 1816999633}
   roomNameField: {fileID: 804614069}
-  roomNameText: {fileID: 0}
+  roomNameText: {fileID: 205676412}
   player1ReadyToggle: {fileID: 211530299}
   player2ReadyToggle: {fileID: 1300337245}
   player1Connect: {fileID: 421966865}
