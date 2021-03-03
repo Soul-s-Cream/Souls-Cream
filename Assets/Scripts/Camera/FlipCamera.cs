@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+[ExecuteAlways]
 [RequireComponent(typeof(Camera))]
 public class FlipCamera : MonoBehaviour
 {

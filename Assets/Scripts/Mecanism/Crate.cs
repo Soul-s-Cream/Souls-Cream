@@ -71,6 +71,10 @@ public class Crate : Photon.PunBehaviour
                 position.y = transform.position.y;
             }
         }
+        else
+        {
+            Debug.LogError("The Sister Crate haven't been defined!");
+        }
 
         //Si jamais la boîte n'est pas en contact avec un objet Humidity, alors on lui donne une masse impossible à pousser.
         //Sinon on l'allège de sorte à pouvoir être déplaçable
