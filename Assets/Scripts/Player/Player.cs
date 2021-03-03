@@ -472,6 +472,8 @@ public class Player : Photon.PunBehaviour
     [PunRPC]
     public void SolitudeScream()
     {
+        screamCurrentlyUsed = true;
+
         screamsDataParsed[ScreamType.Solitude].sound.Post(gameObject);
         foreach (GameObject platform in GameObject.FindGameObjectsWithTag(GameManager.Instance.solitudeScreamReceiversTag))
         {
@@ -489,6 +491,8 @@ public class Player : Photon.PunBehaviour
         {
             platform.SetActive(true);
         }
+
+        screamCurrentlyUsed = false;
     }
 
     [PunRPC]
