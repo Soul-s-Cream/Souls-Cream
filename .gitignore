@@ -65,3 +65,7 @@ crashlytics-build.properties
 BUILD.zip
 
 UserSettings/EditorUserSettings.asset
+
+Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset
+
+Assets/Resources/DOTweenSettings.asset
