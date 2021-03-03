@@ -422,6 +422,7 @@ public class Player : Photon.PunBehaviour
             GameEvents.Instance.TriggerFireScreamAbilityEvent(this, ScreamType.Cornered);
             anim.SetLayerWeight(2, 1f);
             capsuleCollider.size = defaultCapsuleColliderSize * 1.75f;
+            rb.velocity += Vector2.up;
             groundCheckingCenter.y = defaultGroundCenter.y - 0.25f;
             groundCheckingRadius = defaultGroundRadius * 1.75f;
             StartCoroutine(CorneredWait());
@@ -456,6 +457,7 @@ public class Player : Photon.PunBehaviour
             capsuleCollider.size = defaultCapsuleColliderSize * 0.5f;
             groundCheckingCenter.y = defaultGroundCenter.y + 0.15f;
             groundCheckingRadius = defaultGroundRadius * 0.5f;
+            rb.velocity += Vector2.up;
             StartCoroutine(CorneredWait());
         }
     }
