@@ -29,7 +29,7 @@ public class TutoBulleScript : MonoBehaviour        // scipte à attacher quelque
     public Image EcranOpaque;
     public float ecranAlpha = .3f;
     private bool lalaJattend;
-        private Color ecranTutoAlphaColor;
+    private Color ecranTutoAlphaColor;
     private bool ecranTutoActif = true;
 
     private void Awake()

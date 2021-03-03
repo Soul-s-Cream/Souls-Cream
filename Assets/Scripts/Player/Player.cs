@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+//using UnityEngine.UI;
 using DG.Tweening;
 
 public enum ScreamType
@@ -16,6 +16,7 @@ public enum ScreamType
     Pride,
     Joy
 }
+
 
 [RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(Rigidbody2D))]
@@ -36,8 +37,9 @@ public class Player : Photon.PunBehaviour
     public float lowJumpMultiplier = 2f;          // gère la force ascendante lors du saut. Permet un saut plus réaliste
     public float velocityYMax = 50f;              // Permet de limiter la force du saut, notament lors du double saut
 
-    public Vector2 groundCheckingCenter;
     public float groundCheckingRadius;
+
+    public Vector2 groundCheckingCenter;
     public LayerMask groundLayer;
 
     public TagSelectorAttribute humidityTag;
@@ -64,10 +66,17 @@ public class Player : Photon.PunBehaviour
     public ScreamsData screamsData;
     //Données depuis le ScriptableObject ScreamsData mises dans un Dictionary pour faciliter le traitement
     public Dictionary<ScreamType, ScreamData> screamsDataParsed;
-    
+
     [Header("Sound")]
     public AK.Wwise.Event playerMoveSound;
     public AK.Wwise.RTPC footStepsWetRTPC;
+
+    public bool canNoJump = true;
+    public bool canNoMoveLeft = true;
+    public bool canNoMoveRight = true;
+    public bool canNoScreem = true;
+    public bool canNoChangeScreemLeft = true;
+    public bool canNoChangeSreemRight = true;
     #endregion
 
     #region Private Fields
@@ -109,7 +118,7 @@ public class Player : Photon.PunBehaviour
 
         #region Initialize Scream Data
         screamsDataParsed = new Dictionary<ScreamType, ScreamData>();
-        foreach(ScreamData data in screamsData.data)
+        foreach (ScreamData data in screamsData.data)
         {
             screamsDataParsed.Add(data.scream, data);
         }
@@ -149,12 +158,12 @@ public class Player : Photon.PunBehaviour
         }
 
         transform.eulerAngles = scale;
-        isGrounded = Physics2D.OverlapCircle((Vector2) transform.position + groundCheckingCenter, groundCheckingRadius, groundLayer);
+        isGrounded = Physics2D.OverlapCircle((Vector2)transform.position + groundCheckingCenter, groundCheckingRadius, groundLayer);
         horizontalMovement = control.Deplacement.Deplacement.ReadValue<float>() * moveSpeed;
         PlayerMove(horizontalMovement);
 
         anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
-        if (control.Deplacement.Deplacement.ReadValue<float>() > 0)
+        if (!canNoMoveRight && control.Deplacement.Deplacement.ReadValue<float>() > 0)
         {
             photonView.RPC("FlipToggleSprite", PhotonTargets.All, true);
             if (isGrounded)
@@ -162,7 +171,7 @@ public class Player : Photon.PunBehaviour
                 //footStepsWetRTPC.SetGlobalValue(Mathf.Abs(rb.velocity.x));
             }
         }
-        else if (control.Deplacement.Deplacement.ReadValue<float>() < 0)
+        else if (!canNoMoveLeft && control.Deplacement.Deplacement.ReadValue<float>() < 0)
         {
             photonView.RPC("FlipToggleSprite", PhotonTargets.All, false);
             if (isGrounded)
@@ -184,11 +193,7 @@ public class Player : Photon.PunBehaviour
             return;
         }
 
-        /*if (velocity.y > velocityYMax) // Permet de limiter la force du saut, notament lors du double saut
-        {
-            velocity.y = velocityYMax;
-        }*/
-        if (control.Deplacement.Jump.triggered && jumpAmount <= 1) //  si le joueur déclanche le saut
+        if (!canNoJump && control.Deplacement.Jump.triggered && jumpAmount <= 1) //  si le joueur déclanche le saut
         {
             isJuming = true;
             jumpAmount += 1;
@@ -212,13 +217,48 @@ public class Player : Photon.PunBehaviour
 
     }
 
+
+    private void PlayerSpriteVoid(bool opak)
+    {
+        if (opak)
+        {
+            spriteRender.DOColor(Color.white, .5f);
+        }
+        else spriteRender.DOColor(Color.clear, .5f);
+    }
+    public void TutoBoolVoid(int xcv)
+    {
+        if (xcv == 1)
+        {
+            PlayerSpriteVoid(true);
+        }
+        if (xcv == 2)
+        {
+            canNoMoveLeft = false;
+        }
+        if (xcv == 3)
+        {
+            canNoMoveRight = false;
+        }
+        if (xcv == 4)
+        {
+            canNoJump = false;
+        }
+        if (xcv == 5)
+        {
+            canNoScreem = false;
+        }
+
+
+    }
+
     #region Listeners
     /// <summary>
     /// Subscribe to all events required for the object
     /// </summary>
     private void AddListeners()
     {
-        GameEvents.Instance.fireScreamAbility+= OnFireScreamAbility;
+        GameEvents.Instance.fireScreamAbility += OnFireScreamAbility;
     }
 
     /// <summary>
@@ -279,8 +319,6 @@ public class Player : Photon.PunBehaviour
     #endregion
 
 
-
-
     #region Scream
 
     /// <summary>
@@ -291,7 +329,7 @@ public class Player : Photon.PunBehaviour
     public bool UnlockScream(ScreamType scream)
     {
         //On vérifie dans la structure de donnée si le cri est autorisé pour ce rôle, et qu'il n'est pas débloqué...
-        if(screamsDataParsed[scream].unlockableBy.Equals(this.role) && !unlockedScreams.Contains(scream))
+        if (screamsDataParsed[scream].unlockableBy.Equals(this.role) && !unlockedScreams.Contains(scream))
         {
             //..si oui, on le débloque.
             unlockedScreams.Add(scream);
@@ -308,11 +346,11 @@ public class Player : Photon.PunBehaviour
     /// <param name="isUp">Si l'index doit monter ou descendre dans la liste des cris appris</param>
     public void ScreamSelection(bool isUp)
     {
-        if(unlockedScreams.Count != 0)
+        if (unlockedScreams.Count != 0)
         {
-            if (isUp)
+            if (isUp && !canNoChangeSreemRight)
                 screamUnlockedIndex = (screamUnlockedIndex + 1) % unlockedScreams.Count;
-            else
+            else if (!isUp && !canNoChangeScreemLeft)
                 screamUnlockedIndex = ((screamUnlockedIndex - 1) % unlockedScreams.Count + unlockedScreams.Count) % unlockedScreams.Count;
 
             selectedScream = unlockedScreams[screamUnlockedIndex];
@@ -326,47 +364,49 @@ public class Player : Photon.PunBehaviour
     /// </summary>
     public void Screaming()
     {
-        if (!isScreaming)
+        if (!canNoScreem)
         {
-            anim.SetTrigger(Enum.GetName(typeof(ScreamType), selectedScream));
-
-            if (PhotonNetwork.connected)
+            if (!isScreaming)
             {
-                switch (selectedScream)
+                anim.SetTrigger(Enum.GetName(typeof(ScreamType), selectedScream));
+
+                if (PhotonNetwork.connected)
                 {
-                    case ScreamType.Compassion: photonView.RPC("CompassionScream", PhotonTargets.AllBufferedViaServer); break;
-                    case ScreamType.Cornered: photonView.RPC("CorneredScream", PhotonTargets.AllBufferedViaServer); break;
-                    case ScreamType.Curiosity: photonView.RPC("CuriosityScream", PhotonTargets.AllBufferedViaServer); break;
-                    case ScreamType.Envy: photonView.RPC("EnvyScream", PhotonTargets.AllBufferedViaServer); break;
-                    case ScreamType.Joy: photonView.RPC("JoyScream", PhotonTargets.AllBufferedViaServer); break;
-                    case ScreamType.Sadness: photonView.RPC("SadnessScream", PhotonTargets.AllBufferedViaServer); break;
-                    case ScreamType.Pride: photonView.RPC("PrideScream", PhotonTargets.AllBufferedViaServer); break;
-                    case ScreamType.Solitude: photonView.RPC("SolitudeScream", PhotonTargets.AllBufferedViaServer); break;
+                    switch (selectedScream)
+                    {
+                        case ScreamType.Compassion: photonView.RPC("CompassionScream", PhotonTargets.AllBufferedViaServer); break;
+                        case ScreamType.Cornered: photonView.RPC("CorneredScream", PhotonTargets.AllBufferedViaServer); break;
+                        case ScreamType.Curiosity: photonView.RPC("CuriosityScream", PhotonTargets.AllBufferedViaServer); break;
+                        case ScreamType.Envy: photonView.RPC("EnvyScream", PhotonTargets.AllBufferedViaServer); break;
+                        case ScreamType.Joy: photonView.RPC("JoyScream", PhotonTargets.AllBufferedViaServer); break;
+                        case ScreamType.Sadness: photonView.RPC("SadnessScream", PhotonTargets.AllBufferedViaServer); break;
+                        case ScreamType.Pride: photonView.RPC("PrideScream", PhotonTargets.AllBufferedViaServer); break;
+                        case ScreamType.Solitude: photonView.RPC("SolitudeScream", PhotonTargets.AllBufferedViaServer); break;
+                    }
                 }
+                else
+                {
+                    switch (selectedScream)
+                    {
+                        case ScreamType.Compassion: CompassionScream(); break;
+                        case ScreamType.Cornered: CorneredScream(); break;
+                        case ScreamType.Curiosity: CuriosityScream(); break;
+                        case ScreamType.Envy: EnvyScream(); break;
+                        case ScreamType.Joy: JoyScream(); break;
+                        case ScreamType.Sadness: SadnessScream(); break;
+                        case ScreamType.Pride: PrideScream(); break;
+                        case ScreamType.Solitude: SolitudeScream(); break;
+                    }
+                }
+
+                StartCoroutine(WaitDuringScreaming());
             }
             else
             {
-                switch (selectedScream)
-                {
-                    case ScreamType.Compassion: CompassionScream(); break;
-                    case ScreamType.Cornered: CorneredScream(); break;
-                    case ScreamType.Curiosity: CuriosityScream(); break;
-                    case ScreamType.Envy: EnvyScream(); break;
-                    case ScreamType.Joy: JoyScream(); break;
-                    case ScreamType.Sadness: SadnessScream(); break;
-                    case ScreamType.Pride: PrideScream(); break;
-                    case ScreamType.Solitude: SolitudeScream(); break;
-                }
+                anim.SetInteger("Scream", 0);
             }
-
-            StartCoroutine(WaitDuringScreaming());
-        }
-        else
-        {
-            anim.SetInteger("Scream", 0);
         }
     }
-
     /// <summary>
     /// Callbacks called when a fireScreamAbility is triggered. Call the right Callbacks depending on the ScreamType
     /// </summary>
@@ -374,7 +414,7 @@ public class Player : Photon.PunBehaviour
     /// <param name="scream">The scream emitted</param>
     void OnFireScreamAbility(Player player, ScreamType scream)
     {
-        switch(scream)
+        switch (scream)
         {
             case ScreamType.Cornered: OnCorneredScream(); break;
             case ScreamType.Pride: OnPrideScream(); break;
