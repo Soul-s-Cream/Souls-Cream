@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3758f8f58fdef43803eb9be1df0608, type: 3}
   m_Name: PhotonServerSettings
   m_EditorClassIdentifier: 
-  AppID: 086ce474-c102-4bf0-b0d5-8a750c24000b
+  AppID: 
   VoiceAppID: 
   ChatAppID: 
-  HostType: 1
+  HostType: 0
   PreferredRegion: 0
   EnabledRegions: -1
   Protocol: 0
@@ -43,7 +43,6 @@ MonoBehaviour:
   - JoyScream
   - Marco
   - PickupItemInit
-  - PlayMovingSound
   - Polo
   - PrideScream
   - PunPickup
@@ -53,7 +52,6 @@ MonoBehaviour:
   - RequestForPickupTimes
   - SadnessScream
   - SolitudeScream
-  - StopMovingSound
   - SwitchOff
   - SwitchOn
   - TaggedPlayer
