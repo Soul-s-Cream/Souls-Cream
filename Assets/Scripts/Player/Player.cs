@@ -77,6 +77,7 @@ public class Player : Photon.PunBehaviour
     private Rigidbody2D rb;
     private Vector3 scale;
     private bool isScreaming;
+    private bool screamCurrentlyUsed;
     private SpriteRenderer spriteRender;
     [HideInInspector]
     public CapsuleCollider2D capsuleCollider;
@@ -319,7 +320,7 @@ public class Player : Photon.PunBehaviour
     /// </summary>
     public void Screaming()
     {
-        if (!isScreaming)
+        if (!isScreaming && !screamCurrentlyUsed)
         {
             anim.SetTrigger(Enum.GetName(typeof(ScreamType), selectedScream));
 
@@ -415,6 +416,8 @@ public class Player : Photon.PunBehaviour
     [PunRPC]
     public void CorneredScream()
     {
+        screamCurrentlyUsed = true;
+
         screamsDataParsed[ScreamType.Cornered].sound.Post(gameObject);
 
         if (this.role == Role.NOIR)
@@ -448,9 +451,13 @@ public class Player : Photon.PunBehaviour
             groundCheckingCenter.y = defaultGroundCenter.y;
             groundCheckingRadius = defaultGroundRadius;
         }
+
+        screamCurrentlyUsed = false;
     }
     private void OnCorneredScream()
     {
+        screamCurrentlyUsed = true;
+
         if (this.role == Role.BLANC)
         {
             anim.SetLayerWeight(1, 1f);
@@ -502,6 +509,8 @@ public class Player : Photon.PunBehaviour
     [PunRPC]
     public void PrideScream()
     {
+        screamCurrentlyUsed = true;
+
         screamsDataParsed[ScreamType.Pride].sound.Post(gameObject);
 
         if (this.role == Role.BLANC)
@@ -534,6 +543,8 @@ public class Player : Photon.PunBehaviour
             groundCheckingCenter.y = defaultGroundCenter.y;
             groundCheckingRadius = defaultGroundRadius;
         }
+
+        screamCurrentlyUsed = false;
     }
 
     private void OnPrideScream()
